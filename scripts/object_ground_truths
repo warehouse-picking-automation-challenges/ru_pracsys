@@ -1,0 +1,82 @@
+import os
+import sys
+
+object_id_file = "/home/pracsys/object_id.txt"
+object_list_file = "/home/pracsys/object_list.txt"
+objectlist = open(object_list_file,"r")
+lines = objectlist.readlines()
+objectids = open(object_id_file,"r")
+idlines_ = objectids.readlines()
+idlines = [line_.strip() for line_ in idlines_]
+
+obj = ".obj"
+mtl = ".obj.mtl"
+png = ".png"
+jpg = ".jpg"
+
+detection_prefix = '''
+# info about the db
+
+#source1:
+#  type: 'OpenNI'
+#  module: 'object_recognition_core.io.source'
+#  parameters:
+#    image_mode: 'SXGA_RES'
+#    depth_mode: 'VGA_RES'
+#    image_fps: 'FPS_15'
+#    depth_fps: 'FPS_30'
+
+source1:
+  type: RosKinect
+  module: 'object_recognition_ros.io'
+  parameters:
+    crop_enabled: False
+    rgb_frame_id: 'camera_rgb_optical_frame'
+    rgb_image_topic: '/camera/rgb/image_color'
+    rgb_image_topic: '/camera/rgb/image_rect_color'
+    rgb_camera_info: '/camera/rgb/camera_info'
+    depth_frame_id: 'camera_depth_optical_frame'
+    depth_image_topic: '/camera/depth_registered/image_raw'
+    depth_camera_info: '/camera/depth_registered/camera_info'
+#   bag: /home/vrabaud/tod_data_new/training/object_recognition_capture/eggo_01.bag
+#  bag: /home/vrabaud/tod_data_new/training/object_recognition_capture/eggo_01.bag
+
+sink1:
+  type: Publisher
+  module: 'object_recognition_ros.io'
+  inputs: [source1]
+
+pipeline1:
+  type: LinemodDetector
+  module: 'object_recognition_linemod'
+  inputs: [source1]
+  outputs: [sink1]
+  parameters:
+    use_rgb: 1
+    use_depth: 1
+    verbose: 1
+    visualize: 1
+    threshold: 86.5 #86.5 #92.5 #82.9 #91.6
+    th_obj_dist: 0.1
+    icp_dist_min: 0.05 #0.05
+    px_match_min: .70 #0.5
+    depth_frame_id: 'camera_rgb_optical_frame'
+    # The list of object_ids to analyze
+    object_ids: \''''
+detection_suffix='''\'
+    db:
+      type: 'CouchDB'
+      root: 'http://localhost:5984'
+      collection: 'object_recognition\''''
+
+
+
+for i,line in enumerate(lines):
+	line = line.strip()
+	os.system("mkdir $PRACSYS_PATH/../object_ground_truth/"+line);
+	# print os.system("cd $PRACSYS_PATH/../object_models; cp "+line+obj + " " + line+mtl+ " " + line+png + " " + line+jpg + " ../object_ground_truth/"+line+"/")
+	# os.system("cd $PRACSYS_PATH/../object_ground_truth/"+line+"/; rm "+line+obj + " " + line+mtl+ " " + line+png + " " + line+jpg)
+
+	outfile = open("/home/pracsys/repos/apc_hg2/object_ground_truth/"+line+"/detection.ros.ork","w");
+	outfile.write(detection_prefix+idlines[i]+detection_suffix)
+	print line

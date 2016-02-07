@@ -1,0 +1,6 @@
+<launch>
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml" />
+  
+  <include file="$(find dynamic_prm)/input/simulation/manual_sim.launch" />
+  <include file="$(find dynamic_prm)/input/visualization/visualization.launch" />
+</launch>

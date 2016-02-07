@@ -1,0 +1,152 @@
+<launch>
+
+<!--       WORLD MODEL        -->          <!--       WORLD MODEL        -->       <!--       WORLD MODEL        -->
+  <rosparam ns="world_model/planning_contexts">
+    manipulator_pc:
+     default:
+      type: "hide_mapping"
+  </rosparam>
+
+  <rosparam command="load" ns="world_model" file="$(find rearrangement_manipulation)/input/simulation/manipulation_simulator.yaml"/> 
+
+  <rosparam command="load" ns="world_model/simulator/subsystems/manipulator" file="$(find baxter)/input/urdf/baxter.yaml"/>
+  <rosparam command="load" ns="world_model/simulator/obstacles" file="$(find baxter)/input/simulation/baxter_torso.yaml" /> 
+
+  <rosparam ns="world_model/simulator/">
+    simulation_step: 0.02
+    manipulator_name: simulator/manipulator
+  </rosparam>
+
+  <rosparam ns="world_model/simulator/subsystems/manipulator">
+    planning_contexts:
+      manipulator_pc:
+        type: "full_mapping"
+    hand: left
+  </rosparam>
+
+  <!--       PLANNING        -->          <!--       PLANNING        -->       <!--       PLANNING        -->
+  <rosparam command="load" ns="" file="$(find prx_input)/templates/planning_applications/single_query_application.yaml"/>
+  
+  <rosparam ns="">
+    simulate: true 
+    visualize: true 
+    persistent: true
+    consumer_mapping:
+      - 
+        pair: [simulator/consumer, manipulator_pc]
+  </rosparam> 
+
+<!--
+  <rosparam command="load" ns="motion_planner/" file="$(find prx_input)/templates/motion_planners/prm_star.yaml"/>
+-->
+
+  <rosparam ns="motion_planner">
+    type: manipulation_mp
+    lazy_runs: 30
+    visualization_bodies: ["simulator/manipulator/end_effector"]
+    visualize_graph: false
+    visualize_solutions: false        
+    delta_prm: false
+  </rosparam>
+
+  <rosparam ns="manip_spec_template">
+    type: manipulation_mp_specification
+    distance_metric:
+      type: ann_distance_metric
+    local_planner:
+      type: bvp_local_planner
+    stopping_criteria:
+      elements:
+        criterion1:
+          type: iteration_criterion
+          condition: 100
+    heuristic_search:
+      type: obstacle_aware_astar
+      minimum_conflict: true
+      shortest_path: false
+      collision_penalty: 1000
+      max_length: 14
+  </rosparam>
+
+  <rosparam ns="spec_template">
+    type: motion_planning_specification
+    distance_metric:
+      type: ann_distance_metric
+    stopping_criteria:
+      elements:
+        criterion1:
+          type: iteration_criterion
+          condition: 100
+  </rosparam>
+
+  <rosparam ns="graph_query_template">
+    type: manipulator_mp_query
+    query_type: add_query_points_collisions
+    query_collision_type: active_collisions_reuse_edges
+    goal:
+        type: goal_state
+        distance_metric:
+          type: ann_distance_metric
+  </rosparam>
+
+  <rosparam ns="task_planner/" >
+    type: rearrangement_manipulation_tp
+    pc_name_manipulator_only: manipulator_pc
+    pc_name_object_only: object_pc
+    pc_name_manipulator_with_object: manip_object_pc
+    pc_name_manipulator_with_active_object: manip_active_object_pc
+    pc_name_all_objects: all_object_pc
+    pc_name_real_world: real_world_pc
+    pc_name_grasp_planning: grasp_planning_pc
+    manipulation_tp_name: manipulation_planner
+    visualization_body: "simulator/manipulator/end_effector"
+    manip_specification:
+      type: manipulator_specification
+      distance_metric:
+        type: ann_distance_metric
+    stable_pose_space:
+      min: [-0.455, 0.95]
+      max: [0.455, 1.17]
+      scale: [0.5, 0.5]    
+    manip_sampler:
+      type: manip_sampler
+      min_theta: 0
+      max_theta: 3.14
+      min_theta: -1
+      max_theta: 1
+      max_tries: 20
+      grasp_z: 0.03
+    manip_validity_checker:
+      type: system_name_validity_checker
+    planners_specifications:
+      transit:
+        template: manip_spec_template      
+      transfer:
+        template: manip_spec_template
+    planners:
+      manipulation_planner:
+        type: manipulator_tp
+        ungrasped_name: ungrasped
+        grasped_name: grasped
+        face_queries:
+          reach_face:
+            template: graph_query_template
+          transfer_face:
+            template: graph_query_template
+          retract_face:
+            template: graph_query_template
+        planners:
+          ungrasped:
+            template: "motion_planner"
+            space_name: "manipulator_pc"          
+            visualize_graph: true
+          grasped:
+            template: "motion_planner"
+            space_name: "manip_object_pc"  
+ </rosparam>
+
+  <include file="$(find rearrangement_manipulation)/input/planning/problems/common_problem.launch"/>
+
+
+
+</launch> 

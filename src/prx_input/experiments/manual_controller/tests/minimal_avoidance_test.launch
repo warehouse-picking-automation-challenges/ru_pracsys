@@ -1,0 +1,56 @@
+<!-- This file has been tested on PRACSYS revision 2780 -->
+
+<launch>
+
+
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>      
+  <rosparam ns= "simulation" command="load" file="$(find prx_input)/templates/applications/manual_application.yaml"/>
+  <rosparam ns= "simulation" command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+        
+  <rosparam ns="simulation/simulator/sensing">
+    type: proximity_sensing_model
+    sensors:
+        conf_sensor1:
+          type: config_sensor
+          source: "conf_sensor1"
+          sensor_delay: 0.02
+        geom_sensor1:
+          type: geom_sensor
+          source: "geom_sensor1"
+          sensor_delay: 0.02
+            
+  </rosparam>
+        
+  <rosparam ns="simulation/manual_controllers">
+    system_paths: [simulator/manual]
+  </rosparam>
+
+  <rosparam command="load" ns="simulation/simulator/subsystems/manual"
+     file="$(find prx_input)/templates/controllers/manual/disk.yaml"/>
+
+  <rosparam command="load" ns="simulation/simulator/subsystems/manual/subsystems/safety_controller1/subsystems/disk1"
+     file="$(find prx_input)/templates/plants/disk.yaml"/>    
+            
+  <rosparam command="load" ns="simulation/simulator/subsystems/manual/subsystems/safety_controller1">
+    type: minimal_avoidance_controller
+    obstacle_distance: 5
+    plant_distance: 10
+    sensing_info:
+        type: twoD_prox_info
+        sources: ["conf_sensor1", "geom_sensor1"]
+        update_delay: 0.02
+        system_path: "simulator/manual/safety_controller1/disk1/body"
+        max_num_neighbors: 5
+        sensing_radius: 50
+  </rosparam>
+
+  <rosparam command="load" ns="simulation/simulator/obstacles"
+     file="$(find prx_input)/templates/environments/test_all_geoms.yaml"/>
+  
+        
+        
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+        required="true" launch-prefix="gdb --args" args= "simulation" output="screen"/>
+</launch>

@@ -1,0 +1,40 @@
+<launch>
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+  <rosparam ns="visualization/viewer/">
+    windows:
+      window_1:
+        xpos: 920
+        ypos: 100
+        width: 1000
+        height: 1000
+        cameras:
+          perspective:
+            ortho: false
+            camera_type: 0
+            eye: [-0.5, 0, 3.8]
+            center: [0, 1, 3]
+            speed: {move: 0.1, rotate: 0.001}
+          orthographic:
+            ortho: true
+            ortho_param:
+              left: -300
+              right: 300
+              bottom: -300
+              top: 300
+              zNear: 0
+              zFar: 1000
+            speed: {move: 0.2, rotate: 0.001}
+          smooth:
+            ortho: false
+            camera_type: 2
+            eye: [0, -20, 15]
+            center: [0, 1, 18]
+            speed: {move: 0.2, rotate: 0.001}
+  </rosparam>
+
+<rosparam ns="visualization/viewer/scene">
+    line_thickness: 3
+  </rosparam>
+
+</launch>

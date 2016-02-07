@@ -1,0 +1,5 @@
+string hud_name
+float64[]  area
+float64[]  color
+string texture
+---

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<launch>
+
+
+
+	<arg name="debug_depth_unit" default="false" />
+	<arg name="camera" value="camera" />
+	
+    <include file="$(find realsense_camera)/launch/realsense_camera.launch">
+    	<param name="debug_depth_unit" value="$(arg debug_depth_unit)" />
+    	<arg name="camera" value="$(arg camera)" />
+        <arg name="depth_filter" value="0.0" />
+    	<!-- The serial number has to be entered with a leading character / -->
+    	<!-- <arg name="camera_serial" value="/047140047309" /> -->
+    </include>
+
+    
+    <!-- <node name="realsense_rviz" pkg="rviz" type="rviz" args="-d $(find realsense_camera)/config/realsense.rviz" /> -->
+    <node ns="$(arg camera)/rgb" name="image_proc" pkg="image_proc" type="image_proc"/>
+
+</launch>

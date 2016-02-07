@@ -1,0 +1,30 @@
+1441661181, elmers_washable_no_run_school_glue, left, 1, 3.16885209084, 29.6289708614, 49.6755299568, 14, 1, Reason
+1441661255, elmers_washable_no_run_school_glue, left, 1, 1.65084600449, 26.4094121456, 50.4985349178, 14, 0, Physical fumble
+1441661338, elmers_washable_no_run_school_glue, left, 1, 1.04835796356, 26.2431678772, 45.4141559601, 12, 0, Physical fumble
+1441661409, elmers_washable_no_run_school_glue, left, 1, 2.27211999893, 25.9876291752, 47.1186177731, 26, 0, Physical fumble
+1441661481, elmers_washable_no_run_school_glue, left, 1, 1.84003019333, 24.9320259094, 44.8255398273, 21, 0, Physical fumble
+1441662199, elmers_washable_no_run_school_glue, left, 2, 0.486541032791, 31.3489429951, 52.119617939, 4, 1, Reason
+1441662280, elmers_washable_no_run_school_glue, left, 2, 5.18825387955, 70.3058722019, 94.8775091171, 28, 1, Reason
+1441662396, elmers_washable_no_run_school_glue, left, 2, 2.76934194565, 42.5456101894, 61.5551650524, 18, 0, Physical fumble
+1441662693, elmers_washable_no_run_school_glue, left, 2, 0.515755176544, 25.9085710049, 47.0768108368, 5, 1, Reason
+1441662761, elmers_washable_no_run_school_glue, left, 2, 1.76292395592, 61.6277329922, 85.7991218567, 1, 1, Reason
+1441662873, elmers_washable_no_run_school_glue, left, 3, 0.359170913696, 22.8029181957, 40.3819289207, 3, 0, Physical fumble
+1441662965, elmers_washable_no_run_school_glue, left, 3, 2.59119486809, 19.3065271378, 39.4299521446, 8, 0, Physical fumble
+1441663025, elmers_washable_no_run_school_glue, left, 3, 1.23590993881, 37.5929248333, 54.5132629871, 2, 0, Physical fumble
+1441663106, elmers_washable_no_run_school_glue, left, 3, 1.3762140274, 41.6975488663, 60.3275229931, 3, 0, Physical fumble
+1441663208, elmers_washable_no_run_school_glue, left, 3, 0.992835998535, 22.9556028843, 39.9933300018, 6, 0, Physical fumble
+1441663381, elmers_washable_no_run_school_glue, left, 4, 1.179074049, 33.9013569355, 51.8856549263, 12, 0, Physical fumble
+1441663461, elmers_washable_no_run_school_glue, left, 4, 5.27148008347, 79.2032649517, 105.061699867, 12, 0, Physical fumble
+1441665491, elmers_washable_no_run_school_glue, left, 4, 5.34169816971, 74.5972189903, 100.786468983, 32, 0, Physical fumble
+1441665646, elmers_washable_no_run_school_glue, left, 4, 9.31874990463, 33.9373090267, 59.9843409061, 101, 0, Physical fumble
+1441665727, elmers_washable_no_run_school_glue, left, 4, 0.676887989044, 21.226085186, 39.5403940678, 3, 0, Physical fumble
+1441666061, elmers_washable_no_run_school_glue, left, 5, 1.27221608162, 48.1959660053, 67.5262241364, 3, 1, Reason
+1441666216, elmers_washable_no_run_school_glue, left, 5, 9.75648212433, 80.8419508934, 112.913107157, 59, 1, Reason
+1441666358, elmers_washable_no_run_school_glue, left, 5, 13.1410298347, 47.3794460297, 78.5535721779, 96, 1, Reason
+1441666659, elmers_washable_no_run_school_glue, left, 5, 3.66163301468, 80.7714529037, 106.684982061, 12, 1, Reason
+1441667032, elmers_washable_no_run_school_glue, left, 5, 6.83995509148, 64.7998437881, 94.320786953, 74, 1, Reason
+1441667186, elmers_washable_no_run_school_glue, left, 6, 0.448641061783, 22.6848709583, 39.9612510204, 2, 0, Physical fumble
+1441667269, elmers_washable_no_run_school_glue, left, 6, 5.10943388939, 46.656842947, 70.6686258316, 3, 0, Physical fumble
+1441667525, elmers_washable_no_run_school_glue, left, 6, 0.392334938049, 21.9015350342, 38.9742228985, 2, 0, Physical fumble
+1441667595, elmers_washable_no_run_school_glue, left, 6, 2.87563681602, 20.8334541321, 40.3187201023, 3, 0, Physical fumble
+1441667652, elmers_washable_no_run_school_glue, left, 6, 0.28258395195, 21.400851965, 38.4939308167, 1, 0, Physical fumble

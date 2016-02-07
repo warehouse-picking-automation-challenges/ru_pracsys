@@ -1,0 +1,18 @@
+<!-- This file has been tested on PRACSYS revision 3007 -->
+
+<launch>
+  <include file="$(find rrt_star_with_shooting)/input/tests/simulation.launch"/>
+  <include ns="planning" file="$(find rrt_star_with_shooting)/input/tests/world_model.launch"/>
+  <include ns="planning" file="$(find rrt_star_with_shooting)/input/tests/planner_structure.launch"/>
+  <include ns="planning" file="$(find rrt_star_with_shooting)/input/tests/query.launch"/>
+
+ <!-- <node name="planning" pkg="prx_planning" type="prx_planning"
+        required="false" launch-prefix="" output="screen" args="planning" /> -->
+
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+  <rosparam ns="visualization/viewer/scene" >
+   line_thickness: 3
+  </rosparam>
+
+<rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+</launch>

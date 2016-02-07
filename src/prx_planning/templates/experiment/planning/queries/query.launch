@@ -1,0 +1,26 @@
+<launch>
+
+  <!-- This file is meant to store the query to use in the application.  -->
+
+
+  <!-- Load template files -->
+       
+  <rosparam command="load" ns="query_type" file="$(find prx_input)/templates/queries/...yaml"/>
+
+
+  <!-- Specify the query parameters --> 
+
+  <rosparam ns="queries">
+  query1:
+    template: "query_type"
+    state_state: [0,0,0]
+    goal:
+      type: "goal_state"
+      goal_state: [10,10,0]
+    stopping_criteria:
+      criterion1:
+        type: iteration
+        number: 10000
+  </rosparam>
+
+</launch>

@@ -1,0 +1,99 @@
+type: ode_plant
+geometries:
+  -
+    name: upper_wall
+    collision_geometry: 
+      type: box
+      dims: [ 8,198, 50]      
+      material: light_blue       
+    config:
+      position: [-15,80,  .5]
+      orientation: [0, 0, 0, 1]
+    dims: [8,198,  50]   
+    mass_type: true
+    weight: 10000000
+  -
+    name: lower_wall
+    collision_geometry: 
+      type: box
+      dims: [8,198,  50]      
+      material: light_blue       
+    config:
+      position: [175,80,  .5]
+      orientation: [0, 0, 0, 1]
+    dims: [8, 198, 50]   
+    mass_type: true
+    weight: 10000000  
+  -
+    name: right_wall
+    collision_geometry: 
+      type: box
+      dims: [180,8,  50]      
+      material: light_blue       
+    config:
+      position: [80,175,  .5]
+      orientation: [0, 0, 0, 1]
+    dims: [ 180,8, 50]  
+    mass_type: true
+    weight: 10000000  
+  -
+    name: left_wall
+    collision_geometry: 
+      type: box
+      dims: [180,8,  50]      
+      material: light_blue       
+    config:
+      position: [80,-15,  .5]
+      orientation: [0, 0, 0, 1]
+    dims: [180,8,  50]  
+    mass_type: true
+    weight: 10000000  
+  -
+    name: left_upper
+    collision_geometry: 
+      type: box
+      dims: [100,10,  50]      
+      material: light_blue       
+    config:
+      position: [40,30,  .5]
+      orientation: [0, 0, 0, 1]
+    dims: [100,10,  50]  
+    mass_type: true
+    weight: 10000000 
+  -
+    name: left_lower
+    collision_geometry: 
+      type: box
+      dims: [50,10,  50]      
+      material: light_blue       
+    config:
+      position: [145,30,  .5]
+      orientation: [0, 0, 0, 1]
+    dims: [50,10,  50]   
+    mass_type: true
+    weight: 10000000  
+  -
+    name: right_lower
+    collision_geometry: 
+      type: box
+      dims: [100, 10, 50]      
+      material: light_blue       
+    config:
+      position: [120, 130, .5]
+      orientation: [0, 0, 0, 1]
+    dims: [100, 10, 50]   
+    mass_type: true
+    weight: 10000000
+  -
+    name: right_upper
+    collision_geometry: 
+      type: box
+      dims: [50,10,  50]      
+      material: light_blue       
+    config:
+      position: [15,130,  .5]
+      orientation: [0, 0, 0, 1]
+    dims: [50,10,  50]   
+    mass_type: true
+    weight: 10000000
+collide_all: false

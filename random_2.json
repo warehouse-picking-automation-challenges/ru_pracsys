@@ -1,0 +1,105 @@
+{
+  "bin_contents":
+  {
+    "bin_A":
+    [
+      "sharpie_accent_tank_style_highlighters", "munchkin_white_hot_duck_bath_toy"
+    ],
+    "bin_B":
+    [
+      "champion_copper_plus_spark_plug", "champion_copper_plus_spark_plug", "champion_copper_plus_spark_plug"
+    ],
+    "bin_C":
+    [
+      "oreo_mega_stuf"
+    ],
+    "bin_D":
+    [
+      "first_years_take_and_toss_straw_cup", "mommys_helper_outlet_plugs"
+    ],
+    "bin_E":
+    [
+      "kong_air_dog_squeakair_tennis_ball", "kong_duck_dog_toy", "kong_sitting_frog_dog_toy"
+    ],
+    "bin_F":
+    [
+      "mead_index_cards"
+    ],
+    "bin_G":
+    [
+      "elmers_washable_no_run_school_glue"
+    ],
+    "bin_H":
+    [
+      "laugh_out_loud_joke_book", "mark_twain_huckleberry_finn", "paper_mate_12_count_mirado_black_warrior", "crayola_64_ct"
+    ],
+    "bin_I":
+    [
+      "dr_browns_bottle_brush", "safety_works_safety_glasses"
+    ],
+    "bin_J":
+    [
+      "feline_greenies_dental_treats", "stanley_66_052", "cheezit_big_original"
+    ],
+    "bin_K":
+    [
+      "genuine_joe_plastic_stir_sticks"
+    ],
+    "bin_L":
+    [
+      "rolodex_jumbo_pencil_cup", "kyjen_squeakin_eggs_plush_puppies"
+    ]
+  },
+
+  "work_order":
+  [
+    {
+      "bin": "bin_A",
+      "item": "munchkin_white_hot_duck_bath_toy"
+    },
+    {
+      "bin": "bin_B",
+      "item": "champion_copper_plus_spark_plug"
+    },
+    {
+      "bin": "bin_C",
+      "item": "oreo_mega_stuf"
+    },
+    {
+      "bin": "bin_D",
+      "item": "mommys_helper_outlet_plugs"
+    },
+    {
+      "bin": "bin_E",
+      "item": "kong_sitting_frog_dog_toy"
+    },
+    {
+      "bin": "bin_F",
+      "item": "mead_index_cards"
+    },
+    {
+      "bin": "bin_G",
+      "item": "elmers_washable_no_run_school_glue"
+    },
+    {
+      "bin": "bin_H",
+      "item": "paper_mate_12_count_mirado_black_warrior"
+    },
+    {
+      "bin": "bin_I",
+      "item": "safety_works_safety_glasses"
+    },
+    {
+      "bin": "bin_J",
+      "item": "cheezit_big_original"
+    },
+    {
+      "bin": "bin_K",
+      "item": "genuine_joe_plastic_stir_sticks"
+    },
+    {
+      "bin": "bin_L",
+      "item": "kyjen_squeakin_eggs_plush_puppies"
+    }
+  ]
+}

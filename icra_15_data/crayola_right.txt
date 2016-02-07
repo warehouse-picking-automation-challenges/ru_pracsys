@@ -1,0 +1,30 @@
+1441731291, crayola_64_ct, right, 3, 1.5467300415, 25.1293079853, 50.8033220768, 18, 1, Reason
+1441731809, crayola_64_ct, right, 1, -1, -1, 23.2879657745, 204, 0, Failed to compute a valid grasp
+1441731867, crayola_64_ct, right, 1, -1, -1, 23.2494978905, 204, 0, Failed to compute a valid grasp
+1441731961, crayola_64_ct, right, 1, -1, -1, 23.4851510525, 204, 0, Failed to compute a valid grasp
+1441732116, crayola_64_ct, right, 1, -1, -1, 23.3759589195, 204, 0, Failed to compute a valid grasp
+1441732195, crayola_64_ct, right, 1, -1, -1, 23.3667640686, 204, 0, Failed to compute a valid grasp
+1441734446, crayola_64_ct, right, 2, -1, -1, 27.1182088852, 204, 0, Failed to compute a valid grasp
+1441734498, crayola_64_ct, right, 2, -1, -1, 27.1702148914, 204, 0, Failed to compute a valid grasp
+1441734544, crayola_64_ct, right, 2, -1, -1, 27.0408279896, 204, 0, Failed to compute a valid grasp
+1441734652, crayola_64_ct, right, 2, -1, -1, 26.9755728245, 204, 0, Failed to compute a valid grasp
+1441734735, crayola_64_ct, right, 2, -1, -1, 27.0558168888, 204, 0, Failed to compute a valid grasp
+1441734815, crayola_64_ct, right, 3, 7.86319184303, 41.6741821766, 75.6756749153, 23, 0, Physical fumble
+1441734945, crayola_64_ct, right, 3, 2.40107798576, 38.822329998, 63.6014649868, 6, 0, Physical fumble
+1441735694, crayola_64_ct, right, 3, 7.76434803009, 21.7141010761, 52.2438220978, 27, 1, Reason
+1441735808, crayola_64_ct, right, 3, 1.36691188812, 37.5889019966, 63.7627229691, 3, 1, Reason
+1441735966, crayola_64_ct, right, 4, -1, -1, 21.6710400581, 203, 0, Failed to compute a valid grasp
+1441736005, crayola_64_ct, right, 4, -1, -1, 21.871021986, 203, 0, Failed to compute a valid grasp
+1441736045, crayola_64_ct, right, 4, -1, -1, 21.6846528053, 203, 0, Failed to compute a valid grasp
+1441736082, crayola_64_ct, right, 4, -1, -1, 21.7791490555, 203, 0, Failed to compute a valid grasp
+1441736120, crayola_64_ct, right, 4, -1, -1, 21.7528598309, 203, 0, Failed to compute a valid grasp
+1441736176, crayola_64_ct, right, 5, -1, -1, 25.6023421288, 203, 0, Failed to compute a valid grasp
+1441736218, crayola_64_ct, right, 5, -1, -1, 25.8837161064, 203, 0, Failed to compute a valid grasp
+1441736288, crayola_64_ct, right, 5, -1, -1, 25.5687329769, 203, 0, Failed to compute a valid grasp
+1441736330, crayola_64_ct, right, 5, -1, -1, 26.1617379189, 203, 0, Failed to compute a valid grasp
+1441736370, crayola_64_ct, right, 5, -1, -1, 25.7209022045, 203, 0, Failed to compute a valid grasp
+1441736449, crayola_64_ct, right, 6, 31.299672842, 24.1571791172, 71.7988669872, 106, 0, Physical fumble
+1441736526, crayola_64_ct, right, 6, 2.76476693153, 62.4817371368, 90.0391969681, 15, 1, Reason
+1441736678, crayola_64_ct, right, 6, 20.3230950832, 40.6053860188, 88.9610409737, 37, 0, Physical fumble
+1441736798, crayola_64_ct, right, 6, 19.2515039444, 75.2121679783, 118.370495796, 19, 1, Reason
+1441736940, crayola_64_ct, right, 6, 8.25392603874, 62.3447420597, 95.1690781116, 84, 1, Reason

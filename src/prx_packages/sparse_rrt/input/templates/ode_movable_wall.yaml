@@ -1,0 +1,51 @@
+type: ode_plant
+geometries:
+  -
+    name: beam1
+    collision_geometry: 
+      type: box
+      dims: [28,.5,3.5]
+      material: blue
+    config: 
+      position: [105,30,.25]
+      orientation: [0,0,0,1]
+    dims: [28,.5,3.5]
+    mass_type: true
+    weight: 100
+  -
+    name: beam2
+    collision_geometry: 
+      type: box
+      dims: [28,.5,3.5]
+      material: blue
+    config: 
+      position: [105,31,.25]
+      orientation: [0,0,0,1]
+    dims: [28,.5,3.5]
+    mass_type: true
+    weight: 100
+  -
+    name: beam3
+    collision_geometry: 
+      type: box
+      dims: [28,.5,3.5]
+      material: blue
+    config: 
+      position: [55,130,.25]
+      orientation: [0,0,0,1]
+    dims: [28,.5,3.5]
+    mass_type: true
+    weight: 100
+  -
+    name: beam4
+    collision_geometry: 
+      type: box
+      dims: [28,.5,3.5]
+      material: blue
+    config: 
+      position: [55,131,.25]
+      orientation: [0,0,0,1]
+    dims: [28,.5,3.5]
+    mass_type: true
+    weight: 100
+collide_all: true

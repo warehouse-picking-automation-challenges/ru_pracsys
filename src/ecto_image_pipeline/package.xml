@@ -1,0 +1,27 @@
+<package>
+  <name>ecto_image_pipeline</name>
+  <version>0.5.4</version>
+  <description>Common tools for image based pipelines. Includes stereo and mono camera drivers, rectification, image sinks, calibration, etc..</description>
+  <author>Kurt Konolige</author>
+  <author email="erublee@willowgarage.com">Ethan Rublee</author>
+  <maintainer email="vincent.rabaud@gmail.com">Vincent Rabaud</maintainer>
+  <url>http://plasmodic.github.io/ecto_image_pipeline/</url>
+  <license>BSD</license>
+
+  <build_depend>cmake_modules</build_depend>
+  <build_depend>boost</build_depend>
+  <build_depend>cmake_modules</build_depend>
+  <build_depend>ecto</build_depend>
+  <build_depend>eigen</build_depend>
+  <build_depend>opencv_candidate</build_depend>
+
+  <run_depend>cmake_modules</run_depend>
+  <run_depend>boost</run_depend>
+  <run_depend>ecto</run_depend>
+  <run_depend>ecto_opencv</run_depend>
+  <run_depend>ecto_ros</run_depend>
+  <run_depend>eigen</run_depend>
+  <run_depend>opencv_candidate</run_depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

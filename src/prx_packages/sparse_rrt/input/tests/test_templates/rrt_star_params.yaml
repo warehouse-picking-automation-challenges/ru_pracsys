@@ -1,0 +1,164 @@
+NNNNNN:
+  consumer: simulator/consumer
+  debug: true
+  motion_planner:
+    max_attempts: 10
+    sampler: {type: uniform_sampler}
+    type: rrt_star
+    validity_checker: {type: world_model_validity_checker}
+    visualization_solution_name: /sparse_rrt/solution
+    visualization_tree_name: /sparse_rrt/graph
+  persistent: false
+  queries:
+    query1: {template: query_type}
+  query_type:
+    goal:
+      distance_metric: {distance_function: default, type: linear_distance_metric}
+      goal_state: [100, 0]
+      radius: 2
+      type: radial_goal_region
+    start_state: [0, 10]
+    stopping_criteria:
+      elements:
+        criterion1: {condition: 300, type: timed_criterion}
+    type: motion_planning_query
+  random_seed: ####
+  simulate: false
+  system_mapping:
+  - pair: [simulator/consumer/system, world_model/simulator/system]
+  task_planner:
+    planners:
+      NNNNNN:
+        collision_checking: true
+        cost_threshold: 4
+        delta_drain: 0
+        delta_near: 0
+        distance_metric: {distance_function: default, type: graph_distance_metric}
+        local_planner: {accepted_radius: 2, learning_rate: 0.05, lower_multiple: 50,
+          num_controls: 1, type: bvp_local_planner, upper_multiple: 110}
+        max_points: 500000
+        radius_solution: true
+        reduction_rate: 0
+        sampler: {type: uniform_sampler}
+        space_name: no_embedding
+        template: motion_planner
+        validity_checker: {type: world_model_validity_checker}
+        vis_cost: false
+        vis_drain: false
+        vis_near: false
+        visualization_body: simulator/system/body
+        visualize: false
+        visualize_solution: false
+        visualize_tree: false
+    stats_criteria:
+      elements:
+        criterion1: {condition: 10, type: timed_criterion}
+    type: single_shot
+  type: single_query_application
+  visualize: false
+  world_model:
+    embeddings:
+      space1:
+        default: {type: full_mapping}
+    simulator:
+      collision_checker: {type: pqp}
+      obstacles:
+        building1:
+          geometries:
+          - collision_geometry:
+              dims: [10, 30, 3]
+              material: black
+              type: box
+            config:
+              orientation: [0, 0, 0, 1]
+              position: [50, 21, 0]
+            name: obstacle
+          - collision_geometry:
+              dims: [10, 2, 3]
+              material: black
+              type: box
+            config:
+              orientation: [0, 0, 0, 1]
+              position: [50, -2, 0]
+            name: obstacle2
+          type: obstacle
+      simulation_step: 0.002
+      subsystems:
+        system:
+          geometries:
+          - collision_geometry: {height: 2.0, material: white, radius: 3, type: cylinder}
+            name: body
+          input_control_space:
+            max: [50, 0.785398]
+            min: [49, -0.785398]
+            scale: [1, 1]
+          integrator: {type: euler}
+          max_step: 0.35
+          root_geom: body
+          state_space:
+            max: [110, 80]
+            min: [-10, -3]
+            scale: [1, 1]
+          type: disk
+          z: 2
+      type: collision_stop_simulator
+application: {type: empty_application}
+controller: {active_queries: false, keep_last_control: true, planning_node: /planning,
+  smooth: false, type: consumer_controller}
+initialization: {}
+input_keys: {'65293': false}
+plant:
+  geometries:
+  - collision_geometry: {height: 2.0, material: white, radius: 3, type: cylinder}
+    name: body
+  input_control_space:
+    max: [50, 0.785398]
+    min: [49, -0.785398]
+    scale: [1, 1]
+  integrator: {type: rk4}
+  max_step: 0.35
+  root_geom: body
+  state_space:
+    max: [110, 80]
+    min: [-10, -3]
+    scale: [1, 1]
+  type: disk
+  z: 2
+simulator:
+  collision_checker: {type: pqp}
+  obstacles:
+    building1:
+      geometries:
+      - collision_geometry:
+          dims: [10, 30, 3]
+          material: black
+          type: box
+        config:
+          orientation: [0, 0, 0, 1]
+          position: [50, 21, 0]
+        name: obstacle
+      - collision_geometry:
+          dims: [10, 2, 3]
+          material: black
+          type: box
+        config:
+          orientation: [0, 0, 0, 1]
+          position: [50, -2, 0]
+        name: obstacle2
+      type: obstacle
+  simulation_step: 0.002
+  subsystems:
+    consumer:
+      planning_node: /NNNNNN
+      subsystems:
+        system:
+          initial_state: [0, 10]
+          template: plant
+      template: controller
+  type: collision_stop_simulator
+spaces: {AirControl: EEE, Airplane: EEEREEE, DynamicRigidBody: EEEQQQQEEEEEE, EMPTY: '',
+  HeliControl: EERR, ODE_B: E, ODE_J: E, OneLink: RE, R: R, RR: RR, RallyCar: EEEEREEE,
+  RallyCarTask: EEER, Rd: E, Rdd: E, SE2: EER, SE3: EEEQQQQ, SOCar: EEREE, TWO_D_BODY: EEEE,
+  ThreeLink: RRREEE, Time: E, TwoLink: RREE, Vector: ER, WheelControl: REE, X: E,
+  XR: ER, XXd: EE, XXdRRd: EERE, XY: EE, XYZ: EEE, Xd: E, XdRd: EE, XdYd: EE, Xdd: E,
+  XddRdd: EE, XddYdd: EE, bomb_state: EEE}

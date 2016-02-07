@@ -1,0 +1,146 @@
+<!-- This file has been tested on PRACSYS revision  -->
+
+<launch>
+
+    <!-- = = = = = = = = = = -->
+    <!-- = = = = = = = = = = -->
+    <!-- = Simulation Node = -->
+    <!-- = = = = = = = = = = -->
+    <!-- = = = = = = = = = = -->
+    <rosparam command="load" ns="simulation" file="$(find prx_input)/templates/applications/empty_application.yaml"/>
+    <rosparam command="load" ns="simulation" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+    <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+    
+    <rosparam command="load" ns="simulation/simulator/obstacles" file="$(find prx_input)/templates/environments/barriers.yaml"/>
+    
+    <!-- Load template files -->
+    
+    <rosparam command="load" ns="simulation/controller" file="$(find prx_input)/templates/controllers/consumer.yaml"/>
+    <rosparam command="load" ns="simulation/plant" file="$(find prx_input)/templates/plants/point_cube.yaml"/>
+    
+    <!-- Override template parameters -->
+    
+    <rosparam ns="simulation/controller">
+    </rosparam>
+    
+    <rosparam ns="simulation/plant">
+        initial_state: [-4.5,-4,1]
+    </rosparam>
+    
+    <rosparam command="load" ns="simulation/simulator/subsystems/consumer">
+        template: "controller"
+    </rosparam>
+    
+    <rosparam command="load" ns="simulation/simulator/subsystems/consumer/subsystems/disk">
+        template: "plant"
+    </rosparam>
+    
+    <!-- Define the simulation node -->
+    <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+     required="true" launch-prefix="" output="screen" />
+    
+    <!-- = = = = = = = = = -->
+    <!-- = = = = = = = = = -->
+    <!-- = Planning Node = -->
+    <!-- = = = = = = = = = -->
+    <!-- = = = = = = = = = -->
+    <!-- Include the world model you wish to use.  The namespace you place this in must match the planning node name below. -->
+    <rosparam ns="planning/">
+        <!-- First define the mapping between simulation and world model plants -->
+        system_mapping:
+          - 
+            pair: [simulator/consumer/disk, world_model/simulator/disk]
+        
+        consumer: simulator/consumer
+    </rosparam>
+    
+    <rosparam command="load" ns="planning/world_model/simulator/obstacles" file="$(find prx_input)/templates/environments/barriers.yaml"/>
+    
+    <rosparam ns="planning/world_model/planning_contexts">
+        space1:
+          default:
+            type: "full_mapping"
+    </rosparam>
+    
+    <!-- Specify the internal simulator and systems the world model will use -->
+    <rosparam ns="planning/world_model/" command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+    <rosparam command="load" ns="planning/world_model/simulator/subsystems/disk" file="$(find prx_input)/templates/plants/point_cube.yaml"/>
+    
+    <!-- Load the planning application -->
+    <rosparam ns="planning/" command="load" file="$(find prx_input)/templates/planning_applications/single_query_application.yaml"/>
+    
+    <!-- Important to change for headless<->visualized change -->
+    <rosparam ns="planning/">
+        random_seed: 89506
+        consumer_mapping:
+          - 
+            pair: [simulator/consumer, space1]
+        persistent: true
+        simulate: true
+        visualize: true
+    </rosparam>
+    
+    <!-- We currently only support one task planner. It will be future work to bring task planners that work on task planners. -->
+    <rosparam command="load" ns="planning/task_planner/" file="$(find prx_input)/templates/task_planners/single_shot.yaml"/>
+    
+    <rosparam ns="planning/task_planner/planners/" >
+        planner1:
+          type: naive_sparse
+          space_name: "space1"
+          visualization_bodies: ["simulator/disk/body"]
+          visualize_graph: true
+          visualize_solutions: false
+          delta_prm: false
+          pno_mode: false
+    </rosparam>
+    
+    <rosparam ns="planning/task_planner/" >
+        stats_criteria:
+          elements:
+            criterion1:
+              type: iteration_criterion
+              condition: 20000
+    </rosparam>
+    
+    
+    <!-- What queries you wish to run -->
+    <rosparam ns="planning/problems/">
+      problem1:
+        specification:
+          type: motion_planning_specification
+          validity_checker:
+            type: world_model_validity_checker
+          sampler:
+            type: uniform_sampler
+          distance_metric:
+            type: graph_distance_metric
+          local_planner:
+            type: bvp_local_planner
+          stopping_criteria:
+            elements:
+              criterion1:
+                type: iteration_criterion
+                condition: 328
+        query:
+          type: motion_planning_query
+          start_state: [-4.5,-4,1]
+          goal:
+            type: "goal_state"
+            distance_metric:
+              type: ann_distance_metric
+            goal_state: [4.5,4,9]
+    </rosparam>
+    
+    <!-- Define the planning node -->
+    <node name="planning" pkg="prx_planning" type="prx_planning"
+    required="true" launch-prefix="gdb --args" output="screen" args="planning" />
+    
+    <!-- = = = = = = = = = = = -->
+    <!-- = = = = = = = = = = = -->
+    <!-- = Visualization Node = -->
+    <!-- = = = = = = = = = = = -->
+    <!-- = = = = = = = = = = = -->
+    <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+</launch>
+

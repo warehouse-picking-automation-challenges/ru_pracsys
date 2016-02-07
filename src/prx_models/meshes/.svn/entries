@@ -1,0 +1,70 @@
+10
+
+dir
+11
+svn+ssh://rahul@ghost.cs.rutgers.edu/Users/kb572/repositories/pracsys_models/meshes
+svn+ssh://rahul@ghost.cs.rutgers.edu/Users/kb572/repositories/pracsys_models
+
+
+
+2014-01-30T04:41:11.463252Z
+10
+rahul
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0830d76a-f09f-4c9d-a527-08618a1fc3d6
+
+lower_elbow
+dir
+
+upper_shoulder
+dir
+
+head
+dir
+
+electric_gripper
+dir
+
+lower_forearm
+dir
+
+upper_elbow
+dir
+
+cans
+dir
+
+torso
+dir
+
+upper_forearm
+dir
+
+wrist
+dir
+
+base
+dir
+
+cups
+dir
+
+lower_shoulder
+dir
+
+pneumatic_gripper
+dir
+

@@ -1,0 +1,30 @@
+type: two_link_acrobot
+z: 1.5
+integrator:
+  type: rk4
+state_space: 
+  min: [-3.14, -3.14, -6, -6]
+  max: [3.14, 3.14, 6, 6]
+input_control_space: 
+  min: [-4]
+  max: [ 4]
+root_geom: ball
+geometries:
+  -
+    name: ball
+    collision_geometry:
+      type: sphere
+      radius: 1.5
+      material: black
+  -
+    name: rod1
+    collision_geometry:
+      type: box
+      dims: [20, 1, 1]
+      material: blue 
+  -
+    name: rod2
+    collision_geometry:
+      type: box
+      dims: [20, 1, 1]
+      material: red 

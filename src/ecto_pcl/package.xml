@@ -1,0 +1,28 @@
+<package>
+  <name>ecto_pcl</name>
+  <version>0.4.2</version>
+  <description>Ecto bindings for common PCL functionality.</description>
+  <author email="mferguson@willowgarage.com">Michael Ferguson</author>
+  <author email="erublee@willowgarage.com">Ethan Rublee</author>
+  <author email="straszheim@willowgarage.com">Troy Straszheim</author>
+  <maintainer email="vincent.rabaud@gmail.com">Vincent Rabaud</maintainer>
+  <license>BSD</license>
+
+  <url>http://plasmodic.github.io/ecto_pcl</url>
+
+  <build_depend>boost</build_depend>
+  <build_depend>ecto</build_depend>
+  <build_depend>ecto_ros</build_depend>
+  <build_depend>pcl_conversions</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+
+  <run_depend>boost</run_depend>
+  <run_depend>ecto</run_depend>
+  <run_depend>ecto_ros</run_depend>
+  <run_depend>pcl_conversions</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

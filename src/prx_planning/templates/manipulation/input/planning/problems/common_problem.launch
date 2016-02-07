@@ -1,0 +1,37 @@
+<launch>
+
+  <!-- This file is meant to store the query to use in the application.  -->
+
+
+  <!-- Load template files -->
+       
+  <rosparam command="load" ns="query_type" file="$(find manipulation)/input/planning/queries/query1cup.yaml"/>
+
+
+  <!-- Specify the query parameters --> 
+
+  <rosparam ns="problems">
+  manipulation_problem:
+    specification:
+      type: "manipulation_specification"
+      validity_checker: 
+        type: world_model_validity_checker
+      sampler:
+        type: uniform_sampler
+      distance_metric:
+        type: linear_distance_metric
+      local_planner:
+        type: bvp_local_planner
+      z_on_table: 3.4775
+      max_tries: 20
+      max_different_grasps: 3
+      retract_distance: 0.05
+      raise_distance: 0.03
+      num_poses: 0
+      safe_position: [0.25684,-1.34394,0.42624,2.61800,2.84100,2.09400,-0.06762,0]
+    query:
+      template: query_type      
+  </rosparam>
+
+</launch>
+

@@ -1,0 +1,134 @@
+digraph G {
+node [shape=box];
+"base" [label="base"];
+"collision_head_link_1" [label="collision_head_link_1"];
+"collision_head_link_2" [label="collision_head_link_2"];
+"torso" [label="torso"];
+"head" [label="head"];
+"dummyhead1" [label="dummyhead1"];
+"head_camera" [label="head_camera"];
+"screen" [label="screen"];
+"left_arm_mount" [label="left_arm_mount"];
+"left_upper_shoulder" [label="left_upper_shoulder"];
+"left_lower_shoulder" [label="left_lower_shoulder"];
+"left_upper_elbow" [label="left_upper_elbow"];
+"left_lower_elbow" [label="left_lower_elbow"];
+"left_upper_forearm" [label="left_upper_forearm"];
+"left_arm_itb" [label="left_arm_itb"];
+"left_lower_forearm" [label="left_lower_forearm"];
+"left_wrist" [label="left_wrist"];
+"left_hand" [label="left_hand"];
+"left_gripper" [label="left_gripper"];
+"left_hand_camera" [label="left_hand_camera"];
+"left_hand_camera_axis" [label="left_hand_camera_axis"];
+"left_hand_range" [label="left_hand_range"];
+"left_upper_forearm_visual" [label="left_upper_forearm_visual"];
+"left_upper_elbow_visual" [label="left_upper_elbow_visual"];
+"left_torso_itb" [label="left_torso_itb"];
+"pedestal" [label="pedestal"];
+"right_arm_mount" [label="right_arm_mount"];
+"right_upper_shoulder" [label="right_upper_shoulder"];
+"right_lower_shoulder" [label="right_lower_shoulder"];
+"right_upper_elbow" [label="right_upper_elbow"];
+"right_lower_elbow" [label="right_lower_elbow"];
+"right_upper_forearm" [label="right_upper_forearm"];
+"right_arm_itb" [label="right_arm_itb"];
+"right_lower_forearm" [label="right_lower_forearm"];
+"right_wrist" [label="right_wrist"];
+"right_hand" [label="right_hand"];
+"right_gripper" [label="right_gripper"];
+"right_hand_camera" [label="right_hand_camera"];
+"right_hand_camera_axis" [label="right_hand_camera_axis"];
+"right_hand_range" [label="right_hand_range"];
+"right_upper_forearm_visual" [label="right_upper_forearm_visual"];
+"right_upper_elbow_visual" [label="right_upper_elbow_visual"];
+"right_torso_itb" [label="right_torso_itb"];
+"sonar_ring" [label="sonar_ring"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base" -> "collision_head_1" [label="xyz: 0.11 0 0.75 \nrpy: 0 -0 0"]
+"collision_head_1" -> "collision_head_link_1"
+"base" -> "collision_head_2" [label="xyz: 0.11 0 0.75 \nrpy: 0 -0 0"]
+"collision_head_2" -> "collision_head_link_2"
+"base" -> "torso_t0" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"torso_t0" -> "torso"
+"torso" -> "head_pan" [label="xyz: 0.0947 0 0.686 \nrpy: 0 -0 0"]
+"head_pan" -> "head"
+"head" -> "dummy" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"dummy" -> "dummyhead1"
+"head" -> "head_camera" [label="xyz: 0.12839 0 0.06368 \nrpy: 1.91986 -0 1.5708"]
+"head_camera" -> "head_camera"
+"head" -> "head_nod" [label="xyz: 0.088 0 0 \nrpy: 1.91986 -0 1.5708"]
+"head_nod" -> "screen"
+"torso" -> "left_torso_arm_mount" [label="xyz: 0.024645 0.219645 0.118588 \nrpy: 0 -0 0.7854"]
+"left_torso_arm_mount" -> "left_arm_mount"
+"left_arm_mount" -> "left_s0" [label="xyz: 0.055695 0 0.011038 \nrpy: 0 -0 0"]
+"left_s0" -> "left_upper_shoulder"
+"left_upper_shoulder" -> "left_s1" [label="xyz: 0.069 0 0.27035 \nrpy: -1.5708 0 0"]
+"left_s1" -> "left_lower_shoulder"
+"left_lower_shoulder" -> "left_e0" [label="xyz: 0.102 0 0 \nrpy: 1.5708 -5.55112e-17 1.5708"]
+"left_e0" -> "left_upper_elbow"
+"left_upper_elbow" -> "left_e1" [label="xyz: 0.069 0 0.26242 \nrpy: -1.57081 -1.5708 1.13367e-05"]
+"left_e1" -> "left_lower_elbow"
+"left_lower_elbow" -> "left_w0" [label="xyz: 0.10359 0 0 \nrpy: 1.5708 -5.55112e-17 1.5708"]
+"left_w0" -> "left_upper_forearm"
+"left_upper_forearm" -> "left_w0_to_itb_fixed" [label="xyz: -0.0565 0 0.12 \nrpy: -1.5708 5.55112e-17 1.5708"]
+"left_w0_to_itb_fixed" -> "left_arm_itb"
+"left_upper_forearm" -> "left_w1" [label="xyz: 0.01 0 0.2707 \nrpy: -1.57081 -1.5708 1.13367e-05"]
+"left_w1" -> "left_lower_forearm"
+"left_lower_forearm" -> "left_w2" [label="xyz: 0.115975 0 0 \nrpy: 1.5708 -5.55112e-17 1.5708"]
+"left_w2" -> "left_wrist"
+"left_wrist" -> "left_hand" [label="xyz: 0 0 0.11355 \nrpy: 0 -0 0"]
+"left_hand" -> "left_hand"
+"left_hand" -> "left_endpoint" [label="xyz: 0 0 0.05 \nrpy: 0 -0 0"]
+"left_endpoint" -> "left_gripper"
+"left_hand" -> "left_hand_camera" [label="xyz: 0.03825 0.012 0.015355 \nrpy: 0 0 -1.5708"]
+"left_hand_camera" -> "left_hand_camera"
+"left_hand" -> "left_hand_camera_axis" [label="xyz: 0.03825 0.012 0.015355 \nrpy: 0 -0 0"]
+"left_hand_camera_axis" -> "left_hand_camera_axis"
+"left_hand" -> "left_hand_range" [label="xyz: 0.032 -0.020245 0.0288 \nrpy: 1.13367e-05 -1.5708 -1.57081"]
+"left_hand_range" -> "left_hand_range"
+"left_lower_elbow" -> "left_w0_fixed" [label="xyz: 0.088 0 0 \nrpy: 1.5708 -5.55112e-17 1.5708"]
+"left_w0_fixed" -> "left_upper_forearm_visual"
+"left_lower_shoulder" -> "left_e0_fixed" [label="xyz: 0.107 0 0 \nrpy: 1.5708 -5.55112e-17 1.5708"]
+"left_e0_fixed" -> "left_upper_elbow_visual"
+"torso" -> "left_torso_itb_fixed" [label="xyz: -0.08897 0.15593 0.389125 \nrpy: 1.5708 9.26536e-05 3.14159"]
+"left_torso_itb_fixed" -> "left_torso_itb"
+"torso" -> "pedestal_fixed" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"pedestal_fixed" -> "pedestal"
+"torso" -> "right_torso_arm_mount" [label="xyz: 0.024645 -0.219645 0.118588 \nrpy: 0 0 -0.7854"]
+"right_torso_arm_mount" -> "right_arm_mount"
+"right_arm_mount" -> "right_s0" [label="xyz: 0.055695 0 0.011038 \nrpy: 0 -0 0"]
+"right_s0" -> "right_upper_shoulder"
+"right_upper_shoulder" -> "right_s1" [label="xyz: 0.069 0 0.27035 \nrpy: -1.5708 0 0"]
+"right_s1" -> "right_lower_shoulder"
+"right_lower_shoulder" -> "right_e0" [label="xyz: 0.102 0 0 \nrpy: 1.5708 -5.55112e-17 1.5708"]
+"right_e0" -> "right_upper_elbow"
+"right_upper_elbow" -> "right_e1" [label="xyz: 0.069 0 0.26242 \nrpy: -1.57081 -1.5708 1.13367e-05"]
+"right_e1" -> "right_lower_elbow"
+"right_lower_elbow" -> "right_w0" [label="xyz: 0.10359 0 0 \nrpy: 1.5708 -5.55112e-17 1.5708"]
+"right_w0" -> "right_upper_forearm"
+"right_upper_forearm" -> "right_w0_to_itb_fixed" [label="xyz: -0.0565 0 0.12 \nrpy: -1.5708 5.55112e-17 1.5708"]
+"right_w0_to_itb_fixed" -> "right_arm_itb"
+"right_upper_forearm" -> "right_w1" [label="xyz: 0.01 0 0.2707 \nrpy: -1.57081 -1.5708 1.13367e-05"]
+"right_w1" -> "right_lower_forearm"
+"right_lower_forearm" -> "right_w2" [label="xyz: 0.115975 0 0 \nrpy: 1.5708 -5.55112e-17 1.5708"]
+"right_w2" -> "right_wrist"
+"right_wrist" -> "right_hand" [label="xyz: 0 0 0.11355 \nrpy: 0 -0 0"]
+"right_hand" -> "right_hand"
+"right_hand" -> "right_endpoint" [label="xyz: 0 0 0.05 \nrpy: 0 -0 0"]
+"right_endpoint" -> "right_gripper"
+"right_hand" -> "right_hand_camera" [label="xyz: 0.03825 0.012 0.015355 \nrpy: 0 0 -1.5708"]
+"right_hand_camera" -> "right_hand_camera"
+"right_hand" -> "right_hand_camera_axis" [label="xyz: 0.03825 0.012 0.015355 \nrpy: 0 -0 0"]
+"right_hand_camera_axis" -> "right_hand_camera_axis"
+"right_hand" -> "right_hand_range" [label="xyz: 0.032 -0.020245 0.0288 \nrpy: 1.13367e-05 -1.5708 -1.57081"]
+"right_hand_range" -> "right_hand_range"
+"right_lower_elbow" -> "right_w0_fixed" [label="xyz: 0.088 0 0 \nrpy: 1.5708 -5.55112e-17 1.5708"]
+"right_w0_fixed" -> "right_upper_forearm_visual"
+"right_lower_shoulder" -> "right_e0_fixed" [label="xyz: 0.107 0 0 \nrpy: 1.5708 -5.55112e-17 1.5708"]
+"right_e0_fixed" -> "right_upper_elbow_visual"
+"torso" -> "right_torso_itb_fixed" [label="xyz: -0.08897 -0.15593 0.389125 \nrpy: 1.5708 -0 0"]
+"right_torso_itb_fixed" -> "right_torso_itb"
+"torso" -> "sonar_s0" [label="xyz: 0.0947 0 0.817 \nrpy: 0 -0 0"]
+"sonar_s0" -> "sonar_ring"
+}

@@ -1,0 +1,45 @@
+<launch>
+  <!--<rosparam command="load" file="$(find prx_input)/templates/planning_applications/single_query_application.yaml" />-->
+  
+  <rosparam command="load" file="$(find dynamic_prm)/input/applications/dprm_plan_application.yaml" />
+  
+  <rosparam>
+  simulate: true
+  visualize: true
+  random_seed: 42
+  </rosparam>
+  
+  <rosparam command="load" ns="motion_planner/" file="$(find dynamic_prm)/input/motion_planners/dprm_motion_planner.yaml" />
+  
+  <!--<rosparam command="load" ns="task_planner/" file="$(find prx_input)/templates/task_planners/single_shot.yaml" />-->
+  
+  <!--<rosparam command="load" ns="task_planner/" file="$(find dynamic_prm)/input/task_planners/serializing_task_planner.yaml" />-->
+  
+  <!--<rosparam command="load" ns="motion_planner/" file="$(find prx_input)/templates/motion_planners/prm_star.yaml"/>-->
+  
+  <rosparam command="load" ns="task_planner/" file="$(find dynamic_prm)/input/task_planners/dprm_task_planner.yaml" />
+  
+  
+  
+  <rosparam command="load" ns="task_planner/">
+    validity_checker:
+      type: roadmap_validity_checker
+  </rosparam>
+  
+  
+  <rosparam ns="task_planner/planners/">
+  planner1:
+    template: "motion_planner"
+    space_name: "space1"
+    deserialize_file: "../prx_packages/dynamic_prm/roadmap_200.txt"
+    visualization_bodies: ["simulator/manipulator/left_lower_shoulder"]
+    visualize_graph: true
+    visualize_solutions: true
+    solutions_colors: [blue]
+    visualize: true
+    collision_checking: true
+    delta_prm: false
+    distance_metric:
+      type: linear_distance_metric
+  </rosparam>
+</launch>

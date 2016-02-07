@@ -1,0 +1,5 @@
+type: feedback_controller
+planning_node: /planning
+keep_last_control: true
+active_queries: false
+smooth: false

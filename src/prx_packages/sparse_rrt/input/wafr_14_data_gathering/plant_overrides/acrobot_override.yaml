@@ -1,0 +1,8 @@
+space_name: full_space
+delta_drain: .5
+delta_near: 1
+local_planner:
+  lower_multiple: 20
+  upper_multiple: 50
+near_threshold: .5
+max_attempts: 1

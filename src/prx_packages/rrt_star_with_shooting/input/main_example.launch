@@ -1,0 +1,11 @@
+<!-- This file has been tested on PRACSYS revision 3007 -->
+
+<launch>
+  <include file="$(find rrt_star_with_shooting)/input/simulation/simulation.launch"/>
+  <include file="$(find rrt_star_with_shooting)/input/planning/planning.launch"/>
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+  <rosparam ns="visualization/viewer/scene" >
+   line_thickness: 3
+  </rosparam>
+<rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+</launch>

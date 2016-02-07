@@ -1,0 +1,27 @@
+<launch>
+ <rosparam>
+  system_mapping:
+  -
+    pair: [simulator/consumer/baxter, world_model/simulator/baxter]
+  consumer: simulator/consumer
+  </rosparam>
+
+  <rosparam ns="world_model/planning_contexts">
+  full_space:
+    default:
+      type: full_mapping
+  </rosparam>
+
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+  <rosparam ns="world_model" command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+  <rosparam command="load" ns="world_model/simulator/subsystems/baxter" file="$(find baxter)input/urdf/baxter.yaml"/>
+
+  <rosparam ns="world_model/simulator/subsystems/baxter">
+    hand: left
+  </rosparam>
+
+  <rosparam command="load" ns="world_model/simulator/obstacles" file="$(find baxter)/input/simulation/baxter_torso.yaml" />
+  <!-- <rosparam command="load" ns="world_model/simulator/obstacles" file="$(find manipulation)/input/environments/table.yaml" /> -->
+
+</launch>

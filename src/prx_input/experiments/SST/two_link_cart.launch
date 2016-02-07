@@ -1,0 +1,124 @@
+<launch>
+ <rosparam file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+
+<rosparam ns="simulation" file="$(find prx_input)/templates/applications/empty_application.yaml"/>
+<rosparam ns="simulation" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+<rosparam ns="simulation/controller" file="$(find prx_input)/templates/controllers/consumer.yaml"/>
+<rosparam ns="simulation/plant" file="$(find prx_input)/templates/plants/two_link_cart.yaml"/>
+
+<rosparam ns="simulation/simulator/subsystems/consumer">
+  template: "controller"
+  keep_last_control: false
+  keep_last_state: true
+</rosparam>
+
+<rosparam ns="simulation/simulator/subsystems/consumer/subsystems/rover">
+template: "plant"
+initial_state: [0,0,0,0,0,0]
+</rosparam>
+
+
+  <rosparam ns="simulation/simulator/obstacles" file="$(find prx_input)/templates/environments/two_link_cart_obstacles/two_spheres.yaml" />
+
+  <rosparam ns="planning" file="$(find prx_input)/templates/planning_applications/single_query_application.yaml"/>
+
+<rosparam ns="planning">
+random_seed: 56849
+consumer_mapping:
+  - 
+    pair: [simulator/consumer, true_space]
+</rosparam>
+        
+  <!-- Load template files -->
+       
+  <rosparam ns="planning/motion_planner/" file="$(find prx_input)/templates/motion_planners/sst.yaml"/>
+ 
+  <rosparam ns="planning/task_planner/" file="$(find prx_input)/templates/task_planners/single_shot.yaml"/>
+
+  <rosparam ns="planning/task_planner/" >
+    stats_criteria:
+      elements:
+        criterion1:
+          condition: 500
+          type: iteration_criterion
+  </rosparam>
+
+<rosparam ns="planning/task_planner/planners/" >
+planner1:
+  template: "motion_planner"
+  type: sst
+  space_name: "true_space"
+  visualization_body: "simulator/rover/ball"
+  visualize_tree: false
+  visualize_solution: true
+  sample_metric:
+    type: graph_distance_metric
+  max_points: 300001
+  delta_drain: .02
+  steering: false
+  delta_near: .05
+</rosparam>
+       
+  <rosparam ns="planning/query_type" file="$(find prx_input)/templates/queries/motion_planning_query.yaml"/>
+<rosparam ns="planning/problems">
+problem1:
+  specification:
+    type: motion_planning_specification
+    validity_checker: 
+      type: world_model_validity_checker
+    sampler:
+      type: uniform_sampler
+    distance_metric:
+      type: graph_distance_metric
+    local_planner:
+      type: time_varying_local_planner
+      lower_multiple: 10
+      upper_multiple: 50
+    seeds:
+      -
+        state: [0,0,0,0,0,0]
+    stopping_criteria:
+      elements:
+        criterion1:
+          type: iteration_criterion
+          condition: 100000
+  query:
+    template: "query_type"
+    start_state: [0,0,0,0,0,0]
+    goal:
+      type: "radial_goal_region"
+      distance_metric:
+        type: ann_distance_metric
+      goal_state: [0,0,0,0,6,0]
+      radius: .03
+</rosparam>
+
+<rosparam ns="planning">
+  system_mapping:
+  - 
+    pair: [simulator/consumer/rover, world_model/simulator/rover]
+
+  consumer: simulator/consumer
+</rosparam>
+
+<rosparam ns="planning/world_model/planning_contexts">
+true_space:
+  default:
+    type: "full_mapping"
+</rosparam>
+  <rosparam ns="planning/world_model" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+
+
+  <rosparam ns="planning/world_model/simulator/obstacles" file="$(find prx_input)/templates/environments/two_link_cart_obstacles/two_spheres.yaml" />
+
+  <rosparam ns="planning/world_model/simulator/subsystems/rover" file="$(find prx_input)/templates/plants/two_link_cart.yaml"/>
+
+<node name="simulation" pkg="prx_simulation" type="prx_simulation" required="true" launch-prefix="" output="screen" args="simulation"/>
+
+<node name="planning" pkg="prx_planning" type="prx_planning" required="false" launch-prefix="" output="screen" args="planning" />
+
+<include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+
+</launch>

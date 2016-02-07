@@ -1,0 +1,81 @@
+roslaunch robot_interface_streaming_sda10f.launch robot_ip:=172.16.71.101 controller:=fs100 version0:=false
+roslaunch motoman_sda10f_moveit_config moveit_planning_execution.launch robot_ip:=172.16.71.101 controller:=fs100 version0:=false
+
+added
+
+	<rosparam command="load" file="$(find motoman_sda10f_support)/config/sda10f_state_interface.yaml" />
+	<rosparam command="load" file="$(find motoman_sda10f_support)/config/joint_names_sda10f.yaml" />
+
+to the robot_interface_streaming_fs100.launch
+
+
+[arm_left_joint_1_s,arm_left_joint_2_l,arm_left_joint_3_e,arm_left_joint_4_u,arm_left_joint_5_r,arm_left_joint_6_b,arm_left_joint_7_t,arm_right_joint_1_s,arm_right_joint_2_l,arm_right_joint_3_e,arm_right_joint_4_u,arm_right_joint_5_r,arm_right_joint_6_b,arm_right_joint_7_t,torso_joint_b1,torso_joint_b2]
+
+
+
+
+Using actionlib to move the motoman
+
+  _left_client = actionlib.SimpleActionClient(
+            '/joint_trajectory_action',
+            FollowJointTrajectoryAction,
+        )
+
+  print "Waiting..."
+  _left_client.wait_for_server();
+  print "Done waiting"
+
+  goal = FollowJointTrajectoryGoal()
+  goal.trajectory = traj
+  goal.trajectory.header.stamp = rospy.Time.now()
+  _left_client.send_goal(goal)
+  print "Sent goal"
+
+
+
+
+
+To move to position:
+
+roslaunch motoman_driver robot_interface_streaming_fs100.launch robot_ip:=172.16.71.101 version0:=false
+rosrun motoman_driver move_to_joint.py "[.3,0,0,0,0,0,0,.3,0,0,0,0,0,0,.1,0]" 1
+
+
+Simulation
+cd Desktop
+roslaunch motoman_sim.launch model:=sda10f.urdf
+rosrun motoman_driver move_to_joint.py "[.3,0,0,0,0,0,0,.3,0,0,0,0,0,0,.1,0]" 1
+
+
+
+
+
+
+
+
+
+
+
+
+For Demo:
+
+rosrun prx_simulation move_to_joint.py "[1.5, 1.3, 0, 0, 0, 0, 0,    1.5, 1.3, 0, 0, 0, 0, 0,     0, 0]" 5
+rosrun prx_simulation move_to_joint.py "[0, 0, 0, 0, 0, 0, 0,    0, 0, 0, 0, 0, 0, 0,     0, 0]" 5
+rosrun prx_simulation move_to_joint.py "[1.5, 1.3, 0, 0, 0, 0, 0,    1.5, 1.3, 0, 0, 0, 0, 0,     1.5, 0]" 5
+rosrun prx_simulation move_to_joint.py "[1.5, 1.3, 0, 0, 0, 0, 0,    1.5, 1.3, 0, 0, 0, 0, 0,     -1.5, 0]" 5
+rosrun prx_simulation move_to_joint.py "[1.5, 1.3, 0, 0, 0, 0, 0,    1.5, 1.3, 0, 0, 0, 0, 0,     0, 0]" 5
+rosrun prx_simulation move_to_joint.py "[1.5, 1.3, 0, 0, 0, 0, 0,    1.5, 1.3, 0, 0, 0, 0, 0,     0, 0]" 5
+rosrun prx_simulation move_to_joint.py "[1.5, 1.3, 0, 1.2, 0, 1.5, 0,    1.5, 1.3, 0, 1.2, 0, 1.5, 0,     0, 0]" 5
+rosrun prx_simulation move_to_joint.py "[1.5, 1.3, 0, 0, 0, 0, 0,    1.5, 1.3, 0, 0, 0, 0, 0,     0, 0]" 5
+
+
+
+//entering bottom left bin
+rosrun prx_simulation move_to_joint.py "[1.5, 1.54, 1.6, 1.45, 0, 0, 0,    1.5, 1.3, 0, 0, 0, 0, 0,     0, 0]" 3
+rosrun prx_simulation move_to_joint.py "[1.0, 1.4, 1.6, .8, 0, 0, 0,    1.5, 1.3, 0, 0, 0, 0, 0,     -0.2, 0]" 10
+
+
+
+
+
+

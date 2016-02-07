@@ -1,0 +1,12 @@
+background_b: 0
+background_g: 86
+background_r: 250
+rosdistro: 'hydro
+
+  '
+roslaunch:
+  uris: {host_alberto_pc__41340: 'http://alberto-PC:41340/'}
+rosversion: '1.10.11
+
+  '
+run_id: 77a1d39c-80c9-11e4-969d-24fd524417b7

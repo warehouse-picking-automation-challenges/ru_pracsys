@@ -1,0 +1,21 @@
+<launch>
+  <rosparam command="load" ns="query_type" file="$(find prx_input)/templates/queries/motion_planning_query.yaml" />
+  
+  
+  
+  <rosparam ns="queries">
+  query1:
+    template: "query_type"
+    start_state: [0.85000,1.04700,-0.05000,0.25000,0.00000,-1.42080,0.00000,0.00000]
+    goal:
+      type: "goal_state"
+      distance_metric:
+        type: linear_distance_metric
+      goal_state: [1.25168,-0.55300,-0.05000,1.20000,0.00000,1.12920,0.00000,0.00000]
+    stopping_criteria:
+      elements:
+        criterion1:
+          type: iteration_criterion
+          condition: 200
+  </rosparam>
+</launch>

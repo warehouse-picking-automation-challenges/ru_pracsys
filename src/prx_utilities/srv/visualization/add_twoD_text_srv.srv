@@ -1,0 +1,8 @@
+string our_name
+string associate_system
+string text
+string font
+float64[] relative_position
+float64[] color
+float64 text_size
+---

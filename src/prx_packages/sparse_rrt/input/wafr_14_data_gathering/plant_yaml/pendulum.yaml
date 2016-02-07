@@ -1,0 +1,27 @@
+type: simple_pendulum
+z: 1.5
+integrator:
+  type: rk4
+state_space: 
+  min: [-3.14, -7]
+  max: [3.14, 7]
+input_control_space: 
+  min: [-1]
+  max: [ 1]
+root_geom: ball
+geometries:
+  -
+    name: ball
+    collision_geometry:
+      type: sphere
+      radius: 1.5
+      material: black
+  -
+    name: arm
+    collision_geometry:
+      type: box
+      dims: [20, 1, 1]
+      material: blue 
+    relative_configuration:
+      position: [-10, 0, 0]
+      orientation: [0, 0, 0, 1]

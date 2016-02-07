@@ -1,0 +1,27 @@
+<!-- This file has been tested on PRACSYS revision  -->
+
+<launch>
+
+  <include file="$(find prx_input)/experiments/RRT_star/point/simulation/simulation.launch"/>
+  
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+        required="true" launch-prefix="" output="screen" />
+
+  <include ns="planning" file="$(find prx_input)/experiments/RRT_star/point/planning/world_model.launch"/>
+  <include ns="planning" file="$(find prx_input)/experiments/RRT_star/point/planning/planner_structure.launch"/>
+  <include ns="planning" file="$(find prx_input)/experiments/RRT_star/point/planning/query.launch"/>
+
+  <rosparam ns="planning" >
+   random_seed: 894
+  </rosparam>
+
+  <node name="planning" pkg="prx_planning" type="prx_planning"
+        required="false" launch-prefix="" output="screen" args="planning" />
+
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+  <rosparam ns="visualization/viewer/scene" >
+   line_thickness: 3
+  </rosparam>
+
+</launch>

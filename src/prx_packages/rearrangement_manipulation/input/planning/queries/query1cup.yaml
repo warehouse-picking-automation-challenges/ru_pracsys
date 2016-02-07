@@ -1,0 +1,19 @@
+type: manipulation_query
+k: 2
+b: 2
+initial_pose: [0.7 0.4 3.45 0.70710678118 0 -0.70710678118 0  ]
+target_pose: [0 1.12 3.4775 0 0 0 1 ]
+path_quality: best_path
+extra_posess:
+  -
+    pose: [0.07 1 3.4775 0 0 0 1 ]
+  -
+    pose: [0.07 1.1 3.4775 0 0 0 1 ]
+  -
+    pose: [0.3 1.1 3.4775 0 0 0 1 ]
+  -
+    pose: [0.2 0.9 3.4775 0 0 0 1 ]
+  -
+    pose: [0.3 0.9 3.4775 0 0 0 1 ]
+  -
+    pose: [0.25 1 3.4775 0 0 0 1 ]

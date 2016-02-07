@@ -1,0 +1,61 @@
+{
+  "bin_contents":
+  {
+    "bin_J":
+    [
+      "expo_dry_erase_board_eraser"
+    ]
+  },
+
+  "work_order":
+  [
+    {
+      "bin": "bin_J",
+      "item": "expo_dry_erase_board_eraser"
+    },
+    {
+      "bin": "bin_J",
+      "item": "expo_dry_erase_board_eraser"
+    },
+        {
+      "bin": "bin_J",
+      "item": "expo_dry_erase_board_eraser"
+    },
+        {
+      "bin": "bin_J",
+      "item": "expo_dry_erase_board_eraser"
+    },
+        {
+      "bin": "bin_J",
+      "item": "expo_dry_erase_board_eraser"
+    },
+        {
+      "bin": "bin_J",
+      "item": "expo_dry_erase_board_eraser"
+    },
+        {
+      "bin": "bin_J",
+      "item": "expo_dry_erase_board_eraser"
+    },
+        {
+      "bin": "bin_J",
+      "item": "expo_dry_erase_board_eraser"
+    },
+        {
+      "bin": "bin_J",
+      "item": "expo_dry_erase_board_eraser"
+    },
+        {
+      "bin": "bin_J",
+      "item": "expo_dry_erase_board_eraser"
+    },
+        {
+      "bin": "bin_J",
+      "item": "expo_dry_erase_board_eraser"
+    },
+        {
+      "bin": "bin_J",
+      "item": "expo_dry_erase_board_eraser"
+    }
+  ]
+}

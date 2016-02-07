@@ -1,0 +1,8 @@
+<package>
+  <description brief="The SPArse Roadmap Spanner package">
+    A package containing Dobson's work on the SPArse Roadmap Spanner approach.
+  </description>
+  <author>Andrew Dobson</author>
+  <license>BSD</license>
+  <url>http://www.pracsyslab.org</url>
+</package>

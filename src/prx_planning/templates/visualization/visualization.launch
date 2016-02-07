@@ -1,0 +1,24 @@
+<launch>
+  <arg name="visualize" default="true"/>
+  <group if="$(arg visualize)">
+    <arg name="vis_params" default="OSG_single_window.yaml"/>
+    <rosparam command="load" file="$(find prx_planning)/templates/visualization/$(arg vis_params)"/>
+
+    <rosparam ns="/visualization/viewer/scene/texture">
+      -
+        terrain:
+          terrain_image: "terrain/plain.tga"
+          terrain_plane: {x: 10000, y: 10000, z: 0, divisor: 10}
+    </rosparam>
+
+    <rosparam command="load" ns="/visualization/viewer/scene"
+	      file="$(find prx_planning)/templates/visualization/basic_light.yaml"/>
+    <rosparam command="load" ns="/visualization/viewer/scene"
+	      file="$(find prx_planning)/templates/visualization/basic_materials.yaml"/>
+
+    
+    <node name="visualization" pkg="prx_visualization" type="prx_visualization"
+	  required="true" launch-prefix="" output="screen" args="visualization"/>
+    
+  </group>
+</launch>

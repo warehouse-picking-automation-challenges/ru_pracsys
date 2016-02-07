@@ -1,0 +1,6 @@
+string consumer_pathname
+
+---
+
+interval_msg[] state_space_intervals
+interval_msg[] control_space_intervals

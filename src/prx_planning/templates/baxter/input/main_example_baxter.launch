@@ -1,0 +1,65 @@
+<!-- This file has been tested on PRACSYS revision ???? -->
+
+<launch>
+  <rosparam ns="simulation" command="load" file="$(find prx_input)/templates/applications/manual_application.yaml"/>
+  <rosparam ns="simulation" command="load" file="$(find manipulation)/input/simulation/manipulation_simulator.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+
+  <include ns="simulation" file="$(find cloud_manipulation)/input/environments/singular_cup.launch"/>
+
+  <rosparam command="load" ns="simulation/manual_controllers">
+    system_paths: [simulator/manual,simulator/manual_right]
+  </rosparam>
+
+  <rosparam command="load" ns="simulation/baxter" file="$(find baxter)/input/urdf/baxter_nomesh.yaml"/>
+
+  <rosparam command="load" ns="simulation/simulator">
+    manipulator_names:
+      -
+        simulator/manual/manipulator
+      -
+        simulator/manual_right/manipulator_right
+    sensing_info:
+      type: grasp_sensing_info
+      sources: ["grasp_sensor1"]
+      update_delay: 0.02
+    grasp_sensor_source: "grasp_sensor1"
+  </rosparam>
+
+  <rosparam ns="simulation/simulator/sensing">
+    type: sensing_model
+    sensors:
+      grasp_sensor1:
+        type: simulated_grasp_sensor
+        source: "grasp_sensor1"
+        sensor_delay: 0.02
+  </rosparam>
+
+  <rosparam command="load" ns="simulation/simulator/subsystems/manual" file="$(find baxter)/input/simulation/keyboard.yaml"/>
+  <rosparam command="load" ns="simulation/simulator/subsystems/manual_right" file="$(find baxter)/input/simulation/keyboard.yaml"/>
+
+  <rosparam command="load" ns="simulation/simulator/subsystems/manual/subsystems/manipulator">
+    template: "baxter"
+    hand: left
+    initial_state: [-0.823,-0.474,0.036,1.178,3.058,0.924,-0.068,0.000]
+    initial_control: [-0.823,-0.474,0.036,1.178,3.058,0.924,-0.068,0.000]
+    forward_transform_rotation: [1,0,0, 0,1,0, 0,0,1]
+    forward_transform_translation: [0,0,3]
+  </rosparam>
+
+  <rosparam command="load" ns="simulation/simulator/subsystems/manual_right/subsystems/manipulator_right">
+    template: "baxter"
+    hand: right
+    forward_transform_rotation: [1,0,0, 0,1,0, 0,0,1]
+    forward_transform_translation: [0,0,3]
+  </rosparam>
+
+  <rosparam command="load" ns="simulation/simulator/obstacles" file="$(find baxter)/input/simulation/baxter_torso.yaml" />
+
+  <!-- Define the simulation node -->
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+    required="true" launch-prefix="" output="screen" args="simulation"/>
+
+  <include file="$(find baxter)/input/visualization.launch"/>
+
+</launch>

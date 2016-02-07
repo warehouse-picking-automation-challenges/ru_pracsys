@@ -1,0 +1,10 @@
+space_name: space1
+delta_drain: 2
+delta_near: 3
+local_planner:
+  num_controls: 1
+  lower_multiple: 50
+  upper_multiple: 250
+near_threshold: 4
+max_points: 500001
+max_attempts: 1

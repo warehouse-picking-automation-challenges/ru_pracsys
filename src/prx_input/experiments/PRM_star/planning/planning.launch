@@ -1,0 +1,13 @@
+<launch>
+
+  <!-- Include the world model you wish to use.  The namespace you place this in must match the planning node name below. -->
+  <include ns="planning" file="$(find prx_input)/experiments/PRM_star/planning/world_models/world_model.launch"/>
+
+  <!-- Include the planner structure you wish to use -->
+  <include ns="planning" file="$(find prx_input)/experiments/PRM_star/planning/planner_structures/planner_structure.launch"/>
+
+  <!-- What queries you wish to run -->
+  <include ns="planning" file="$(find prx_input)/experiments/PRM_star/planning/queries/query.launch"/>
+
+
+</launch>

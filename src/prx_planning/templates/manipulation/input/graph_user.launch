@@ -1,0 +1,39 @@
+<launch>
+
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>  
+  <include ns="graph_user" file="$(find manipulation)/input/common_planning.launch"/>
+
+  <include ns="simulation" file="$(find manipulation)/input/environments/3cups.launch"/>
+  <rosparam command="load" ns="simulation/simulator/obstacles" file="$(find manipulation)/input/environments/shelf.yaml" />
+
+  <include ns="graph_user" file="$(find manipulation)/input/planning/world_models/world_model_baxter.launch"/>  
+  <rosparam command="load" ns="graph_user/world_model/simulator/obstacles" file="$(find manipulation)/input/environments/shelf.yaml" />
+  
+  <rosparam ns="graph_user/" >
+    random_seed: 143918341
+    simulate: false 
+    visualize: false 
+    persistent: false
+    graph_user: true
+    graph_builder_node: "/graph_builder"
+    deserialize: true
+    graphs_filenames:
+      ungrasped_file: "manipulation_roadmaps/ungrasped_10000_3_prm_star"
+      grasped_file: "manipulation_roadmaps/grasped_10000_3_prm_star"
+  </rosparam>
+
+  <rosparam ns="graph_user/task_planner/" >
+    smooths_query: false
+    goal_biasing: 6
+    replay_plan: false
+    dummy_algorithm: false
+    statistics_file_name: statistics_tdk.txt    
+  </rosparam>
+  
+  <include ns="graph_user" file="$(find manipulation)/input/planning/queries/query_easy.launch"/>
+
+  <!-- Define the planning node -->
+  <node name="graph_user" pkg="prx_planning" type="prx_planning" 
+    required="true" launch-prefix="gdb --args" output="screen" args="graph_user" />
+
+</launch>

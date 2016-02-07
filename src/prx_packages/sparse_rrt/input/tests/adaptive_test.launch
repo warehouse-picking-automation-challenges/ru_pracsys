@@ -1,0 +1,136 @@
+<launch>
+<rosparam command="load" ns="NNNNNN" file="$(find prx_input)/templates/planning_applications/single_query_application.yaml"/>
+<rosparam>
+NNNNNN:
+  simulate: true
+  visualize: true
+  random_seed: 68484
+  persistent: false
+</rosparam>
+<rosparam command="load" ns="NNNNNN/motion_planner" file="$(find sparse_rrt)/input/templates/adaptive_sparse_rrt.yaml"/>
+<rosparam command="load" ns="NNNNNN/task_planner" file="$(find prx_input)/templates/task_planners/single_shot.yaml"/>
+<rosparam ns="NNNNNN/task_planner/planners/NNNNNN" >
+template: motion_planner
+space_name: no_embedding
+validity_checker:
+  type: world_model_validity_checker
+sampler:
+  type: uniform_sampler
+local_planner:
+  type: time_varying_local_planner
+  lower_multiple: 50
+  upper_multiple: 500
+  learning_rate: .05
+  accepted_radius: 2
+  num_controls: 10
+  max_multiple: 500
+distance_metric:
+  type: graph_distance_metric
+  distance_function: default
+max_points: 100000
+delta_drain: 0
+delta_near: 0
+reduction_rate: 0
+radius_solution: true
+collision_checking: true
+cost_threshold: 4
+visualize: true
+vis_drain: false
+vis_near: false
+vis_cost: false
+visualize_tree: false
+visualize_solution: true
+visualization_body: simulator/system/body
+</rosparam>
+<rosparam command="load" ns="NNNNNN/task_planner" >
+stats_criteria:
+  elements:
+    criterion1:
+      type: timed_criterion
+      condition: 10
+</rosparam>
+<rosparam command="load" ns="NNNNNN/query_type" file="$(find prx_input)/templates/queries/motion_planning_query.yaml"/>
+<rosparam command="load" ns="NNNNNN/query_type" >
+start_state: [80, -80, 0]
+goal:
+  type: radial_goal_region
+  distance_metric:
+    type: linear_distance_metric
+    distance_function: default
+  goal_state: [-80, 80, 0]
+  radius: 5
+stopping_criteria:
+  elements:
+    criterion1:
+      type: timed_criterion
+      condition: 60
+</rosparam>
+<rosparam command="load" ns="NNNNNN/queries/query1" >
+template: query_type
+</rosparam>
+<rosparam command="load" ns="NNNNNN/world_model/embeddings" >
+space1:
+  default:
+    type: full_mapping
+</rosparam>
+<rosparam command="load" ns="NNNNNN/world_model" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+<rosparam command="load" ns="NNNNNN/world_model/simulator" >
+simulation_step: 0.002
+</rosparam><rosparam command="load" ns="NNNNNN/world_model/simulator/subsystems/system" file="$(find prx_input)/templates/plants/disk_rigid_body.yaml"/>
+
+ <rosparam ns="NNNNNN">
+  <!-- First define the mapping between simulation and world model plants -->
+  system_mapping:
+  - 
+    pair: [simulator/consumer/system, world_model/simulator/system]
+
+  consumer: simulator/consumer
+  </rosparam>
+
+  <rosparam command="load" ns="NNNNNN/world_model/simulator/obstacles"
+     file="$(find sparse_rrt)/input/templates/narrow_passage.yaml"/>
+      
+  <rosparam command="load" file="$(find prx_input)/templates/applications/empty_application.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+
+  <!-- Load template files -->
+  <rosparam ns="simulator">
+  simulation_step: 0.002
+  </rosparam>
+
+        
+  <rosparam command="load" ns="controller" file="$(find prx_input)/templates/controllers/consumer.yaml"/>
+  <rosparam command="load" ns="plant" file="$(find prx_input)/templates/plants/disk_rigid_body.yaml"/>
+  
+  <!-- Override template parameters -->
+        
+  <rosparam ns="controller">
+  </rosparam>
+       
+  <!-- Set up concrete system tree -->
+   
+  <rosparam command="load" ns="simulator/subsystems/consumer">
+    template: "controller"
+    planning_node: /NNNNNN
+  </rosparam>
+        
+  <rosparam command="load" ns="simulator/subsystems/consumer/subsystems/system">
+    template: "plant"
+    initial_state: [80,-80,0]
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/obstacles"
+     file="$(find sparse_rrt)/input/templates/narrow_passage.yaml"/>
+ 
+  <!-- Define the simulation node -->
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+        required="true" launch-prefix="" output="screen" />
+
+  <node name="NNNNNN" pkg="prx_planning" type="prx_planning"
+        required="false" launch-prefix="" output="screen" args="NNNNNN" />
+
+
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+</launch>

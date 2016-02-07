@@ -1,0 +1,4 @@
+type: prm_star
+heuristic_search: 
+  type: prm_astar
+

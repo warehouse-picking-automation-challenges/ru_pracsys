@@ -1,0 +1,15 @@
+%YAML:1.0
+pyramid_levels: 2
+T: [ 5, 5 ]
+modalities:
+   -
+      type: ColorGradient
+      weak_threshold: 25.
+      num_features: 63
+      strong_threshold: 35.
+   -
+      type: DepthNormal
+      distance_threshold: 1000
+      difference_threshold: 100
+      num_features: 63
+      extract_threshold: 2

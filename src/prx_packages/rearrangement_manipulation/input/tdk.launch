@@ -1,0 +1,51 @@
+<launch>
+
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>  
+  <include ns="simulation" file="$(find rearrangement_manipulation)/input/common_simulation.launch"/>
+  <include ns="planning" file="$(find rearrangement_manipulation)/input/common_planning.launch"/>
+
+  <include ns="simulation" file="$(find rearrangement_manipulation)/input/environments/6kiva_cups.launch"/>
+  
+  <!--  
+  <rosparam command="load" ns="simulation/simulator/obstacles" file="$(find rearrangement_manipulation)/input/environments/kiva_pod.yaml" />
+  <rosparam command="load" ns="simulation/simulator/obstacles" file="$(find rearrangement_manipulation)/input/environments/shelf.yaml" />  
+  <rosparam command="load" ns="simulation/simulator/obstacles" file="$(find rearrangement_manipulation)/input/environments/table.yaml" /> 
+  -->
+
+  <include ns="planning" file="$(find rearrangement_manipulation)/input/planning/world_models/world_model_baxter.launch"/>  
+  <!--
+  <rosparam command="load" ns="planning/world_model/simulator/obstacles" file="$(find rearrangement_manipulation)/input/environments/kiva_pod.yaml" />
+  <rosparam command="load" ns="planning/world_model/simulator/obstacles" file="$(find rearrangement_manipulation)/input/environments/shelf.yaml" />  
+  <rosparam command="load" ns="planning/world_model/simulator/obstacles" file="$(find rearrangement_manipulation)/input/environments/table.yaml" />
+  -->
+
+  <rosparam ns="planning/" >
+    random_seed: 14391835
+  </rosparam>
+
+  <rosparam ns="planning/task_planner/planners/" >
+    manipulation_planner:
+        planners:
+            ungrasped:
+              deserialize_file: ungrasped_500_1_prm_star
+              serialize_file: ungrasped_500_spars
+            grasped:
+              deserialize_file: grasped_500_1_prm_star
+              serialize_file: grasped_500_spars
+  </rosparam>
+
+  <!-- This is the file for different start and goal positions -->
+  <rosparam command="load" ns="planning/problems/rearrangement_manipulation_problem/specification" file="$(find rearrangement_manipulation)/input/planning/problems/1cup_problem.yaml"/>
+
+  <!-- Define the planning node -->
+
+  <node name="planning" pkg="prx_planning" type="prx_planning" 
+    required="true" launch-prefix="gdb --args" output="screen" args="planning" />
+
+  <!-- Define the simulation node -->
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation" 
+    required="true" launch-prefix="" output="screen" args="simulation"/>
+
+  <include file="$(find rearrangement_manipulation)/input/visualization.launch"/>
+
+</launch>

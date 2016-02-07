@@ -1,0 +1,21 @@
+<!-- This file has been tested on PRACSYS revision  -->
+
+<launch>
+
+  <include file="$(find prx_input)/experiments/RRT/planning/planning.launch"/>
+
+  <include ns="simulation2" file="$(find prx_input)/experiments/RRT/simulation/simulation.launch"/>      
+
+
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+
+  <node name="simulation2" pkg="prx_simulation" type="prx_simulation"
+        required="true" launch-prefix="" args="simulation2" output="screen" />
+
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+  <rosparam ns="visualization/viewer/scene" >
+   line_thickness: 3
+  </rosparam>
+ 
+</launch>

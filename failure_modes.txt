@@ -1,0 +1,37 @@
+- The planner fails to find a plan:
+  - To move to the origin
+  - To move to the bin
+  - To move to map
+  - To move closer to the object
+    -> Implemented solution: Go back to the bin position state and try it all again from this state.
+  - To grasp the target object
+    -> Implemented solution: Go back to the bin position state and try it all again from this state.
+  - To move away from the bin
+    -> Implemented solution: Release the object and go back to the bin position state and try it all again from this state.
+  - To move to the order bin
+  - To grasp the target object
+- The planner fails to execute a plan:
+  - To move to the origin
+  - To move to the bin
+  - To move to map
+  - To move closer to the object
+    -> Implemented solution: Go back to the bin position state and try it all again from this state.
+  - To grasp the target object
+    -> Implemented solution: Release the object and go back to the bin position state and try it all again from this state.
+  - To move away from the bin
+    -> Implemented solution: Release the object and go back to the bin position state and try it all again from this state.
+  - To move to the order bin
+  - To grasp the target object
+- The robot trying to grasp an object but missing it, and continuing to complete its task under the assumption that it has a successful grasp.
+  -> Suggested solution: Try and avoid it by implementing mechanisms for detecting a grasping failure with very high confidence.
+- The robot grasping the wrong object because of faulty recognition or incorrect calibration of the recognition systems.
+  -> Suggested solution: Try and avoid it by implementing an object detector with very high confidence.
+- The detected object pose is far from a reasonable region that the corresponding bin can be.
+  -> Implemented solution: Using the center of the bin coordinates as a hint to the detector so that it does not offer detections 
+     too much outside of the bin. 
+- The robot picks up multiple objects when it is required to pick a single object.
+- The robot drops the object during the transfer process.
+  -> Suggested solution: Ignore the event and continue to the next object.
+- Some of the software modules stop responding.
+  -> Suggested solution: Restart the silent module and change the system state accordingly.
+

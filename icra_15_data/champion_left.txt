@@ -1,0 +1,30 @@
+1441647012, champion_copper_plus_spark_plug, left, 1, 0.320965051651, 23.1709349155, 39.4977440834, 2, 0, Physical fumble
+1441647114, champion_copper_plus_spark_plug, left, 1, 1.08209395409, 38.1335041523, 54.8391439915, 1, 1, Reason
+1441647199, champion_copper_plus_spark_plug, left, 1, 0.552190065384, 36.6127669811, 54.3567459583, 4, 0, Physical fumble
+1441647278, champion_copper_plus_spark_plug, left, 1, 1.0323870182, 34.3148541451, 52.8835670948, 2, 0, Physical fumble
+1441647416, champion_copper_plus_spark_plug, left, 1, 1.50387692451, 35.0380871296, 53.7202138901, 7, 0, Physical fumble
+1441648180, champion_copper_plus_spark_plug, left, 2, 3.91601109505, 35.1593518257, 55.3077509403, 52, 1, Reason
+1441648257, champion_copper_plus_spark_plug, left, 2, 2.65732598305, 32.794093132, 54.3674049377, 33, 1, Reason
+1441648332, champion_copper_plus_spark_plug, left, 2, 3.38396215439, 36.0083918571, 55.5500779152, 45, 1, Reason
+1441648406, champion_copper_plus_spark_plug, left, 2, 1.87229084969, 35.1809639931, 53.2790510654, 19, 1, Reason
+1441648480, champion_copper_plus_spark_plug, left, 2, 2.65109395981, 39.8768370152, 58.8440141678, 36, 1, Reason
+1441648563, champion_copper_plus_spark_plug, left, 3, 1.12993097305, 31.1885151863, 51.2650380135, 14, 1, Reason
+1441648725, champion_copper_plus_spark_plug, left, 3, 1.99240016937, 38.545306921, 56.6111760139, 24, 1, Reason
+1441648803, champion_copper_plus_spark_plug, left, 3, 1.86224508286, 31.2732279301, 52.1200830936, 22, 1, Reason
+1441648877, champion_copper_plus_spark_plug, left, 3, 2.51815295219, 31.3732328415, 52.9778308868, 27, 1, Reason
+1441649001, champion_copper_plus_spark_plug, left, 3, 0.321774959564, 28.8530919552, 50.2184619904, 2, 1, Reason
+1441649126, champion_copper_plus_spark_plug, left, 4, 1.23725795746, 23.5790059566, 42.4760408401, 13, 0, Physical fumble
+1441649187, champion_copper_plus_spark_plug, left, 4, 3.1917219162, 38.4031600952, 59.3764951229, 2, 0, Physical fumble
+1441649261, champion_copper_plus_spark_plug, left, 4, 0.907814979553, 23.6453909874, 41.255012989, 8, 0, Physical fumble
+1441649332, champion_copper_plus_spark_plug, left, 4, 4.2162759304, 29.9901199341, 52.1831319332, 8, 0, Physical fumble
+1441649398, champion_copper_plus_spark_plug, left, 4, 0.280787944794, 23.5379531384, 40.5875020027, 1, 1, Reason
+1441650307, champion_copper_plus_spark_plug, left, 5, 17.3344509602, 46.9690670967, 86.7360880375, 204, 0, Physical fumble
+1441650501, champion_copper_plus_spark_plug, left, 5, 24.6511540413, 47.0578160286, 94.201862812, 303, 0, Physical fumble
+1441650774, champion_copper_plus_spark_plug, left, 5, 3.36002588272, 46.8619551659, 72.5699629784, 18, 0, Physical fumble
+1441651040, champion_copper_plus_spark_plug, left, 5, 5.34187102318, -1, 63.1171898842, 42, 0, Physical fumble
+1441651204, champion_copper_plus_spark_plug, left, 5, 2.91336393356, 46.8593399525, 72.0495100021, 9, 0, Physical fumble
+1441651391, champion_copper_plus_spark_plug, left, 6, 2.74638104439, 54.1330988407, 78.522507906, 27, 1, Reason
+1441651581, champion_copper_plus_spark_plug, left, 6, 18.8050918579, 54.1744260788, 94.6940979958, 179, 1, Reason
+1441651700, champion_copper_plus_spark_plug, left, 6, 19.1589951515, 51.344370842, 92.0243558884, 198, 1, Reason
+1441652019, champion_copper_plus_spark_plug, left, 6, 1.95289802551, 51.4649310112, 74.9164350033, 21, 1, Reason
+1441652212, champion_copper_plus_spark_plug, left, 6, 14.4411709309, 51.5382781029, 87.3466441631, 171, 1, Reason

@@ -1,0 +1,5 @@
+string[] info_names
+geometry_msgs/Pose[] info_configs
+Vec4_msg[] info_colors
+bool poll_tf
+---

@@ -1,0 +1,17 @@
+collision_checking: true
+distance_metric: 
+  distance_function: default
+  type: graph_distance_metric
+local_planner: 
+  type: time_varying_local_planner
+max_points: 500001
+radius_solution: true
+reduction_rate: 0
+sampler: {type: uniform_sampler}
+space_name: no_embedding
+validity_checker: {type: world_model_validity_checker}
+visualization_body: not_used
+visualize: false
+visualize_solution: false
+visualize_tree: false
+type: rrt_star_with_shooting

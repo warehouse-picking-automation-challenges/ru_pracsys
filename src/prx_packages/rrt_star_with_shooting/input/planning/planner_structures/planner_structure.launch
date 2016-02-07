@@ -1,0 +1,51 @@
+<launch>
+  <!-- Load the planning application -->
+  <rosparam command="load" file="$(find prx_input)/templates/planning_applications/single_query_application.yaml"/>
+
+  <rosparam >
+  simulate: true
+  visualize: true
+  </rosparam>
+
+  <!-- Load template files -->
+       
+  <rosparam command="load" ns="motion_planner/" file="$(find rrt_star_with_shooting)/input/templates/rrt_star_with_shooting.yaml"/>
+ 
+  <!-- We currently only support one task planner. It will be future work to bring task planners that work on task planners. -->
+  <rosparam command="load" ns="task_planner/" file="$(find prx_input)/templates/task_planners/single_shot.yaml"/>
+
+  <!-- Overwrite any parameters for the template or the task planner -->
+  <rosparam ns="task_planner/" >
+  </rosparam>
+
+  <!-- Set up the motion planners used in the task planner. 
+	 1) can either be from template or loading a yaml and rewriting the values
+	 2) the space name needs to correspond to the names in the world_model file -->
+  <rosparam ns="task_planner/planners/" >
+planner1:
+  template: "motion_planner"
+  space_name: "no_embedding"
+  validity_checker: 
+    type: world_model_validity_checker
+  sampler:
+    type: uniform_sampler
+  distance_metric:
+    type: graph_distance_metric
+  local_planner:
+    type: time_varying_local_planner
+    lower_multiple: 50
+    upper_multiple: 500
+    num_controls: 1
+  max_points: 1000000
+  near_threshold: .5
+  radius_solution: true
+  collision_checking: true
+  visualize_tree: true
+  visualize_solution: false
+  visualization_tree_name: "/rrt_star_shooting/graph"
+  visualization_solution_name: "/rrt_star_shooting/solution"
+  visualization_body: simulator/car/chassis
+  </rosparam>
+
+
+</launch>

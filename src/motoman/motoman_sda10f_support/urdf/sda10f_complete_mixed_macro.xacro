@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+    name="sda10f">	
+        <xacro:include filename="$(find motoman_sda10f_support)/urdf/common_torso_macro.xacro" />
+        <xacro:include filename="$(find motoman_sda10f_support)/urdf/arm_macro.xacro" />
+        <xacro:include filename="$(find robotiq_s_model_visualization)/cfg/s-model_articulated_macro.xacro" />
+        <xacro:include filename="$(find prx_planning)/templates/motoman/unigripper_macro.xacro" />
+        <xacro:include filename="$(find prx_planning)/templates/object_templates/realsense_macro.xacro" />
+        <xacro:include filename="$(find prx_planning)/templates/object_templates/kinect_macro.xacro" />
+        <xacro:include filename="$(find prx_planning)/templates/motoman/left_force_torque_assembly_macro.xacro" />
+        <xacro:include filename="$(find prx_planning)/templates/motoman/right_force_torque_assembly_macro.xacro" />
+                    
+        <xacro:torso name="torso" prefix="torso_"/>
+        
+        <xacro:motoman_arm name="arm_left" prefix="arm_left_" parent="torso_link_b1" reflect="1">
+            <origin xyz="0.09996 0.0275 0.32214" rpy="1.57 0 0" />
+        </xacro:motoman_arm>      
+        
+        <xacro:motoman_arm name="arm_right" prefix="arm_right_" parent="torso_link_b1" reflect="-1">
+            <origin xyz="0.09996 -0.0275 0.32214" rpy="1.57 0 0" />
+        </xacro:motoman_arm>       
+
+		<joint name="robot-hand" type="fixed" >
+		    <origin xyz="0 0 -0.1195" rpy="-1.57 0 0"/>
+		    <parent link="arm_right_link_tool0" />
+		    <child link="palm" />
+		</joint>
+
+        <xacro:s-model_articulated prefix="">
+        </xacro:s-model_articulated>
+        
+        <joint name="right_fta" type="fixed" >
+            <origin xyz="0 0 -0.016" rpy="3.1415 0 1.5707"/>
+            <parent link="arm_right_link_tool0" />
+            <child link="right_arm_to_sensor_plate" />
+        </joint>
+
+        <xacro:right_force_torque_assembly prefix="right_">
+        </xacro:right_force_torque_assembly>
+
+        <joint name="left_fta" type="fixed" >
+            <origin xyz="0 0 -0.016" rpy="3.1415 0 1.5707"/>
+            <parent link="arm_left_link_tool0" />
+            <child link="left_arm_to_sensor_plate" />
+        </joint>
+
+        <xacro:left_force_torque_assembly prefix="left_">
+        </xacro:left_force_torque_assembly>
+        
+        <joint name="unigripper_joint" type="fixed" >
+            <origin xyz="0 0 -0.063" rpy="0 3.1415 -1.57"/>
+            <parent link="arm_left_link_tool0" />
+            <child link="base_plate" />
+        </joint>
+        
+        <xacro:unigripper prefix="">
+        </xacro:unigripper>
+
+        <joint name="left_kinect_joint" type="fixed" >
+            <origin xyz="0 0 0.0735" rpy="0 0 1.57"/>
+            <parent link="arm_left_link_6_b" />
+            <child link="left_kinect_base" />
+        </joint>
+
+        <xacro:kinect prefix="left_">
+        </xacro:kinect>
+
+        <joint name="right_realsense_joint" type="fixed" >
+            <origin xyz="0 0.079 0.085" rpy="0 -0.229 1.57"/>
+            <parent link="arm_right_link_6_b" />
+            <child link="right_realsense_sensor_bar" />
+        </joint>
+
+        <xacro:realsense prefix="right_">
+        </xacro:realsense>    
+        
+</robot>

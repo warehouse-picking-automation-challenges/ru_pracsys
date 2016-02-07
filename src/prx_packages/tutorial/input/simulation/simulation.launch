@@ -1,0 +1,41 @@
+<launch>
+
+  <!-- Load independent files -->
+        
+  <rosparam command="load" file="$(find prx_input)/templates/applications/empty_application.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+  <!-- Load template files -->
+        
+  <rosparam command="load" ns="consumer_controller" file="$(find prx_input)/templates/controllers/consumer.yaml"/>
+  <rosparam command="load" ns="controller" file="$(find tutorial)/input/templates/test_controller.yaml"/>
+  <rosparam command="load" ns="plant" file="$(find prx_input)/templates/plants/disk.yaml"/>
+  
+  <!-- Override template parameters -->
+        
+  <rosparam ns="consumer_controller">
+  </rosparam>
+
+  <rosparam ns="controller">
+  </rosparam>
+        
+  <rosparam ns="plant">
+    initial_state: [0,0]
+  </rosparam>
+       
+  <!-- Set up concrete system tree -->
+   
+  <rosparam command="load" ns="simulator/subsystems/consumer">
+    template: "consumer_controller"
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/consumer/subsystems/test">
+    template: "controller"
+  </rosparam>
+        
+  <rosparam command="load" ns="simulator/subsystems/consumer/subsystems/test/subsystems/disk">
+    template: "plant"
+  </rosparam>
+  
+
+</launch>

@@ -1,0 +1,7 @@
+sensor_msgs/JointState end_state
+string arm
+string dest_type
+---
+bool success
+---
+bool computing

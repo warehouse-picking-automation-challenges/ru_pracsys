@@ -1,0 +1,9 @@
+<!-- This file has been tested on PRACSYS revision  -->
+
+<launch>
+
+  <include file="$(find prx_input)/experiments/replanning/simulation/multi_agent_replanning.launch"/>
+  <include file="$(find prx_input)/experiments/replanning/planning/multi_agent_replanning.launch"/>
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+</launch>

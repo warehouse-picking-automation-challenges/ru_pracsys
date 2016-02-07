@@ -1,0 +1,6 @@
+<launch>
+  <node name="kinect_sub" pkg="ecto_ros" type="camera_sub.py">
+        <remap from="camera" to="camera/rgb"/>
+        <remap from="depth_camera" to="camera/depth"/>
+  </node>
+</launch>

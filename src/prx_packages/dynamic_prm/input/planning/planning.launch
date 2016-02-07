@@ -1,0 +1,6 @@
+<launch>
+	<include ns="planning" file="$(find dynamic_prm)/input/planning/world_model.launch" />
+	<include ns="planning" file="$(find dynamic_prm)/input/planning/planner_structure.launch" />
+	<include ns="planning" file="$(find dynamic_prm)/input/planning/query.launch" />
+	<node name="planning" pkg="prx_planning" type="prx_planning" required="false" launch-prefix="" output="screen" args="planning" />
+</launch>

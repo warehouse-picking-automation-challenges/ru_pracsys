@@ -1,0 +1,431 @@
+<library path="lib/libprx_planning">
+
+
+    <!-- Samplers -->
+
+    <class name="prx_planning/uniform_sampler"
+        type="prx::plan::uniform_sampler_t"
+        base_class_type="prx::plan::sampler_t">
+        <description>
+            Samples uniformly in the space
+        </description>
+    </class>
+    
+    <class name="prx_planning/apc_sampler"
+        type="prx::plan::apc_sampler_t"
+        base_class_type="prx::plan::sampler_t">
+        <description>
+            apc sampler for transit/tranfer points
+        </description>
+    </class>
+
+    <!-- COMMUNICATION CLASSES -->
+    <class name="prx_planning/visualization_comm"
+        type="prx::plan::comm::visualization_comm_t"
+        base_class_type="prx::plan::plan_base_communication_t">
+        <description>
+            Default communication between planning and visualization.
+        </description>
+    </class>
+
+    <class name="prx_planning/simulation_comm"
+        type="prx::plan::comm::simulation_comm_t"
+        base_class_type="prx::plan::plan_base_communication_t">
+        <description>
+            Default communication between planning and simulation.
+        </description>
+    </class>
+
+    <class name="prx_planning/planning_comm"
+        type="prx::plan::comm::planning_comm_t"
+        base_class_type="prx::plan::plan_base_communication_t">
+        <description>
+            Default communication initiated by planning.
+        </description>
+    </class>
+
+    <!-- Planning Applications -->
+
+    <class name="prx_planning/single_query_application"
+        type="prx::plan::single_query_application_t"
+        base_class_type="prx::plan::planning_application_t">
+        <description>
+            Top level application class that reasons over a single query
+        </description>
+    </class>
+
+    <class name="prx_planning/base_apc_planning_application"
+        type="prx::plan::base_apc_planning_application_t"
+        base_class_type="prx::plan::planning_application_t">
+        <description>
+            APC application
+        </description>
+    </class>
+    <class name="prx_planning/motoman_planning_application"
+        type="prx::plan::motoman_planning_application_t"
+        base_class_type="prx::plan::planning_application_t">
+        <description>
+            motoman APC application
+        </description>
+    </class>
+
+    <class name="prx_planning/grasp_test_planning_application"
+        type="prx::plan::grasp_test_planning_application_t"
+        base_class_type="prx::plan::planning_application_t">
+        <description>
+            Application for testing different grasping positions
+        </description>
+    </class>
+
+    <class name="prx_planning/motoman_precomputing_application"
+        type="prx::plan::motoman_precomputing_application_t"
+        base_class_type="prx::plan::planning_application_t">
+        <description>
+            motoman APC PRECOMPUTATION application
+        </description>
+    </class>
+
+    <class name="prx_planning/ground_truth_query_application"
+        type="prx::plan::ground_truth_query_application_t"
+        base_class_type="prx::plan::planning_application_t">
+        <description>
+            A planning application that receives and is reason about ground truth
+        </description>
+    </class>
+
+    <!-- Task Planners -->
+
+    <class name="prx_planning/single_shot"
+        type="prx::plan::single_shot_planner_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            Performs single shot planning queries.
+        </description>
+    </class>
+    <class name="prx_planning/base_apc_task_planner"
+        type="prx::plan::base_apc_task_planner_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            The task planner for the APC
+        </description>
+    </class>
+
+    <class name="prx_planning/multi_planner"
+        type="prx::plan::multi_planner_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            Performs multiple motion planners in sequence, gathering statistics.
+        </description>
+    </class>
+
+    <class name="prx_planning/replanning_planner"
+        type="prx::plan::replanning_planner_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            Performs replanning.
+        </description>
+    </class>
+
+<!-- Motion Planners -->
+
+    <class name="prx_planning/prm_star"
+        type="prx::plan::prm_star_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            Probabilistic Roadmap Method.
+        </description>
+    </class>
+
+    <class name="prx_planning/apc_planner"
+        type="prx::plan::apc_planner_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            The APC planner.
+        </description>
+    </class>
+
+    <class name="prx_planning/rrt"
+        type="prx::plan::rrt_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            Randomly-exploring Random Tree.
+        </description>
+    </class>
+    <class name="prx_planning/anytime_rrt"
+        type="prx::plan::anytime_rrt_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            Anytime RRT
+        </description>
+    </class>
+
+    <class name="prx_planning/rrtc"
+        type="prx::plan::rrtc_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            RRT-connect, a bi-directional, greedy tree algorithm.
+        </description>
+    </class>
+
+    <class name="prx_planning/rrt_star"
+        type="prx::plan::rrt_star_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            RRT* (Sampling-based Algorithms for Optimal Motion Planning  Karaman,Frazzoli)
+        </description>
+    </class>
+
+    <class name="prx_planning/sst"
+        type="prx::plan::sst_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            SST (Stable Sparse-RRT)
+        </description>
+    </class>
+
+    <class name="prx_planning/isst"
+        type="prx::plan::isst_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            iSST (Informed Stable Sparse-RRT)
+        </description>
+    </class>
+
+<!-- Validity Checkers -->
+
+    <class name="prx_planning/world_model_validity_checker"
+        type="prx::plan::world_model_validity_checker_t"
+        base_class_type="prx::plan::validity_checker_t">
+        <description>
+            Uses the world model to check the validity of states.
+        </description>
+    </class>
+
+    <class name="prx_planning/near_collision_validity_checker"
+        type="prx::plan::near_collision_validity_checker_t"
+        base_class_type="prx::plan::validity_checker_t">
+        <description>
+            Ensures states are valid within a certain clearance threshold.
+        </description>
+    </class>
+
+    <class name="prx_planning/ignore_list_validity_checker"
+        type="prx::plan::ignore_list_validity_checker_t"
+        base_class_type="prx::plan::validity_checker_t">
+        <description>
+            This checker can load a list of collisions which do not invalidate states.
+        </description>
+    </class>
+
+    <class name="prx_planning/temporal_validity_checker"
+        type="prx::plan::temporal_validity_checker_t"
+        base_class_type="prx::plan::validity_checker_t">
+        <description>
+            Relies on informed trajectories to determine invalid states.
+        </description>
+    </class>
+
+    <!-- Local Planners -->
+
+    <class name="prx_planning/approach_local_planner"
+        type="prx::plan::approach_local_planner_t"
+        base_class_type="prx::plan::local_planner_t">
+        <description>
+            Uses the world model propagate to create local plans.
+        </description>
+    </class>
+
+    <class name="prx_planning/time_varying_local_planner"
+        type="prx::plan::time_varying_local_planner_t"
+        base_class_type="prx::plan::local_planner_t">
+        <description>
+            Uses the world model propagate to create local plans with a random amount of time for propagation.
+        </description>
+    </class>
+
+
+    <class name="prx_planning/gradient_descent_local_planner"
+        type="prx::plan::gradient_descent_local_planner_t"
+        base_class_type="prx::plan::local_planner_t">
+        <description>
+            Performs a gradient descent to improve controls
+        </description>
+    </class>
+
+    <class name="prx_planning/bvp_local_planner"
+        type="prx::plan::bvp_local_planner_t"
+        base_class_type="prx::plan::local_planner_t">
+        <description>
+            Connects two states with the steering_function in simulator.
+        </description>
+    </class>
+    
+    <class name="prx_planning/apc_local_planner"
+        type="prx::plan::apc_local_planner_t"
+        base_class_type="prx::plan::local_planner_t">
+        <description>
+            APC local planner that checks if the trajectory is inside the shelf.
+        </description>
+    </class>
+
+    <!-- Path smoothers -->
+
+    <class name="prx_planning/shortcut_smoother"
+        type="prx::plan::shortcut_smoother_t"
+        base_class_type="prx::plan::planner_t">
+        <description>
+            Performs smoothing by finding shortcuts.
+        </description>
+    </class>
+
+    <!-- Heuristic Search -->
+
+    <class name="prx_planning/prm_astar"
+        type="prx::plan::prm_astar_t"
+        base_class_type="prx::plan::astar_module_t">
+        <description>
+            Performs heuristic search on a graph constructed by PRM.
+        </description>
+    </class>
+
+    <!-- Stopping Criteria -->
+
+    <class name="prx_planning/timed_criterion"
+        type="prx::plan::timed_criterion_t"
+        base_class_type="prx::plan::criterion_t">
+        <description>
+            Will signal a stop when the allotted time runs out.
+        </description>
+    </class>
+
+    <class name="prx_planning/log_timed_criterion"
+        type="prx::plan::log_timed_criterion_t"
+        base_class_type="prx::plan::criterion_t">
+        <description>
+            Will signal a stop when the allotted time runs out. Also scales the time up for subsequent checks.
+        </description>
+    </class>
+
+    <class name="prx_planning/iteration_criterion"
+        type="prx::plan::iteration_criterion_t"
+        base_class_type="prx::plan::criterion_t">
+        <description>
+            Will signal a stop when the number of iterations is reached
+        </description>
+    </class>
+
+    <class name="prx_planning/goal_criterion"
+        type="prx::plan::goal_criterion_t"
+        base_class_type="prx::plan::criterion_t">
+        <description>
+            Will signal a stop when the allotted time runs out.
+        </description>
+    </class>
+
+    <class name="prx_planning/succeeded_criterion"
+        type="prx::plan::succeeded_criterion_t"
+        base_class_type="prx::plan::criterion_t">
+        <description>
+            Will signal a stop when the linked motion planner's succeeded() function returns true.
+        </description>
+    </class>
+
+<!-- Queries -->
+    <class name="prx_planning/multi_planner_query"
+        type="prx::plan::multi_planner_query_t"
+        base_class_type="prx::plan::query_t">
+        <description>
+            A query for multiple motion_planning_querys.
+        </description>
+    </class>
+
+    <class name="prx_planning/motion_planning_query"
+        type="prx::plan::motion_planning_query_t"
+        base_class_type="prx::plan::query_t">
+        <description>
+           A query for results from a motion planner.
+        </description>
+    </class>
+    <class name="prx_planning/base_apc_task_query"
+        type="prx::plan::base_apc_task_query_t"
+        base_class_type="prx::plan::query_t">
+        <description>
+        </description>
+    </class>
+
+    <class name="prx_planning/single_shot_query"
+        type="prx::plan::single_shot_query_t"
+        base_class_type="prx::plan::query_t">
+        <description>
+            A query for results from a single shot task planner.
+        </description>
+    </class>
+
+ <!-- Specifications -->
+
+     <class name="prx_planning/multi_planner_specification"
+        type="prx::plan::multi_planner_specification_t"
+        base_class_type="prx::plan::specification_t">
+        <description>
+            A specification for multiple motion_planning_specifications.
+        </description>
+    </class>
+
+    <class name="prx_planning/motion_planning_specification"
+        type="prx::plan::motion_planning_specification_t"
+        base_class_type="prx::plan::specification_t">
+        <description>
+           A specification for a motion planner.
+        </description>
+    </class>
+
+    <class name="prx_planning/base_apc_task_specification"
+        type="prx::plan::base_apc_task_specification_t"
+        base_class_type="prx::plan::specification_t">
+        <description>
+        </description>
+    </class>
+
+    <!-- PACKAGES -->
+<class name="prx_planning/manipulation_application"
+    type="prx::packages::manipulation::manipulation_application_t"
+    base_class_type="prx::plan::planning_application_t">
+    <description>
+        An application for the manipulation problems.
+    </description>        
+</class>
+
+<class name="prx_planning/manipulation_tp"
+    type="prx::packages::manipulation::manipulation_tp_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        A task planner for a simple manipulation problem.
+    </description>        
+</class>
+
+<class name="prx_planning/manip_sampler"
+    type="prx::packages::manipulation::manip_sampler_t"
+    base_class_type="prx::plan::sampler_t">
+    <description>
+        A sampler for sampling a manipulator with an object.
+    </description>        
+</class>
+
+<class name="prx_planning/manipulation_query"
+    type="prx::packages::manipulation::manipulation_query_t"
+    base_class_type="prx::plan::query_t">
+    <description>
+        The query for the manipulation problem.
+    </description>        
+</class>
+
+<class name="prx_planning/manipulation_specification"
+    type="prx::packages::manipulation::manipulation_specification_t"
+    base_class_type="prx::plan::specification_t">
+    <description>
+        The problem specification for the manipulation problem.
+    </description>        
+</class>
+    <!-- END PACKAGES -->
+
+</library>

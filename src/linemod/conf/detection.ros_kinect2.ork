@@ -1,0 +1,57 @@
+# info about the db
+
+#source1:
+#  type: 'OpenNI'
+#  module: 'object_recognition_core.io.source'
+#  parameters:
+#    image_mode: 'SXGA_RES'
+#    depth_mode: 'VGA_RES'
+#    image_fps: 'FPS_15'
+#    depth_fps: 'FPS_30'
+
+source1:
+  type: RosKinect
+  module: 'object_recognition_ros.io'
+  parameters:
+    crop_enabled: False
+    rgb_frame_id: 'camera2_rgb_optical_frame'
+    rgb_image_topic: '/camera2/rgb/image_rect_color'
+    rgb_camera_info: '/camera2/rgb/camera_info'
+    depth_frame_id: 'camera2_depth_optical_frame'
+    depth_image_topic: '/camera2/depth_registered/image_raw'
+    depth_camera_info: '/camera2/depth_registered/camera_info'
+#   bag: /home/vrabaud/tod_data_new/training/object_recognition_capture/eggo_01.bag
+#  bag: /home/vrabaud/tod_data_new/training/object_recognition_capture/eggo_01.bag
+
+sink1:
+  type: Publisher
+  module: 'object_recognition_ros.io'
+  inputs: [source1]
+
+pipeline1:
+  type: LinemodDetector
+  module: 'object_recognition_linemod'
+  inputs: [source1]
+  outputs: [sink1]
+  parameters:
+    use_rgb: 1
+    use_depth: 1
+    verbose: 1
+    visualize: 1
+    threshold: 90.0 #92.5 #82.9 #91.6
+    th_obj_dist: 0.1
+    icp_dist_min: 0.05 #0.05
+    px_match_min: .70 #0.5
+    depth_frame_id: 'camera2_rgb_optical_frame'
+    # The list of object_ids to analyze
+    TOP_N: 1
+    linemod_similarity_weight: 0.5
+    histogram_similarity_weight: 0.5
+    #depth_far: 0.85
+    object_ids: 'all'
+    # object_ids: ['9cc95a562f9bc3193af983727c0083da']
+    # object_ids: ['bd3f4901c7585a437d1e44c596002114']
+    db:
+      type: 'CouchDB'
+      root: 'http://localhost:5984'
+      collection: 'object_recognition'

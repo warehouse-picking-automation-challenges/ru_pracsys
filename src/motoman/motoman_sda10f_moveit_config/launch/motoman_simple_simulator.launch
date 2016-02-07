@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<launch>
+	<arg name="gui" default="True" />
+	<param name="robot_description" command="$(find xacro)/xacro.py $(find motoman_sda10f_support)/urdf/sda10f.xacro" />
+	<param name="use_gui" value="$(arg gui)"/>
+	<rosparam command="load" file="$(find prx_simulation)/urdf/joint_names_sda10f.yaml" />
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+	
+	<node name="joint_trajectory_action" pkg="prx_simulation" type="motoman_sim.py" output="screen" />
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find motoman_sda10f_moveit_config)/launch/moveit.rviz" required="true" />
+</launch>

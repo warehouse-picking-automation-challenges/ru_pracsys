@@ -1,0 +1,75 @@
+<launch>
+
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>  
+  <include ns="simulation" file="$(find rearrangement_manipulation)/input/common_simulation.launch"/>
+  <include ns="planning" file="$(find rearrangement_manipulation)/input/common_planning.launch"/>
+
+  <include ns="simulation" file="$(find rearrangement_manipulation)/input/environments/cup.launch"/>
+  <rosparam command="load" ns="simulation/simulator/obstacles" file="$(find rearrangement_manipulation)/input/environments/kiva_pod.yaml" />
+  
+  <!--
+  <rosparam command="load" ns="simulation/simulator/obstacles" file="$(find rearrangement_manipulation)/input/environments/shelf.yaml" />
+  <rosparam command="load" ns="simulation/simulator/obstacles" file="$(find rearrangement_manipulation)/input/environments/table.yaml" />
+  -->
+
+  <include ns="planning" file="$(find rearrangement_manipulation)/input/planning/world_models/world_model_baxter.launch"/>  
+  <rosparam command="load" ns="planning/world_model/simulator/obstacles" file="$(find rearrangement_manipulation)/input/environments/shelf.yaml" />    
+  <!--
+  <rosparam command="load" ns="planning/world_model/simulator/obstacles" file="$(find rearrangement_manipulation)/input/environments/shelf.yaml" />  
+  <rosparam command="load" ns="planning/world_model/simulator/obstacles" file="$(find rearrangement_manipulation)/input/environments/table.yaml" />
+  -->
+
+  <rosparam ns="planning/" >
+    random_seed: 14391835
+  </rosparam>
+
+  <rosparam ns="planning/task_planner/planners/" >
+    manipulation_planner:
+        planners:
+            ungrasped:
+              deserialize_file: ungrasped_500_1_prm_star
+              serialize_file: ungrasped_500_spars
+            grasped:
+              deserialize_file: grasped_500_1_prm_star
+              serialize_file: grasped_500_spars
+  </rosparam>
+
+
+  <rosparam command="load" ns="simulation/simulator/check_poses" file="$(find rearrangement_manipulation)/input/planning/problems/kiva_front_poses.yaml" />
+  <rosparam ns="simulation/simulator/" >
+    check_states1:
+      -
+        state: [-0.372121 , -0.758792 , 0.440192 , 1.74842 , 1.58323 , 1.18537 , -2.55159]
+      -
+        state: [ 1.50604 , -0.179628 , -1.28827 , 2.18872 , 0.248149 , -0.988957 , 1.16909]
+      -
+        state: [-0.119617 , -0.449958 , 0.612667 , 0.3316 , 1.02626 , 1.60106 , -1.40112]
+      -
+        state: [-0.52129 , -0.390662 , 1.74483 , 1.82811 , 0.458384 , -0.95858 , -1.63646]
+      -
+        state: [1.67695 , -1.62268 , -0.996279 , 2.12978 , -1.02651 , -0.81403 , 0.794489]
+      -
+        state: [-0.179921 , -0.606977 , 1.85976 , 2.19302 , -2.58205 , 1.03085 , 1.74006]
+      -
+        state: [-0.00177664 , -0.981052 , 0.213597 , 2.2753 , -0.863641 , -1.29684 , 0.137666]
+      -
+        state: [0.913589 , 0.816248 , -1.86918 , 1.88522 , -2.16784 , 1.9831 , -1.09796]
+    checks2:
+      -
+        state: []
+
+  </rosparam>
+
+
+  <!-- This is the file for different start and goal positions -->
+  <rosparam command="load" ns="planning/problems/rearrangement_manipulation_problem/specification" file="$(find rearrangement_manipulation)/input/planning/problems/1cup_problem.yaml"/>
+
+  <!-- Define the planning node -->
+
+  <!-- Define the simulation node -->
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation" 
+    required="true" launch-prefix="gdb --args" output="screen" args="simulation"/>
+
+  <include file="$(find rearrangement_manipulation)/input/visualization.launch"/>
+
+</launch>

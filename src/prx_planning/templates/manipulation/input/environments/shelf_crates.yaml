@@ -1,0 +1,24 @@
+shelf_crates:
+  type: obstacle
+  geometries:
+    -
+      name: left_crate
+      collision_geometry:
+        type: box
+        dims: [0.3, 0.2, 0.2]
+        material: off_white
+      config:
+        position: [-0.35, 1.23, 3.4505]
+        orientation: [0, 0, 0, 1]
+    -
+      name: right_crate
+      collision_geometry:
+        type: box
+        dims: [0.3, 0.2, 0.2]
+        material: off_white
+      config:
+        position: [0.35, 1.23, 3.4505]
+        orientation: [0, 0, 0, 1]
+
+
+      

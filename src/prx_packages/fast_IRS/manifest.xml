@@ -1,0 +1,8 @@
+<package>
+  <description brief="Faster Version of IRS">
+    A package dedicated to increasing the computational efficiency of IRS.
+  </description>
+  <author>Andrew Dobson, Andrew Kimmel</author>
+  <license>BSD</license>
+  <url>http://www.pracsyslab.org</url>
+</package>

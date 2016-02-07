@@ -1,0 +1,443 @@
+application: {type: empty_application}
+initialization: {simulation: true}
+rosdistro: 'groovy
+
+  '
+roslaunch:
+  uris: {host_davos_cs_rutgers_edu__62983: 'http://davos.cs.rutgers.edu:62983/'}
+rosversion: '1.9.46
+
+  '
+run_id: c112dc80-e34d-11e2-b96d-c82a145ad556
+simulator:
+  collision_checker: {type: ode}
+  obstacles:
+    building1:
+      geometries:
+      - collision_geometry:
+          dims: [10, 10, 1.6]
+          material: light_blue
+          type: box
+        config:
+          orientation: [0, 0, 0, 1]
+          position: [100, 40, 1]
+        dims: [10, 10, 1.6]
+        name: box1
+      - collision_geometry:
+          dims: [10, 10, 1.6]
+          material: orange
+          type: box
+        config:
+          orientation: [0, 0, 0, 1]
+          position: [40, 40, 1]
+        dims: [10, 10, 1.6]
+        name: box2
+      - collision_geometry:
+          dims: [10, 10, 1.6]
+          material: red
+          type: box
+        config:
+          orientation: [0, 0, 0, 1]
+          position: [20, 40, 1]
+        dims: [10, 10, 1.6]
+        name: box3
+      - collision_geometry:
+          dims: [10, 10, 1.6]
+          material: green
+          type: box
+        config:
+          orientation: [0, 0, 0, 1]
+          position: [80, 40, 1]
+        dims: [10, 10, 1.6]
+        name: box4
+      - collision_geometry:
+          dims: [10, 10, 1.6]
+          material: yellow
+          type: box
+        config:
+          orientation: [0, 0, 0, 1]
+          position: [60, 40, 1]
+        dims: [10, 10, 1.6]
+        name: box5
+      - collision_geometry:
+          dims: [10, 10, 1.6]
+          material: blue
+          type: box
+        config:
+          orientation: [0, 0, 0, 1]
+          position: [120, 40, 1]
+        dims: [10, 10, 1.6]
+        name: box6
+      - collision_geometry:
+          dims: [10, 10, 1.6]
+          material: purple
+          type: box
+        config:
+          orientation: [0, 0, 0, 1]
+          position: [140, 40, 1]
+        dims: [10, 10, 1.6]
+        name: box7
+      type: ode_obstacle
+  simulation_step: 0.005
+  space_type: hash
+  step_type: simple
+  subsystems:
+    manual1:
+      input_keys:
+      - {action: add, control_index: 0, input_key: UP, value: 4}
+      - {action: add, control_index: 0, input_key: DOWN, value: -4}
+      - {action: add, control_index: 1, input_key: LEFT, value: 0.5}
+      - {action: add, control_index: 1, input_key: RIGHT, value: -0.5}
+      - {action: replace, control_index: 0, input_key: 0, value: 0}
+      subsystems:
+        convertor1:
+          mapping: ode_car_as_second_order_car
+          subsystems:
+            car1:
+              controls:
+              - bounds: [-40, 60]
+                component: 1
+                name: left_forward_torque
+                ode_object: fljoint
+                type: joint
+              - bounds: [-40, 60]
+                component: 1
+                name: right_forward_torque
+                ode_object: frjoint
+                type: joint
+              - bounds: [-2, 2]
+                component: 0
+                name: left_turning_torque
+                ode_object: fljoint
+                type: joint
+              - bounds: [-2, 2]
+                component: 0
+                name: right_turning_torque
+                ode_object: frjoint
+                type: joint
+              geometries:
+              - collision_geometry:
+                  dims: [10, 6, 3]
+                  material: green
+                  type: box
+                config:
+                  orientation: [0.0, 0.0, 0.0, 1]
+                  position: [20, 0, 3]
+                dims: [10, 6, 3]
+                name: chassis
+              - collision_geometry: {height: 0.5, material: black, radius: 1.5, type: cylinder}
+                config:
+                  orientation: [0.7071067812, 0.0, 0.0, 0.7071067812]
+                  position: [23, -3, 1.5]
+                dims: [1.5, 0.5]
+                name: frwheel
+              - collision_geometry: {height: 0.5, material: black, radius: 1.5, type: cylinder}
+                config:
+                  orientation: [0.7071067812, 0.0, 0.0, 0.7071067812]
+                  position: [23, 3, 1.5]
+                dims: [1.5, 0.5]
+                name: flwheel
+              - collision_geometry: {height: 0.5, material: black, radius: 1.5, type: cylinder}
+                config:
+                  orientation: [0.7071067812, 0.0, 0.0, 0.7071067812]
+                  position: [17, -3, 1.5]
+                dims: [1.5, 0.5]
+                name: brwheel
+              - collision_geometry: {height: 0.5, material: black, radius: 1.5, type: cylinder}
+                config:
+                  orientation: [0.7071067812, 0.0, 0.0, 0.7071067812]
+                  position: [17, 3, 1.5]
+                dims: [1.5, 0.5]
+                name: blwheel
+              joints:
+              - child: frwheel
+                joint_limits_1: [-0.2, 0.2]
+                name: frjoint
+                params: [23, -3, 1.5, 0, 0, 1, 0, -1, 0]
+                parent: chassis
+                suspension: 0.1
+                type: hinge2
+              - child: flwheel
+                joint_limits_1: [-0.2, 0.2]
+                name: fljoint
+                params: [23, 3, 1.5, 0, 0, 1, 0, -1, 0]
+                parent: chassis
+                suspension: 0.1
+                type: hinge2
+              - child: brwheel
+                joint_limits_1: [0.0, 0.0]
+                name: brjoint
+                params: [17, -3, 1.5, 0, 0, 1, 0, -1, 0]
+                parent: chassis
+                suspension: 0.03
+                type: hinge2
+              - child: blwheel
+                joint_limits_1: [0.0, 0.0]
+                name: bljoint
+                params: [17, 3, 1.5, 0, 0, 1, 0, -1, 0]
+                parent: chassis
+                suspension: 0.03
+                type: hinge2
+              type: ode_plant
+          type: converter
+      type: manual_controller
+  type: ode_simulator
+visualization:
+  type: prx_visualization/osg
+  viewer:
+    clear_color: [0.6, 0.7, 0.76, 1.0]
+    fullscreen: false
+    scene:
+      geometry: []
+      lights:
+        default:
+          ambient: [0.25, 0.25, 0.25, 1.0]
+          diffuse: [0.25, 0.25, 0.25, 1.0]
+          direction: [0.0, 0.0, -1.0]
+          position: [0.0, 0.0, 10000.0]
+          specular: [0.25, 0.25, 0.25, 1.0]
+      materials:
+        black:
+          ambient:
+            color: [0.0, 0.0, 0.0, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.0, 0.0, 0.0, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 12.8}
+          specular:
+            color: [0.0225, 0.0225, 0.0225, 1.0]
+            faces: front_back
+        blue:
+          ambient:
+            color: [0.0, 0.0, 0.0, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.0, 0.0, 1.0, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 12.8}
+          specular:
+            color: [0.0225, 0.0225, 0.0225, 1.0]
+            faces: front_back
+        bronze:
+          ambient:
+            color: [0.0, 0.0, 0.0, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.714, 0.4284, 0.18144, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 12.6}
+          specular:
+            color: [0.393548, 0.271906, 0.166721, 1.0]
+            faces: front_back
+        dark_green:
+          ambient:
+            color: [0.0, 0.2, 0.0, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.01, 0.2, 0.01, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 0.7}
+          specular:
+            color: [0.03, 0.2, 0.03, 1.0]
+            faces: front_back
+        gold:
+          ambient:
+            color: [0.3, 0.1, 0.0, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.5, 0.3, 0.0, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 0.7}
+          specular:
+            color: [0.2, 0.1, 0.05, 1.0]
+            faces: front_back
+        green:
+          ambient:
+            color: [0.0, 0.2, 0.0, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.0, 0.4, 0.0, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 0.7}
+          specular:
+            color: [0.1, 0.2, 0.1, 1.0]
+            faces: front_back
+        grey:
+          ambient:
+            color: [0.1, 0.1, 0.1, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.2, 0.2, 0.2, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 0.7}
+          specular:
+            color: [0.05, 0.05, 0.05, 1.0]
+            faces: front_back
+        indigo:
+          ambient:
+            color: [0.0, 0.0, 0.0, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.0980392, 0.0, 0.458824, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 12.8}
+          specular:
+            color: [0.0225, 0.0225, 0.0225, 1.0]
+            faces: front_back
+        light_blue:
+          ambient:
+            color: [0.0, 0.2, 0.2, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.0, 0.4, 0.5, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 0.7}
+          specular:
+            color: [0.1, 0.16, 0.2, 1.0]
+            faces: front_back
+        off_white:
+          ambient:
+            color: [0.3, 0.3, 0.29, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.8, 0.8, 0.72, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 0.7}
+          specular:
+            color: [0.5, 0.5, 0.49, 1.0]
+            faces: front_back
+        orange:
+          ambient:
+            color: [0.16, 0.05, 0.0, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.6, 0.16, 0.03, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 0.7}
+          specular:
+            color: [0.3, 0.1, 0.01, 1.0]
+            faces: front_back
+        pink:
+          ambient:
+            color: [0.2, 0.1, 0.1, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.5, 0.0, 0.5, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 0.7}
+          specular:
+            color: [0.3, 0.1, 0.3, 1.0]
+            faces: front_back
+        purple:
+          ambient:
+            color: [0.12, 0.0, 0.25, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.19, 0.0, 0.4, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 0.7}
+          specular:
+            color: [0.025, 0.01, 0.04, 1.0]
+            faces: front_back
+        red:
+          ambient:
+            color: [0.0, 0.0, 0.0, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [1.0, 0.0, 0.0, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 12.8}
+          specular:
+            color: [0.0225, 0.0225, 0.0225, 1.0]
+            faces: front_back
+        teal:
+          ambient:
+            color: [0.05, 0.05, 0.4, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.3, 0.3, 0.8, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 0.7}
+          specular:
+            color: [0.05, 0.05, 0.5, 1.0]
+            faces: front_back
+        violet:
+          ambient:
+            color: [0.0, 0.0, 0.0, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.635294, 0.0, 1.0, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 12.8}
+          specular:
+            color: [0.0225, 0.0225, 0.0225, 1.0]
+            faces: front_back
+        white:
+          ambient:
+            color: [0.4, 0.4, 0.4, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.95, 0.95, 0.95, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 0.7}
+          specular:
+            color: [0.6, 0.6, 0.6, 1.0]
+            faces: front_back
+        yellow:
+          ambient:
+            color: [0.2, 0.2, 0.0, 1.0]
+            faces: front_back
+          color_mode: ambient_diffuse
+          diffuse:
+            color: [0.4, 0.4, 0.0, 1.0]
+            faces: front_back
+          shininess: {faces: front_back, value: 0.7}
+          specular:
+            color: [0.2, 0.2, 0.1, 1.0]
+            faces: front_back
+      texture:
+      - terrain:
+          terrain_image: terrain/plain.tga
+          terrain_plane: {divisor: 10, x: 10000, y: 10000, z: 0}
+    windows:
+      window_1:
+        cameras:
+          orthographic:
+            ortho: true
+            ortho_param: {bottom: -300, left: -300, right: 300, top: 300, zFar: 1000,
+              zNear: 0}
+            speed: {move: 10, rotate: 0.001}
+          perspective:
+            camera_type: 0
+            center: [0, 1, 18]
+            eye: [0, -20, 15]
+            ortho: false
+            speed: {move: 4, rotate: 0.001}
+          smooth:
+            camera_type: 2
+            center: [0, 1, 18]
+            eye: [0, -20, 15]
+            ortho: false
+            speed: {move: 4, rotate: 0.001}
+        height: 1000
+        width: 1000
+        xpos: 920
+        ypos: 100

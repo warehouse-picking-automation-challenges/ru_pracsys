@@ -1,0 +1,174 @@
+<launch>
+
+  <!-- Load template files -->
+        
+  <rosparam command="load" ns="cup" file="$(find manipulation)/input/simulation/plants/cups.yaml"/>               
+  <rosparam command="load" ns="cup">
+    state_space: 
+        min: [-10, -10, -100, -1, -1, -1, -1]
+        max: [10, 10, 100, 1, 1, 1, 1]
+        scale: [0.025, 0.025, 0.05, 0.5, 0.5, 0.5, 0.5]
+  </rosparam>
+
+  <!-- Set up concrete system tree -->
+
+  <rosparam command="load" ns="simulator/subsystems/cup1">
+    template: "cup"
+    initial_state:  [0.7 0.4 3.45 0.70710678118 0 -0.70710678118 0  ] 
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.02
+          height: 0.14
+          material: red
+        visualization_geometry:
+            type: mesh
+            filename: meshes/cans/duff_taller.osg
+            local_transform:
+              position: [0,0,-0.08]
+              orientation: [0,0,0,1]
+  </rosparam>
+
+<!--
+  <rosparam command="load" ns="simulator/subsystems/cup2">
+    template: "cup"
+    initial_state: [0.7 0.4 3.45 0.70710678118 0 -0.70710678118 0]
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.02
+          height: 0.14
+          material: red
+        visualization_geometry:
+            type: mesh
+            filename: meshes/cans/duff_taller.osg
+            local_transform:
+              position: [0,0,-0.08]
+              orientation: [0,0,0,1]
+  </rosparam>
+
+
+  <rosparam command="load" ns="simulator/subsystems/cup2">
+    template: "cup"
+    initial_state: [0.3655517196844108029907261 1.1314294514392639889877046  3.47750 0 0 0 1]
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.02
+          height: 0.08
+          material: green
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/cup3">
+    template: "cup"
+    initial_state: [-0.3286347593756554497090860 1.1391085093045181242388253 3.4775000000 0 0 0 1 ]
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.02
+          height: 0.08
+          material: blue
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/cup4">
+    template: "cup"
+    initial_state: [-0.3260297482325834050875812 1.1459170236372933082691361 3.477500000 0 0 0 1 ]
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.02
+          height: 0.08
+          material: blue
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/cup5">
+    template: "cup"
+    initial_state: [-0.2286011690709745525218466 1.0916909693049690055488554 3.4775000000 0 0 0 1 ]
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.02
+          height: 0.08
+          material: blue
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/cup6">
+    template: "cup"
+    initial_state: [0.3583980348861767195600692 1.0749387693288452449991155 3.477500000 0 0 0 1 ]
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.02
+          height: 0.08
+          material: blue
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/cup7">
+    template: "cup"
+    initial_state: [0.1592554124790501735020598 1.1936954069154781521433506 3.4775000000 0 0 0 1 ]
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.02
+          height: 0.08
+          material: blue
+  </rosparam>
+
+
+  <rosparam command="load" ns="simulator/subsystems/cup8">
+    template: "cup"
+    initial_state: [-0.0390716719553208524651211 1.1723002816048917473779056 3.477500000 0 0 0 1 ]
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.02
+          height: 0.08
+          material: blue
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/cup9">
+    template: "cup"
+    initial_state: [-0.2657813404597255679817636 1.1611622421495439994032495  3.4775000000 0 0 0 1 ]
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.02
+          height: 0.08
+          material: blue
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/cup10">
+    template: "cup"
+    initial_state: [-0.0953452234949661581175917 1.0889107822388925939094406  3.4775000000 0 0 0 1 ]
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.02
+          height: 0.08
+          material: blue
+  </rosparam>
+-->
+
+</launch>

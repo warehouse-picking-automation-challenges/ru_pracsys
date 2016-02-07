@@ -1,0 +1,17 @@
+<launch>
+
+  <!-- Include the world model you wish to use.  The namespace you place this in must match the planning node name below. -->
+  <include ns="planning" file="$(find prx_input)/experiments/replanning/planning/world_models/sparse_rrt.launch"/>
+
+  <!-- Include the planner structure you wish to use -->
+  <include ns="planning" file="$(find prx_input)/experiments/replanning/planning/planner_structures/sparse_rrt.launch"/>
+
+  <!-- Define the planning node -->
+  <!-- 	IMPORTANT! If you want simulation to run after the planning node has finished,
+	then you need to set the required attribute to false. -->
+
+  <node name="planning" pkg="prx_planning" type="prx_planning"
+        required="true" launch-prefix="gdb" output="screen" args="planning"/>
+
+
+</launch>

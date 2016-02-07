@@ -1,0 +1,43 @@
+type: obstacle
+root_configuration:
+  position: [0, -2, -20]
+  orientation: [0, 0, 0, 1]
+geometries:
+  -
+    name: bottom
+    collision_geometry: 
+      type: box
+      dims: [0.91, 0.94, 1.472]
+      material: dark_grey
+    config:
+      position: [0.225, 0, -0.541]
+      orientation: [0, 0, 0, 1]
+  -
+    name: top
+    collision_geometry: 
+      type: box
+      dims: [0.91, 0.94, 0.37]
+      material: dark_grey
+    config:
+      position: [0.225, 0, 0.705]
+      orientation: [0, 0, 0, 1]
+  -
+    name: left
+    collision_geometry: 
+      type: box
+      dims: [0.91, 0.28, 0.33]
+      material: dark_grey
+    config:
+      position: [0.225, 0.33, 0.355]
+      orientation: [0, 0, 0, 1]
+  -
+    name: right
+    collision_geometry: 
+      type: box
+      dims: [0.91, 0.28, 0.33]
+      material: dark_grey
+    config:
+      position: [0.225, -0.33, 0.355]
+      orientation: [0, 0, 0, 1]
+
+# +0.245

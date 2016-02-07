@@ -1,0 +1,10 @@
+<launch>
+ <rosparam file="NNNNNN.yaml" />
+  <node name="NNNNNN" pkg="prx_planning" type="prx_planning"
+        required="false" launch-prefix="" output="screen" args="NNNNNN" />
+
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+        required="true" launch-prefix="" output="screen" />
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+</launch>

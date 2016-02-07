@@ -1,0 +1,17 @@
+
+<class name="prx_planning/spars2"
+    type="prx::packages::spars::spars2_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        The SPArse Roadmap Spanner method which does not require a dense graph.
+    </description>        
+</class>
+
+<class name="prx_planning/naive_sparse"
+    type="prx::packages::spars::naive_sparse_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        A naive sparse roadmap algorithm.
+    </description>
+</class>
+

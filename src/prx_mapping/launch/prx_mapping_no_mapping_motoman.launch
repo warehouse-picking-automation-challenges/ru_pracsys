@@ -1,0 +1,8 @@
+<launch>
+	<param name="data_gathering" value="false"/>
+	<param name="robot_name" value="motoman"/>
+	<param name="hard_coded_object" value="true"/>
+	
+	<node pkg="tf" type="static_transform_publisher" name="localizer_world_base_link_broadcaster"
+		args="0.0 0.0 0.0 0.0 0.0 0.0 /world /base_link 50" />
+</launch>

@@ -1,0 +1,4388 @@
+#
+# Wavefront material file
+# Converted by Meshlab Group
+#
+
+newmtl material_0
+Ka 0.200000 0.200000 0.200000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Tr 1.000000
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_1
+Ka 0.200000 0.200000 0.200000
+Kd 0.501961 0.501961 0.501961
+Ks 1.000000 1.000000 1.000000
+Tr 1.000000
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_2
+Ka 0.200000 0.200000 0.200000
+Kd 0.537255 0.258824 0.329412
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_3
+Ka 0.200000 0.200000 0.200000
+Kd 0.164706 0.349020 0.474510
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_4
+Ka 0.200000 0.200000 0.200000
+Kd 0.749020 0.749020 0.749020
+Ks 1.000000 1.000000 1.000000
+Tr 1.000000
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_5
+Ka 0.200000 0.200000 0.200000
+Kd 0.266667 0.592157 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_6
+Ka 0.200000 0.200000 0.200000
+Kd 0.529412 0.839216 0.686275
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_7
+Ka 0.200000 0.200000 0.200000
+Kd 0.564706 0.501961 0.000000
+Ks 1.000000 1.000000 1.000000
+Tr 0.000000
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_8
+Ka 0.200000 0.200000 0.200000
+Kd 0.364706 0.901961 0.709804
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_9
+Ka 0.200000 0.200000 0.200000
+Kd 0.603922 0.674510 0.466667
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_10
+Ka 0.200000 0.200000 0.200000
+Kd 0.364706 0.149020 0.384314
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_11
+Ka 0.200000 0.200000 0.200000
+Kd 0.364706 0.247059 0.000000
+Ks 1.000000 1.000000 1.000000
+Tr 0.000000
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_12
+Ka 0.200000 0.200000 0.200000
+Kd 0.501961 0.376471 0.000000
+Ks 1.000000 1.000000 1.000000
+Tr 0.000000
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_13
+Ka 0.200000 0.200000 0.200000
+Kd 0.592157 0.301961 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_14
+Ka 0.200000 0.200000 0.200000
+Kd 0.858824 0.674510 0.682353
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_15
+Ka 0.200000 0.200000 0.200000
+Kd 0.501961 0.811765 0.729412
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_16
+Ka 0.200000 0.200000 0.200000
+Kd 0.776471 0.984314 0.466667
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_17
+Ka 0.200000 0.200000 0.200000
+Kd 0.192157 0.929412 0.384314
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_18
+Ka 0.200000 0.200000 0.200000
+Kd 0.701961 0.603922 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_19
+Ka 0.200000 0.200000 0.200000
+Kd 0.686275 0.764706 0.658824
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_20
+Ka 0.200000 0.200000 0.200000
+Kd 0.258824 0.694118 0.756863
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_21
+Ka 0.200000 0.200000 0.200000
+Kd 0.439216 0.529412 0.458824
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_22
+Ka 0.200000 0.200000 0.200000
+Kd 0.686275 0.713726 0.384314
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_23
+Ka 0.200000 0.200000 0.200000
+Kd 0.411765 0.501961 0.000000
+Ks 1.000000 1.000000 1.000000
+Tr 0.000000
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_24
+Ka 0.200000 0.200000 0.200000
+Kd 0.384314 0.756863 0.286275
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_25
+Ka 0.200000 0.200000 0.200000
+Kd 0.129412 0.176471 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_26
+Ka 0.200000 0.200000 0.200000
+Kd 0.909804 0.584314 0.513726
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_27
+Ka 0.200000 0.200000 0.200000
+Kd 0.556863 0.376471 0.411765
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_28
+Ka 0.200000 0.200000 0.200000
+Kd 0.811765 0.431373 0.411765
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_29
+Ka 0.200000 0.200000 0.200000
+Kd 0.956863 0.921569 0.501961
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_30
+Ka 0.200000 0.200000 0.200000
+Kd 0.384314 0.737255 0.003922
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_31
+Ka 0.200000 0.200000 0.200000
+Kd 0.109804 0.976471 0.392157
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_32
+Ka 0.200000 0.200000 0.200000
+Kd 0.611765 0.827451 0.419608
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_33
+Ka 0.200000 0.200000 0.200000
+Kd 0.858824 0.427451 0.384314
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_34
+Ka 0.200000 0.200000 0.200000
+Kd 0.003922 0.101961 0.513726
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_35
+Ka 0.200000 0.200000 0.200000
+Kd 0.819608 0.701961 0.984314
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_36
+Ka 0.200000 0.200000 0.200000
+Kd 0.921569 0.392157 0.392157
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_37
+Ka 0.200000 0.200000 0.200000
+Kd 0.956863 0.000000 0.427451
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_38
+Ka 0.200000 0.200000 0.200000
+Kd 0.109804 0.164706 0.184314
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_39
+Ka 0.200000 0.200000 0.200000
+Kd 0.074510 0.203922 0.184314
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_40
+Ka 0.200000 0.200000 0.200000
+Kd 0.329412 0.376471 0.203922
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_41
+Ka 0.200000 0.200000 0.200000
+Kd 0.956863 0.211765 0.411765
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_42
+Ka 0.200000 0.200000 0.200000
+Kd 0.000000 0.427451 0.584314
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_43
+Ka 0.200000 0.200000 0.200000
+Kd 0.203922 0.874510 0.839216
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_44
+Ka 0.200000 0.200000 0.200000
+Kd 0.686275 0.109804 0.400000
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_45
+Ka 0.200000 0.200000 0.200000
+Kd 0.611765 0.666667 0.431373
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_46
+Ka 0.200000 0.200000 0.200000
+Kd 0.086275 0.894118 0.419608
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_47
+Ka 0.200000 0.200000 0.200000
+Kd 0.392157 0.992157 0.564706
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_48
+Ka 0.200000 0.200000 0.200000
+Kd 0.513726 0.364706 0.858824
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_49
+Ka 0.200000 0.200000 0.200000
+Kd 0.854902 0.956863 0.392157
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_50
+Ka 0.200000 0.200000 0.200000
+Kd 0.039216 0.211765 0.439216
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_51
+Ka 0.200000 0.200000 0.200000
+Kd 0.513726 0.164706 0.431373
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_52
+Ka 0.200000 0.200000 0.200000
+Kd 0.627451 0.894118 0.584314
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_53
+Ka 0.200000 0.200000 0.200000
+Kd 0.066667 0.066667 0.819608
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_54
+Ka 0.200000 0.200000 0.200000
+Kd 0.831373 0.258824 0.384314
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_55
+Ka 0.200000 0.200000 0.200000
+Kd 0.882353 0.376471 0.549020
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_56
+Ka 0.200000 0.200000 0.200000
+Kd 0.513726 0.611765 0.486275
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_57
+Ka 0.200000 0.200000 0.200000
+Kd 0.384314 0.392157 0.086275
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_58
+Ka 0.200000 0.200000 0.200000
+Kd 0.756863 0.003922 0.058824
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_59
+Ka 0.200000 0.200000 0.200000
+Kd 0.164706 0.266667 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_60
+Ka 0.200000 0.200000 0.200000
+Kd 0.737255 0.737255 0.729412
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_61
+Ka 0.200000 0.200000 0.200000
+Kd 0.364706 0.686275 0.486275
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_62
+Ka 0.200000 0.200000 0.200000
+Kd 0.274510 0.764706 0.058824
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_63
+Ka 0.200000 0.200000 0.200000
+Kd 0.674510 0.666667 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_64
+Ka 0.200000 0.200000 0.200000
+Kd 0.211765 0.266667 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_65
+Ka 0.200000 0.200000 0.200000
+Kd 0.874510 0.184314 0.494118
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_66
+Ka 0.200000 0.200000 0.200000
+Kd 0.349020 0.337255 0.058824
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_67
+Ka 0.200000 0.200000 0.200000
+Kd 0.501961 0.529412 0.376471
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_68
+Ka 0.200000 0.200000 0.200000
+Kd 0.694118 0.137255 0.701961
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_69
+Ka 0.200000 0.200000 0.200000
+Kd 0.639216 0.301961 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_70
+Ka 0.200000 0.200000 0.200000
+Kd 0.549020 0.509804 0.486275
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_71
+Ka 0.200000 0.200000 0.200000
+Kd 0.011765 0.349020 0.839216
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_72
+Ka 0.200000 0.200000 0.200000
+Kd 0.403922 0.231373 0.403922
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_73
+Ka 0.200000 0.200000 0.200000
+Kd 0.603922 0.909804 0.749020
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_74
+Ka 0.200000 0.200000 0.200000
+Kd 0.039216 0.039216 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_75
+Ka 0.200000 0.200000 0.200000
+Kd 0.764706 0.376471 0.376471
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_76
+Ka 0.200000 0.200000 0.200000
+Kd 0.137255 0.949020 0.694118
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_77
+Ka 0.200000 0.200000 0.200000
+Kd 0.392157 0.282353 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_78
+Ka 0.200000 0.200000 0.200000
+Kd 0.639216 0.074510 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_79
+Ka 0.200000 0.200000 0.200000
+Kd 0.929412 0.054902 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_80
+Ka 0.200000 0.200000 0.200000
+Kd 0.149020 0.901961 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_81
+Ka 0.200000 0.200000 0.200000
+Kd 0.156863 0.156863 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_82
+Ka 0.200000 0.200000 0.200000
+Kd 0.247059 0.831373 0.376471
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_83
+Ka 0.200000 0.200000 0.200000
+Kd 0.592157 0.839216 0.701961
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_84
+Ka 0.200000 0.200000 0.200000
+Kd 0.882353 0.874510 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_85
+Ka 0.200000 0.200000 0.200000
+Kd 0.839216 0.219608 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_86
+Ka 0.200000 0.200000 0.200000
+Kd 0.949020 0.866667 0.286275
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_87
+Ka 0.200000 0.200000 0.200000
+Kd 0.282353 0.701961 0.039216
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_88
+Ka 0.200000 0.200000 0.200000
+Kd 0.066667 0.494118 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_89
+Ka 0.200000 0.200000 0.200000
+Kd 0.976471 0.086275 0.086275
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_90
+Ka 0.200000 0.200000 0.200000
+Kd 0.639216 0.592157 0.784314
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_91
+Ka 0.200000 0.200000 0.200000
+Kd 0.874510 0.901961 0.313726
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_92
+Ka 0.200000 0.200000 0.200000
+Kd 0.949020 0.239216 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_93
+Ka 0.200000 0.200000 0.200000
+Kd 0.149020 0.901961 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_94
+Ka 0.200000 0.200000 0.200000
+Kd 0.384314 0.858824 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_95
+Ka 0.200000 0.200000 0.200000
+Kd 0.239216 0.356863 0.776471
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_96
+Ka 0.200000 0.200000 0.200000
+Kd 0.901961 0.086275 0.329412
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_97
+Ka 0.200000 0.200000 0.200000
+Kd 0.192157 0.403922 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_98
+Ka 0.200000 0.200000 0.200000
+Kd 0.949020 0.937255 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_99
+Ka 0.200000 0.200000 0.200000
+Kd 0.164706 0.019608 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_100
+Ka 0.200000 0.200000 0.200000
+Kd 0.047059 0.266667 0.784314
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_101
+Ka 0.200000 0.200000 0.200000
+Kd 0.686275 0.309804 0.321569
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_102
+Ka 0.200000 0.200000 0.200000
+Kd 0.486275 0.066667 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_103
+Ka 0.200000 0.200000 0.200000
+Kd 0.337255 0.866667 0.529412
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_104
+Ka 0.200000 0.200000 0.200000
+Kd 0.349020 0.674510 0.419608
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_105
+Ka 0.200000 0.200000 0.200000
+Kd 0.764706 0.937255 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_106
+Ka 0.200000 0.200000 0.200000
+Kd 0.121569 0.403922 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_107
+Ka 0.200000 0.200000 0.200000
+Kd 0.019608 0.364706 0.792157
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_108
+Ka 0.200000 0.200000 0.200000
+Kd 0.164706 0.384314 0.313726
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_109
+Ka 0.200000 0.200000 0.200000
+Kd 0.929412 0.458824 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_110
+Ka 0.200000 0.200000 0.200000
+Kd 0.356863 1.000000 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_111
+Ka 0.200000 0.200000 0.200000
+Kd 0.486275 0.231373 0.321569
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_112
+Ka 0.200000 0.200000 0.200000
+Kd 0.564706 0.494118 0.529412
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_113
+Ka 0.200000 0.200000 0.200000
+Kd 0.239216 0.031373 0.086275
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_114
+Ka 0.200000 0.200000 0.200000
+Kd 0.627451 0.858824 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_115
+Ka 0.200000 0.200000 0.200000
+Kd 0.239216 0.192157 0.803922
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_116
+Ka 0.200000 0.200000 0.200000
+Kd 0.811765 0.556863 0.313726
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_117
+Ka 0.200000 0.200000 0.200000
+Kd 0.729412 0.854902 0.529412
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_118
+Ka 0.200000 0.200000 0.200000
+Kd 0.313726 0.501961 0.611765
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_119
+Ka 0.200000 0.200000 0.200000
+Kd 0.501961 0.811765 0.337255
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_120
+Ka 0.200000 0.200000 0.200000
+Kd 0.447059 0.384314 0.901961
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_121
+Ka 0.200000 0.200000 0.200000
+Kd 0.721569 0.901961 0.047059
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_122
+Ka 0.200000 0.200000 0.200000
+Kd 0.882353 0.019608 0.686275
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_123
+Ka 0.200000 0.200000 0.200000
+Kd 0.447059 0.886275 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_124
+Ka 0.200000 0.200000 0.200000
+Kd 0.294118 0.329412 0.474510
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_125
+Ka 0.200000 0.200000 0.200000
+Kd 0.074510 0.701961 0.054902
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_126
+Ka 0.200000 0.200000 0.200000
+Kd 0.521569 0.721569 0.376471
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_127
+Ka 0.200000 0.200000 0.200000
+Kd 0.047059 0.537255 0.701961
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_128
+Ka 0.200000 0.200000 0.200000
+Kd 0.129412 0.074510 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_129
+Ka 0.200000 0.200000 0.200000
+Kd 0.074510 0.521569 0.482353
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_130
+Ka 0.200000 0.200000 0.200000
+Kd 0.109804 0.847059 0.054902
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_131
+Ka 0.200000 0.200000 0.200000
+Kd 0.286275 0.729412 0.384314
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_132
+Ka 0.200000 0.200000 0.200000
+Kd 0.949020 0.109804 0.686275
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_133
+Ka 0.200000 0.200000 0.200000
+Kd 0.592157 0.392157 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_134
+Ka 0.200000 0.200000 0.200000
+Kd 0.737255 0.086275 0.486275
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_135
+Ka 0.200000 0.200000 0.200000
+Kd 0.337255 0.419608 0.129412
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_136
+Ka 0.200000 0.200000 0.200000
+Kd 0.329412 0.337255 0.239216
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_137
+Ka 0.200000 0.200000 0.200000
+Kd 0.784314 0.274510 0.337255
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_138
+Ka 0.200000 0.200000 0.200000
+Kd 0.564706 0.929412 0.074510
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_139
+Ka 0.200000 0.200000 0.200000
+Kd 0.486275 0.792157 0.376471
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_140
+Ka 0.200000 0.200000 0.200000
+Kd 0.549020 0.101961 0.709804
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_141
+Ka 0.200000 0.200000 0.200000
+Kd 0.901961 0.184314 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_142
+Ka 0.200000 0.200000 0.200000
+Kd 0.894118 0.639216 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_143
+Ka 0.200000 0.200000 0.200000
+Kd 0.949020 0.713726 0.074510
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_144
+Ka 0.200000 0.200000 0.200000
+Kd 0.901961 0.537255 0.376471
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_145
+Ka 0.200000 0.200000 0.200000
+Kd 0.184314 0.447059 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_146
+Ka 0.200000 0.200000 0.200000
+Kd 0.937255 0.066667 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_147
+Ka 0.200000 0.200000 0.200000
+Kd 0.749020 0.274510 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_148
+Ka 0.200000 0.200000 0.200000
+Kd 0.074510 0.521569 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_149
+Ka 0.200000 0.200000 0.200000
+Kd 0.149020 0.521569 0.721569
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_150
+Ka 0.200000 0.200000 0.200000
+Kd 0.294118 0.458824 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_151
+Ka 0.200000 0.200000 0.200000
+Kd 0.501961 0.984314 0.529412
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_152
+Ka 0.200000 0.200000 0.200000
+Kd 0.709804 0.486275 0.411765
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_153
+Ka 0.200000 0.200000 0.200000
+Kd 0.274510 0.749020 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_154
+Ka 0.200000 0.200000 0.200000
+Kd 0.592157 0.701961 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_155
+Ka 0.200000 0.200000 0.200000
+Kd 0.886275 0.164706 0.329412
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_156
+Ka 0.200000 0.200000 0.200000
+Kd 0.082353 0.156863 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_157
+Ka 0.200000 0.200000 0.200000
+Kd 0.403922 0.501961 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_158
+Ka 0.200000 0.200000 0.200000
+Kd 0.384314 0.019608 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_159
+Ka 0.200000 0.200000 0.200000
+Kd 0.031373 0.231373 0.784314
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_160
+Ka 0.200000 0.200000 0.200000
+Kd 0.776471 0.101961 0.329412
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_161
+Ka 0.200000 0.200000 0.200000
+Kd 0.137255 0.737255 0.529412
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_162
+Ka 0.200000 0.200000 0.200000
+Kd 0.694118 0.027451 0.458824
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_163
+Ka 0.200000 0.200000 0.200000
+Kd 0.737255 0.447059 0.109804
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_164
+Ka 0.200000 0.200000 0.200000
+Kd 0.803922 0.047059 0.286275
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_165
+Ka 0.200000 0.200000 0.200000
+Kd 0.694118 0.211765 0.329412
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_166
+Ka 0.200000 0.200000 0.200000
+Kd 0.556863 0.086275 0.874510
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_167
+Ka 0.200000 0.200000 0.200000
+Kd 0.827451 0.831373 0.321569
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_168
+Ka 0.200000 0.200000 0.200000
+Kd 0.513726 0.039216 0.086275
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_169
+Ka 0.200000 0.200000 0.200000
+Kd 0.227451 0.949020 0.329412
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_170
+Ka 0.200000 0.200000 0.200000
+Kd 0.819608 0.101961 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_171
+Ka 0.200000 0.200000 0.200000
+Kd 0.537255 0.047059 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_172
+Ka 0.200000 0.200000 0.200000
+Kd 0.431373 0.713726 0.329412
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_173
+Ka 0.200000 0.200000 0.200000
+Kd 0.137255 0.074510 0.858824
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_174
+Ka 0.200000 0.200000 0.200000
+Kd 0.592157 0.282353 0.321569
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_175
+Ka 0.200000 0.200000 0.200000
+Kd 0.619608 0.976471 0.529412
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_176
+Ka 0.200000 0.200000 0.200000
+Kd 0.976471 0.984314 0.031373
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_177
+Ka 0.200000 0.200000 0.200000
+Kd 0.192157 0.529412 0.011765
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_178
+Ka 0.200000 0.200000 0.200000
+Kd 0.219608 0.901961 0.164706
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_179
+Ka 0.200000 0.200000 0.200000
+Kd 0.074510 0.866667 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_180
+Ka 0.200000 0.200000 0.200000
+Kd 0.321569 0.447059 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_181
+Ka 0.200000 0.200000 0.200000
+Kd 0.231373 0.686275 0.721569
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_182
+Ka 0.200000 0.200000 0.200000
+Kd 0.792157 0.231373 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_183
+Ka 0.200000 0.200000 0.200000
+Kd 0.211765 0.937255 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_184
+Ka 0.200000 0.200000 0.200000
+Kd 0.286275 0.109804 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_185
+Ka 0.200000 0.200000 0.200000
+Kd 0.054902 0.894118 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_186
+Ka 0.200000 0.200000 0.200000
+Kd 0.937255 0.776471 0.729412
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_187
+Ka 0.200000 0.200000 0.200000
+Kd 0.086275 0.447059 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_188
+Ka 0.200000 0.200000 0.200000
+Kd 0.686275 0.827451 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_189
+Ka 0.200000 0.200000 0.200000
+Kd 0.929412 0.482353 0.031373
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_190
+Ka 0.200000 0.200000 0.200000
+Kd 0.709804 0.937255 0.329412
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_191
+Ka 0.200000 0.200000 0.200000
+Kd 0.976471 0.129412 0.109804
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_192
+Ka 0.200000 0.200000 0.200000
+Kd 0.521569 0.094118 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_193
+Ka 0.200000 0.200000 0.200000
+Kd 0.619608 0.349020 0.384314
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_194
+Ka 0.200000 0.200000 0.200000
+Kd 0.901961 0.749020 0.686275
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_195
+Ka 0.200000 0.200000 0.200000
+Kd 0.882353 0.364706 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_196
+Ka 0.200000 0.200000 0.200000
+Kd 0.521569 0.909804 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_197
+Ka 0.200000 0.200000 0.200000
+Kd 0.258824 0.894118 0.074510
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_198
+Ka 0.200000 0.200000 0.200000
+Kd 0.839216 0.337255 0.384314
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_199
+Ka 0.200000 0.200000 0.200000
+Kd 0.819608 0.803922 0.686275
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_200
+Ka 0.200000 0.200000 0.200000
+Kd 0.149020 0.564706 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_201
+Ka 0.200000 0.200000 0.200000
+Kd 0.227451 0.000000 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_202
+Ka 0.200000 0.200000 0.200000
+Kd 0.282353 0.874510 0.376471
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_203
+Ka 0.200000 0.200000 0.200000
+Kd 0.011765 0.321569 0.694118
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_204
+Ka 0.200000 0.200000 0.200000
+Kd 0.831373 0.886275 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_205
+Ka 0.200000 0.200000 0.200000
+Kd 0.047059 0.886275 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_206
+Ka 0.200000 0.200000 0.200000
+Kd 0.439216 0.019608 0.313726
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_207
+Ka 0.200000 0.200000 0.200000
+Kd 0.858824 0.039216 0.031373
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_208
+Ka 0.200000 0.200000 0.200000
+Kd 0.737255 0.427451 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_209
+Ka 0.200000 0.200000 0.200000
+Kd 0.694118 0.847059 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_210
+Ka 0.200000 0.200000 0.200000
+Kd 0.564706 0.713726 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_211
+Ka 0.200000 0.200000 0.200000
+Kd 0.803922 0.694118 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_212
+Ka 0.200000 0.200000 0.200000
+Kd 0.392157 0.749020 0.082353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_213
+Ka 0.200000 0.200000 0.200000
+Kd 0.737255 0.447059 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_214
+Ka 0.200000 0.200000 0.200000
+Kd 0.003922 0.976471 0.411765
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_215
+Ka 0.200000 0.200000 0.200000
+Kd 0.003922 0.121569 0.909804
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_216
+Ka 0.200000 0.200000 0.200000
+Kd 0.784314 0.364706 0.027451
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_217
+Ka 0.200000 0.200000 0.200000
+Kd 0.192157 0.682353 0.294118
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_218
+Ka 0.200000 0.200000 0.200000
+Kd 0.156863 0.592157 0.513726
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_219
+Ka 0.200000 0.200000 0.200000
+Kd 0.592157 0.231373 0.019608
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_220
+Ka 0.200000 0.200000 0.200000
+Kd 0.792157 0.909804 0.439216
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_221
+Ka 0.200000 0.200000 0.200000
+Kd 0.894118 0.737255 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_222
+Ka 0.200000 0.200000 0.200000
+Kd 0.584314 0.094118 0.286275
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_223
+Ka 0.200000 0.200000 0.200000
+Kd 0.137255 0.019608 0.549020
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_224
+Ka 0.200000 0.200000 0.200000
+Kd 0.403922 0.356863 0.003922
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_225
+Ka 0.200000 0.200000 0.200000
+Kd 0.713726 0.364706 0.466667
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_226
+Ka 0.200000 0.200000 0.200000
+Kd 0.584314 0.074510 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_227
+Ka 0.200000 0.200000 0.200000
+Kd 0.537255 0.192157 0.266667
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_228
+Ka 0.200000 0.200000 0.200000
+Kd 0.109804 0.109804 0.513726
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_229
+Ka 0.200000 0.200000 0.200000
+Kd 0.384314 0.521569 0.039216
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_230
+Ka 0.200000 0.200000 0.200000
+Kd 0.313726 0.584314 0.458824
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_231
+Ka 0.200000 0.200000 0.200000
+Kd 0.882353 0.274510 0.337255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_232
+Ka 0.200000 0.200000 0.200000
+Kd 0.356863 0.909804 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_233
+Ka 0.200000 0.200000 0.200000
+Kd 0.713726 0.576471 0.039216
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_234
+Ka 0.200000 0.200000 0.200000
+Kd 0.086275 0.537255 0.337255
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_235
+Ka 0.200000 0.200000 0.200000
+Kd 0.666667 0.749020 0.384314
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_236
+Ka 0.200000 0.200000 0.200000
+Kd 0.031373 0.882353 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_237
+Ka 0.200000 0.200000 0.200000
+Kd 0.537255 0.427451 0.937255
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_238
+Ka 0.200000 0.200000 0.200000
+Kd 0.521569 0.784314 0.403922
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_239
+Ka 0.200000 0.200000 0.200000
+Kd 0.564706 0.921569 0.419608
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_240
+Ka 0.200000 0.200000 0.200000
+Kd 0.313726 0.639216 0.392157
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_241
+Ka 0.200000 0.200000 0.200000
+Kd 0.466667 1.000000 0.521569
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_242
+Ka 0.200000 0.200000 0.200000
+Kd 0.027451 0.047059 0.956863
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_243
+Ka 0.200000 0.200000 0.200000
+Kd 0.976471 0.411765 0.392157
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_244
+Ka 0.200000 0.200000 0.200000
+Kd 0.929412 0.949020 0.427451
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_245
+Ka 0.200000 0.200000 0.200000
+Kd 0.149020 0.894118 0.301961
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_246
+Ka 0.200000 0.200000 0.200000
+Kd 0.364706 0.666667 0.682353
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_247
+Ka 0.200000 0.200000 0.200000
+Kd 0.074510 0.121569 0.976471
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_248
+Ka 0.200000 0.200000 0.200000
+Kd 0.203922 0.992157 0.301961
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_249
+Ka 0.200000 0.200000 0.200000
+Kd 0.847059 0.811765 0.431373
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_250
+Ka 0.200000 0.200000 0.200000
+Kd 0.349020 0.682353 0.047059
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_251
+Ka 0.200000 0.200000 0.200000
+Kd 0.364706 0.619608 0.403922
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_252
+Ka 0.200000 0.200000 0.200000
+Kd 0.403922 0.847059 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_253
+Ka 0.200000 0.200000 0.200000
+Kd 0.984314 0.376471 0.313726
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_254
+Ka 0.200000 0.200000 0.200000
+Kd 0.329412 0.792157 0.411765
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_255
+Ka 0.200000 0.200000 0.200000
+Kd 0.831373 0.349020 0.054902
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_256
+Ka 0.200000 0.200000 0.200000
+Kd 0.992157 0.019608 0.392157
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_257
+Ka 0.200000 0.200000 0.200000
+Kd 0.313726 0.258824 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_258
+Ka 0.200000 0.200000 0.200000
+Kd 0.576471 0.411765 0.337255
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_259
+Ka 0.200000 0.200000 0.200000
+Kd 0.337255 0.792157 0.427451
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_260
+Ka 0.200000 0.200000 0.200000
+Kd 0.603922 0.631373 0.039216
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_261
+Ka 0.200000 0.200000 0.200000
+Kd 0.192157 0.349020 0.392157
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_262
+Ka 0.200000 0.200000 0.200000
+Kd 0.584314 0.219608 0.392157
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_263
+Ka 0.200000 0.200000 0.200000
+Kd 0.066667 0.886275 0.156863
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_264
+Ka 0.200000 0.200000 0.200000
+Kd 0.792157 0.149020 0.031373
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_265
+Ka 0.200000 0.200000 0.200000
+Kd 0.047059 0.921569 0.019608
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_266
+Ka 0.200000 0.200000 0.200000
+Kd 0.486275 0.886275 0.309804
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_267
+Ka 0.200000 0.200000 0.200000
+Kd 0.419608 0.694118 0.474510
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_268
+Ka 0.200000 0.200000 0.200000
+Kd 0.247059 0.384314 0.039216
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_269
+Ka 0.200000 0.200000 0.200000
+Kd 0.203922 0.654902 0.419608
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_270
+Ka 0.200000 0.200000 0.200000
+Kd 0.313726 0.894118 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_271
+Ka 0.200000 0.200000 0.200000
+Kd 0.784314 0.631373 0.329412
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_272
+Ka 0.200000 0.200000 0.200000
+Kd 0.639216 0.800000 0.458824
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_273
+Ka 0.200000 0.200000 0.200000
+Kd 0.109804 0.176471 0.039216
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_274
+Ka 0.200000 0.200000 0.200000
+Kd 0.964706 0.400000 0.403922
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_275
+Ka 0.200000 0.200000 0.200000
+Kd 0.811765 0.458824 0.384314
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_276
+Ka 0.200000 0.200000 0.200000
+Kd 0.419608 0.792157 0.658824
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_277
+Ka 0.200000 0.200000 0.200000
+Kd 0.384314 0.031373 0.392157
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_278
+Ka 0.200000 0.200000 0.200000
+Kd 0.627451 0.266667 0.600000
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_279
+Ka 0.200000 0.200000 0.200000
+Kd 0.227451 0.066667 0.458824
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_280
+Ka 0.200000 0.200000 0.200000
+Kd 0.909804 0.764706 0.509804
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_281
+Ka 0.200000 0.200000 0.200000
+Kd 0.721569 0.392157 0.937255
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_282
+Ka 0.200000 0.200000 0.200000
+Kd 0.674510 0.176471 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_283
+Ka 0.200000 0.200000 0.200000
+Kd 0.949020 0.231373 0.474510
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_284
+Ka 0.200000 0.200000 0.200000
+Kd 0.792157 0.027451 0.474510
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_285
+Ka 0.200000 0.200000 0.200000
+Kd 0.784314 0.556863 0.521569
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_286
+Ka 0.200000 0.200000 0.200000
+Kd 0.737255 0.266667 0.921569
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_287
+Ka 0.200000 0.200000 0.200000
+Kd 0.847059 0.039216 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_288
+Ka 0.200000 0.200000 0.200000
+Kd 0.529412 0.031373 0.486275
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_289
+Ka 0.200000 0.200000 0.200000
+Kd 0.149020 0.274510 0.458824
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_290
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.039216 0.521569
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_291
+Ka 0.200000 0.200000 0.200000
+Kd 0.231373 0.603922 0.921569
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_292
+Ka 0.200000 0.200000 0.200000
+Kd 0.592157 0.003922 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_293
+Ka 0.200000 0.200000 0.200000
+Kd 0.192157 0.956863 0.474510
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_294
+Ka 0.200000 0.200000 0.200000
+Kd 0.466667 0.486275 0.411765
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_295
+Ka 0.200000 0.200000 0.200000
+Kd 0.419608 0.686275 0.086275
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_296
+Ka 0.200000 0.200000 0.200000
+Kd 0.784314 0.937255 0.737255
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_297
+Ka 0.200000 0.200000 0.200000
+Kd 0.066667 0.866667 0.294118
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_298
+Ka 0.200000 0.200000 0.200000
+Kd 0.627451 0.086275 0.337255
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_299
+Ka 0.200000 0.200000 0.200000
+Kd 0.784314 0.211765 0.074510
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_300
+Ka 0.200000 0.200000 0.200000
+Kd 0.886275 0.521569 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_301
+Ka 0.200000 0.200000 0.200000
+Kd 0.776471 0.286275 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_302
+Ka 0.200000 0.200000 0.200000
+Kd 0.239216 0.874510 0.313726
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_303
+Ka 0.200000 0.200000 0.200000
+Kd 0.403922 0.521569 0.337255
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_304
+Ka 0.200000 0.200000 0.200000
+Kd 0.874510 0.701961 0.066667
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_305
+Ka 0.200000 0.200000 0.200000
+Kd 0.454902 0.137255 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_306
+Ka 0.200000 0.200000 0.200000
+Kd 0.556863 0.949020 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_307
+Ka 0.200000 0.200000 0.200000
+Kd 0.792157 0.694118 0.301961
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_308
+Ka 0.200000 0.200000 0.200000
+Kd 0.529412 0.949020 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_309
+Ka 0.200000 0.200000 0.200000
+Kd 0.309804 0.066667 0.066667
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_310
+Ka 0.200000 0.200000 0.200000
+Kd 0.129412 0.521569 0.376471
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_311
+Ka 0.200000 0.200000 0.200000
+Kd 0.458824 0.301961 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_312
+Ka 0.200000 0.200000 0.200000
+Kd 0.121569 0.458824 0.047059
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_313
+Ka 0.200000 0.200000 0.200000
+Kd 0.011765 0.313726 0.329412
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_314
+Ka 0.200000 0.200000 0.200000
+Kd 0.549020 0.219608 0.603922
+Ks 1.000000 1.000000 1.000000
+Tr 0.231373
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_315
+Ka 0.200000 0.200000 0.200000
+Kd 0.458824 0.164706 0.094118
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_316
+Ka 0.200000 0.200000 0.200000
+Kd 0.019608 0.964706 0.247059
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_317
+Ka 0.200000 0.200000 0.200000
+Kd 0.827451 0.376471 0.066667
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_318
+Ka 0.200000 0.200000 0.200000
+Kd 0.600000 0.286275 0.321569
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_319
+Ka 0.200000 0.200000 0.200000
+Kd 0.776471 0.686275 0.564706
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_320
+Ka 0.200000 0.200000 0.200000
+Kd 0.647059 0.094118 0.094118
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_321
+Ka 0.200000 0.200000 0.200000
+Kd 0.584314 0.666667 0.247059
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_322
+Ka 0.200000 0.200000 0.200000
+Kd 0.666667 0.858824 0.066667
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_323
+Ka 0.200000 0.200000 0.200000
+Kd 0.427451 0.976471 0.321569
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_324
+Ka 0.200000 0.200000 0.200000
+Kd 0.392157 0.494118 0.564706
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_325
+Ka 0.200000 0.200000 0.200000
+Kd 0.847059 0.266667 0.094118
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_326
+Ka 0.200000 0.200000 0.200000
+Kd 0.419608 0.564706 0.247059
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_327
+Ka 0.200000 0.200000 0.200000
+Kd 0.658824 0.011765 0.074510
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_328
+Ka 0.200000 0.200000 0.200000
+Kd 0.474510 0.858824 0.321569
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_329
+Ka 0.200000 0.200000 0.200000
+Kd 0.776471 0.784314 0.564706
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_330
+Ka 0.200000 0.200000 0.200000
+Kd 0.321569 0.721569 0.164706
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_331
+Ka 0.200000 0.200000 0.200000
+Kd 0.584314 0.811765 0.047059
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_332
+Ka 0.200000 0.200000 0.200000
+Kd 0.364706 0.729412 0.976471
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_333
+Ka 0.200000 0.200000 0.200000
+Kd 0.929412 0.929412 0.094118
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_334
+Ka 0.200000 0.200000 0.200000
+Kd 0.847059 0.737255 0.247059
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_335
+Ka 0.200000 0.200000 0.200000
+Kd 0.066667 0.682353 0.066667
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_336
+Ka 0.200000 0.200000 0.200000
+Kd 0.184314 0.337255 0.321569
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_337
+Ka 0.200000 0.200000 0.200000
+Kd 0.584314 0.003922 0.564706
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_338
+Ka 0.200000 0.200000 0.200000
+Kd 0.737255 0.156863 0.094118
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_339
+Ka 0.200000 0.200000 0.200000
+Kd 0.039216 0.384314 0.247059
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_340
+Ka 0.200000 0.200000 0.200000
+Kd 0.286275 0.294118 0.074510
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_341
+Ka 0.200000 0.200000 0.200000
+Kd 0.156863 0.384314 0.321569
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_342
+Ka 0.200000 0.200000 0.200000
+Kd 0.121569 0.458824 0.564706
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_343
+Ka 0.200000 0.200000 0.200000
+Kd 0.992157 0.313726 0.929412
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_344
+Ka 0.200000 0.200000 0.200000
+Kd 0.647059 0.564706 0.309804
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_345
+Ka 0.200000 0.200000 0.200000
+Kd 0.000000 0.976471 0.713726
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_346
+Ka 0.200000 0.200000 0.200000
+Kd 0.901961 0.019608 0.094118
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_347
+Ka 0.200000 0.200000 0.200000
+Kd 0.074510 0.027451 0.247059
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_348
+Ka 0.200000 0.200000 0.200000
+Kd 0.874510 0.839216 0.074510
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_349
+Ka 0.200000 0.200000 0.200000
+Kd 0.313726 0.701961 0.313726
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_350
+Ka 0.200000 0.200000 0.200000
+Kd 0.258824 0.556863 0.674510
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_351
+Ka 0.200000 0.200000 0.200000
+Kd 0.792157 0.411765 0.109804
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_352
+Ka 0.200000 0.200000 0.200000
+Kd 0.356863 0.639216 0.286275
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_353
+Ka 0.200000 0.200000 0.200000
+Kd 0.337255 0.964706 0.200000
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_354
+Ka 0.200000 0.200000 0.200000
+Kd 0.356863 0.603922 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_355
+Ka 0.200000 0.200000 0.200000
+Kd 0.074510 0.921569 0.858824
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_356
+Ka 0.200000 0.200000 0.200000
+Kd 0.929412 0.513726 0.392157
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_357
+Ka 0.200000 0.200000 0.200000
+Kd 0.349020 0.337255 0.866667
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_358
+Ka 0.200000 0.200000 0.200000
+Kd 0.400000 0.309804 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_359
+Ka 0.200000 0.200000 0.200000
+Kd 0.164706 0.619608 0.709804
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_360
+Ka 0.200000 0.200000 0.200000
+Kd 0.427451 0.047059 0.254902
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_361
+Ka 0.200000 0.200000 0.200000
+Kd 0.164706 0.094118 0.219608
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_362
+Ka 0.200000 0.200000 0.200000
+Kd 0.054902 0.803922 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_363
+Ka 0.200000 0.200000 0.200000
+Kd 0.031373 0.556863 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_364
+Ka 0.200000 0.200000 0.200000
+Kd 0.313726 0.658824 0.713726
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_365
+Ka 0.200000 0.200000 0.200000
+Kd 0.003922 0.039216 0.247059
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_366
+Ka 0.200000 0.200000 0.200000
+Kd 0.839216 0.164706 0.219608
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_367
+Ka 0.200000 0.200000 0.200000
+Kd 0.247059 0.274510 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_368
+Ka 0.200000 0.200000 0.200000
+Kd 0.984314 0.447059 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_369
+Ka 0.200000 0.200000 0.200000
+Kd 0.686275 0.886275 0.713726
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_370
+Ka 0.200000 0.200000 0.200000
+Kd 0.231373 0.713726 0.239216
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_371
+Ka 0.200000 0.200000 0.200000
+Kd 0.274510 0.254902 0.219608
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_372
+Ka 0.200000 0.200000 0.200000
+Kd 0.694118 0.964706 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_373
+Ka 0.200000 0.200000 0.200000
+Kd 0.447059 0.227451 0.976471
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_374
+Ka 0.200000 0.200000 0.200000
+Kd 0.564706 0.537255 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_375
+Ka 0.200000 0.200000 0.200000
+Kd 0.894118 0.619608 0.756863
+Ks 1.000000 1.000000 1.000000
+Tr 0.231373
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_376
+Ka 0.200000 0.200000 0.200000
+Kd 0.109804 0.376471 0.156863
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_377
+Ka 0.200000 0.200000 0.200000
+Kd 0.031373 0.109804 0.764706
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_378
+Ka 0.200000 0.200000 0.200000
+Kd 0.749020 0.874510 0.286275
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_379
+Ka 0.200000 0.200000 0.200000
+Kd 0.709804 0.894118 0.200000
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_380
+Ka 0.200000 0.200000 0.200000
+Kd 0.909804 0.784314 0.529412
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_381
+Ka 0.200000 0.200000 0.200000
+Kd 0.329412 0.666667 0.156863
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_382
+Ka 0.200000 0.200000 0.200000
+Kd 0.784314 0.784314 0.764706
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_383
+Ka 0.200000 0.200000 0.200000
+Kd 0.811765 0.294118 0.286275
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_384
+Ka 0.200000 0.200000 0.200000
+Kd 0.447059 0.282353 0.203922
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_385
+Ka 0.200000 0.200000 0.200000
+Kd 0.627451 0.654902 0.529412
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_386
+Ka 0.200000 0.200000 0.200000
+Kd 0.909804 0.603922 0.156863
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_387
+Ka 0.200000 0.200000 0.200000
+Kd 0.121569 0.949020 0.756863
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_388
+Ka 0.200000 0.200000 0.200000
+Kd 0.564706 0.556863 0.294118
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_389
+Ka 0.200000 0.200000 0.200000
+Kd 0.047059 0.047059 0.200000
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_390
+Ka 0.200000 0.200000 0.200000
+Kd 0.529412 0.203922 0.529412
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_391
+Ka 0.200000 0.200000 0.200000
+Kd 0.537255 0.858824 0.921569
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_392
+Ka 0.200000 0.200000 0.200000
+Kd 0.901961 0.384314 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_393
+Ka 0.200000 0.200000 0.200000
+Kd 0.164706 0.458824 0.121569
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_394
+Ka 0.200000 0.200000 0.200000
+Kd 0.839216 0.184314 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_395
+Ka 0.200000 0.200000 0.200000
+Kd 0.937255 0.203922 0.701961
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_396
+Ka 0.200000 0.200000 0.200000
+Kd 0.164706 0.282353 0.258824
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_397
+Ka 0.200000 0.200000 0.200000
+Kd 0.529412 0.658824 0.211765
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_398
+Ka 0.200000 0.200000 0.200000
+Kd 0.874510 0.286275 0.549020
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_399
+Ka 0.200000 0.200000 0.200000
+Kd 0.901961 0.694118 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_400
+Ka 0.200000 0.200000 0.200000
+Kd 0.474510 0.764706 0.701961
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_401
+Ka 0.200000 0.200000 0.200000
+Kd 0.631373 0.239216 0.258824
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_402
+Ka 0.200000 0.200000 0.200000
+Kd 0.156863 0.203922 0.211765
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_403
+Ka 0.200000 0.200000 0.200000
+Kd 0.984314 0.956863 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_404
+Ka 0.200000 0.200000 0.200000
+Kd 0.964706 0.137255 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_405
+Ka 0.200000 0.200000 0.200000
+Kd 0.219608 0.486275 0.694118
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_406
+Ka 0.200000 0.200000 0.200000
+Kd 0.521569 0.047059 0.266667
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_407
+Ka 0.200000 0.200000 0.200000
+Kd 0.337255 0.729412 0.211765
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_408
+Ka 0.200000 0.200000 0.200000
+Kd 0.384314 0.301961 0.549020
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_409
+Ka 0.200000 0.200000 0.200000
+Kd 0.231373 0.756863 0.631373
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_410
+Ka 0.200000 0.200000 0.200000
+Kd 0.901961 0.364706 0.447059
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_411
+Ka 0.200000 0.200000 0.200000
+Kd 0.854902 0.349020 0.309804
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_412
+Ka 0.200000 0.200000 0.200000
+Kd 0.494118 0.627451 0.419608
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_413
+Ka 0.200000 0.200000 0.200000
+Kd 0.384314 0.964706 0.101961
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_414
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.686275 0.337255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_415
+Ka 0.200000 0.200000 0.200000
+Kd 0.101961 0.956863 0.176471
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_416
+Ka 0.200000 0.200000 0.200000
+Kd 0.466667 0.666667 0.549020
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_417
+Ka 0.200000 0.200000 0.200000
+Kd 0.403922 0.376471 0.419608
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_418
+Ka 0.200000 0.200000 0.200000
+Kd 0.721569 0.419608 0.109804
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_419
+Ka 0.200000 0.200000 0.200000
+Kd 0.094118 0.301961 0.329412
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_420
+Ka 0.200000 0.200000 0.200000
+Kd 0.247059 0.549020 0.176471
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_421
+Ka 0.200000 0.200000 0.200000
+Kd 0.654902 0.721569 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_422
+Ka 0.200000 0.200000 0.200000
+Kd 0.321569 0.058824 0.419608
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_423
+Ka 0.200000 0.200000 0.200000
+Kd 0.992157 0.854902 0.101961
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_424
+Ka 0.200000 0.200000 0.200000
+Kd 0.976471 0.803922 0.337255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_425
+Ka 0.200000 0.200000 0.200000
+Kd 0.513726 0.803922 0.176471
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_426
+Ka 0.200000 0.200000 0.200000
+Kd 0.576471 0.647059 0.549020
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_427
+Ka 0.200000 0.200000 0.200000
+Kd 0.556863 0.137255 0.984314
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_428
+Ka 0.200000 0.200000 0.200000
+Kd 0.549020 0.086275 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_429
+Ka 0.200000 0.200000 0.200000
+Kd 0.494118 0.784314 0.074510
+Ks 1.000000 1.000000 1.000000
+Tr 0.227451
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_430
+Ka 0.200000 0.200000 0.200000
+Kd 0.556863 0.537255 0.403922
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_431
+Ka 0.200000 0.200000 0.200000
+Kd 0.356863 0.101961 0.101961
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_432
+Ka 0.200000 0.200000 0.200000
+Kd 0.937255 0.694118 0.337255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_433
+Ka 0.200000 0.200000 0.200000
+Kd 0.294118 0.054902 0.176471
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_434
+Ka 0.200000 0.200000 0.200000
+Kd 0.909804 0.647059 0.521569
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_435
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.149020 0.403922
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_436
+Ka 0.200000 0.200000 0.200000
+Kd 0.713726 0.054902 0.101961
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_437
+Ka 0.200000 0.200000 0.200000
+Kd 0.819608 0.737255 0.337255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_438
+Ka 0.200000 0.200000 0.200000
+Kd 0.203922 0.082353 0.176471
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_439
+Ka 0.200000 0.200000 0.200000
+Kd 0.294118 0.000000 0.521569
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_440
+Ka 0.200000 0.200000 0.200000
+Kd 0.874510 0.509804 0.403922
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_441
+Ka 0.200000 0.200000 0.200000
+Kd 0.431373 0.301961 0.094118
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_442
+Ka 0.200000 0.200000 0.200000
+Kd 0.556863 1.000000 0.349020
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_443
+Ka 0.200000 0.200000 0.200000
+Kd 0.482353 0.784314 0.176471
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_444
+Ka 0.200000 0.200000 0.200000
+Kd 0.776471 0.764706 0.521569
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_445
+Ka 0.200000 0.200000 0.200000
+Kd 0.258824 0.121569 0.584314
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_446
+Ka 0.200000 0.200000 0.200000
+Kd 0.403922 0.674510 0.454902
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_447
+Ka 0.200000 0.200000 0.200000
+Kd 0.874510 0.156863 0.756863
+Ks 1.000000 1.000000 1.000000
+Tr 0.231373
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_448
+Ka 0.200000 0.200000 0.200000
+Kd 0.458824 0.447059 0.411765
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_449
+Ka 0.200000 0.200000 0.200000
+Kd 0.403922 0.937255 0.109804
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_450
+Ka 0.200000 0.200000 0.200000
+Kd 0.019608 0.431373 0.329412
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_451
+Ka 0.200000 0.200000 0.200000
+Kd 0.337255 0.886275 0.176471
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_452
+Ka 0.200000 0.200000 0.200000
+Kd 0.286275 0.219608 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_453
+Ka 0.200000 0.200000 0.200000
+Kd 0.764706 0.219608 0.419608
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_454
+Ka 0.200000 0.200000 0.200000
+Kd 0.149020 0.776471 0.101961
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_455
+Ka 0.200000 0.200000 0.200000
+Kd 0.494118 0.858824 0.337255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_456
+Ka 0.200000 0.200000 0.200000
+Kd 0.839216 0.784314 0.176471
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_457
+Ka 0.200000 0.200000 0.200000
+Kd 0.701961 0.192157 0.537255
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_458
+Ka 0.200000 0.200000 0.200000
+Kd 0.501961 0.556863 0.792157
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_459
+Ka 0.200000 0.200000 0.200000
+Kd 0.164706 0.356863 0.411765
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_460
+Ka 0.200000 0.200000 0.200000
+Kd 0.286275 0.839216 0.584314
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_461
+Ka 0.200000 0.200000 0.200000
+Kd 0.827451 0.749020 0.376471
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_462
+Ka 0.200000 0.200000 0.200000
+Kd 0.576471 0.984314 0.486275
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_463
+Ka 0.200000 0.200000 0.200000
+Kd 0.886275 0.929412 0.313726
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_464
+Ka 0.200000 0.200000 0.200000
+Kd 0.603922 0.419608 0.184314
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_465
+Ka 0.200000 0.200000 0.200000
+Kd 0.701961 0.537255 0.556863
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_466
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.149020 0.376471
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_467
+Ka 0.200000 0.200000 0.200000
+Kd 0.764706 0.792157 0.486275
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_468
+Ka 0.200000 0.200000 0.200000
+Kd 0.329412 0.211765 0.313726
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_469
+Ka 0.200000 0.200000 0.200000
+Kd 0.894118 0.109804 0.184314
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_470
+Ka 0.200000 0.200000 0.200000
+Kd 0.858824 0.427451 0.549020
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_471
+Ka 0.200000 0.200000 0.200000
+Kd 0.184314 0.094118 0.376471
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_472
+Ka 0.200000 0.200000 0.200000
+Kd 0.058824 0.909804 0.482353
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_473
+Ka 0.200000 0.200000 0.200000
+Kd 0.909804 0.694118 0.321569
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_474
+Ka 0.200000 0.200000 0.200000
+Kd 0.811765 0.454902 0.184314
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_475
+Ka 0.200000 0.200000 0.200000
+Kd 0.992157 0.286275 0.549020
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_476
+Ka 0.200000 0.200000 0.200000
+Kd 0.149020 0.231373 0.294118
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_477
+Ka 0.200000 0.200000 0.200000
+Kd 0.964706 0.192157 0.047059
+Ks 1.000000 1.000000 1.000000
+Tr 0.749020
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_478
+Ka 0.200000 0.200000 0.200000
+Kd 0.294118 0.137255 0.501961
+Ks 1.000000 1.000000 1.000000
+Tr 0.737255
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_479
+Ka 0.200000 0.200000 0.200000
+Kd 0.458824 0.239216 0.894118
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_480
+Ka 0.200000 0.200000 0.200000
+Kd 0.286275 0.392157 0.164706
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_481
+Ka 0.200000 0.200000 0.200000
+Kd 0.258824 0.874510 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_482
+Ka 0.200000 0.200000 0.200000
+Kd 0.376471 0.803922 0.203922
+Ks 1.000000 1.000000 1.000000
+Tr 0.254902
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_483
+Ka 0.200000 0.200000 0.200000
+Kd 0.909804 0.611765 0.356863
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_484
+Ka 0.200000 0.200000 0.200000
+Kd 0.419608 0.039216 0.894118
+Ks 1.000000 1.000000 1.000000
+Tr 0.239216
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_485
+Ka 0.200000 0.200000 0.200000
+Kd 0.756863 0.776471 0.156863
+Ks 1.000000 1.000000 1.000000
+Tr 0.247059
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+
+newmtl material_486
+Ka 0.200000 0.200000 0.200000
+Kd 0.776471 0.564706 0.364706
+Ks 1.000000 1.000000 1.000000
+Tr 0.756863
+illum 2
+Ns 0.000000
+map_Kd munchkin_white_hot_duck_bath_toy.png
+

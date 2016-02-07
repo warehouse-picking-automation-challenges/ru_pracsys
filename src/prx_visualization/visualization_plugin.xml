@@ -1,0 +1,16 @@
+<library path="lib/libprx_visualization_lib">
+  <class name="prx_visualization/osg"
+	 type="prx::vis::osg_visualization_t"
+	 base_class_type="prx::vis::visualization_t">
+    <description>
+      OpenSceneGraph plugin for prx_visualization.
+    </description>
+  </class>
+  <class name="prx_visualization/visualization_comm"
+	 type="prx::vis::visualization_comm_t"
+	 base_class_type="prx::vis::visualization_comm_t">
+    <description>
+      Default visualization communication.
+    </description>
+  </class>
+</library>

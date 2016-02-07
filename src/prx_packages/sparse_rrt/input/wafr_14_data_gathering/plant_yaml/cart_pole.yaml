@@ -1,0 +1,29 @@
+type: cart_pole
+z: 1
+integrator:
+  type: rk4
+state_space: 
+  min: [-30, -40, -3.14, -2]
+  max: [30, 40, 3.14 2]
+initial_state: [-20,0,3.14,0]
+input_control_space: 
+  min: [-300]
+  max: [300]
+root_geom: chassis
+geometries:
+  -
+    name: chassis
+    collision_geometry:
+      type: box
+      dims: [1, 1, 1]
+      material: blue
+  -
+    name: pole
+    collision_geometry:
+      type: box
+      dims: [.2, 2.5, .2 ]
+      material: red
+
+
+
+

@@ -1,0 +1,5 @@
+simulator:
+  type: collision_stop_simulator
+  simulation_step: 0.02
+  collision_checker:
+    type: pqp

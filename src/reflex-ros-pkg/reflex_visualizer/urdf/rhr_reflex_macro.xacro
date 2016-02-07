@@ -1,0 +1,302 @@
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="reflex_hand">
+  <xacro:macro name="reflex_model" params="prefix">
+
+    <!-- Links -->
+    <link name="${prefix}palm">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/base_link.STL" />
+        </geometry>
+        <material name="dark_gray">
+          <color rgba="0.14 0.14 0.14 1"/>
+        </material>
+      </visual>
+    </link>
+    <link name="pad">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/pad.STL" />
+        </geometry>
+        <material name="black">
+          <color rgba="0.02 0.02 0.02 1"/>
+        </material>
+      </visual>
+    </link>
+    <link name="swivel_1">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/swivel_1.STL" />
+        </geometry>
+        <material name="dark_gray">
+          <color rgba="0.14 0.14 0.14 1"/>
+        </material>
+      </visual>
+    </link>
+    <link name="proximal_1">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/proximal_1.STL" />
+        </geometry>
+        <material name="dark_gray">
+          <color rgba="0.14 0.14 0.14 1"/>
+        </material>
+      </visual>
+    </link>
+    <link name="proximal_pad_1">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/proximal_pad_1.STL" />
+        </geometry>
+        <material name="">
+          <xacro:pad_color/>
+        </material>
+      </visual>
+    </link>
+    <link name="distal_1">
+      <visual>
+        <origin xyz="0.01 0 -0.004" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/distal_1.STL" />
+        </geometry>
+        <material name="dark_gray">
+          <color rgba="0.14 0.14 0.14 1"/>
+        </material>
+      </visual>
+    </link>
+    <link name="distal_pad_1">
+      <visual>
+        <origin xyz="0 -0.004 -0.01" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/distal_pad_1.STL" />
+        </geometry>
+        <material name="">
+          <xacro:pad_color/>
+        </material>
+      </visual>
+    </link>
+    <link name="swivel_2">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/swivel_2.STL" />
+        </geometry>
+        <material name="dark_gray">
+          <color rgba="0.14 0.14 0.14 1"/>
+        </material>
+      </visual>
+    </link>
+    <link name="proximal_2">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/proximal_2.STL" />
+        </geometry>
+        <material name="dark_gray">
+          <color rgba="0.14 0.14 0.14 1"/>
+        </material>
+      </visual>
+    </link>
+    <link name="proximal_pad_2">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/proximal_pad_2.STL" />
+        </geometry>
+        <material name="">
+          <xacro:pad_color/>
+        </material>
+      </visual>
+    </link>
+    <link name="distal_2">
+      <visual>
+        <origin xyz="0.01 0 -0.004" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/distal_2.STL" />
+        </geometry>
+        <material name="dark_gray">
+          <color rgba="0.14 0.14 0.14 1"/>
+        </material>
+      </visual>
+    </link>
+    <link name="distal_pad_2">
+      <visual>
+        <origin xyz="0 -0.004 -0.01" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/distal_pad_2.STL" />
+        </geometry>
+        <material name="">
+          <xacro:pad_color/>
+        </material>
+      </visual>
+    </link>
+    <link name="proximal_3">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/proximal_3.STL" />
+        </geometry>
+        <material name="dark_gray">
+          <color rgba="0.14 0.14 0.14 1"/>
+        </material>
+      </visual>
+    </link>
+    <link name="proximal_pad_3">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/proximal_pad_3.STL" />
+        </geometry>
+        <material name="">
+          <xacro:pad_color/>
+        </material>
+      </visual>
+    </link>
+    <link name="distal_3">
+      <visual>
+        <origin xyz="0.01 0 -0.004" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/distal_3.STL" />
+        </geometry>
+        <material name="dark_gray">
+          <color rgba="0.14 0.14 0.14 1"/>
+        </material>
+      </visual>
+    </link>
+    <link name="distal_pad_3">
+      <visual>
+        <origin xyz="0 -0.004 -0.01" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://reflex_visualizer/meshes/distal_pad_3.STL" />
+        </geometry>
+        <material name="">
+          <xacro:pad_color/>
+        </material>
+      </visual>
+    </link>
+
+    <link name="${prefix}reflex_virtual">
+      <visual>
+        <geometry>
+          <box size="0.01 .035 .11" />
+        </geometry>
+        <material name="green">
+          <color rgba="0.05 0.85 0.05 0.5"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.01 .035 .11" />
+        </geometry>
+        <material name="green">
+          <color rgba="0.05 0.85 0.05 0.5"/>
+        </material>
+      </collision>
+    </link>
+
+    <!-- Joints -->
+    <joint name="pad_joint" type="fixed">
+      <origin xyz="0.02 0 0.063" rpy="1.5707963267949 0 -1.5707963267949" />
+      <parent link="${prefix}palm" />
+      <child link="pad" />
+      <axis xyz="0 0 0" />
+    </joint>
+    <joint name="preshape_1" type="continuous">
+      <origin xyz="0.0503973683071414 -0.026 0.063" rpy="0 0 0" />
+      <parent link="${prefix}palm" />
+      <child link="swivel_1" />
+      <axis xyz="0 0 -1" />
+    </joint>
+    <joint name="proximal_joint_1" type="continuous">
+      <origin xyz="0.01 0 0.0186" rpy="0 0 0" />
+      <parent link="swivel_1" />
+      <child link="proximal_1" />
+      <axis xyz="0 -1 0" />
+    </joint>
+    <joint name="prox1_pad_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="1.5707963267949 0 -1.5707963267949" />
+      <parent link="proximal_1" />
+      <child link="proximal_pad_1" />
+      <axis xyz="0 0 0" />
+    </joint>
+    <joint name="distal_joint_1" type="continuous">
+      <origin xyz="0.076 0 0.0025" rpy="0 0 0" />
+      <parent link="proximal_1" />
+      <child link="distal_1" />
+      <axis xyz="0 -1 0" />
+    </joint>
+    <joint name="dist1_pad_joint" type="fixed">
+      <origin xyz="-0.076 0 -0.0025" rpy="1.5707963267949 0 -1.5707963267949" />
+      <parent link="distal_1" />
+      <child link="distal_pad_1" />
+      <axis xyz="0 0 0" />
+    </joint>
+    <joint name="preshape_2" type="continuous">
+      <origin xyz="0.0503973683071413 0.026 0.063" rpy="0 0 0" />
+      <parent link="${prefix}palm" />
+      <child link="swivel_2" />
+      <axis xyz="0 0 -1" />
+    </joint>
+    <joint name="proximal_joint_2" type="continuous">
+      <origin xyz="0.01 0 0.0186" rpy="0 0 0" />
+      <parent link="swivel_2" />
+      <child link="proximal_2" />
+      <axis xyz="0 -1 0" />
+    </joint>
+    <joint name="prox2_pad_joint" type="fixed">
+      <origin
+        xyz="0 0 0" rpy="1.5707963267949 0 -1.5707963267949" />
+      <parent link="proximal_2" />
+      <child link="proximal_pad_2" />
+      <axis xyz="0 0 0" />
+    </joint>
+    <joint name="distal_joint_2"
+      type="continuous">
+      <origin xyz="0.076 0 0.0025" rpy="0 0 0" />
+      <parent link="proximal_2" />
+      <child link="distal_2" />
+      <axis xyz="0 -1 0" />
+    </joint>
+    <joint name="dist2_pad_joint" type="fixed">
+      <origin xyz="-0.076 0 -0.0025" rpy="1.5707963267949 0 -1.5707963267949" />
+      <parent link="distal_2" />
+      <child link="distal_pad_2" />
+      <axis xyz="0 0 0" />
+    </joint>
+    <joint name="proximal_joint_3" type="continuous">
+      <origin xyz="-0.03 0 0.0816" rpy="0 0 3.14159265358979" />
+      <parent link="${prefix}palm" />
+      <child link="proximal_3" />
+      <axis xyz="0 -1 0" />
+    </joint>
+    <joint name="prox3_pad_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="1.5707963267949 0 -1.5707963267949" />
+      <parent link="proximal_3" />
+      <child link="proximal_pad_3" />
+      <axis xyz="0 0 0" />
+    </joint>
+    <joint name="distal_joint_3" type="continuous">
+      <origin xyz="0.076 0 0.0025" rpy="0 0 0" />
+      <parent link="proximal_3" />
+      <child link="distal_3" />
+      <axis xyz="0 -1 0" />
+    </joint>
+    <joint name="dist3_pad_joint" type="fixed">
+      <origin xyz="-0.076 0 -0.0025" rpy="1.5707963267949 0 -1.5707963267949" />
+      <parent link="distal_3" />
+      <child link="distal_pad_3" />  
+    </joint>
+
+    <joint name="${prefix}reflex_virtual_joint" type="fixed">
+      <parent link="${prefix}palm"/>
+      <child link="${prefix}reflex_virtual"/>
+      <origin xyz="0.01 0 0.15" rpy="0 0 0"/>
+    </joint>
+
+  </xacro:macro>
+</robot>

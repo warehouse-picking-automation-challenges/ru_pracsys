@@ -1,0 +1,4 @@
+type: single_query_application
+debug: true
+visualize: true
+simulate: true

@@ -1,0 +1,8 @@
+<package>
+  <description brief="Sparse-RRT">
+    Sparse RRT
+  </description>
+  <author>Zakary Littlefield</author>
+  <license>BSD</license>
+  <url>http://www.pracsyslab.org</url>
+</package>

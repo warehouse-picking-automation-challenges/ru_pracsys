@@ -1,0 +1,16 @@
+shelf:
+  type: obstacle
+  geometries:
+    -
+      name: foundation
+      collision_geometry:
+        type: box
+        dims: [1.11, 0.5,  1.36]
+        material: shelf_grey
+      config:
+        position: [0.0, 1.1, 2.7175]
+        orientation: [0, 0, 0, 1]
+    
+
+
+      

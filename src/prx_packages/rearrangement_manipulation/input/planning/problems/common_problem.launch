@@ -1,0 +1,35 @@
+<launch>
+
+  <rosparam ns="problems">
+    rearrangement_manipulation_problem:
+      specification:
+        type: rearrangement_manipulation_specification
+        validity_checker: 
+          type: world_model_validity_checker
+        sampler:
+          type: uniform_sampler
+        distance_metric:
+          type: linear_distance_metric
+        transfer_metric:
+          type: linear_distance_metric
+        local_planner:
+          type: bvp_local_planner
+        heuristic_search:
+          type: super_graph_astar
+        z_on_table: 3.4775
+        max_tries: 10
+        max_different_grasps: 3
+        retract_distance: 0.05
+        num_poses: 2
+        safe_position: [0.25684,-1.34394,0.42624,2.61800,2.84100,2.09400,-0.06762,0]
+        poses_file: poses.txt
+        transit_graph_file: informed_transit_graph.txt
+        transfer_graph_file: informed_transfer_graph.txt
+        deserialize: true
+        apply_smoothing: true
+      query:
+        type: motion_planning_query
+  </rosparam>
+
+</launch>
+

@@ -1,0 +1,5 @@
+type: rrtc
+collision_checking: true
+use_boost_random: false
+visualize_solution: true
+visualize_tree: false

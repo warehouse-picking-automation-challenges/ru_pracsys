@@ -1,0 +1,4 @@
+string destination_node
+int32 screen_num
+int32 number_of_screenshots
+---

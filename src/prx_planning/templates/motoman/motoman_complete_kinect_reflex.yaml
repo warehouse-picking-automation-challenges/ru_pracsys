@@ -1,0 +1,719 @@
+type: motoman
+max_step: 0
+hand: left
+robotiq: false
+unigripper: true
+integrator: 
+  type: euler
+initial_state: [0 1.57 0 0 -1.70 0 0 0 1.57 0 0 -1.70 0 0 0 0 0]
+initial_control: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+root_offset: [0 0 0]
+state_space: 
+  min: [-2.9470, -3.141, -1.918, -2.965, -2.355, -3.141, -1.918, -3.141,
+                 -3.141, -1.918, -2.965, -2.355, -3.141, -1.918, -3.141, 0, 0]
+  max: [2.9470, 3.141, 1.918, 2.965, 2.355, 3.141, 1.918, 3.141,
+                3.141, 1.918, 2.965, 2.355, 3.141, 1.918, 3.141, 1.56,1]
+input_control_space:
+  min: [-.565,  -0.7375, -0.7375, -0.7375, -0.7375, -0.87, -0.87, -1.7425,
+              0, 0, 0, 0, 0, 0, 0, -.39, 0]
+  max: [.565,  0.7375, 0.7375, 0.7375, 0.7375, 0.87, 0.87, 1.7425,
+               0, 0, 0, 0, 0, 0, 0, .39, 1]
+config_offsets:
+  # Base
+  base_link:
+    offset: [0.0, 0.0, 0.45]
+  # torso_link_b1:
+  #   offset: [0.08, 0.0, 0.23]
+  # Left arm
+  arm_left_link_1_s:
+    offset: [0.0, 0.0, -0.21]
+  arm_left_link_2_l:
+    offset: [0.0, 0.06, -0.03]
+  arm_left_link_3_e:
+    offset: [0.0, 0.011, -0.128]    
+  arm_left_link_4_u:
+    offset: [0.0, 0.062, 0.003]
+  # arm_left_link_5_r:
+  #   offset: [0.0, -0.012, -0.105]
+  # arm_left_link_6_b:
+  #   offset: [0.0, 0.055, -0.007]
+  arm_left_link_7_t:
+    offset: [0.0, 0.0, -0.0055]
+  # Right arm
+  arm_right_link_1_s:
+    offset: [0.0, 0.0, -0.21]
+  arm_right_link_2_l:
+    offset: [0.0, 0.06, -0.03]
+  arm_right_link_3_e:
+    offset: [0.0, 0.011, -0.128]    
+  arm_right_link_4_u:
+    offset: [0.0, 0.062, 0.003]
+  # arm_right_link_5_r:
+  #   offset: [0.0, -0.012, -0.105]
+  # arm_right_link_6_b:
+  #   offset: [0.0, 0.055, -0.007]
+  arm_right_link_7_t:
+    offset: [0.0, 0.0, -0.0055]
+  # Unigripper
+  head_connector: 
+    offset: [-0.01, 0.0, -0.004]
+  head_plate:
+    offset: [-0.01, 0.0, -0.004]
+  head_base:
+    offset: [-0.01, 0.0, -0.004]
+  tube_port:
+    offset: [-0.01, 0.0, -0.004]
+  head_sponge:
+    offset: [-0.01, 0.0, -0.004]
+  # Reflex
+  arm_right_palm:
+    offset: [0.012, 0.0, 0.024]
+  proximal_pad_1:
+    offset: [0.0, 0.012, -0.029]
+  distal_pad_1:
+    offset: [0.0, 0.012, -0.095]
+  proximal_pad_2:
+    offset: [0.0, 0.012, -0.029]
+  distal_pad_2:
+    offset: [0.0, 0.012, -0.095]
+  proximal_pad_3:
+    offset: [0.0, 0.012, -0.029]
+  distal_pad_3:
+    offset: [0.0, 0.012, -0.095]
+  # Kinects
+  left_kinect_head:
+    offset: [ 0.0, 0.0, 0.03 ]
+  right_kinect_head:
+    offset: [ 0.0, 0.0, 0.03 ]
+geometries:
+#base of robot
+  -
+    name: base_link
+    collision_geometry:
+      type: cylinder
+      radius: 0.23
+      height: 0.9
+      # type: mesh
+      # filename: meshes/motoman/sda10f/collision/motoman_base.stl
+      material: white
+  -
+    name: torso_link_b1
+    collision_geometry:
+      # type: cylinder
+      # radius: 0.20
+      # height: 0.46
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_b1.stl
+      material: white
+#left arm
+  -
+    name: arm_left_link_1_s
+    collision_geometry:
+      type: cylinder
+      radius: 0.115
+      height: 0.21
+      # type: mesh
+      # filename: meshes/motoman/sda10f/collision/motoman_axis_s.stl
+      material: blue
+  -
+    name: arm_left_link_2_l
+    collision_geometry:
+      type: box
+      dims: [0.19, 0.22, 0.17]
+      # type: mesh
+      # filename: meshes/motoman/sda10f/collision/motoman_axis_l.stl
+      material: white
+  -
+    name: arm_left_link_3_e
+    collision_geometry:
+      type: cylinder
+      radius: 0.082
+      height: 0.25
+      # type: mesh
+      # filename: meshes/motoman/sda10f/collision/motoman_axis_e.stl
+      material: blue
+  -
+    name: arm_left_link_4_u
+    collision_geometry:
+      type: box
+      dims: [0.14, 0.26, 0.135]
+      # type: mesh
+      # filename: meshes/motoman/sda10f/collision/motoman_axis_u.stl
+      material: white
+  -
+    name: arm_left_link_5_r
+    collision_geometry:
+      # type: cylinder
+      # radius: 0.071
+      # height: 0.21
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_r.stl
+      material: blue
+  -
+    name: arm_left_link_6_b
+    collision_geometry:
+      # type: box
+      # dims: [0.12, 0.225, 0.129]
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_b.stl
+      material: white
+  -
+    name: arm_left_link_7_t
+    collision_geometry:
+      type: cylinder
+      radius: 0.04
+      height: 0.01
+      # type: mesh
+      # filename: meshes/motoman/sda10f/collision/motoman_axis_t.stl
+      material: yellow
+#right arm
+  -
+    name: arm_right_link_1_s
+    collision_geometry:
+      type: cylinder
+      radius: 0.115
+      height: 0.21
+      material: blue
+  -
+    name: arm_right_link_2_l
+    collision_geometry:
+      type: box
+      dims: [0.19, 0.22, 0.17]
+      # type: mesh
+      # filename: meshes/motoman/sda10f/collision/motoman_axis_l.stl
+      material: white
+  -
+    name: arm_right_link_3_e
+    collision_geometry:
+      type: cylinder
+      radius: 0.082
+      height: 0.25
+      # type: mesh
+      # filename: meshes/motoman/sda10f/collision/motoman_axis_e.stl
+      material: blue
+  -
+    name: arm_right_link_4_u
+    collision_geometry:
+      type: box
+      dims: [0.14, 0.26, 0.135]
+      # type: mesh
+      # filename: meshes/motoman/sda10f/collision/motoman_axis_u.stl
+      material: white
+  -
+    name: arm_right_link_5_r
+    collision_geometry:
+      # type: cylinder
+      # radius: 0.071
+      # height: 0.21
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_r.stl
+      material: blue
+  -
+    name: arm_right_link_6_b
+    collision_geometry:
+      # type: box
+      # dims: [0.12, 0.225, 0.129]
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_b.stl
+      material: white
+  -
+    name: arm_right_link_7_t
+    collision_geometry:
+      type: cylinder
+      radius: 0.04
+      height: 0.01
+      # type: mesh
+      # filename: meshes/motoman/sda10f/collision/motoman_axis_t.stl
+      material: yellow
+  #right hand reflex
+  -
+    name: arm_right_reflex_virtual
+    collision_geometry:
+      type: box
+      dims: [0.01, 0.035, 0.11]
+      material: glass
+  -
+    name: arm_right_palm
+    collision_geometry:
+      material: dark_grey
+      type: box
+      dims: [0.128, .105, .078]
+      # type: mesh
+      # filename: meshes/reflex/reflex-beta-pads-separate/collision/palm.stl
+  -  
+    name: pad
+    collision_geometry:
+      material: black
+      # type: box
+      # dims: [0.01, .02, .03]
+      type: mesh
+      filename: meshes/reflex/reflex-beta-pads-separate/collision/palm_pad.stl
+  - 
+    name: swivel_1
+    collision_geometry:
+      material: dark_grey
+      # type: box
+      # dims: [0.01, .02, .03]
+      type: mesh
+      filename: meshes/reflex/reflex-beta-pads-separate/collision/swivel_1.stl
+  -
+    name: proximal_1
+    collision_geometry:
+      material: black
+      # type: box
+      # dims: [0.01, .02, .03]
+      type: mesh
+      filename: meshes/reflex/reflex-beta-pads-separate/collision/proximal_1.stl
+  - 
+    name: proximal_pad_1
+    collision_geometry:
+      material: red
+      type: box
+      dims: [0.015, .0045, .057]
+      # type: mesh
+      # filename: meshes/reflex/reflex-beta-pads-separate/collision/proximal_pad_1.stl
+  -   
+    name: distal_1
+    collision_geometry:
+      material: black
+      # type: box
+      # dims: [0.01, .02, .03]
+      type: mesh
+      filename: meshes/reflex/reflex-beta-pads-separate/collision/distal_1.stl
+  -
+    name: distal_pad_1
+    collision_geometry:
+      material: red
+      type: box
+      dims: [0.015, .0045, .037]
+      # type: mesh
+      # filename: meshes/reflex/reflex-beta-pads-separate/collision/distal_pad_1.stl
+  -
+    name: swivel_2
+    collision_geometry:
+      material: dark_grey
+      # type: box
+      # dims: [0.01, .02, .03]
+      type: mesh
+      filename: meshes/reflex/reflex-beta-pads-separate/collision/swivel_2.stl
+  - 
+    name: proximal_2
+    collision_geometry:
+      material: black
+      # type: box
+      # dims: [0.01, .02, .03]
+      type: mesh
+      filename: meshes/reflex/reflex-beta-pads-separate/collision/proximal_2.stl
+  - 
+    name: proximal_pad_2
+    collision_geometry:
+      material: red
+      type: box
+      dims: [0.015, .0045, .057]
+      # type: mesh
+      # filename: meshes/reflex/reflex-beta-pads-separate/collision/proximal_pad_2.stl
+  -  
+    name: distal_2
+    collision_geometry:
+      material: black
+      # type: box
+      # dims: [0.01, .02, .03]
+      type: mesh
+      filename: meshes/reflex/reflex-beta-pads-separate/collision/distal_2.stl
+  -  
+    name: distal_pad_2
+    collision_geometry:
+      material: red
+      type: box
+      dims: [0.015, .0045, .037]
+      # type: mesh
+      # filename: meshes/reflex/reflex-beta-pads-separate/collision/distal_pad_2.stl
+  - 
+    name: proximal_3
+    collision_geometry:
+      material: black
+      # type: box
+      # dims: [0.01, .02, .03]
+      type: mesh
+      filename: meshes/reflex/reflex-beta-pads-separate/collision/proximal_3.stl
+  -  
+    name: proximal_pad_3
+    collision_geometry:
+      material: red
+      type: box
+      dims: [0.015, .0045, .057]
+      # type: mesh
+      # filename: meshes/reflex/reflex-beta-pads-separate/collision/proximal_pad_3.stl
+  -
+    name: distal_3
+    collision_geometry:
+      material: black
+      # type: box
+      # dims: [0.01, .02, .03]
+      type: mesh
+      filename: meshes/reflex/reflex-beta-pads-separate/collision/distal_3.stl
+  - 
+    name: distal_pad_3
+    collision_geometry:
+      material: red
+      type: box
+      dims: [0.015, .0045, .037]
+      # type: mesh
+      # filename: meshes/reflex/reflex-beta-pads-separate/collision/distal_pad_3.stl
+#left hand unigripper
+  -
+    name: base_plate
+    collision_geometry:
+      type: cylinder
+      radius: 0.04
+      height: 0.008
+      material: silver
+  -
+    name: main_beam
+    collision_geometry:
+      type: box
+      dims: [0.015, 0.040, 0.180]
+      material: silver
+  -
+    name: head_connector
+    collision_geometry:
+      type: box
+      dims: [0.035, 0.015, 0.039]
+      material: silver
+  -
+    name: head_plate
+    collision_geometry:
+      type: box
+      dims: [0.045, 0.045, 0.005]
+      material: silver
+  -
+    name: head_base
+    collision_geometry:
+      type: box
+      dims: [0.062, 0.121, 0.038]
+      material: silver
+  -
+    name: head_sponge
+    collision_geometry:
+      type: box
+      dims: [0.06, 0.12, 0.008]
+      material: black
+  -
+    name: tube_port
+    collision_geometry:
+      type: cylinder
+      radius: 0.01
+      height: 0.025
+      material: blue
+  -
+    name: actuator
+    collision_geometry:
+      type: box
+      dims: [0.03, 0.035, 0.180]
+      material: dark_grey
+#Right hand force-torque assembly
+  # -
+  #   name: right_arm_to_sensor_plate
+  #   collision_geometry:
+  #     type: box
+  #     dims: [0.085, 0.085, 0.01]
+  #     material: silver
+  # -
+  #   name: right_force_torque_ring
+  #   collision_geometry:
+  #     type: cylinder
+  #     radius: 0.07 
+  #     height: 0.038
+  #     material: black
+  # -
+  #   name: right_to_hand_ring
+  #   collision_geometry:
+  #     type: cylinder 
+  #     radius: 0.04 
+  #     height: 0.016
+  #     material: black
+  # -
+  #   name: right_io_port
+  #   collision_geometry:
+  #     type: cylinder 
+  #     radius: 0.01
+  #     height: 0.02
+  #     material: silver
+  # -
+  #   name: right_cable_connector
+  #   collision_geometry:
+  #     type: box
+  #     dims: [0.020, 0.060, 0.020]
+  #     material: blue
+#Left hand force-torque assembly
+  # -
+  #   name: left_arm_to_sensor_plate
+  #   collision_geometry:
+  #     type: box
+  #     dims: [0.085, 0.085, 0.01]
+  #     material: silver
+  # -
+  #   name: left_force_torque_ring
+  #   collision_geometry:
+  #     type: cylinder
+  #     radius: 0.07 
+  #     height: 0.038
+  #     material: black
+  # -
+  #   name: left_io_port
+  #   collision_geometry:
+  #     type: cylinder 
+  #     radius: 0.01
+  #     height: 0.02
+  #     material: silver
+  # -
+  #   name: left_cable_connector
+  #   collision_geometry:
+  #     type: box
+  #     dims: [0.020, 0.060, 0.020]
+  #     material: blue
+#Left Kinect
+  -
+    name: left_kinect_base
+    collision_geometry:
+      type: box
+      dims: [0.09, 0.145, 0.07]
+      material: black
+  -
+    name: left_kinect_head
+    collision_geometry:
+      type: box
+      dims: [0.065, 0.28, 0.035]
+      material: black
+  -
+    name: left_RGB_camera
+    collision_geometry:
+      type: cylinder
+      radius: 0.01
+      height: 0.011
+      material: dark_grey
+  -
+    name: left_IR_camera
+    collision_geometry:
+      type: cylinder
+      radius: 0.01
+      height: 0.011
+      material: dark_grey
+#Right Kinect
+  -
+    name: right_kinect_base
+    collision_geometry:
+      type: box
+      dims: [0.09, 0.145, 0.07]
+      material: black
+  -
+    name: right_kinect_head
+    collision_geometry:
+      type: box
+      dims: [0.065, 0.28, 0.035]
+      material: black
+  -
+    name: right_RGB_camera
+    collision_geometry:
+      type: cylinder
+      radius: 0.01
+      height: 0.011
+      material: dark_grey
+  -
+    name: right_IR_camera
+    collision_geometry:
+      type: cylinder
+      radius: 0.01
+      height: 0.011
+      material: dark_grey
+white_list:
+  - [base_link, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            right_kinect_base, right_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [torso_link_b1, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            right_kinect_base, right_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+# LEFT ARM
+  - [arm_left_link_1_s, [arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            right_kinect_base, right_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [arm_left_link_2_l, [arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            right_kinect_base, right_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [arm_left_link_3_e, [arm_left_link_6_b, arm_left_link_7_t,
+                            arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            right_kinect_base, right_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [arm_left_link_4_u, [arm_left_link_7_t,
+                            arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            right_kinect_base, right_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [arm_left_link_5_r, [arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            left_kinect_head, 
+                            right_kinect_base, right_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [arm_left_link_6_b, [arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            right_kinect_base, right_kinect_head, 
+                            tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [arm_left_link_7_t, [arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            right_kinect_base, right_kinect_head, 
+                            tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+# RIGHT ARM
+  - [arm_right_link_1_s, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            right_kinect_base, right_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [arm_right_link_2_l, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            right_kinect_base, right_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [arm_right_link_3_e, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            arm_right_link_6_b, arm_right_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            right_kinect_base, right_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [arm_right_link_4_u, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            arm_right_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            right_kinect_base, right_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [arm_right_link_5_r, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            right_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [arm_right_link_6_b, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [arm_right_link_7_t, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base,
+                            ]]
+# LEFT KINECT
+  - [left_kinect_base, [arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            right_kinect_base, right_kinect_head, 
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [left_kinect_head, [arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                            right_kinect_base, right_kinect_head, 
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+# RIGHT KINECT
+  - [right_kinect_base, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base
+                            ]]
+  - [right_kinect_head, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                            left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base
+                            ]]
+# UNIGRIPPER
+  - [base_plate, [ right_kinect_base, right_kinect_head, 
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [main_beam, [ right_kinect_base, right_kinect_head, 
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [actuator, [ right_kinect_base, right_kinect_head, 
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]  
+  - [tube_port, [ right_kinect_base, right_kinect_head, 
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+  - [head_base, [ right_kinect_base, right_kinect_head, 
+                            arm_right_palm, pad, swivel_1, proximal_1, proximal_pad_1, distal_1, distal_pad_1, swivel_2, proximal_2, proximal_pad_2, distal_2, distal_pad_2, proximal_3, proximal_pad_3, distal_3, distal_pad_3]
+                            ]
+# REFLEX
+  - [arm_right_palm, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [pad, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [swivel_1, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [proximal_1, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [proximal_pad_1, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [distal_1, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [distal_pad_1, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [swivel_2, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [proximal_2, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [proximal_pad_2, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [distal_2, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [distal_pad_2, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [proximal_3, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [proximal_pad_3, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [distal_3, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+  - [distal_pad_3, [ left_kinect_base, left_kinect_head, 
+                            base_plate, main_beam, actuator,  tube_port, head_base]
+                            ]
+
+
+
+
+

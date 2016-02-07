@@ -1,0 +1,9 @@
+<launch>
+
+  <include ns="planning" file="$(find baxter)/input/planning/world_models/world_model_baxter.launch"/>
+
+  <include ns="planning" file="$(find baxter)/input/planning/planner_structures/planner_structure_baxter.launch"/>
+
+  <include ns="planning" file="$(find baxter)/input/planning/queries/query_baxter.launch"/>
+
+</launch>

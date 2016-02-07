@@ -1,0 +1,19 @@
+<launch>
+  
+  <!--       SIMULATION        -->          <!--       SIMULATION        -->       <!--       SIMULATION        -->
+
+  <rosparam command="load" file="$(find prx_input)/templates/applications/empty_application.yaml"/> 
+  <rosparam command="load" file="$(find prx_input/templates/collision_stop_simulator.yaml"/>  
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>  
+
+  <rosparam command="load" ns="baxter" file="$(find baxter)/input/urdf/baxter.yaml"/>
+  <rosparam command="load" ns="simulator/obstacles" file="$(find baxter)/input/simulation/baxter_torso.yaml" />
+
+
+  <rosparam command="load" ns="simulator/subsystems/consumer" file="$(find prx_input)/templates/controllers/consumer.yaml"/>
+
+  <rosparam command="load" ns="simulator/subsystems/consumer/subsystems/manipulator">
+    template: "baxter"
+  </rosparam>
+
+</launch> 

@@ -1,0 +1,45 @@
+<launch>
+	<node name="prx_mapping_node" pkg="prx_mapping" type="prx_mapping_node" required="true" output="screen">
+		<remap from="/camera/depth_registered/image_raw" to="/softkinetic_camera/depth/image_raw"/>
+		<remap from="/camera/depth_registered/camera_info" to="/softkinetic_camera/depth/camera_info"/>
+		<remap from="/camera/rgb/image_color" to="/softkinetic_camera/rgb/image_color"/>
+        </node>
+
+	<node name="image_view_rgb" pkg="image_view" type="image_view">
+		<remap from="image" to="/softkinetic_camera/rgb/image_color"/>
+	</node>
+
+	<node name="image_view_depth" pkg="image_view" type="image_view">
+		<remap from="image" to="/softkinetic_camera/depth/image_raw"/>
+	</node>
+
+	<node name="image_view_kinfu" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera/kinfuLS/depth"/>
+	</node>
+
+	<node name="softkinetic_camera" pkg="softkinetic_camera" type="softkinetic_bringup_node" args="0" output="screen" >
+		<param name="camera_link" type="string" value="/softkinetic_camera_link" />
+		
+		<param name="rgb_optical_frame" type="string" value="/softkinetic_camera_rgb_optical_frame" />
+		<param name="depth_optical_frame" type="string" value="/softkinetic_camera_depth_optical_frame" />
+		
+		<param name="rgb_calibration_file" type="string" value="$(find softkinetic_camera)/resources/senz3d.yaml" />
+		
+		<param name="confidence_threshold" type="int" value="50" />
+		
+		<param name="use_radius_filter" type="bool" value="false" />
+		<param name="search_radius" type="double" value="0.05" />
+		<param name="min_neighbours" type="int" value="50" />
+
+		<param name="depth_frame_format"    type="string"    value="QVGA"  /> <!-- QQVGA, QVGA, VGA -->
+		<param name="depth_frame_rate"      type="int"       value="25"    /> <!-- 25, 30 -->
+
+		<param name="color_frame_format"    type="string"    value="QVGA"  /> <!-- QQVGA, QVGA, VGA, WXGA, NHD -->
+		<param name="color_compression"     type="string"    value="YUY2"  /> <!-- YUY2, MJPEG -->
+		<param name="color_frame_rate"      type="int"       value="25"    /> <!-- 25, 30 -->
+	</node>
+
+	<node pkg="tf" type="static_transform_publisher" name="softkinect_tf"
+		args="0 0 0 0 0 1.2 /base /softkinetic_camera_link 40" />
+
+</launch>

@@ -1,0 +1,8 @@
+<launch>
+    <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml" />
+	<include ns="planning1" file="$(find dynamic_prm)/input/planning/world_model.launch" />
+	<include ns="planning1" file="$(find dynamic_prm)/input/distr_test/planner_structure.launch" />
+	<include ns="planning1" file="$(find dynamic_prm)/input/planning/query.launch" />
+	
+	<node name="planning1" pkg="prx_planning" type="prx_planning" required="false" launch-prefix="" output="screen" args="planning1" />
+</launch>

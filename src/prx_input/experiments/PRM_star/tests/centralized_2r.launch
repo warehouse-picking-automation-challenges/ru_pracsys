@@ -1,0 +1,17 @@
+<!-- This file has been tested on PRACSYS revision  -->
+
+<launch>
+
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+  <include ns="simulation" file="$(find prx_input)/experiments/PRM_star/simulation/simulation_2r.launch"/>
+  <include file="$(find prx_input)/experiments/PRM_star/planning/planning_2r.launch"/>
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+  <!-- Define the planning node -->
+  <node name="planning" pkg="prx_planning" type="prx_planning" required="true" launch-prefix="" output="screen" args="planning" />
+
+  <!-- Define the simulation node -->
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation" required="true" launch-prefix="" output="screen" args="simulation"/>
+
+
+</launch>

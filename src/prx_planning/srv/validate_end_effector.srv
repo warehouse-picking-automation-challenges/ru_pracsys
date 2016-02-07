@@ -1,0 +1,6 @@
+geometry_msgs/PoseStamped pose
+string arm
+bool camera
+---
+sensor_msgs/JointState arm_config
+bool success

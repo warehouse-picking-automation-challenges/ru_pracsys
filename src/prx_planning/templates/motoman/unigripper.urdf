@@ -1,0 +1,263 @@
+<?xml version="1.0" ?>
+<robot name="unigripper" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <link name="base_plate">
+    <visual>
+      <geometry>
+        <cylinder radius="0.04" length="0.008" />
+      </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.82 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.04" length="0.008" />
+        </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.82 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.002"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  
+  <link name="main_beam">
+    <visual>
+      <geometry>
+        <box size="0.015 0.040 0.180" />
+      </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.82 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.015 0.040 0.180" />
+        </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.82 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  
+  <link name="actuator">
+    <visual>
+      <geometry>
+        <box size="0.03 0.035 0.180" />
+      </geometry>
+      <material name="dark_grey">
+        <color rgba="0.2 0.2 0.2 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.035 0.180" />
+      </geometry>
+      <material name="dark_grey">
+        <color rgba="0.2 0.2 0.2 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  
+  <link name="head_connector">
+    <visual>
+      <origin xyz="-0.01 0.0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.015 0.039" />
+      </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.82 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.01 0.0 -0.004" rpy="0 0 0" />
+        <geometry>
+          <box size="0.035 0.015 0.039" />
+        </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.82 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  
+  <link name="head_plate">
+    <visual>
+      <origin xyz="-0.01 0.0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.045 0.005" />
+      </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.82 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.01 0.0 -0.004" rpy="0 0 0" />
+        <geometry>
+          <box size="0.045 0.045 0.005" />
+        </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.82 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  
+  <link name="head_base">
+    <visual>
+      <origin xyz="-0.01 0.0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.062 0.121 0.03" />
+      </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.82 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.01 0.0 -0.004" rpy="0 0 0" />
+        <geometry>
+          <box size="0.062 0.121 0.03" />
+        </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.82 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  
+  <link name="head_sponge">
+    <visual>
+      <origin xyz="-0.01 0.0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.12 0.016" />
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.01 0.0 -0.004" rpy="0 0 0" />
+        <geometry>
+          <box size="0.06 0.12 0.016" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.2 0.2 0.2 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+
+  <link name="tube_port">
+    <visual>
+      <origin xyz="-0.01 0.0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.025" />
+      </geometry>
+      <material name="blue">
+        <color rgba="0.1 0.1 0.92 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.01 0.0 -0.004" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.01" length="0.025" />
+        </geometry>
+      <material name="blue">
+        <color rgba="0.1 0.1 0.92 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  
+
+<!-- Joints -->
+
+  <joint name="plate_beam" type="fixed">
+    <origin xyz="0.0 0.0 0.094" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+    <parent link="base_plate" />
+    <child link="main_beam" />
+  </joint>
+
+  <joint name="beam_act" type="fixed">
+    <origin xyz="-0.0225 0.0 0.0" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+    <parent link="main_beam" />
+    <child link="actuator" />
+  </joint>
+
+  <joint name="neck_plate" type="fixed">
+    <origin xyz="0.0 0 0.022" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+    <parent link="head_connector" />
+    <child link="head_plate" />
+  </joint>
+
+  <joint name="plate_head" type="fixed">
+    <origin xyz="0.0 0 0.0175" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+    <parent link="head_plate" />
+    <child link="head_base" />
+  </joint>
+
+  <joint name="head_sponge" type="fixed">
+    <origin xyz="0.0 0 0.023" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+    <parent link="head_base" />
+    <child link="head_sponge" />
+  </joint>
+
+  <joint name="head_valve" type="fixed">
+    <origin xyz="0.0 0.0435 -0.0275" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+    <parent link="head_base" />
+    <child link="tube_port" />
+  </joint>
+
+  <joint name="head_hinge" type="revolute">
+    <origin xyz="0.0 0.0 0.0825" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <parent link="main_beam" />
+    <child link="head_connector" />
+    <dynamics damping="0.0" friction="0.5" />
+    <limit effort="50" velocity="10" lower="-0.05" upper="1.6" />
+  </joint>
+
+</robot>

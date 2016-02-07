@@ -1,0 +1,120 @@
+environment:
+    type: obstacle
+    geometries:
+      -
+        name: box1
+        collision_geometry: 
+          type: box
+          material: light_blue 
+          dims: [20,1,1]      
+        config:
+          position: [0, -4, .5]
+          orientation: [0, 0, 0, 1]  
+        visualization_geometry: 
+          type: box
+          material: light_blue 
+          dims: [.1,.1,.1]   
+      -
+        name: box2
+        collision_geometry: 
+          type: box
+          material: light_blue 
+          dims: [20,1,5]      
+        config:
+          position: [0, -4, 7.5]
+          orientation: [0, 0, 0, 1]
+        visualization_geometry: 
+          type: box
+          material: light_blue 
+          dims: [.1,.1,.1]   
+      -
+        name: box3
+        collision_geometry: 
+          type: box
+          material: light_blue 
+          dims: [12,1,4]      
+        config:
+          position: [-4, -4, 3]
+          orientation: [0, 0, 0, 1]
+        visualization_geometry: 
+          type: box
+          material: light_blue 
+          dims: [.1,.1,.1]   
+      -
+        name: box4
+        collision_geometry: 
+          type: box
+          material: light_blue 
+          dims: [2,1,4]      
+        config:
+          position: [9, -4, 3]
+          orientation: [0, 0, 0, 1]
+        visualization_geometry: 
+          type: box
+          material: light_blue 
+          dims: [.1,.1,.1]   
+      -
+        name: mid1
+        collision_geometry: 
+          type: box
+          material: light_blue 
+          dims: [1,8,8]      
+        config:
+          position: [0, 0, 4]
+          orientation: [0, 0, 0, 1]
+        visualization_geometry: 
+          type: box
+          material: light_blue 
+          dims: [.1,.1,.1]   
+      -
+        name: a_box1
+        collision_geometry: 
+          type: box
+          material: light_blue 
+          dims: [20,1,1]      
+        config:
+          position: [0, 4, 9.5]
+          orientation: [0, 0, 0, 1]
+        visualization_geometry: 
+          type: box
+          material: light_blue 
+          dims: [.1,.1,.1]   
+      -
+        name: a_box2
+        collision_geometry: 
+          type: box
+          material: light_blue 
+          dims: [20,1,5]      
+        config:
+          position: [0, 4, 2.5]
+          orientation: [0, 0, 0, 1]
+        visualization_geometry: 
+          type: box
+          material: light_blue 
+          dims: [.1,.1,.1]   
+      -
+        name: a_box3
+        collision_geometry: 
+          type: box
+          material: light_blue 
+          dims: [12,1,4]      
+        config:
+          position: [4, 4, 7]
+          orientation: [0, 0, 0, 1]
+        visualization_geometry: 
+          type: box
+          material: light_blue 
+          dims: [.1,.1,.1]   
+      -
+        name: a_box4
+        collision_geometry: 
+          type: box
+          material: light_blue 
+          dims: [4,1,4]      
+        config:
+          position: [-8, 4, 7]
+          orientation: [0, 0, 0, 1]
+        visualization_geometry: 
+          type: box
+          material: light_blue 
+          dims: [.1,.1,.1]   

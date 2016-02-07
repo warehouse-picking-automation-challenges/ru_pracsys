@@ -1,0 +1,38 @@
+
+<launch>
+  <rosparam command="load" ns="simulation" file="$(find prx_input)/templates/applications/manual_application.yaml"/> 
+  <rosparam command="load" ns="simulation" file="$(find manipulation)/input/simulation/manipulation_simulator.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+
+  <rosparam command="load" ns="simulation/baxter" file="$(find manipulation)/input/urdf/baxter.yaml"/>
+  <rosparam command="load" ns="simulation/simulator/obstacles" file="$(find manipulation)/input/simulation/baxter_torso.yaml" />
+
+  <rosparam command="load" ns="simulation/simulator">
+    manipulator_name: simulator/manual/manipulator
+    fake_planning: true
+    ghosting: false
+    ghost_waiting_frames: 11
+    ghost_plants:
+        system_paths: ["simulator/manual/manipulator", "simulator/cup1"]
+  </rosparam>
+
+  <rosparam command="load" ns="simulation/simulator/subsystems/manual/subsystems/manipulator">
+    template: "baxter"    
+  </rosparam>
+
+  <include  ns="simulation" file="$(find manipulation)/input/environments/3cups.launch"/>
+
+  <rosparam command="load" ns="simulation/manual_controllers">
+    system_paths: [simulator/manual]
+  </rosparam>
+
+  <rosparam command="load" ns="simulation/simulator/subsystems/manual" file="$(find manipulation)/input/simulation/keyboard.yaml"/>
+        
+  <rosparam command="load" ns="simulation/simulator/obstacles" file="$(find manipulation)/input/environments/shelf.yaml" />
+
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation" 
+    required="true" launch-prefix="" output="screen" args="simulation"/>
+
+  <include file="$(find manipulation)/input/visualization.launch"/>
+
+</launch> 

@@ -1,0 +1,7 @@
+<launch>
+  <include ns="planning" file="$(find rrt_star_with_shooting)/input/planning/world_models/world_model.launch"/>
+  <include ns="planning" file="$(find rrt_star_with_shooting)/input/planning/planner_structures/planner_structure.launch"/>
+  <include ns="planning" file="$(find rrt_star_with_shooting)/input/planning/queries/query.launch"/>
+  <node name="planning" pkg="prx_planning" type="prx_planning"
+        required="false" launch-prefix="" output="screen" args="planning" />
+</launch>

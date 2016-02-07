@@ -1,0 +1,29 @@
+<launch>
+
+  <!-- This file is meant to store the query to use in the application.  -->
+
+
+  <!-- Specify the query parameters --> 
+
+  <rosparam ns="gta_query">
+    type: gta_query
+    my_goal:
+        type: "radial_goal_region"
+        distance_metric:
+            type: linear_distance_metric
+        goal_state: [125,0]
+    neighbor_goals:
+      -
+        goal:
+            type: "radial_goal_region"
+            distance_metric:
+                type: linear_distance_metric
+            goal_state: [-125,0]
+            radius: 1
+    start_states:
+      -
+        state: [125,0]
+  </rosparam>
+
+</launch>
+

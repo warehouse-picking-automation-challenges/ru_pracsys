@@ -1,0 +1,3 @@
+planning_contexts:
+  space1:
+    default: {type: full_mapping}

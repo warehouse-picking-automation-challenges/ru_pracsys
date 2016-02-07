@@ -1,0 +1,17 @@
+
+<class name="prx_simulation/motoman"
+    type="prx::packages::motoman::motoman_plant_t"
+    base_class_type="prx::sim::system_t">
+    <description>
+        Motoman plant for use in PRACSYS.
+    </description>        
+</class>
+
+<class name="prx_simulation/motoman_unigripper"
+    type="prx::packages::motoman::unigripper_motoman_plant_t"
+    base_class_type="prx::sim::system_t">
+    <description>
+        Motoman plant with the UNIgripper on the left hand.
+    </description>        
+</class>
+

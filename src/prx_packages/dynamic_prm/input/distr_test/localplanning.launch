@@ -1,0 +1,5 @@
+<launch>
+  <rosparam ns="planning" command="load" file="$(find dynamic_prm)/input/applications/plan_shell_app.yaml" />
+  
+  <node name="planning" pkg="prx_planning" type="prx_planning" required="false" launch-prefix="" output="screen" args="planning" />
+</launch>

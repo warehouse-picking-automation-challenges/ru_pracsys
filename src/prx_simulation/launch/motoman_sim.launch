@@ -1,0 +1,17 @@
+<launch>
+
+<!--
+	<param name="robot_description" textfile="$(find prx_planning)/templates/motoman/sda10f_both_robotiq.urdf" />
+-->
+ 	<param name="robot_description" command="$(find xacro)/xacro.py '$(find motoman_sda10f_support)/urdf/sda10f.xacro'"/>
+ 	
+	<rosparam command="load" file="$(find prx_simulation)/urdf/joint_names_sda10f.yaml" />
+
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+	<node name="joint_trajectory_action" pkg="prx_simulation" type="motoman_sim.py" output="screen" />
+	<node name="unigripper_joint_trajectory_action" pkg="prx_simulation" type="unigripper_sim.py" output="screen" />
+	<node name="robotiq_sim" pkg="prx_simulation" type="robotiq_sim.py" output="screen" />
+	<!--
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find prx_simulation)/launch/motoman_sim.rviz" required="true" />
+	-->
+</launch>

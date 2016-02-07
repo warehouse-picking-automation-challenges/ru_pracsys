@@ -1,0 +1,67 @@
+<launch>
+
+  <!-- Load independent files -->
+        
+  <rosparam command="load" file="$(find prx_input)/templates/applications/empty_application.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/simulators/null_response_simulator.yaml"/>
+  
+
+  <!-- Load template files -->
+        
+  <rosparam command="load" ns="controller" file="$(find prx_input)/templates/controllers/consumer.yaml"/>
+  <rosparam command="load" ns="plant" file="$(find prx_input)/templates/plants/second_order_car.yaml"/>
+  
+  <!-- Override template parameters -->
+        
+  <rosparam ns="controller">
+  </rosparam>
+        
+  <rosparam ns="plant">
+    initial_state: [0,0,0,0,0]
+    state_space: 
+      min: [-300, -300, -4, 0, -0.1]
+      max: [300, 300, 4, 50, 0.1]
+  </rosparam>
+       
+  <!-- Set up concrete system tree -->
+              
+  <rosparam command="load" ns="simulator">
+    simulation_step: 0.02
+  </rosparam>
+   
+  <rosparam command="load" ns="simulator/subsystems/consumer">
+    template: controller
+    planning_node: /planning
+    keep_last_control: true
+    active_queries: true
+    goals:
+      -
+        goal:
+            type: "radial_goal_region"
+            distance_metric:
+                type: linear_distance_metric
+            goal_state: [100,0,0,0,0]
+            radius: 25
+      -
+        goal:
+            type: "radial_goal_region"
+            distance_metric:
+                type: linear_distance_metric
+            goal_state: [0,100,0,0,0]
+            radius: 25
+      -
+        goal:
+            type: "radial_goal_region"
+            distance_metric:
+                type: linear_distance_metric
+            goal_state: [-100,0,0,0,0]
+            radius: 25
+                        
+  </rosparam>
+        
+  <rosparam command="load" ns="simulator/subsystems/consumer/subsystems/car">
+    template: "plant"
+  </rosparam>
+
+            
+</launch>

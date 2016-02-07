@@ -1,0 +1,1 @@
+rosservice call unigripper_vacuum false

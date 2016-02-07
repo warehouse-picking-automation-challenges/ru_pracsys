@@ -1,0 +1,8 @@
+<package>
+  <description brief="Rearranging Manipulation Problems">
+    This package includes the problem of rearranging objects with a manipulator.
+  </description>
+  <author>Athanasios Krontiris</author>
+  <license>BSD</license>
+  <url>http://www.pracsyslab.org</url>
+</package>

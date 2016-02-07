@@ -1,0 +1,47 @@
+<package>
+  <name>prx_utilities</name>
+  <version>0.4.2</version> 
+  <description>
+
+     prx_utilities
+
+  </description>
+  <author>Kostas Bekris/kostas.bekris@cs.rutgers.edu</author>
+  <license>BSD</license>
+  <maintainer email="kostas.bekris@cs.rutgers.edu">Kostas Bekris</maintainer>
+  <url>http://www.pracsyslab.org/software</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rosconsole</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>boost</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>roslib</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>class_loader</build_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rosconsole</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>pluginlib</run_depend>
+  <run_depend>boost</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>message_generation</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>class_loader</run_depend>
+  
+  <export>
+      <cpp cflags="-I${prefix}/ -I${prefix}/srv_gen/cpp/include/ -I${prefix}/msg_gen/cpp/include/" lflags="-L${prefix}/lib -lprx_utilities"/>
+      <prx_utilities plugin="${prefix}/utilities_plugin.xml"/>
+  </export>
+
+</package>
+
+

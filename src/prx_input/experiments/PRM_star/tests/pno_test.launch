@@ -1,0 +1,9 @@
+<!-- This file has been tested on PRACSYS revision  -->
+
+<launch>
+
+  <include file="$(find prx_input)/experiments/PRM_star/simulation/pno_test.launch"/>
+  <include file="$(find prx_input)/experiments/PRM_star/planning/pno_planning.launch"/>
+  <!-- <include file="$(find prx_input)/templates/visualization/visualization.launch"/> -->
+
+</launch>

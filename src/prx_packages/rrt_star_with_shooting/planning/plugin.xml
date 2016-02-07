@@ -1,0 +1,7 @@
+<class name="prx_planning/rrt_star_with_shooting"
+    type="prx::packages::rrt_star_with_shooting::rrt_star_with_shooting_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        RRT* with Shooting
+    </description>        
+</class>

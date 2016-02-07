@@ -1,0 +1,32 @@
+<launch>
+
+ 	<include file="$(find motoman_driver)/launch/robot_interface_streaming_fs100_apc.launch" /> 
+
+	<include file="$(find prx_mapping)/launch/prx_mapping_freenect_no_rviz_kinect2.launch" />
+ 	<node name="prx_localizer" pkg="prx_localizer" type="prx_localizer" />
+
+	<node name="dynamic_reconfigure2" pkg="dynamic_reconfigure" type="dynparam" args="/camera2/driver depth_registration True" 
+	output="screen" > </node>
+	<node name="dynamic_reconfigure3" pkg="dynamic_reconfigure" type="dynparam" args="/camera2/driver data_skip 5" 
+	output="screen" > </node>
+	<node name="dynamic_reconfigure1" pkg="dynamic_reconfigure" type="dynparam" args="set /prx_mapping_node first_rotating_axis 1" 
+	output="screen" > </node>
+
+
+	<node name="rq_test_sensor" pkg="robotiq_force_torque_sensor" type="rq_test_sensor" />
+	<node name="robotiq_force_torque_sensor" pkg="robotiq_force_torque_sensor" type="rq_sensor" />
+	<node name="robotiqSModel" pkg="robotiq_s_model_control" type="SModelTcpNode.py" args="192.168.1.11" />
+
+
+	<include file="$(find prx_planning)/launch/motoman_planning.launch" />
+
+	<node name="object_recognition_core2" pkg="object_recognition_core" type="detection" 
+		args="-c $(find object_recognition_linemod)/conf/detection.ros_kinect2.ork" 
+		required="true" output="screen" >
+        </node>
+
+	<node name="prx_decision_making" pkg="prx_decision_making" type="ru_decision_making" args="robotiq_test.json" />
+	<node name="task_planner" pkg="prx_planning" type="prx_task_planning.py" />
+
+
+</launch>

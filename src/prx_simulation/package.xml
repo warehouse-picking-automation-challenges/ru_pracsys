@@ -1,0 +1,61 @@
+<package>
+  <name>prx_simulation</name>
+  <version>0.4.2</version>
+  <description>
+
+     prx_simulation
+
+  </description>
+  <author>Kostas Bekris</author>
+  <license>BSD</license>
+  <maintainer email="kostas.bekris@cs.rutgers.edu">Kostas Bekris</maintainer>
+  <url>pracsyslab.org</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>prx_utilities</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>urdf</build_depend>
+  <build_depend>pqp</build_depend>
+  <build_depend>fcl</build_depend>
+  <build_depend>octomap</build_depend>
+  <build_depend>boost</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>roslib</build_depend>
+  <build_depend>class_loader</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>kdl_parser</build_depend>
+  <build_depend>unigripper_msgs</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>prx_utilities</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>pluginlib</run_depend>
+  <run_depend>urdf</run_depend>
+  <run_depend>pqp</run_depend>
+  <run_depend>fcl</run_depend>
+  <run_depend>octomap</run_depend>
+  <run_depend>boost</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>class_loader</run_depend>
+  <run_depend>message_generation</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>kdl_parser</run_depend>
+  <run_depend>unigripper_msgs</run_depend>
+  
+  <build_depend>message_generation</build_depend>
+  <run_depend>message_runtime</run_depend>
+  
+  <export>
+      <cpp cflags="-I${prefix}/" lflags="-L${prefix}/lib -lprx_simulation_lib"/>
+      <prx_simulation plugin="${prefix}/simulation_plugin.xml"/>
+  </export>
+
+</package>
+
+

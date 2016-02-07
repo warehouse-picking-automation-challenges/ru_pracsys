@@ -1,0 +1,24 @@
+<launch>
+
+  <!-- Load independent files -->
+        
+  <rosparam command="load" file="$(find prx_input)/templates/applications/empty_application.yaml"/> 
+  <rosparam command="load" file="$(find manipulation)/input/simulation/manipulation_simulator.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+  
+<rosparam command="load" ns="baxter" file="$(find manipulation)/input/urdf/baxter.yaml"/>
+
+  <rosparam command="load" ns="simulator">
+    manipulator_name: simulator/consumer/manipulator
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/consumer" file="$(find prx_input)/templates/controllers/consumer.yaml"/>
+  
+  <rosparam command="load" ns="simulator/subsystems/consumer/subsystems/manipulator">
+    template: "baxter"
+  </rosparam>
+  
+  <rosparam command="load" ns="simulator/obstacles" file="$(find manipulation)/input/simulation/baxter_torso.yaml" />
+
+
+</launch>

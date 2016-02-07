@@ -1,0 +1,365 @@
+MatrixTransform {
+  UniqueID MatrixTransform_0
+  DataVariance STATIC
+  nodeMask 0xffffffff
+  cullingActive TRUE
+  referenceFrame RELATIVE
+  Matrix {
+    1 0 0 0
+    0 1 0 0
+    0 0 1 0
+    -2 0 0.5 1
+  }
+  num_children 1
+  MatrixTransform {
+    DataVariance STATIC
+    name "fire.osg"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    referenceFrame RELATIVE
+    Matrix {
+      1 0 0 0
+      0 1 0 0
+      0 0 1 0
+      0 0 -1 1
+    }
+    num_children 1
+    MatrixTransform {
+      DataVariance STATIC
+      name "fire.osg"
+      nodeMask 0xffffffff
+      cullingActive TRUE
+      referenceFrame RELATIVE
+      Matrix {
+        -4.37114e-08 1 0 0
+        0 0 -1 0
+        -1 -4.37114e-08 -3.51004e-21 0
+        1 -12 -1 1
+      }
+      num_children 1
+      Group {
+        DataVariance DYNAMIC
+        name "fire.osg"
+        nodeMask 0xffffffff
+        cullingActive TRUE
+        num_children 3
+        MatrixTransform {
+          DataVariance DYNAMIC
+          nodeMask 0xffffffff
+          cullingActive TRUE
+          referenceFrame RELATIVE
+          Matrix {
+            0.658579 0.316228 0.682843 0
+            -0.316228 -0.707107 0.632455 0
+            0.682843 -0.632455 -0.365685 0
+            0 0 0 1
+          }
+          num_children 1
+          MatrixTransform {
+            DataVariance DYNAMIC
+            nodeMask 0xffffffff
+            cullingActive TRUE
+            referenceFrame RELATIVE
+            Matrix {
+              1 0 0 0
+              0 -1 -8.74228e-08 0
+              0 8.74228e-08 -1 0
+              8 -3 10 1
+            }
+            num_children 2
+            osgParticle::ModularEmitter {
+              DataVariance DYNAMIC
+              nodeMask 0xffffffff
+              cullingActive FALSE
+              osgParticle::ParticleSystem {
+                UniqueID ParticleSystem_1
+                DataVariance DYNAMIC
+                StateSet {
+                  DataVariance STATIC
+                  rendering_hint TRANSPARENT_BIN
+                  renderBinMode USE
+                  binNumber 1
+                  binName DepthSortedBin
+                  GL_LIGHTING OFF
+                  GL_BLEND ON
+                  Material {
+                    UniqueID Material_2
+                    DataVariance STATIC
+                    ColorMode OFF
+                    ambientColor 0.2 0.2 0.2 1
+                    diffuseColor 0.8 0.8 0.8 1
+                    specularColor FRONT 0 0 0 1
+                    specularColor BACK  0 0 0 1
+                    emissionColor FRONT 0 0 0 1
+                    emissionColor BACK  0 0 0 1
+                    shininess 0
+                  }
+                  BlendFunc {
+                    DataVariance STATIC
+                    source SRC_ALPHA
+                    destination ONE
+                  }
+                  textureUnit 0 {
+                    GL_TEXTURE_2D ON
+                    Texture2D {
+                      UniqueID Texture2D_3
+                      DataVariance STATIC
+                      file "Images/smoke.rgb"
+                      wrap_s CLAMP
+                      wrap_t CLAMP
+                      wrap_r CLAMP
+                      min_filter LINEAR
+                      mag_filter LINEAR
+                      maxAnisotropy 1
+                      borderColor 0 0 0 0
+                      borderWidth 0
+                      useHardwareMipMapGeneration TRUE
+                      unRefImageDataAfterApply TRUE
+                      internalFormatMode USE_IMAGE_DATA_FORMAT
+                      resizeNonPowerOfTwo TRUE
+                      shadowComparison FALSE
+                      shadowCompareFunc GL_LEQUAL
+                      shadowTextureMode GL_LUMINANCE
+                    }
+                    TexEnv {
+                      UniqueID TexEnv_4
+                      DataVariance STATIC
+                      mode MODULATE
+                    }
+                  }
+                }
+                supportsDisplayList FALSE
+                useDisplayList FALSE
+                useVertexBufferObjects FALSE
+                particleAlignment BILLBOARD
+                particleScaleReferenceFrame WORLD_COORDINATES
+                alignVectorX 1 0 0
+                alignVectorY 0 1 0
+                doublePassRendering FALSE
+                frozen FALSE
+                freezeOnCull TRUE
+                defaultBoundingBox -10 -10 -10 10 10 10
+                particleTemplate {
+                  shape QUAD
+                  lifeTime 2
+                  sizeRange 0.2 0.2
+                  alphaRange 1 0
+                  colorRange 1 1 1 1 1 1 1 1
+                  position 0 0 0
+                  velocity 0 0 0
+                  angle 0 0 0
+                  angularVelocity 0 0 0
+                  radius 0.2
+                  mass 0.1
+                  textureTile 1 1 24
+                  sizeInterpolator {
+                    osgParticle::LinearInterpolator {
+                      DataVariance DYNAMIC
+                    }
+                  }
+                  alphaInterpolator {
+                    osgParticle::LinearInterpolator {
+                      DataVariance DYNAMIC
+                    }
+                  }
+                  colorInterpolator {
+                    osgParticle::LinearInterpolator {
+                      DataVariance DYNAMIC
+                    }
+                  }
+                }
+              }
+              enabled TRUE
+              referenceFrame RELATIVE
+              endless TRUE
+              lifeTime 0
+              startTime 0
+              currentTime 0
+              resetTime 0
+              useDefaultTemplate FALSE
+              particleTemplate {
+                shape QUAD
+                lifeTime 1.5
+                sizeRange 3 1
+                alphaRange 1 0
+                colorRange 1 0.5 0 1 1 1 1 1
+                position 0 0 0
+                velocity 0 0 0
+                angle 0 0 0
+                angularVelocity 0 0 0
+                radius 0.2
+                mass 0.1
+                textureTile 1 1 24
+                sizeInterpolator {
+                  osgParticle::LinearInterpolator {
+                    UniqueID LinearInterpolator_5
+                    DataVariance DYNAMIC
+                  }
+                }
+                alphaInterpolator {
+                  osgParticle::LinearInterpolator {
+                    UniqueID LinearInterpolator_6
+                    DataVariance DYNAMIC
+                  }
+                }
+                colorInterpolator {
+                  osgParticle::LinearInterpolator {
+                    UniqueID LinearInterpolator_7
+                    DataVariance DYNAMIC
+                  }
+                }
+              }
+
+              osgParticle::RandomRateCounter {
+                DataVariance DYNAMIC
+                rateRange 30 50
+              }
+              osgParticle::PointPlacer {
+                DataVariance DYNAMIC
+                center 0 0 0
+              }
+              osgParticle::RadialShooter {
+                DataVariance DYNAMIC
+                thetaRange -0.785398 0.785398
+                phiRange -0.785398 0.785398
+                initialSpeedRange 5 7.5
+                initialRotationalSpeedRange 0 0 0 0 0 0
+              }
+            }
+            osgParticle::ModularEmitter {
+              DataVariance DYNAMIC
+              nodeMask 0xffffffff
+              cullingActive FALSE
+              osgParticle::ParticleSystem {
+                UniqueID ParticleSystem_8
+                DataVariance DYNAMIC
+                StateSet {
+                  DataVariance STATIC
+                  rendering_hint TRANSPARENT_BIN
+                  renderBinMode USE
+                  binNumber 1
+                  binName DepthSortedBin
+                  GL_LIGHTING OFF
+                  GL_BLEND ON
+                  Use Material_2
+                  BlendFunc {
+                    DataVariance STATIC
+                    source SRC_ALPHA
+                    destination ONE_MINUS_SRC_ALPHA
+                  }
+                  textureUnit 0 {
+                    GL_TEXTURE_2D ON
+                    Use Texture2D_3
+                    Use TexEnv_4
+                  }
+                }
+                supportsDisplayList FALSE
+                useDisplayList FALSE
+                useVertexBufferObjects FALSE
+                particleAlignment BILLBOARD
+                particleScaleReferenceFrame WORLD_COORDINATES
+                alignVectorX 1 0 0
+                alignVectorY 0 1 0
+                doublePassRendering FALSE
+                frozen FALSE
+                freezeOnCull TRUE
+                defaultBoundingBox -10 -10 -10 10 10 10
+                particleTemplate {
+                  shape QUAD
+                  lifeTime 2
+                  sizeRange 0.2 0.2
+                  alphaRange 1 0
+                  colorRange 1 1 1 1 1 1 1 1
+                  position 0 0 0
+                  velocity 0 0 0
+                  angle 0 0 0
+                  angularVelocity 0 0 0
+                  radius 0.2
+                  mass 0.1
+                  textureTile 1 1 24
+                  sizeInterpolator {
+                    osgParticle::LinearInterpolator {
+                      DataVariance DYNAMIC
+                    }
+                  }
+                  alphaInterpolator {
+                    osgParticle::LinearInterpolator {
+                      DataVariance DYNAMIC
+                    }
+                  }
+                  colorInterpolator {
+                    osgParticle::LinearInterpolator {
+                      DataVariance DYNAMIC
+                    }
+                  }
+                }
+              }
+              enabled TRUE
+              referenceFrame RELATIVE
+              endless TRUE
+              lifeTime 0
+              startTime 0
+              currentTime 0
+              resetTime 0
+              useDefaultTemplate FALSE
+              particleTemplate {
+                shape QUAD
+                lifeTime 3
+                sizeRange 1 12
+                alphaRange 1 0
+                colorRange 0.1 0.1 0.1 0.5 1 1 1 1.5
+                position 0 0 0
+                velocity 0 0 0
+                angle 0 0 0
+                angularVelocity 0 0 0
+                radius 0.2
+                mass 0.1
+                textureTile 1 1 24
+                sizeInterpolator {
+                  Use LinearInterpolator_5
+                }
+                alphaInterpolator {
+                  Use LinearInterpolator_6
+                }
+                colorInterpolator {
+                  Use LinearInterpolator_7
+                }
+              }
+
+              osgParticle::RandomRateCounter {
+                DataVariance DYNAMIC
+                rateRange 30 50
+              }
+              osgParticle::PointPlacer {
+                DataVariance DYNAMIC
+                center 0 0 1
+              }
+              osgParticle::RadialShooter {
+                DataVariance DYNAMIC
+                thetaRange -0.392699 0.392699
+                phiRange -0.392699 0.392699
+                initialSpeedRange 10 15
+                initialRotationalSpeedRange 0 0 0 0 0 0
+              }
+            }
+          }
+        }
+        osgParticle::ParticleSystemUpdater {
+          DataVariance DYNAMIC
+          nodeMask 0xffffffff
+          cullingActive FALSE
+          Use ParticleSystem_8
+          Use ParticleSystem_1
+        }
+        Geode {
+          DataVariance DYNAMIC
+          nodeMask 0xffffffff
+          cullingActive TRUE
+          num_drawables 2
+          Use ParticleSystem_1
+          Use ParticleSystem_8
+        }
+      }
+    }
+  }
+}

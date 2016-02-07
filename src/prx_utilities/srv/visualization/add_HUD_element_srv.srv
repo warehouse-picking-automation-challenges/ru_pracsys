@@ -1,0 +1,8 @@
+string parent_name
+string our_name
+float64[]  position
+float64[]  color
+int32 character_size
+string font
+string text
+---

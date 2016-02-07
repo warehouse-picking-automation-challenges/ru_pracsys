@@ -1,0 +1,39 @@
+<package>
+  <name>ecto_ros</name>
+  <version>0.4.5</version>
+  <description>A set of generic cells to interact with ROS</description>
+  <author email="erublee@willowgarage.com">Ethan Rublee</author>
+  <author email="vrabaud@willowgarage.com">Vincent Rabaud</author>
+  <maintainer email="vincent.rabaud@gmail.com">Vincent Rabaud</maintainer>
+  <license>BSD</license>
+
+  <url>http://plasmodic.github.io/ecto_ros</url>
+
+  <build_depend>cmake_modules</build_depend>
+  <!-- only a dep on OpenCV is needed but the key has changed between Hydro and Indigo, not the cv_bridge key -->
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>ecto</build_depend>
+  <build_depend>eigen</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>rosbag</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rosmsg</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <run_depend>cmake_modules</run_depend>
+  <run_depend>cv_bridge</run_depend>
+  <run_depend>ecto</run_depend>
+  <run_depend>eigen</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <!-- for the macro that generates publisher cells -->
+  <run_depend>message_generation</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>rosbag</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

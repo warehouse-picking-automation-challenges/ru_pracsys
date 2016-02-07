@@ -1,0 +1,4 @@
+
+application:
+    type: dprm_sim_application
+    interval: 0.1

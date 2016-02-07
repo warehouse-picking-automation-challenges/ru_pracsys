@@ -1,0 +1,85 @@
+baxter_torso_real:
+  type: obstacle
+  geometries:
+    -
+      name: pedestal
+      collision_geometry:
+        type: box
+        dims: [0.92, 0.83, 0.3]
+        material: black
+      config:
+        position: [-0.04, 0, 2.425]
+        orientation: [0, 0, 0, 1]
+      visualization_geometry:
+        type: mesh
+        filename: meshes/base/pedestal.osg
+        material: black
+    -
+      name: torso_mid
+      collision_geometry:
+        type: cylinder
+        radius: 0.15
+        height: 0.36
+        material: black
+      config:
+        position: [-0.065, 0, 3.3]
+        orientation: [0, 0, 0, 1]
+      visualization_geometry:
+        type: mesh
+        filename: meshes/torso/base.osg
+        material: black
+    -
+      name: torso_high
+      collision_geometry:
+        type: cylinder
+        radius: 0.2
+        height: 0.15
+        material: black
+      config:
+        position: [-0.065, 0, 3.52]
+        orientation: [0, 0, 0, 1]
+      visualization_geometry:
+        type: box
+        dims: [0.01, 0.01, 0.01]
+        material: black
+    -
+      name: torso_low
+      collision_geometry:
+        type: cylinder
+        radius: 0.24
+        height: 0.22
+        material: black
+      config:
+        position: [-0.065, 0, 3]
+        orientation: [0, 0, 0, 1]
+      visualization_geometry:
+        type: box
+        dims: [0.01, 0.01, 0.01]
+        material: black
+    -
+      name: pedestal_high
+      collision_geometry:
+        type: cylinder
+        radius: 0.15
+        height: 0.4
+        material: black
+      config:
+        position: [0, 0, 2.7]
+        orientation: [0, 0, 0, 1]
+      visualization_geometry:
+        type: box
+        dims: [0.01, 0.01, 0.01]
+        material: black
+    -
+      name: head
+      collision_geometry:
+        type: box
+        dims: [0.35,0.2,0.3]
+        material: black
+      config:
+        position: [-0.01, 0, 3.7]
+        orientation: [0, 0, 0, 1]
+      visualization_geometry:
+        type: box
+        dims: [0.01, 0.01, 0.01]
+        material: black

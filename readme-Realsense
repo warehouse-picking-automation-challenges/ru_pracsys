@@ -1,0 +1,24 @@
+>>>>>>>>>>>>>>>Before running the realsense driver
+
+Install libudev
+sudo apt-get install libudev-dev
+
+Ensure that the registration data (2048 .bin files) is in [package_location]/data/uvmap/serial/
+[Note: The camera will work without this data however the depth registered topics are not published]
+
+
+>>>>>>>>>>>>>>>Running the realsense driver
+
+---To run any connected camera feed:
+roslaunch realsense_camera realsense_camera_no_rviz.launch
+
+
+---To run any connected camera feed with rviz showing color, depth, ir, depth cloud, and depth registered cloud feeds
+roslaunch realsense_camera realsense_rviz.launch
+
+[Note: The ir feed will require a kernel patch http://bit.ly/1JITy5M . However this is not necessary for the camera operation. ] 
+
+
+---To run the two cameras individually/concurrently(identified by serial number)
+roslaunch realsense_camera realsense1_driver.launch
+roslaunch realsense_camera realsense2_driver.launch

@@ -1,0 +1,5 @@
+# Captured sensor values from unloaded state, used for calibration 
+tactile_offset_f1: [271, 297, 272, 294, 333, 342, 347, 355, 273]
+tactile_offset_f2: [272, 309, 304, 374, 384, 308, 293, 323, 381]
+tactile_offset_f3: [285, 280, 1018, 319, 338, 308, 347, 311, 301]
+tactile_offset_palm: [398, 334, 328, 398, 336, 356, 438, 418, 202, 414, 1022]

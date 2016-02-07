@@ -1,0 +1,36 @@
+<launch>
+
+  <!-- Load template files -->
+  <rosparam command="load" ns="query_type" file="$(find prx_input)/templates/queries/motion_planning_query.yaml"/>
+  <rosparam command="load" ns="specification_type" file="$(find prx_input)/templates/specifications/motion_planning_specification.yaml"/>
+
+  <!-- Specify the query parameters -->
+  <rosparam ns="problems">
+  problem1:
+    specification:
+      template: "specification_type"
+      seeds:
+        -
+          state: [1.40684,-1.24394,0.02624,2.26800,3.02419,1.02000,-0.06762,0.00000]
+      stopping_criteria:
+        elements:
+          criterion1:
+            type: iteration_criterion
+            condition: 2000
+      local_planner:
+        type: bvp_local_planner
+        max_prop_length: 0.2
+    query:
+      template: "query_type"
+      start_state: [1.40684,-1.24394,0.02624,2.26800,3.02419,1.02000,-0.06762,0.00000]
+      goal:
+        type: "goal_state"
+        #type: "radial_goal_region"
+        radius: 2.5
+        distance_metric:
+          type: ann_distance_metric
+        goal_state: [-0.80684,-1.24394,0.02624,2.46800,3.02419,1.32000,-0.06762,0.00000]
+  </rosparam>
+
+</launch>
+

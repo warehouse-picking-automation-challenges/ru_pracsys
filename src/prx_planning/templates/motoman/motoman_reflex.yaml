@@ -1,0 +1,361 @@
+type: motoman
+max_step: 0
+#hand: right 
+hand: left
+robotiq: true
+reflex: true
+integrator: 
+  type: euler
+initial_state: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+initial_control: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# root_offset: [0 0 .296863]
+root_offset: [0 0 0]
+state_space: 
+  # min: [-2.9570, -3.13, -1.90, -2.95, -2.36, -3.13, -1.90, -3.13,
+  #                -3.13, -1.90, -2.95, -2.36, -3.13, -1.90, -3.13]
+  # max: [2.9570, 3.13, 1.90, 2.95, 2.36, 3.13, 1.90, 3.13,
+  #               3.13, 1.90, 2.95, 2.36, 3.13, 1.90, 3.13]
+  min: [-2.9570, -3.13, -1.90, -2.95, -2.36, -3.13, -1.90, -3.13,
+                 -3.13, -1.90, -2.95, -2.36, -3.13, -1.90, -3.13,0]
+  max: [2.9570, 3.13, 1.90, 2.95, 2.36, 3.13, 1.90, 3.13,
+                3.13, 1.90, 2.95, 2.36, 3.13, 1.90, 3.13,1]
+input_control_space:
+  # min: [-2.26,  -2.95, -2.95, -2.95, -2.95, -3.48, -3.48, -6.97,
+  #              -2.95, -2.95, -2.95, -2.95, -3.48, -3.48, -6.97]
+  # max: [2.26,  2.95, 2.95, 2.95, 2.95, 3.48, 3.48, 6.97,
+  #              2.95, 2.95, 2.95, 2.95, 3.48, 3.48, 6.97]
+  ####### Full speed Left arm and torso
+  # min: [-2.26,  -2.95, -2.95, -2.95, -2.95, -3.48, -3.48, -6.97,
+  #             0, 0, 0, 0, 0, 0, 0]
+  # max: [2.26,  2.95, 2.95, 2.95, 2.95, 3.48, 3.48, 6.97,
+  #              0, 0, 0, 0, 0, 0, 0]
+  ####### Quarter speed
+  min: [-.565, 0, 0, 0, 0, 0, 0, 0, 
+            -0.7375, -0.7375, -0.7375, -0.7375, -0.87, -0.87, -1.7425,0]
+  max: [.565, 0, 0, 0, 0, 0, 0, 0,
+            0.7375, 0.7375, 0.7375, 0.7375, 0.87, 0.87, 1.7425, 1]
+geometries:
+  -
+    name: base_link
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_base.stl
+      material: blue
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_base.stl
+    #   material: blue
+  -
+    name: torso_link_b1
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_b1.stl
+      material: white
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_b1.osg
+    #   material: white
+  -
+    name: arm_left_link_1_s
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_s.stl
+      material: blue
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_s.osg
+    #   material: blue
+  -
+    name: arm_left_link_2_l
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_l.stl
+      material: white
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_l.osg
+    #   material: white
+  -
+    name: arm_left_link_3_e
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_e.stl
+      material: blue
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_e.osg
+    #   material: blue
+  -
+    name: arm_left_link_4_u
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_u.stl
+      material: white
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_u.osg
+    #   material: white
+  -
+    name: arm_left_link_5_r
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_r.stl
+      material: blue
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_r.osg
+    #   material: blue
+  -
+    name: arm_left_link_6_b
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_b.stl
+      material: white
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_b.osg
+    #   material: white
+  -
+    name: arm_left_link_7_t
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_t.stl
+      material: blue
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_t.osg
+    #   material: blue
+  -
+    name: arm_right_link_1_s
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_s.stl
+      material: blue
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_s.osg
+    #   material: blue
+  -
+    name: arm_right_link_2_l
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_l.stl
+      material: white
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_l.osg
+    #   material: white
+  -
+    name: arm_right_link_3_e
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_e.stl
+      material: blue
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_e.osg
+    #   material: blue
+  -
+    name: arm_right_link_4_u
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_u.stl
+      material: white
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_u.osg
+    #   material: white
+  -
+    name: arm_right_link_5_r
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_r.stl
+      material: blue
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_r.osg
+    #   material: blue
+  -
+    name: arm_right_link_6_b
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_b.stl
+      material: white
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_b.osg
+    #   material: white
+  -
+    name: arm_right_link_7_t
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_t.stl
+      material: blue
+    # visualization_geometry:
+    #   type: mesh
+    #   filename: meshes/motoman/sda10f/visual/motoman_axis_t.osg
+    #   material: blue
+
+## -----------------------ADDED FOR THE REFLEX HAND BY CHRIS ---------------------
+
+-
+  name: arm_left_reflex_virtual
+  collision_geometry:
+    type: box
+    dims: [.01 .01 .01]
+    material: orange
+
+-
+  name: reflex_palm
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/palm.stl
+
+-  
+  name: reflex_palm_pad
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/palm_pad.stl
+
+- 
+  name: reflex_swivel_1
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/swivel_1.stl
+
+-
+  name: reflex_proximal_1
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/proximal_1.stl
+
+- 
+  name: reflex_proximal_pad_1
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/proximal_pad_1.stl
+
+-   
+  name: reflex_distal_1
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/distal_1.stl
+  
+-
+  name: reflex_distal_pad_1
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/distal_pad_1.stl
+
+-
+  name: reflex_swivel_2
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/swivel_2.stl
+
+- 
+  name: reflex_proximal_2
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/proximal_2.stl
+
+- 
+  name: reflex_proximal_pad_2
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/proximal_pad_2.stl
+
+-  
+  name: reflex_distal_2
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/distal_2.stl
+
+-  
+  name: reflex_distal_pad_2
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/distal_pad_2.stl
+
+- 
+  name: reflex_proximal_3
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/proximal_3.stl
+
+-  
+  name: reflex_proximal_pad_3
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/proximal_pad_3.stl
+
+-
+  name: reflex_distal_3
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/distal_3.stl
+
+- 
+  name: reflex_distal_pad_3
+  collision_geometry:
+    material: red
+    type: mesh
+    filename: meshes/reflex/reflex-se-articulated-pads-separate/collision/distal_pad_3.stl
+
+
+white_list:
+  - [base_link, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                 arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                 reflex_distal_1, reflex_distal_2, reflex_distal_3]]
+  - [torso_link_b1, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                 arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                 reflex_distal_1, reflex_distal_2, reflex_distal_3]]
+  - [arm_left_link_1_s, [arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                         arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         reflex_distal_1, reflex_distal_2, reflex_distal_3]]
+  - [arm_left_link_2_l, [arm_left_link_6_b, arm_left_link_7_t,
+                         arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         reflex_distal_1, reflex_distal_2, reflex_distal_3]]
+  - [arm_left_link_3_e, [arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         reflex_distal_1, reflex_distal_2, reflex_distal_3]]
+  - [arm_left_link_4_u, [arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         reflex_distal_1, reflex_distal_2, reflex_distal_3]]
+  - [arm_left_link_5_r, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         reflex_distal_1, reflex_distal_2, reflex_distal_3]]
+  - [arm_left_link_6_b, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         reflex_distal_1, reflex_distal_2, reflex_distal_3]]
+  - [arm_left_link_7_t, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         reflex_distal_1, reflex_distal_2, reflex_distal_3]]
+  - [arm_right_link_1_s, [arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                          reflex_distal_1, reflex_distal_2, reflex_distal_3]]
+  - [arm_right_link_2_l, [arm_right_link_6_b, arm_right_link_7_t,
+                          reflex_distal_1, reflex_distal_2, reflex_distal_3]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+

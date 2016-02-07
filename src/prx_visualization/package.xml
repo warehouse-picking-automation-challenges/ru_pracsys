@@ -1,0 +1,36 @@
+<package>
+  <name>prx_visualization</name>
+  <version>0.4.2</version>
+  <description >
+
+     prx_visualization
+
+  </description>
+  <author>Kostas Bekris/kostas.bekris@cs.rutgers.edu</author>
+  <license>All rights reserved</license>
+  <maintainer email="kostas.bekris@cs.rutgers.edu">Kostas Bekris</maintainer>
+  
+  <url>http://www.pracsyslab.org/</url>
+
+
+  <build_depend>prx_utilities</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>osg</build_depend>
+  <run_depend>prx_utilities</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>pluginlib</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>osg</run_depend>
+
+  <export>
+      <cpp cflags="-I${prefix}/" lflags="-L${prefix}/lib -lprx_visualization_lib"/>
+      <prx_visualization plugin="${prefix}/visualization_plugin.xml"/>
+  </export>
+
+</package>
+
+

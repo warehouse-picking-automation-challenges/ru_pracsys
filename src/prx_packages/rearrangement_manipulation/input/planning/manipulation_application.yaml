@@ -1,0 +1,4 @@
+type: manipulation_application
+debug: true
+visualize: true
+simulate: true

@@ -1,0 +1,33 @@
+<launch>
+
+  <!-- This file is meant to store the query to use in the application.  -->
+
+
+  <!-- Load template files -->
+       
+  <rosparam command="load" ns="query_type" file="$(find prx_input)/templates/queries/motion_planning_query.yaml"/>
+
+
+  <!-- Specify the query parameters --> 
+
+  <rosparam ns="problems">
+  problem1:
+    specification:
+      type: motion_planning_specification
+      stopping_criteria:
+        elements:
+          criterion1:
+            type: iteration_criterion
+            condition: 100
+    query:
+      template: "query_type"
+      start_state: [-80,-80,0]
+      goal:
+        type: "goal_state"
+        distance_metric:
+          type: ann_distance_metric
+        goal_state: [26,19,0]
+  </rosparam>
+
+</launch>
+

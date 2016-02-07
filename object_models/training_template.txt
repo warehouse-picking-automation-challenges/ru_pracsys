@@ -1,0 +1,15 @@
+pipeline1:
+  type: LinemodTrainer
+  module: 'object_recognition_linemod'
+  parameters:
+    visualize: true
+    renderer_n_points: 5000
+    renderer_angle_step: 15
+    renderer_radius_min: 0.4
+    renderer_radius_max: 1.0
+    renderer_radius_step: 0.1
+    object_ids: ['insert_object_id_here']
+    db:
+      type: 'CouchDB'
+      root: 'http://localhost:5984'
+      collection: 'object_recognition'

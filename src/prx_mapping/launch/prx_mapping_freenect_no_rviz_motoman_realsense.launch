@@ -1,0 +1,34 @@
+<launch>
+	<param name="robot_name" value="motoman"/>
+	
+	<node name="prx_mapping_node" pkg="prx_mapping" type="prx_mapping_node" required="true" output="screen">
+        </node>
+
+
+	<node name="image_view_rgb" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera2/rgb/image_raw"/>
+	</node>
+
+	<node name="image_view_depth" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera2/depth_registered/image_raw"/>
+	</node>
+
+	<node name="image_view_kinfu" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera2/kinfuLS/depth"/>
+	</node>
+
+    <include file="$(find realsense_camera)/launch/realsense2_driver.launch" />
+
+<!--
+	<node name="image_view_kinfu_map" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera/kinfuLS/generated_depth"/>
+	</node>
+
+	<include file="$(find freenect_launch)/launch/freenect.launch"/>
+
+	<node pkg="rviz" type="rviz" name="mapping_and_object_detection_rviz" respawn="false"  required="true"
+		args="-d $(find prx_mapping)/launch/prx_mapping.rviz"  />
+
+	<include file="$(find realsense_camera)/launch/realsense_rviz.launch"/>
+-->
+</launch>

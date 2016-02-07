@@ -1,0 +1,109 @@
+{
+  "bin_contents":
+  {
+    "bin_A":
+    [
+      "expo_dry_erase_board_eraser",
+	"crayola_64_ct",
+	"champion_copper_plus_spark_plug",
+	"highland_6539_self_stick_notes"
+    ],
+    "bin_B":
+    [
+      "expo_dry_erase_board_eraser",
+	"crayola_64_ct",
+	"champion_copper_plus_spark_plug",
+	"highland_6539_self_stick_notes"
+    ],
+    "bin_C":
+    [
+      "expo_dry_erase_board_eraser",
+	"crayola_64_ct",
+	"champion_copper_plus_spark_plug",
+	"highland_6539_self_stick_notes"
+    ],
+    "bin_D":
+    [
+      "expo_dry_erase_board_eraser",
+	"crayola_64_ct",
+	"champion_copper_plus_spark_plug",
+	"highland_6539_self_stick_notes"
+    ],
+    "bin_E":
+    [
+      "expo_dry_erase_board_eraser",
+	"crayola_64_ct",
+	"champion_copper_plus_spark_plug",
+	"highland_6539_self_stick_notes"
+    ],
+    "bin_F":
+    [
+      "expo_dry_erase_board_eraser",
+	"crayola_64_ct",
+	"champion_copper_plus_spark_plug",
+	"highland_6539_self_stick_notes"
+    ],
+    "bin_G":
+    [
+      "expo_dry_erase_board_eraser",
+	"crayola_64_ct",
+	"champion_copper_plus_spark_plug",
+	"highland_6539_self_stick_notes"
+    ],
+    "bin_H":
+    [
+      "expo_dry_erase_board_eraser",
+	"crayola_64_ct",
+	"champion_copper_plus_spark_plug",
+	"highland_6539_self_stick_notes"
+    ],
+    "bin_I":
+    [
+      "expo_dry_erase_board_eraser",
+	"crayola_64_ct",
+	"champion_copper_plus_spark_plug",
+	"highland_6539_self_stick_notes"
+    ],
+    "bin_J":
+    [
+      "expo_dry_erase_board_eraser",
+	"crayola_64_ct",
+	"champion_copper_plus_spark_plug",
+	"highland_6539_self_stick_notes"
+    ],
+    "bin_K":
+    [
+      "expo_dry_erase_board_eraser",
+	"crayola_64_ct",
+	"champion_copper_plus_spark_plug",
+	"highland_6539_self_stick_notes"
+    ],
+    "bin_L":
+    [
+      "expo_dry_erase_board_eraser",
+	"crayola_64_ct",
+	"champion_copper_plus_spark_plug",
+	"highland_6539_self_stick_notes"
+    ]
+  },
+
+  "work_order":
+  [
+    {
+      "bin": "bin_G",
+      "item": "expo_dry_erase_board_eraser"
+    },
+    {
+      "bin": "bin_A",
+      "item": "highland_6539_self_stick_notes"
+    },
+    {
+      "bin": "bin_L",
+      "item": "expo_dry_erase_board_eraser"
+    },
+    {
+      "bin": "bin_C",
+      "item": "expo_dry_erase_board_eraser"
+    }
+  ]
+}

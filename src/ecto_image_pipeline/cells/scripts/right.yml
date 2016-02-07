@@ -1,0 +1,28 @@
+%YAML:1.0
+# Camera
+image_width: 640
+image_height: 480
+input_camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 5.8398520430759038e+02, 0., 3.1950000000000000e+02, 0.,
+       5.8398520430759038e+02, 2.3950000000000000e+02, 0., 0., 1. ]
+distortion_coefficients: !!opencv-matrix
+   rows: 5
+   cols: 1
+   dt: d
+   data: [ -1.2886593820916653e-01, 5.3803868914017883e-01,
+       -3.7456436215094172e-03, 1.6493033749415010e-03,
+       -7.3234829043693128e-01 ]
+rotation_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 1., 0., 0., 0., 1., 0., 0., 0., 1. ]
+rectified_camera_matrix: !!opencv-matrix
+   rows: 3
+   cols: 3
+   dt: d
+   data: [ 5.8398520430759038e+02, 0., 3.1950000000000000e+02, 0.,
+       5.8398520430759038e+02, 2.3950000000000000e+02, 0., 0., 1. ]

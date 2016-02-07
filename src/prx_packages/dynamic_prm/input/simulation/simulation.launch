@@ -1,0 +1,43 @@
+<launch>
+  <rosparam command="load" file="$(find prx_input)/templates/applications/empty_application.yaml" />
+  <!--<rosparam command="load" file="$(find dynamic_prm)/input/applications/dprm_sim_application.yaml" />-->
+  
+  <rosparam command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml" />
+  
+  <rosparam>
+    interval: 0.05
+  </rosparam>
+  
+  <rosparam ns="simulator">
+  simulation_step: 0.05
+  </rosparam>
+  
+  <!--<rosparam command="load" ns="simulator/subsystems/consumer" file="$(find prx_input)/templates/controllers/consumer.yaml" />-->
+  <rosparam command="load" ns="simulator/subsystems/consumer" file="$(find dynamic_prm)/input/simulation/feedback_controller.yaml" />
+  <!--<rosparam command="load" ns="simulator/subsystems/consumer">
+    active_queries: true
+    goals:
+      -
+        goal:
+          goal_state: [1.25168,-0.55300,-0.05000,1.20000,0.00000,1.12920,0.00000,0.00000]
+          radius: 10
+  </rosparam>-->
+  
+  
+  <rosparam command="load" ns="baxter" file="$(find manipulation)/input/urdf/baxter.yaml"/>
+  <rosparam command="load" ns="simulator/subsystems/consumer/subsystems/manipulator">
+    template: "baxter"
+    initial_state: [0.85000,1.04700,-0.05000,0.25000,0.00000,-1.42080,0.00000,0.00000]
+    initial_control: [0,0,0,0,0,0,0,0]
+  </rosparam>
+  
+  
+  <rosparam command="load" ns="simulator/obstacles" file="$(find manipulation)/input/simulation/baxter_torso.yaml" />
+  <!--<rosparam command="load" ns="simulator/obstacles" file="$(find manipulation)/input/environments/shelf.yaml" />-->
+  
+  <rosparam command="load" ns="simulator/obstacles" file="$(find dynamic_prm)/input/obstacles/table.yaml" />
+  
+  <include file="$(find dynamic_prm)/input/obstacles/sim_obstacles.launch" />
+  
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation" required="true" launch-prefix="" output="screen" />
+</launch>

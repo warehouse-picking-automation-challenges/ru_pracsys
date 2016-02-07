@@ -1,0 +1,6 @@
+float64 speed
+string traj_type
+---
+bool success
+---
+bool executing

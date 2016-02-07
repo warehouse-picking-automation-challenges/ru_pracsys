@@ -1,0 +1,59 @@
+type: first_order_car
+z: .4
+integrator:
+  type: euler
+state_space: 
+  min: [-500,-500,-3.14]
+  max: [500,500,3.14]
+  scale: [1,1,1]
+input_control_space:
+  min: [-.5,-.04]
+  max: [.5,.04]
+root_geom: chassis
+geometries:
+  -
+    name: chassis
+    collision_geometry:
+      type: box
+      dims: [1,.8,.2]
+      material: red    
+  -
+    name: front_left
+    collision_geometry:
+      type: cylinder
+      radius: .15
+      height: .1
+      material: black
+    relative_configuration:
+      position: [0.35, 0.45, -.1]
+      orientation: [0.707106781, 0, 0, 0.707106781]
+  -
+    name: front_right
+    collision_geometry:
+      type: cylinder
+      radius: .15
+      height: .1
+      material: black
+    relative_configuration:
+      position: [0.35, -0.45, -.1]
+      orientation: [0.707106781, 0, 0, 0.707106781]
+  -
+    name: back_left
+    collision_geometry:
+      type: cylinder
+      radius: .15
+      height: .1
+      material: black
+    relative_configuration:
+      position: [-0.35, 0.45, -.1]
+      orientation: [0.707106781, 0, 0, 0.707106781]
+  -
+    name: back_right
+    collision_geometry:
+      type: cylinder
+      radius: .15
+      height: .1
+      material: black
+    relative_configuration:
+      position: [-0.35, -0.45, -.1]
+      orientation: [0.707106781, 0, 0, 0.707106781]

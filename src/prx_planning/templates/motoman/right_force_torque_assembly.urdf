@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<robot name="unigripper" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <link name="arm_to_sensor_plate">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.085 0.01" />
+      </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.76 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.085 0.01" />
+      </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.76 1"/>
+      </material>
+    </collision>
+  </link>
+
+  <link name="force_torque_ring">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.038" />
+      </geometry>
+      <material name="black">
+        <color rgba="0.05 0.05 0.05 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.038" />
+      </geometry>
+      <material name="black">
+        <color rgba="0.05 0.05 0.05 1"/>
+      </material>
+    </collision>
+  </link>
+
+  <link name="to_hand_ring">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.016" />
+      </geometry>
+      <material name="black">
+        <color rgba="0.05 0.05 0.05 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.016" />
+      </geometry>
+      <material name="black">
+        <color rgba="0.05 0.05 0.05 1"/>
+      </material>
+    </collision>
+  </link>
+
+  <link name="io_port">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+      </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.76 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+      </geometry>
+      <material name="silver">
+        <color rgba="0.76 0.76 0.76 1"/>
+      </material>
+    </collision>
+  </link>
+ 
+<!-- Joints -->
+
+  <joint name="arm_sensor" type="fixed">
+    <origin xyz="0.0 0.0 0.024" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+    <parent link="arm_to_sensor_plate" />
+    <child link="force_torque_ring" />
+  </joint>
+
+  <joint name="sensor_hand" type="fixed">
+    <origin xyz="0.0 0.0 0.027" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+    <parent link="force_torque_ring" />
+    <child link="to_hand_ring" />
+  </joint>
+
+  <joint name="sensor_port" type="fixed">
+    <origin xyz="0.08 0.0 -0.002" rpy="0 1.5707 0" />
+    <axis xyz="0 0 0" />
+    <parent link="force_torque_ring" />
+    <child link="io_port" />
+  </joint>
+
+</robot>

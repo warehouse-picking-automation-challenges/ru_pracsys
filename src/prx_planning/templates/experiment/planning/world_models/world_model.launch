@@ -1,0 +1,55 @@
+<launch>
+
+  <!-- 	First define the embedding names you are going to use. 
+	This part of the file only specifies the default mapping function
+	for things that don't define a mapping.-->
+  <rosparam ns="embeddings">
+  space1:
+    default:
+      type: "hide_mapping"
+  space2:
+    default:
+      type: "full_mapping"
+  </rosparam>
+
+  <!-- This file is reincluded for the event where planning runs without simulation-->
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+
+  <!-- Specify the internal simulator and systems the world model will use -->
+  <rosparam ns="world_model" command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+
+  <!-- Load template files -->
+        
+  <rosparam command="load" ns="controller" file="$(find prx_input)/templates/controllers/....yaml"/>
+  <rosparam command="load" ns="plant" file="$(find prx_input)/templates/plants/....yaml"/>
+  
+  <!-- Override template parameters -->
+        
+  <rosparam ns="controller">
+  </rosparam>
+        
+  <rosparam ns="plant">
+  </rosparam>
+       
+  <!-- 	Set up concrete system tree. For each system with state, you can define an embedding for that state.
+	Otherwise, the default from above is used. -->
+   
+  <rosparam command="load" ns="world_model/simulator/subsystems/...">
+    template: "controller"
+  </rosparam>
+        
+  <rosparam command="load" ns="world_model/simulator/subsystems/.../subsystems/...">
+    template: "plant"
+    space1:
+      type: "full_mapping"
+    space2:
+      type: "hide_mapping"
+  </rosparam>
+
+  <!-- Load an environment -->
+  <rosparam command="load" ns="world_model/simulator/obstacles"
+     file="$(find prx_input)/templates/environments/....yaml"/>
+
+
+</launch>

@@ -1,0 +1,10 @@
+<launch>
+ <rosparam>
+  system_mapping:
+  -
+    pair: [simulator/consumer/manipulator, world_model/simulator/manipulator]
+
+  consumer: simulator/consumer
+  </rosparam>
+
+</launch>

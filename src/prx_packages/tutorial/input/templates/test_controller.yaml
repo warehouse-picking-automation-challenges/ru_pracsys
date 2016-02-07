@@ -1,0 +1,7 @@
+type: test_controller
+state_space: 
+  min: [-3.14]
+  max: [3.14]
+input_control_space:
+  min: [-0.01]
+  max: [0.01]

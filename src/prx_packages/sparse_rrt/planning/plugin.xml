@@ -1,0 +1,28 @@
+<class name="prx_planning/sparse_rrt"
+    type="prx::packages::sparse_rrt::sparse_rrt_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        Sparse RRT
+    </description>        
+</class>
+<class name="prx_planning/adaptive_sparse_rrt"
+    type="prx::packages::sparse_rrt::adaptive_sparse_rrt_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        Adaptive Sparse RRT
+    </description>        
+</class>
+<class name="prx_planning/reachable_sparse_rrt"
+    type="prx::packages::sparse_rrt::reachable_sparse_rrt_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        Reachable Sparse RRT
+    </description>        
+</class>
+<class name="prx_planning/drain_rrt"
+    type="prx::packages::sparse_rrt::drain_rrt_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        WAFR 2014 Drain RRT
+    </description>        
+</class>

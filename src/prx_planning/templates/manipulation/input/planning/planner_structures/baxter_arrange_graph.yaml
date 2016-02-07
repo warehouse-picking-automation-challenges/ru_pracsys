@@ -1,0 +1,38 @@
+type: arrange_prm
+validity_checker: 
+  type: world_model_validity_checker
+distance_metric:
+  type: ann_distance_metric
+grasped_distance_metric:
+  type: ann_distance_metric
+grasped_pose_distance_metric:
+  type: ann_distance_metric
+pose_distance_metric:
+  type: ann_distance_metric
+sampler:
+  type: uniform_sampler 
+local_planner:
+  type: bvp_local_planner
+  duration_step: 5
+manipulator_sampler:
+  state_space:
+    min: [-0.455, 1, 1]
+    max: [0.455, 1.2, 2]
+    scale: [0.4, 0.4, 0.2]
+named_validity_checker:
+  type: system_name_validity_checker
+  system: simulator/manipulator
+  object: simulator/cup_a
+random_sample_space:
+  min: [-0.455, -0.3, 3.48, -0.35, -0.35, 1]
+  max: [0.455, 1.2, 3.57, 0.35, 0.35, 2]
+for_manipulator: true
+stretch_factor: 1
+retract_distance: 0.1
+raise_distance: 0.03
+pose_space:
+    min: [-0.405, 1.07]
+    max: [0.405, 1.2]
+    scale: [0.5, 0.5]
+shortest_path_mode: false
+minimum_conflict_mode: true

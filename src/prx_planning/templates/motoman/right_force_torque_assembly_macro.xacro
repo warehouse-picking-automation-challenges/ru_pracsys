@@ -1,0 +1,141 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="right_force_torque_assembly" params="prefix">
+
+    <link name="${prefix}arm_to_sensor_plate">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.085 0.085 0.01" />
+        </geometry>
+        <material name="silver">
+          <color rgba="0.76 0.76 0.76 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.085 0.085 0.01" />
+        </geometry>
+        <material name="silver">
+          <color rgba="0.76 0.76 0.76 1"/>
+        </material>
+      </collision>
+    </link>
+
+    <link name="${prefix}force_torque_ring">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.07" length="0.038" />
+        </geometry>
+        <material name="black">
+          <color rgba="0.05 0.05 0.05 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.07" length="0.038" />
+        </geometry>
+        <material name="black">
+          <color rgba="0.05 0.05 0.05 1"/>
+        </material>
+      </collision>
+    </link>
+
+    <link name="${prefix}to_hand_ring">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.04" length="0.016" />
+        </geometry>
+        <material name="black">
+          <color rgba="0.05 0.05 0.05 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.04" length="0.016" />
+        </geometry>
+        <material name="black">
+          <color rgba="0.05 0.05 0.05 1"/>
+        </material>
+      </collision>
+    </link>
+
+    <link name="${prefix}io_port">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.01" length="0.02" />
+        </geometry>
+        <material name="silver">
+          <color rgba="0.76 0.76 0.76 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.01" length="0.02" />
+        </geometry>
+        <material name="silver">
+          <color rgba="0.76 0.76 0.76 1"/>
+        </material>
+      </collision>
+    </link>
+    
+    <link name="${prefix}cable_connector">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.020 0.060 0.020" />
+        </geometry>
+        <material name="blue">
+          <color rgba="0.4 0.4 0.6 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.020 0.060 0.020" />
+        </geometry>
+        <material name="blue">
+          <color rgba="0.4 0.4 0.6 1"/>
+        </material>
+      </collision>
+    </link>
+
+    <!-- Joints -->
+
+    <joint name="${prefix}arm_sensor" type="fixed">
+      <origin xyz="0.0 0.0 0.024" rpy="0 0 0" />
+      <axis xyz="0 0 0" />
+      <parent link="${prefix}arm_to_sensor_plate" />
+      <child link="${prefix}force_torque_ring" />
+    </joint>
+
+    <joint name="${prefix}sensor_hand" type="fixed">
+      <origin xyz="0.0 0.0 0.027" rpy="0 0 0" />
+      <axis xyz="0 0 0" />
+      <parent link="${prefix}force_torque_ring" />
+      <child link="${prefix}to_hand_ring" />
+    </joint>
+
+    <joint name="${prefix}sensor_port" type="fixed">
+      <origin xyz="0.08 0.0 -0.002" rpy="0 1.5707 0" />
+      <axis xyz="0 0 0" />
+      <parent link="${prefix}force_torque_ring" />
+      <child link="${prefix}io_port" />
+    </joint>
+
+    <joint name="${prefix}cable_connection" type="fixed">
+      <origin xyz="0.0 0.02 0.02" rpy="0 0 0" />
+      <axis xyz="0 0 0" />
+      <parent link="${prefix}io_port" />
+      <child link="${prefix}cable_connector" />
+    </joint>
+
+  </xacro:macro>
+</robot>

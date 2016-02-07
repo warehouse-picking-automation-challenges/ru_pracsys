@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<robot name="order_bin" xmlns:xacro="http://ros.org/wiki/xacro">
+  
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.62 0.02" />
+      </geometry>
+      <material name="off_red">
+        <color rgba="0.9 0.11 0.06 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.62 0.02" />
+      </geometry>
+      <material name="off_red">
+        <color rgba="0.9 0.11 0.06 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+
+  <link name="front">
+    <visual>
+      <origin xyz="0 -0.27 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.08 0.18" />
+      </geometry>
+      <material name="off_red">
+        <color rgba="0.9 0.11 0.06 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.27 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.08 0.18" />
+      </geometry>
+      <material name="off_red">
+        <color rgba="0.9 0.11 0.06 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+
+  <link name="back">
+    <visual>
+      <origin xyz="0 0.27 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.08 0.18" />
+      </geometry>
+      <material name="off_red">
+        <color rgba="0.9 0.11 0.06 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.27 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.08 0.18" />
+      </geometry>
+      <material name="off_red">
+        <color rgba="0.9 0.11 0.06 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+
+  <link name="left">
+    <visual>
+      <origin xyz="-0.165 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.52 0.18" />
+      </geometry>
+      <material name="off_red">
+        <color rgba="0.9 0.11 0.06 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.165 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.52 0.18" />
+      </geometry>
+      <material name="off_red">
+        <color rgba="0.9 0.11 0.06 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+
+  <link name="right">
+    <visual>
+      <origin xyz="0.165 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.52 0.18" />
+      </geometry>
+      <material name="off_red">
+        <color rgba="0.9 0.11 0.06 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.165 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.52 0.18" />
+      </geometry>
+      <material name="off_red">
+        <color rgba="0.9 0.11 0.06 1"/>
+      </material>
+    </collision>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+
+<!-- Joints -->
+
+  <joint name="fix_front" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+    <parent link="base_link" />
+    <child link="front" />
+  </joint>
+
+  <joint name="fix_back" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+    <parent link="base_link" />
+    <child link="back" />
+  </joint>
+
+  <joint name="fix_left" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+    <parent link="base_link" />
+    <child link="left" />
+  </joint>
+
+  <joint name="fix_right" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+    <parent link="base_link" />
+    <child link="right" />
+  </joint>
+
+</robot>

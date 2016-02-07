@@ -1,0 +1,7 @@
+string object_name
+---
+bool success
+string arm
+int32 grasp_id
+int32 num_grasps_tried
+

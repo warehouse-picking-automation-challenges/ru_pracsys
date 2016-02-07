@@ -1,0 +1,42 @@
+<launch>
+  <!-- Load the planning application -->
+  <rosparam command="load" file="$(find prx_input)/templates/planning_applications/single_query_application.yaml"/>
+
+  <rosparam>
+    random_seed: 34378
+    consumer_mapping:
+      - 
+        pair: [simulator/consumer, space1]
+  </rosparam>
+        
+  <!-- Load template files -->
+       
+  <rosparam command="load" ns="motion_planner/" file="$(find prx_input)/templates/motion_planners/sst.yaml"/>
+ 
+  <!-- We currently only support one task planner. It will be future work to bring task planners that work on task planners. -->
+  <rosparam command="load" ns="task_planner/" file="$(find prx_input)/templates/task_planners/single_shot.yaml"/>
+
+  <!-- Overwrite any parameters for the template or the task planner -->
+  <rosparam ns="task_planner/" >
+  </rosparam>
+
+  <!-- Set up the motion planners used in the task planner. 
+	 1) can either be from template or loading a yaml and rewriting the values
+	 2) the space name needs to correspond to the names in the world_model file -->
+  <rosparam ns="task_planner/planners/" >
+  planner1:
+    template: "motion_planner"
+    space_name: "space1"
+    visualization_body: "simulator/disk/body"
+    visualize_tree: true
+    visualize_solution: true
+    distance_metric:
+      type: graph_distance_metric
+    sample_metric:
+      type: graph_distance_metric
+    max_points: 100001
+    delta_drain: 2
+  </rosparam>
+
+
+</launch>

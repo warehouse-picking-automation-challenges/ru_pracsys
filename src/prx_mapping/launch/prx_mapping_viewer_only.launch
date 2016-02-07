@@ -1,0 +1,15 @@
+<launch>
+	<node name="image_view_rgb" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera/rgb/image_color"/>
+	</node>
+
+	<node name="image_view_kinfu" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera/kinfuLS/depth"/>
+	</node>
+
+<!--
+	<node name="image_view_kinfu_map" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera/kinfuLS/generated_depth"/>
+	</node>
+-->
+</launch>

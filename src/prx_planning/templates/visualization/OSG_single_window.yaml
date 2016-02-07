@@ -1,0 +1,39 @@
+visualization:
+  type: prx_visualization/osg
+  viewer:
+    fullscreen: false
+    clear_color: [0.6, 0.7, 0.76, 1.0]
+    scene: {geometry: []}
+    windows:
+      window_1:
+        xpos: 920
+        ypos: 100
+        width: 1000
+        height: 1000
+        cameras:
+          perspective:
+            ortho: false
+            camera_type: 0
+            eye: [0, -20, 15]
+            center: [0, 1, 18]
+            speed: {move: 4, rotate: 0.001}
+          orthographic:
+            ortho: true
+            ortho_param:
+              left: -300
+              right: 300
+              bottom: -300
+              top: 300
+              zNear: 0
+              zFar: 1000
+            speed: {move: 10, rotate: 0.001}
+          smooth:
+            ortho: false
+            camera_type: 2
+            eye: [0, -20, 15]
+            center: [0, 1, 18]
+            speed: {move: 4, rotate: 0.001}
+
+        
+      
+      

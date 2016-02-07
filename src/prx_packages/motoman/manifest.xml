@@ -1,0 +1,8 @@
+<package>
+  <description brief="Motoman">
+    Model of the Motoman SDA10F
+  </description>
+  <author>Zakary Littlefield</author>
+  <license>BSD</license>
+  <url>http://www.pracsyslab.org</url>
+</package>

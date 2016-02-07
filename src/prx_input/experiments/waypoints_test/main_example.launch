@@ -1,0 +1,28 @@
+<!-- This file has been tested on PRACSYS revision  -->
+
+<launch>
+        
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>      
+  <!-- Define simulation parameters -->      
+  <include ns="simulation" file="$(find prx_input)/experiments/waypoints_test/simulation/simulation.launch"/>
+
+  <!-- Define the simulation node -->
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+        required="true"   launch-prefix="" args="simulation" output="screen" />
+        
+  <!-- Define planning parameters -->           
+  <include ns="planning" file="$(find prx_input)/experiments/waypoints_test/planning/world_models/world_model.launch"/>
+  <include ns="planning" file="$(find prx_input)/experiments/waypoints_test/planning/planner_structures/planner_structure.launch"/>
+           
+  <!-- Define the planning node -->
+  <node name="planning" pkg="prx_planning" type="prx_planning"
+        required="true" launch-prefix="gdb" output="screen" args="planning"/>
+        
+  
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+        
+  <rosparam ns="visualization/viewer/scene" >
+   line_thickness: 3
+  </rosparam>
+
+</launch>

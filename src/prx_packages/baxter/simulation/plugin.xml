@@ -1,0 +1,15 @@
+<class name="prx_simulation/manipulator"
+    type="prx::packages::baxter::manipulator_plant_t"
+    base_class_type="prx::sim::system_t">
+    <description>
+        A plant that represent a manipulator.
+    </description>        
+</class>
+
+<class name="prx_simulation/baxter"
+    type="prx::packages::baxter::baxter_arm_t"
+    base_class_type="prx::sim::system_t">
+    <description>
+        Baxter plant for use in PRACSYS.
+    </description>        
+</class>

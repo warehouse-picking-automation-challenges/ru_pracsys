@@ -1,0 +1,14 @@
+type: sst
+sample_metric:
+  type: linear_distance_metric
+max_points: 5000
+delta_drain: 1
+delta_near: 2
+max_attempts: 1
+collision_checking: true
+cost_threshold: 20
+visualize_tree: false
+visualize_solution: false
+visualization_tree_name: "/sparse_rrt/graph"
+visualization_solution_name: "/sparse_rrt/solution"
+visualization_body: body

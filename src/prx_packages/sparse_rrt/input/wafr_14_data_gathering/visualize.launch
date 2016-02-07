@@ -1,0 +1,47 @@
+<launch>
+<rosparam ns="point_drain_rrt_0">
+simulate: true
+visualize: true
+</rosparam>
+<rosparam>
+application:
+  type: empty_application
+simulator:
+  type: collision_stop_simulator
+  collision_checker:
+    type: pqp
+  simulation_step: 0.005
+  subsystems:
+    consumer:
+      type: consumer_controller
+      planning_node: point_drain_rrt_0
+</rosparam>
+
+<rosparam ns="simulator/subsystems/consumer/subsystems/system" file="plant_yaml/point.yaml"/>
+<rosparam ns="simulator/obstacles" file="obstacle_yaml/recreate_rrt_star.yaml"/>
+<rosparam file="model_overrides/point_override.yaml"/>
+<rosparam ns="point_drain_rrt_0">
+system_mapping:
+  - 
+    pair: [simulator/consumer/system, world_model/simulator/system]
+
+consumer: simulator/consumer
+task_planner:
+  planners:
+    point_drain_rrt_0:
+      visualization_body: simulator/system/body
+      visualize_tree: false
+      visualize_solution: true
+      visualize: true
+</rosparam>
+
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+        required="true" launch-prefix="" output="screen" />
+        
+  <node name="point_drain_rrt_0" pkg="prx_planning" type="prx_planning"
+        required="false" launch-prefix="" output="screen" args="point_drain_rrt_0" /> 
+<include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+<rosparam>
+ spaces: {AirControl: EEE, Airplane: EEEREEE, DynamicRigidBody: EEEQQQQEEEEEE, EMPTY: '',HeliControl: EERR, ODE_B: E, ODE_J: E, OneLink: RE, R: R, RR: RR, RallyCar: EEEEREEE,RallyCarTask: EEER, Rd: E, Rdd: E, SE2: EER, SE3: EEEQQQQ, SOCar: EEREE, TWO_D_BODY: EEEE,ThreeLink: RRREEE, Time: E, TwoLink: RREE, Vector: ER, WheelControl: REE, X: E,XR: ER, XXd: EE, XXdRRd: EERE, XY: EE, XYZ: EEE, Xd: E, XdRd: EE, XdYd: EE, Xdd: E,XddRdd: EE, XddYdd: EE, bomb_state: EEE}</rosparam>
+</launch>

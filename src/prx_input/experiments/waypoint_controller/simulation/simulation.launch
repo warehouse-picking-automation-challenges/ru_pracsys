@@ -1,0 +1,21 @@
+<launch>
+
+  <rosparam command="load" file="$(find prx_input)/templates/applications/empty_application.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+  <rosparam command="load" ns="simulator/subsystems/controller" file="$(find prx_input)/templates/controllers/waypoint_controller.yaml"/>
+
+  <rosparam command="load" ns="simulator/subsystems/controller">
+    mode: 1
+    waypoints:
+      -
+        state: [-10, -165]
+      -
+        state: [-45, -32]
+      -
+        state: [-114, -140]
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/controller/subsystems/disk1" file="$(find prx_input)/templates/plants/disk.yaml"/>
+
+</launch>

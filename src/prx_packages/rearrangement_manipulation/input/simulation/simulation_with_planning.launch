@@ -1,0 +1,32 @@
+<launch>
+
+  <!-- Load independent files -->
+        
+  <rosparam command="load" file="$(find prx_input)/templates/applications/empty_application.yaml"/> 
+  <rosparam command="load" file="$(find manipulation)/input/simulation/manipulation_simulator.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+  
+  <!-- <rosparam command="load" ns="/simulator/obstacles" file="$(find prx_input)/templates/environments/wall.yaml"/> -->
+
+  <!-- Set up concrete system tree -->
+
+  <rosparam command="load" ns="controller" file="$(find prx_input)/templates/controllers/consumer.yaml"/>
+
+  <rosparam command="load" ns="simulator">
+    manipulator_name: simulator/consumer/manipulator
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/consumer">
+    template: "controller"
+  </rosparam>
+
+  
+  <rosparam command="load" ns="simple_manipulator" file="$(find manipulation)/input/simulation/simple_manipulator.yaml"/> 
+
+  <rosparam command="load" ns="simulator/subsystems/consumer/subsystems/manipulator">
+    template: "simple_manipulator"
+    initial_state: [-20,10,2,0,0,0,0]
+    initial_control: [-20,10,2,0,0,0,0]
+  </rosparam>
+
+</launch>

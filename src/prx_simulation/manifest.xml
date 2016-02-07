@@ -1,0 +1,37 @@
+<package>
+  <name>prx_simulation</name>
+  <version>0.4.2</version>
+  <description>
+
+     prx_simulation
+
+  </description>
+  <author>Kostas Bekris</author>
+  <license>BSD</license>
+  <maintainer email="kostas.bekris@cs.rutgers.edu">Kostas Bekris</maintainer>
+  <url>pracsyslab.org</url>
+
+  <build_depend>prx_utilities</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>urdf</build_depend>
+  <build_depend>pqp</build_depend>
+  <build_depend>fcl</build_depend>
+  <run_depend>prx_utilities</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>pluginlib</run_depend>
+  <run_depend>urdf</run_depend>
+  <run_depend>pqp</run_depend>
+  <run_depend>fcl</run_depend>
+
+  
+  <export>
+      <cpp cflags="-I${prefix}/" lflags="-L${prefix}/lib -lprx_simulation_lib"/>
+      <prx_simulation plugin="${prefix}/simulation_plugin.xml"/>
+  </export>
+
+</package>
+
+

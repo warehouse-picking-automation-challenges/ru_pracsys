@@ -1,0 +1,20 @@
+<launch>
+
+  <rosparam command="load" file="$(find prx_input)/templates/applications/manual_application.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+  <rosparam ns="manual_controllers">
+    system_paths: [simulator/manual]
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/manual"
+     file="$(find prx_input)/templates/controllers/manual/disk.yaml"/>
+  
+  <rosparam command="load" ns="simulator/subsystems/manual/subsystems/disk1"
+     file="$(find prx_input)/templates/plants/disk.yaml"/>
+
+  <rosparam command="load" ns="simulator/obstacles"
+     file="$(find prx_packages)/REU_2014_VO/input/templates/environments/test_all_geoms1.yaml"/>
+
+
+</launch>

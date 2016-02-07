@@ -1,0 +1,66 @@
+<launch>
+
+  <rosparam command="load" file="$(find prx_input)/templates/applications/manual_application.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+
+  <rosparam ns="manual_controllers">
+    system_paths: [simulator/manual, simulator/manual2]
+  </rosparam>
+
+  <rosparam command="load" ns="disk"
+     file="$(find prx_input)/templates/plants/disk.yaml" />
+  <rosparam ns="disk">
+    state_space: 
+      min: [-500, -500]
+      max: [500, 500]
+    input_control_space:
+      min: [0, -4]
+      max: [100, 4]
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/manual"
+     file="$(find prx_input)/templates/controllers/manual/disk.yaml"/>
+  
+  <rosparam command="load" ns="simulator/subsystems/manual/subsystems/disk1">
+    initial_state: [0,-50]
+    template: "disk"
+    state_space: 
+      min: [0, -50]
+      max: [20, -50]
+  </rosparam>
+
+
+
+  <rosparam command="load"a ns="simulator/subsystems/manual2"
+     file="$(find prx_input)/templates/controllers/manual/disk.yaml"/>
+
+  <rosparam command="load" ns="simulator/subsystems/manual2/subsystems/disk1">
+    initial_state: [-10,-50]
+    template: "disk"
+    geometries:
+    -
+      name: body
+      collision_geometry:
+        type: cylinder
+        radius: 1.1
+        height: 2.0
+        material: green
+  </rosparam>
+                
+    <rosparam command="load" ns="simulator/subsystems/disk2">
+    initial_state: [10,-50]
+    template: "disk"
+  </rosparam>
+    <rosparam command="load" ns="simulator/subsystems/disk4">
+    initial_state: [40,-50]
+    template: "disk"
+  </rosparam>
+
+  <rosparam command="load" ns="/simulator/obstacles"
+     file="$(find prx_input)/templates/environments/single_corridor_3wide.yaml"/>
+
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+        required="true" output="screen" launch-prefix=""/>
+
+</launch>

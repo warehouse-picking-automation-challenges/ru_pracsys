@@ -1,0 +1,11 @@
+\subsubsection usage Usage
+\verbatim
+<node name="prx_mapping" pkg="prx_mapping" type="prx_mapping">
+  <param name="stop" type="bool" value="False" />
+  <param name="first_rotating_axis" type="int" value="2" />
+  <param name="first_rotating_axis_signal" type="double" value="1.0" />
+  <param name="second_rotating_axis" type="int" value="2" />
+  <param name="second_rotating_axis_signal" type="double" value="1.0" />
+</node>
+\endverbatim
+

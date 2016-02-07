@@ -1,0 +1,8 @@
+!!python/object/new:dynamic_reconfigure.encoding.Config
+dictitems:
+  d_gain: 50.0
+  i_clamp_max: 0.0
+  i_clamp_min: -0.0
+  i_gain: 0.05
+  p_gain: 400.0
+state: []

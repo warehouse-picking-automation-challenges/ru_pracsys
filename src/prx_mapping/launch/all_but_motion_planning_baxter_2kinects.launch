@@ -1,0 +1,127 @@
+<launch>
+<!--
+	<node name="prx_motion_planning" pkg="prx_motion_planning" type="move_baxter_to_origin.py" 
+		output="screen" >
+        </node>
+-->
+
+	<include file="$(find prx_mapping)/launch/freenect1.launch"/>
+	<include file="$(find prx_mapping)/launch/freenect2.launch"/>
+	
+
+	<node name="prx_mapping_node" pkg="prx_mapping" type="prx_mapping_node" required="true" output="screen">
+        </node>
+	
+	
+
+	<node name="image_view_rgb" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera/rgb/image_color"/>
+	</node>
+
+	<node name="image_view_rgb2" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera2/rgb/image_color"/>
+	</node>
+
+	<node name="image_view_kinfu" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera/kinfuLS/depth"/>
+	</node>
+
+
+
+	<node name="dynamic_reconfigure0" pkg="dynamic_reconfigure" type="dynparam" args="set /camera/driver depth_registration True" 
+		output="screen" >
+        </node>
+
+	<node name="dynamic_reconfigure1" pkg="dynamic_reconfigure" type="dynparam" args="set /camera/driver data_skip 10" 
+		output="screen" >
+        </node>
+
+	<node name="dynamic_reconfigure2" pkg="dynamic_reconfigure" type="dynparam" args="set /camera2/driver depth_registration True" 
+		output="screen" >
+        </node>
+
+	<node name="dynamic_reconfigure3" pkg="dynamic_reconfigure" type="dynparam" args="set /camera2/driver data_skip 10" 
+		output="screen" >
+        </node>
+
+	<node name="dynamic_reconfigure4" pkg="dynamic_reconfigure" type="dynparam" args="set /prx_mapping_node first_rotating_axis 1" 
+		output="screen" >
+        </node>
+
+
+
+	<node name="prx_localizer" pkg="prx_localizer" type="prx_localizer" required="true" output="screen">
+	</node>
+
+
+
+	<node name="object_recognition" pkg="object_recognition_core" type="detection" 
+		args="-c $(find object_recognition_linemod)/conf/detection.ros.ork" 
+		required="true" output="screen" >
+        </node>
+
+	<node name="object_recognition2" pkg="object_recognition_core" type="detection" 
+		args="-c $(find object_recognition_linemod)/conf/detection.ros_kinect2.ork" 
+		required="true" output="screen" >
+        </node>
+
+
+
+	<node name="prx_decision_making" pkg="prx_decision_making" type="prx_decision_making_node" 
+		args="$(find prx_decision_making)/../../example2_kinect2.json" 
+		required="true" output="screen" >
+        </node>
+
+
+<!--
+	<node name="baxter_interface" pkg="baxter_interface" type="joint_trajectory_action_server.py" 
+		required="true" output="screen" >
+        </node>
+-->
+
+	<arg name="use_pracsys" default="false" />
+	<arg name="motoman" default="false" />
+
+	<include file="$(find baxter_moveit_config)/launch/moveit_apc_baxter.launch" unless="$(arg use_pracsys)">
+		<arg name="kinect" value="true"/>
+		required="true" output="screen" >
+	</include>
+
+	<include file="$(find prx_planning)/launch/prx_planning.launch" if="$(arg use_pracsys)">
+	</include>
+
+
+
+	<node name="dynamic_reconfigure5" pkg="dynamic_reconfigure" type="dynparam" 
+		args="load /robot/left_joint_position_controller/joints/left_s0_controller/pid $(find prx_decision_making)/../../robot_s0.yaml" 
+		output="screen" >
+	</node>
+
+	<node name="dynamic_reconfigure6" pkg="dynamic_reconfigure" type="dynparam" 
+		args="load /robot/left_joint_position_controller/joints/left_s1_controller/pid $(find prx_decision_making)/../../robot_s1.yaml" 
+		output="screen" >
+	</node>
+
+	<node name="dynamic_reconfigure7" pkg="dynamic_reconfigure" type="dynparam" 
+		args="load /robot/right_joint_position_controller/joints/right_s0_controller/pid $(find prx_decision_making)/../../robot_s0.yaml" 
+		output="screen" >
+	</node>
+
+	<node name="dynamic_reconfigure8" pkg="dynamic_reconfigure" type="dynparam" 
+		args="load /robot/right_joint_position_controller/joints/right_s1_controller/pid $(find prx_decision_making)/../../robot_s1.yaml" 
+		output="screen" >
+	</node>
+
+<!--
+	<node name="image_view_kinfu_map" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera/kinfuLS/generated_depth"/>
+	</node>
+-->
+
+<!--
+	rosrun object_recognition_core detection -c  `rospack find object_recognition_linemod`/conf/detection.ros.ork
+	<node pkg="rviz" type="rviz" name="mapping_and_object_detection_rviz" respawn="false"  required="true"
+		args="-d $(find prx_mapping)/launch/prx_mapping.rviz"  />
+-->
+
+</launch>

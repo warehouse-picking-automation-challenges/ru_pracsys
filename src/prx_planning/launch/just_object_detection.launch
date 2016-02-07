@@ -1,0 +1,6 @@
+<launch>
+	<node name="object_recognition_core" pkg="object_recognition_core" type="detection" 
+		args="-c $(find object_recognition_linemod)/conf/detection_realsense.ros.ork" 
+		required="true" output="screen" >
+        </node>
+</launch>

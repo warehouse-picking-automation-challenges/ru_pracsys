@@ -1,0 +1,114 @@
+type: baxter
+integrator:
+  type: rk4
+state_space:
+  min: [-1.70167993878, -2.147, -3.05417993878, -0.05, -3.059, -1.57079632679, -3.059, 0]
+  max: [1.70167993878, 1.047, 3.05417993878, 2.618, 3.059, 2.094, 3.059, 1]
+  scale: [1, 1, 1, 1, 1, 1, 1, 0.0]
+input_control_space:
+  min: [-1.70167993878, -2.147, -3.05417993878, -0.05, -3.059, -1.57079632679, -3.059, 0]
+  max: [1.70167993878, 1.047, 3.05417993878, 2.618, 3.059, 2.094, 3.059, 1]
+  scale: [1, 1, 1, 1, 1, 1, 1, 0.0]
+initial_state: [0.25684,-1.34394,0.42624,2.61800,2.84100,2.09400,-0.06762,0]
+initial_control: [0.25684,-1.34394,0.42624,2.61800,2.84100,2.09400,-0.06762,0]
+forward_transform_rotation: [1,0,0, 0,1,0, 0,0,1]
+forward_transform_translation: [0, 0, 0]
+# x_offset: 0.0
+# y_offset: 0.0
+# z_offset: 3.0
+root_geom: left_lower_shoulder
+hand: left
+effector_name: end_effector
+max_step: 0.03
+print: false
+geometries:
+  -
+    name: left_lower_shoulder
+    collision_geometry:
+      type: cylinder
+      radius: 0.06
+      height: 0.26
+      material: baxter_red
+  -
+    name: left_gripper
+    collision_geometry:
+      type: box
+      dims: [0.05, 0.102, 0.05]
+      material: baxter_red
+  -
+    name: left_gripper_left_finger
+    collision_geometry:
+      type: box
+      dims: [0.012, 0.012, 0.075]
+      material: baxter_grey
+  -
+    name: left_gripper_right_finger
+    collision_geometry:
+      type: box
+      dims: [0.012, 0.012, 0.075]
+      material: baxter_grey
+  -
+    name: left_hand
+    collision_geometry:
+      type: cylinder
+      radius: 0.04
+      height: 0.055
+      material: baxter_grey
+  -
+    name: left_lower_elbow
+    collision_geometry:
+      type: cylinder
+      radius: 0.06
+      height: 0.1
+      material: baxter_red
+  -
+    name: left_lower_forearm
+    collision_geometry:
+      type: cylinder
+      radius: 0.06
+      height: 0.1
+      material: baxter_red
+  -
+    name: left_upper_elbow
+    collision_geometry:
+      type: cylinder
+      radius: 0.06
+      height: 0.304
+      material: baxter_red
+  -
+    name: left_upper_forearm
+    collision_geometry:
+      type: cylinder
+      radius: 0.06
+      height: 0.276
+      material: baxter_red
+  -
+    name: left_upper_shoulder
+    collision_geometry:
+      type: cylinder
+      radius: 0.12
+      height: 0.2722
+      material: baxter_red
+  -
+    name: left_wrist
+    collision_geometry:
+      type: cylinder
+      radius: 0.06
+      height: 0.1371
+      material: baxter_grey
+  -
+    name: end_effector
+    collision_geometry:
+      type: sphere
+      radius: 0.02
+      material: baxter_red
+    visualization_geometry:
+      type: sphere
+      radius: 0.000002
+      material: baxter_red
+white_list:
+    - [left_gripper, [left_lower_shoulder, left_upper_elbow,left_upper_shoulder]]
+    - [left_gripper_left_finger,[left_lower_shoulder, left_upper_elbow,left_upper_shoulder]]
+    - [left_gripper_right_finger, [left_lower_shoulder, left_upper_elbow,left_upper_shoulder]]
+    - [left_hand, [left_lower_shoulder, left_upper_elbow,left_upper_shoulder]]
+    - [left_wrist, [left_lower_shoulder, left_upper_elbow,left_upper_shoulder]]

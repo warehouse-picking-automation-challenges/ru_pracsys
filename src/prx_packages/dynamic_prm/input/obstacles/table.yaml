@@ -1,0 +1,28 @@
+table:
+  type: obstacle
+  geometries:
+    -
+      name: top
+      collision_geometry:
+        type: box
+        dims: [1.82, 0.5, 0.03]
+        material: green
+      config:
+        position: [0, 0.85, 2.85]
+        orientation: [0, 0, 0, 1]
+    -
+      name: leg1
+      collision_geometry:
+        type: box
+        dims: [0.02, 0.45, 0.69]
+        material: green
+      config:
+        position: [-0.72, 0.875, 2.515]
+    -
+      name: leg2
+      collision_geometry:
+        type: box
+        dims: [0.02, 0.45, 0.69]
+        material: green
+      config:
+        position: [0.72, 0.875, 2.515]

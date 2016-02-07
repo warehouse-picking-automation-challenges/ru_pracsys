@@ -1,0 +1,13 @@
+<!-- This file has been tested on PRACSYS revision  -->
+
+<launch>
+
+  <include file="$(find prx_input)/experiments/RRT/tests/airplane_test/simulation/simulation.launch"/>
+  <include file="$(find prx_input)/experiments/RRT/tests/airplane_test/planning/planning.launch"/>
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+  <rosparam ns="visualization/viewer/scene" >
+   line_thickness: 3
+  </rosparam>
+
+</launch>

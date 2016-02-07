@@ -1,0 +1,4 @@
+type: rrt  
+collision_checking: true
+goal_bias_rate: 0.0
+use_boost_random: false

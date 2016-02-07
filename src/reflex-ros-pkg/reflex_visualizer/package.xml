@@ -1,0 +1,24 @@
+<package>
+  <name>reflex_visualizer</name>
+  <version>0.1.1</version>
+  <description>
+
+     Package for handling the Right-Hand Robotics's Reflex Hand
+
+  </description>
+  <author>Chris Kourtev</author>
+  <license>BSD</license>
+  <maintainer email="kostas.bekris@cs.rutgers.edu">Kostas Bekris</maintainer>
+  <url>pracsyslab.org</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>urdf</build_depend>
+  <run_depend>urdf</run_depend>
+
+  <export>
+  </export>
+
+</package>
+
+

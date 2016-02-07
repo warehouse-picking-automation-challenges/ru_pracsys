@@ -1,0 +1,9 @@
+<!-- This file has been tested on PRACSYS revision  -->
+
+<launch>
+
+  <include file="$(find prx_input)/experiments/PRM_star/simulation/simulation_8r.launch"/>
+  <include file="$(find prx_input)/experiments/PRM_star/planning/planning_8r.launch"/>
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+</launch>

@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+    name="sda10f">	
+        <xacro:include filename="$(find motoman_sda10f_support)/urdf/common_torso_macro.xacro" />
+        <xacro:include filename="$(find motoman_sda10f_support)/urdf/arm_macro.xacro" />
+        <xacro:include filename="$(find reflex_visualizer)/urdf/rhr_reflex_macro.xacro" />
+        <xacro:include filename="$(find prx_planning)/templates/motoman/unigripper_macro.xacro" />
+        <xacro:include filename="$(find prx_planning)/templates/object_templates/kinect_macro.xacro" />
+                    
+        <xacro:torso name="torso" prefix="torso_"/>
+        
+        <xacro:motoman_arm name="arm_left" prefix="arm_left_" parent="torso_link_b1" reflect="1">
+            <origin xyz="0.09996 0.0275 0.32214" rpy="1.57 0 0" />
+        </xacro:motoman_arm>      
+        
+        <xacro:motoman_arm name="arm_right" prefix="arm_right_" parent="torso_link_b1" reflect="-1">
+            <origin xyz="0.09996 -0.0275 0.32214" rpy="1.57 0 0" />
+        </xacro:motoman_arm>       
+
+		<joint name="robot-hand" type="fixed" >
+		    <origin xyz="0 0 -0.02" rpy="3.14159 0 2.55"/>
+		    <parent link="arm_right_link_tool0" />
+		    <child link="arm_right_palm" />
+		</joint>
+
+        <xacro:reflex_model prefix="arm_right_">
+        </xacro:reflex_model>
+        
+        <joint name="unigripper_joint" type="fixed" >
+            <origin xyz="0 0 -0.015" rpy="0 3.1415 -1.57"/>
+            <parent link="arm_left_link_tool0" />
+            <child link="base_plate" />
+        </joint>
+        
+        <xacro:unigripper prefix="">
+        </xacro:unigripper>
+
+		<joint name="left_kinect_joint" type="fixed" >
+		    <origin xyz="0.0 0.020 0.0645" rpy="0 0 1.57"/>
+		    <parent link="arm_left_link_6_b" />
+		    <child link="left_kinect_base" />
+		</joint>
+
+        <xacro:kinect prefix="left_">
+        </xacro:kinect>
+
+        <joint name="right_kinect_joint" type="fixed" >
+            <origin xyz="0.0 0.020 0.0645" rpy="0 0 1.57"/>
+            <parent link="arm_right_link_6_b" />
+            <child link="right_kinect_base" />
+        </joint>
+
+        <xacro:kinect prefix="right_">
+        </xacro:kinect>    
+        
+</robot>

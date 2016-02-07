@@ -1,0 +1,203 @@
+#! /usr/bin/env python
+# Copyright (c) 2008, Willow Garage, Inc.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above copyright
+#       notice, this list of conditions and the following disclaimer in the
+#       documentation and/or other materials provided with the distribution.
+#     * Neither the name of the Willow Garage, Inc. nor the names of its
+#       contributors may be used to endorse or promote products derived from
+#       this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+# LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+# Brings up a set of controllers when run, and brings them down when
+# killed.  Extremely useful for spawning a set of controllers from
+# roslaunch.
+#
+# Author: Stuart Glaser
+
+import roslib, time
+roslib.load_manifest('controller_manager')
+import rosparam
+
+import rospy, sys
+import os.path
+import getopt
+import yaml
+from controller_manager_msgs.srv import *
+from std_msgs.msg import *
+
+def print_usage(exit_code = 0):
+    print 'spawner [--stopped] [--wait-for=wait_for_topic] [--namespace=robot_namespace] <controller names>'
+    print "  stopped: loads controllers, but doesn't start them"
+    print "  wait-for: doesn't load or start controllers until it hears 'True' on wait_for_topic (Bool)"
+    print "  namespace: namespace of the controller_manager services"
+    sys.exit(exit_code)
+
+loaded = []
+
+# Declare these here so they can be shared between functions
+load_controller_service = ""
+switch_controller_service = ""
+unload_controller_service = ""
+
+def shutdown():
+    global loaded,unload_controller_service,load_controller_service,switch_controller_service
+
+    return #temp
+
+    try:
+        # unloader
+        rospy.loginfo("Controller Spawner: Waiting for service "+unload_controller_service)
+        rospy.wait_for_service(unload_controller_service, 3)
+        unload_controller = rospy.ServiceProxy(unload_controller_service, UnloadController)
+
+        # switcher
+        rospy.loginfo("Controller Spawner: Waiting for service "+switch_controller_service)
+        rospy.wait_for_service(switch_controller_service, 3)
+        switch_controller = rospy.ServiceProxy(switch_controller_service, SwitchController)
+
+        switch_controller([], loaded, SwitchControllerRequest.STRICT)
+        for name in reversed(loaded):
+            rospy.logout("Trying to unload %s" % name)
+            unload_controller(name)
+            rospy.logout("Succeeded in unloading %s" % name)
+    except (rospy.ServiceException, rospy.exceptions.ROSException) as exc:
+        rospy.logwarn("Controller Spawner couldn't reach controller_manager to take down controllers.")
+
+# At this moment, I am absolutely livid about Python's lack of
+# reasonable scoping mechanisms.  This variable had to be declared
+# completely globally and could not be declared near its use because
+# Python is horrific at handling scoping for nested functions.  Hate.
+wait_for_topic_result = None
+
+def main():
+    global unload_controller_service,load_controller_service,switch_controller_service
+
+    opts, args = getopt.gnu_getopt(rospy.myargv()[1:], 'h',
+                                   ['wait-for=', 'stopped','namespace='])
+    wait_for_topic = None
+    autostart = 1
+    robot_namespace = ""
+    for o, a in opts:
+        if o == '-h':
+            print_usage()
+        elif o == '--wait-for':
+            wait_for_topic = a
+        elif o == '--stopped':
+            autostart = 0
+        elif o == '--namespace':
+            robot_namespace = a
+
+    if not args:
+        print_usage(1)
+        
+    rospy.init_node('spawner', anonymous=True)
+
+    # add a '/' to the namespace if needed
+    if robot_namespace and robot_namespace[-1] != '/':
+        robot_namespace = robot_namespace+'/'
+
+    # set service names based on namespace
+    load_controller_service = robot_namespace+"controller_manager/load_controller"
+    unload_controller_service = robot_namespace+"controller_manager/unload_controller"
+    switch_controller_service = robot_namespace+'controller_manager/switch_controller'
+
+    try:
+        # loader
+        rospy.loginfo("Controller Spawner: Waiting for service "+load_controller_service)
+        rospy.wait_for_service(load_controller_service, timeout=100)
+        load_controller = rospy.ServiceProxy(load_controller_service, LoadController)
+
+        #switcher
+        rospy.loginfo("Controller Spawner: Waiting for service "+switch_controller_service)
+        rospy.wait_for_service(switch_controller_service, timeout=10)
+        switch_controller = rospy.ServiceProxy(switch_controller_service, SwitchController)
+
+    except rospy.exceptions.ROSException:
+        rospy.logwarn("Controller Spawner couldn't reach controller_manager to load controllers.")
+        return
+
+    global wait_for_topic_result  # Python scoping sucks
+    if wait_for_topic:
+        def wait_for_topic_cb(msg):
+            global wait_for_topic_result  # Python scoping really really sucks
+            wait_for_topic_result = msg
+            rospy.logdebug("Heard from wait-for topic: %s" % str(msg.data))
+        rospy.Subscriber(wait_for_topic, Bool, wait_for_topic_cb)
+        started_waiting = time.time()
+
+        # We might not have receieved any time messages yet
+        warned_about_not_hearing_anything = False
+        while not wait_for_topic_result:
+            time.sleep(0.01)
+            if rospy.is_shutdown():
+                return
+            if not warned_about_not_hearing_anything:
+                if time.time() - started_waiting > 10.0:
+                    warned_about_not_hearing_anything = True
+                    rospy.logwarn("Controller Spawner hasn't heard anything from its \"wait for\" topic (%s)" % \
+                                      wait_for_topic)
+        while not wait_for_topic_result.data:
+            time.sleep(0.01)
+            if rospy.is_shutdown():
+                return
+
+    # hook for unloading controllers on shutdown
+    rospy.on_shutdown(shutdown)
+
+    # find yaml files to load
+    controllers = []
+    for name in args:
+        if os.path.exists(name):
+            # load yaml file onto the parameter server, using the namespace specified in the yaml file
+            rosparam.set_param("",open(name))
+            # list the controllers to be loaded
+            name_yaml = yaml.load(open(name))
+            for controller in name_yaml:
+                controllers.append(controller)
+        else:
+            controllers.append(name)
+
+    # load controllers
+    for name in controllers:
+        rospy.loginfo("Loading controller: "+name)
+        resp = load_controller(name)
+        if resp.ok != 0:
+            loaded.append(name)
+        else:
+            time.sleep(1) # give error message a chance to get out
+            rospy.logerr("Failed to load %s" % name)
+
+    rospy.loginfo("Controller Spawner: Loaded controllers: %s" % ', '.join(loaded))
+
+    if rospy.is_shutdown():
+        return
+
+    # start controllers is requested
+    if autostart:
+        resp = switch_controller(loaded, [], 2)
+        if resp.ok != 0:
+            rospy.loginfo("Started controllers: %s" % ', '.join(loaded))
+        else:
+            rospy.logerr("Failed to start controllers: %s" % ', '.join(loaded))
+
+    rospy.spin()
+
+if __name__ == '__main__': main()

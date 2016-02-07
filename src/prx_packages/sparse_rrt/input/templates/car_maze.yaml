@@ -1,0 +1,129 @@
+building1:
+    type: obstacle
+    geometries:
+      -
+        name: upper_boundary
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [200,10,3]      
+        config:
+          position: [0, 100, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: lower_boundary
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [200,10,3]      
+        config:
+          position: [0, -100, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: left_boundary
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [10,200,3]      
+        config:
+          position: [-95, 0, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: right_boundary
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [10,200,3]      
+        config:
+          position: [95, 0, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: block1
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [10,10,3]      
+        config:
+          position: [45, 40, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: block2
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [10,10,3]      
+        config:
+          position: [15, 40, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: block3
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [10,10,3]      
+        config:
+          position: [-15, 40, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: block4
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [10,10,3]      
+        config:
+          position: [-45, 40, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: block1_b
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [10,10,3]      
+        config:
+          position: [45, -40, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: block2_b
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [10,10,3]      
+        config:
+          position: [15, -40, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: block3_b
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [10,10,3]      
+        config:
+          position: [-15, -40, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: block4_b
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [10,10,3]      
+        config:
+          position: [-45, -40, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: mid
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [70,10,3]      
+        config:
+          position: [-55, 0, 0]
+          orientation: [0, 0, 0, 1]
+      -
+        name: mid2
+        collision_geometry: 
+          type: box
+          material: black 
+          dims: [70,10,3]      
+        config:
+          position: [55, 0, 0]
+          orientation: [0, 0, 0, 1]

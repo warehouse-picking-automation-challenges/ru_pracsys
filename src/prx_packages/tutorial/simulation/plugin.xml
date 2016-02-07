@@ -1,0 +1,7 @@
+<class name="prx_simulation/test_controller"
+    type="prx::packages::tutorial::test_controller_t"
+    base_class_type="prx::sim::system_t">
+    <description>
+        Test controller, makes a disk behave like a car.
+    </description>        
+</class>

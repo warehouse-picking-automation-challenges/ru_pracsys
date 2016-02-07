@@ -1,0 +1,121 @@
+<library path="lib/libprx_utilities">
+
+    <!-- Distance functions -->
+
+    <class name="prx_utilities/default_euclidean"
+        type="prx::util::default_euclidean_t"
+        base_class_type="prx::util::distance_function_t">
+        <description>
+            Default euclidean distance as defined by space_t.
+        </description>
+    </class>
+
+    <class name="prx_utilities/manhattan_distance"
+        type="prx::util::manhattan_distance_t"
+        base_class_type="prx::util::distance_function_t">
+        <description>
+            L1 distance (Manhattan distance)
+        </description>
+    </class>
+    <class name="prx_utilities/l_infinite_norm"
+        type="prx::util::l_infinite_norm_t"
+        base_class_type="prx::util::distance_function_t">
+        <description>
+            L-infinite distance.
+        </description>        
+    </class>
+
+    <!-- Distance Metrics -->
+
+    <class name="prx_utilities/linear_distance_metric"
+        type="prx::util::linear_distance_metric_t"
+        base_class_type="prx::util::distance_metric_t">
+        <description>
+            Simple linear search proximity metric.
+        </description>
+    </class>
+
+    <class name="prx_utilities/ann_distance_metric"
+        type="prx::util::ann_distance_metric_t"
+        base_class_type="prx::util::distance_metric_t">
+        <description>
+            Uses ANN to do nearest neighbor queries.
+        </description>
+    </class>
+    <class name="prx_utilities/graph_distance_metric"
+        type="prx::util::graph_distance_metric_t"
+        base_class_type="prx::util::distance_metric_t">
+        <description>
+            Creates a neighborhood graph for distance queries.
+        </description>
+    </class>
+
+    <!-- Goals -->
+
+    <class name="prx_utilities/goal_state"
+        type="prx::util::goal_state_t"
+        base_class_type="prx::util::goal_t">
+        <description>
+            Simple goal with a state that we want to reach.
+        </description>
+    </class>
+    <class name="prx_utilities/multiple_goal_states"
+        type="prx::util::multiple_goal_states_t"
+        base_class_type="prx::util::goal_t">
+        <description>
+            Multiple  goals that we want to reach at least one of them.
+        </description>
+    </class>
+    <class name="prx_utilities/radial_goal_region"
+        type="prx::util::radial_goal_region_t"
+        base_class_type="prx::util::goal_t">
+        <description>
+            A goal region defined by a point and radius.
+        </description>
+    </class>
+    <class name="prx_utilities/bounded_goal_region"
+        type="prx::util::bounded_goal_region_t"
+        base_class_type="prx::util::goal_t">
+        <description>
+            A goal region that is bounded.
+        </description>
+    </class>
+
+    <!-- Mapping Functions -->
+
+    <class name="prx_utilities/obstacle_mapping"
+        type="prx::util::obstacle_mapping_t"
+        base_class_type="prx::util::mapping_function_t">
+        <description>
+            Mapping for hiding a system while allowing collisions with it.
+        </description>
+    </class>
+
+    <class name="prx_utilities/planar_to_linear"
+        type="prx::util::planar_to_linear_t"
+        base_class_type="prx::util::mapping_function_t">
+        <description>
+            Mapping planar_to_linear.
+        </description>
+    </class>
+
+    <class name="prx_utilities/full_mapping"
+        type="prx::util::full_mapping_t"
+        base_class_type="prx::util::mapping_function_t">
+        <description>
+            Copies the space information into embedded space.
+        </description>
+    </class>
+
+    <class name="prx_utilities/hide_mapping"
+        type="prx::util::hide_mapping_t"
+        base_class_type="prx::util::mapping_function_t">
+        <description>
+            Mapping for hiding a system.
+        </description>
+    </class>
+
+    <!-- PACKAGES -->
+    <!-- END PACKAGES -->
+
+</library>

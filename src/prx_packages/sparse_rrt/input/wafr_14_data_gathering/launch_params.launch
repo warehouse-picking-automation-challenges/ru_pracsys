@@ -1,0 +1,37 @@
+<rosparam ns="PLANNER_NAME">
+debug: true
+persistent: false
+simulate: false
+task_planner:
+  stats_criteria:
+    elements:
+      criterion1: 
+        condition: 500
+        type: iteration_criterion
+  type: single_shot
+type: single_query_application
+visualize: false
+random_seed: RANDOM_SEED
+queries:
+  query:
+    goal:
+      distance_metric: {distance_function: default, type: linear_distance_metric}
+      type: radial_goal_region
+    stopping_criteria:
+      elements:
+        criterion1: {condition: 500000, type: iteration_criterion}
+    type: motion_planning_query
+world_model:
+  simulator:
+    collision_checker:
+      type: pqp
+    simulation_step: 0.005
+    type: collision_stop_simulator
+</rosparam>
+
+<rosparam ns="PLANNER_NAME/queries/query/goal" file="query_yaml/QUERY_FILE.yaml"/>
+<rosparam ns="PLANNER_NAME/task_planner/planners/PLANNER_NAME" file="plant_overrides/OVERRIDE_FILE.yaml"/>
+<rosparam ns="PLANNER_NAME/task_planner/planners/PLANNER_NAME" file="planner_yaml/PLANNER_FILE.yaml"/>
+<rosparam ns="PLANNER_NAME/world_model/simulator/subsystems/system" file="plant_yaml/PLANT_FILE.yaml"/>
+<rosparam ns="PLANNER_NAME/world_model/simulator/obstacles" file="obstacle_yaml/OBSTACLE_FILE.yaml"/>
+<rosparam ns="PLANNER_NAME/world_model" file="model_overrides/MODEL_OVERRIDE_FILE.yaml"/>

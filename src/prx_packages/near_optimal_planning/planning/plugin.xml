@@ -1,0 +1,7 @@
+<class name="prx_planning/cover_process"
+    type="prx::packages::near_optimal_planning::coverage_process_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        A simple coverage process to check if first paths meet bounds (hint, they do).
+    </description>        
+</class>

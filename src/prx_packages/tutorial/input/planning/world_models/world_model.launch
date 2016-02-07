@@ -1,0 +1,34 @@
+<launch>
+ <rosparam>
+  <!-- First define the mapping between simulation and world model plants -->
+  system_mapping:
+  - 
+    pair: [simulator/consumer/test/disk, world_model/simulator/test/disk]
+  - 
+    pair: [simulator/consumer/test, world_model/simulator/test]
+
+  consumer: simulator/consumer
+  </rosparam>
+  <rosparam ns="world_model/planning_contexts">
+  space1:
+    default:
+      type: "full_mapping"
+  </rosparam>
+  <rosparam ns="world_model">
+  use_optimized_propagate: false
+  </rosparam>
+
+  <!-- This file is reincluded for the event where planning runs without simulation-->
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+  <rosparam ns="world_model" command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+  <rosparam command="load" ns="controller" file="$(find tutorial)/input/templates/test_controller.yaml"/>
+  <rosparam ns="controller">
+  </rosparam>
+        
+  <rosparam command="load" ns="world_model/simulator/subsystems/test">
+    template: "controller"
+  </rosparam>
+  <rosparam command="load" ns="world_model/simulator/subsystems/test/subsystems/disk" file="$(find prx_input)/templates/plants/disk.yaml"/>
+
+</launch>

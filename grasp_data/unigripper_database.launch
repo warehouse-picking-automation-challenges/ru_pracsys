@@ -1,0 +1,100 @@
+<launch>
+
+  
+  <rosparam>
+  unigripper_grasps:
+    champion_copper_plus_spark_plug: 1
+    cheezit_big_original: 1
+    crayola_64_ct: 1
+    dr_browns_bottle_brush: 1
+    elmers_washable_no_run_school_glue: 1
+    expo_dry_erase_board_eraser: 1
+    feline_greenies_dental_treats: 1
+    first_years_take_and_toss_straw_cup: 1
+    genuine_joe_plastic_stir_sticks: 1
+    highland_6539_self_stick_notes: 1
+    kong_duck_dog_toy: 1
+    kong_sitting_frog_dog_toy: 1
+    kong_air_dog_squeakair_tennis_ball: 1
+    laugh_out_loud_joke_book: 1
+    mark_twain_huckleberry_finn: 1
+    mead_index_cards: 1
+    mommys_helper_outlet_plugs: 1
+    munchkin_white_hot_duck_bath_toy: 1
+    oreo_mega_stuf: 1
+    paper_mate_12_count_mirado_black_warrior: 1
+    safety_works_safety_glasses: 1
+    sharpie_accent_tank_style_highlighters: 1
+    stanley_66_052: 1
+  </rosparam>
+  <!--
+  <rosparam ns="unigripper_grasps/champion_copper_plus_spark_plug"
+    file="$(find prx_planning)../../grasp_data/Unigripper/champion_copper_plus_spark_plug.yaml"/>
+
+  <rosparam ns="unigripper_grasps/cheezit_big_original"
+    file="$(find prx_planning)../../grasp_data/Unigripper/cheezit_big_original.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/crayola_64_ct"
+    file="$(find prx_planning)../../grasp_data/Unigripper/crayola_64_ct.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/dr_browns_bottle_brush"
+    file="$(find prx_planning)../../grasp_data/Unigripper/dr_browns_bottle_brush.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/elmers_washable_no_run_school_glue"
+    file="$(find prx_planning)../../grasp_data/Unigripper/elmers_washable_no_run_school_glue.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/expo_dry_erase_board_eraser"
+    file="$(find prx_planning)../../grasp_data/Unigripper/expo_dry_erase_board_eraser.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/feline_greenies_dental_treats"
+    file="$(find prx_planning)../../grasp_data/Unigripper/feline_greenies_dental_treats.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/first_years_take_and_toss_straw_cup"
+    file="$(find prx_planning)../../grasp_data/Unigripper/first_years_take_and_toss_straw_cup.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/genuine_joe_plastic_stir_sticks"
+    file="$(find prx_planning)../../grasp_data/Unigripper/genuine_joe_plastic_stir_sticks.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/highland_6539_self_stick_notes"
+    file="$(find prx_planning)../../grasp_data/Unigripper/highland_6539_self_stick_notes.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/kong_duck_dog_toy"
+    file="$(find prx_planning)../../grasp_data/Unigripper/kong_duck_dog_toy.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/kong_sitting_frog_dog_toy"
+    file="$(find prx_planning)../../grasp_data/Unigripper/kong_sitting_frog_dog_toy.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/kong_air_dog_squeakair_tennis_ball"
+    file="$(find prx_planning)../../grasp_data/Unigripper/kong_air_dog_squeakair_tennis_ball.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/laugh_out_loud_joke_book"
+    file="$(find prx_planning)../../grasp_data/Unigripper/laugh_out_loud_joke_book.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/mark_twain_huckleberry_finn"
+    file="$(find prx_planning)../../grasp_data/Unigripper/mark_twain_huckleberry_finn.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/mead_index_cards"
+    file="$(find prx_planning)../../grasp_data/Unigripper/mead_index_cards.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/mommys_helper_outlet_plugs"
+    file="$(find prx_planning)../../grasp_data/Unigripper/mommys_helper_outlet_plugs.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/munchkin_white_hot_duck_bath_toy"
+    file="$(find prx_planning)../../grasp_data/Unigripper/munchkin_white_hot_duck_bath_toy.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/oreo_mega_stuf"
+    file="$(find prx_planning)../../grasp_data/Unigripper/oreo_mega_stuf.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/paper_mate_12_count_mirado_black_warrior"
+    file="$(find prx_planning)../../grasp_data/Unigripper/paper_mate_12_count_mirado_black_warrior.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/safety_works_safety_glasses"
+    file="$(find prx_planning)../../grasp_data/Unigripper/safety_works_safety_glasses.yaml"/> 
+
+  <rosparam ns="unigripper_grasps/sharpie_accent_tank_style_highlighters"
+    file="$(find prx_planning)../../grasp_data/Unigripper/sharpie_accent_tank_style_highlighters.yaml"/>
+     
+  <rosparam ns="unigripper_grasps/stanley_66_052"
+    file="$(find prx_planning)../../grasp_data/Unigripper/stanley_66_052.yaml"/> 
+-->
+</launch>

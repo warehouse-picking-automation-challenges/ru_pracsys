@@ -1,0 +1,277 @@
+<launch>
+
+<!-- Load World Model-->
+<rosparam file="$(find prx_planning)/templates/spaces/space_types.yaml"/> 
+<rosparam ns="prx_planning_node/world_model" 
+    file="$(find prx_planning)/templates/manipulation/input/simulation/manipulation_simulator.yaml"/> 
+<rosparam ns="prx_planning_node/world_model/simulator">
+  manipulator_names:
+    -
+      simulator/a_left_manipulator
+    -
+      simulator/a_right_manipulator
+  manipulation_sensing_info:
+    type: grasp_sensing_info
+    sources: ["grasp_sensor2"]
+    update_delay: 0.02
+  grasp_sensor_source: "grasp_sensor2"
+  sensing_info:
+    type: point_cloud_sensing_info
+    sources: ["point_cloud"]
+    update_delay: .1
+  sensing:
+    type: sensing_model
+    sensors:
+      point_cloud_sensor:
+        type: point_cloud_sensor
+        source: "point_cloud"
+        topic_name: "/point_cloud"
+        obstacle_geometry: "simulator/obstacles/map/point_cloud"
+        sensor_delay: 0.1
+      grasp_sensor2:
+        type: simulated_grasp_sensor
+        source: "grasp_sensor2"
+        sensor_delay: 0.02
+  collision_checker:
+    type: fcl
+    octomap_resolution: .01
+</rosparam>
+
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/a_left_manipulator" 
+    file="$(find prx_planning)/templates/motoman/motoman_robotiq.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/a_left_manipulator">
+hand: left
+input_control_space:
+  min: [-.565,-0.7375, -0.7375, -0.7375, -0.7375, -0.87, -0.87, -1.7425,
+         0, 0, 0, 0, 0, 0, 0, 0]
+  max: [.565, 0.7375, 0.7375, 0.7375, 0.7375, 0.87, 0.87, 1.7425, 
+        0, 0, 0, 0, 0, 0, 0, 1]
+planning_contexts:
+  left_manipulator:
+    type: full_mapping
+</rosparam>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/a_right_manipulator" 
+    file="$(find prx_planning)/templates/motoman/motoman_robotiq.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/a_right_manipulator">
+hand: right
+planning_contexts:
+  right_manipulator:
+    type: full_mapping
+</rosparam>
+
+
+<!-- Setup objects -->
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/oreo_mega_stuf" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/champion_copper_plus_spark_plug" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/expo_dry_erase_board_eraser" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/kong_duck_dog_toy" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/genuine_joe_plastic_stir_sticks" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/munchkin_white_hot_duck_bath_toy" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/crayola_64_ct" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/mommys_helper_outlet_plugs" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/sharpie_accent_tank_style_highlighters" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/kong_air_dog_squeakair_tennis_ball" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/stanley_66_052" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/safety_works_safety_glasses" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/dr_browns_bottle_brush" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/laugh_out_loud_joke_book" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/cheezit_big_original" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/paper_mate_12_count_mirado_black_warrior" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/feline_greenies_dental_treats" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/elmers_washable_no_run_school_glue" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/mead_index_cards" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/rolodex_jumbo_pencil_cup" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/first_years_take_and_toss_straw_cup" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/highland_6539_self_stick_notes" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/mark_twain_huckleberry_finn" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/kyjen_squeakin_eggs_plush_puppies" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/kong_sitting_frog_dog_toy" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/subsystems/cone" 
+    file="$(find prx_planning)/templates/object_templates/placeholder.yaml"/>
+
+<rosparam ns="prx_planning_node/world_model/simulator/obstacles/order_bin" 
+    file="$(find prx_planning)/templates/object_templates/order_bin.yaml"/>
+<rosparam ns="prx_planning_node/world_model/simulator/obstacles/shelf" 
+    file="$(find prx_planning)/templates/object_templates/shelf.yaml"/>
+
+<rosparam ns="prx_planning_node/world_model/simulator/obstacles" 
+    file="$(find prx_planning)/templates/environments/point_cloud.yaml" /> 
+
+<rosparam ns="prx_planning_node/world_model/planning_contexts">
+left_manipulator:
+ default:
+  type: "hide_mapping"
+</rosparam>
+<rosparam ns="prx_planning_node/world_model/planning_contexts">
+right_manipulator:
+ default:
+  type: "hide_mapping"
+</rosparam>
+
+<!-- Load Planning Application -->
+<rosparam ns="prx_planning_node">
+type: motoman_planning_application
+random_seed: 12345
+load_roadmaps: true
+</rosparam>
+
+<!-- Load Task Planner -->
+<rosparam ns="prx_planning_node/task_planner">
+type: base_apc_task_planner
+left_prm:
+  type: motion_planning_specification
+  validity_checker: 
+    type: world_model_validity_checker
+  sampler:
+    type: manip_sampler
+  distance_metric:
+    type: linear_distance_metric
+    distance_function: l_infinite_norm
+  local_planner:
+    type: bvp_local_planner
+  stopping_criteria:
+    elements:
+      criterion1:
+        type: iteration_criterion
+        condition: 500
+left_prm_grasp:
+  type: motion_planning_specification
+  validity_checker: 
+    type: world_model_validity_checker
+  sampler:
+    type: manip_sampler
+  distance_metric:
+    type: linear_distance_metric
+    distance_function: l_infinite_norm
+  local_planner:
+    type: bvp_local_planner
+  stopping_criteria:
+    elements:
+      criterion1:
+        type: iteration_criterion
+        condition: 500
+right_prm:
+  type: motion_planning_specification
+  validity_checker: 
+    type: world_model_validity_checker
+  sampler:
+    type: manip_sampler
+  distance_metric:
+    type: linear_distance_metric
+    distance_function: l_infinite_norm
+  local_planner:
+    type: bvp_local_planner
+  stopping_criteria:
+    elements:
+      criterion1:
+        type: iteration_criterion
+        condition: 500
+right_prm_grasp:
+  type: motion_planning_specification
+  validity_checker: 
+    type: world_model_validity_checker
+  sampler:
+    type: manip_sampler
+  distance_metric:
+    type: linear_distance_metric
+    distance_function: l_infinite_norm
+  local_planner:
+    type: bvp_local_planner
+  stopping_criteria:
+    elements:
+      criterion1:
+        type: iteration_criterion
+        condition: 500
+</rosparam>
+
+<!-- Load Motion Planner -->
+<rosparam ns="prx_planning_node/task_planner/planners">
+left_prm:
+  type: prm_star
+  space_name: left_manipulator
+  lazy_collision_mode: true
+  heuristic_search: 
+    type: prm_astar
+left_prm_grasp:
+  type: prm_star
+  space_name: left_manipulator
+  lazy_collision_mode: true
+  heuristic_search: 
+    type: prm_astar
+right_prm:
+  type: prm_star
+  space_name: right_manipulator
+  lazy_collision_mode: true
+  heuristic_search: 
+    type: prm_astar
+right_prm_grasp:
+  type: prm_star
+  space_name: right_manipulator
+  lazy_collision_mode: true
+  heuristic_search: 
+    type: prm_astar
+</rosparam>
+
+<!-- Load Problem Definition -->
+<rosparam ns="prx_planning_node/problems">
+baxter_problem:
+  specification:
+    type: base_apc_task_specification
+  query:
+    type: base_apc_task_query
+    query_collision_type: lazy_collisions
+    start_state: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    goal:
+      type: "goal_state"
+      distance_metric:
+        type: ann_distance_metric
+      goal_state: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+</rosparam>
+
+<!-- Load Node --> 
+
+
+<param name="robot_description" textfile="$(find prx_planning)/templates/motoman/motoman_robotiq.urdf" />
+  <rosparam command="load" file="$(find prx_simulation)/urdf/joint_names_sda10f.yaml" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+
+<arg name="command_args" value="-d $(find prx_planning)/launch/motoman_robotiq_planning.rviz" />
+<node name="$(anon rviz)" pkg="rviz" type="rviz" respawn="false"
+  args="$(arg command_args)" output="screen" />
+
+
+<node name="prx_planning_node" pkg="prx_planning" type="prx_planning_exe" required="true" 
+    launch-prefix="" output="screen" args="prx_planning_node" />
+
+
+
+
+
+
+</launch>

@@ -1,0 +1,27 @@
+expo_dry_erase_board_eraser 1 1 1
+crayola_64_ct 1 1 1
+genuine_joe_plastic_stir_sticks 1 1 1
+oreo_mega_stuf 1 1 1
+highland_6539_self_stick_notes 1 1 1
+cheezit_big_original 1 1 1
+mead_index_cards 1 1 1
+champion_copper_plus_spark_plug 1 1 1
+munchkin_white_hot_duck_bath_toy 0 0 0
+first_years_take_and_toss_straw_cup 0 0 0
+paper_mate_12_count_mirado_black_warrior 1 1 1
+feline_greenies_dental_treats 0 0 1
+mark_twain_huckleberry_finn 1 1 1
+laugh_out_loud_joke_book 1 1 1
+kyjen_squeakin_eggs_plush_puppies 2 2 2
+elmers_washable_no_run_school_glue 0 0 1
+kong_air_dog_squeakair_tennis_ball 0 1 0
+stanley_66_052 0 0 0
+kong_duck_dog_toy 0 0 0
+kong_sitting_frog_dog_toy 0 0 0
+dr_browns_bottle_brush 0 1 0
+mommys_helper_outlet_plugs 0 0 0
+sharpie_accent_tank_style_highlighters 1 1 1
+rolodex_jumbo_pencil_cup 0 0 2
+safety_works_safety_glasses 1 1 1
+
+# 0 = NO SYMMETRY, 1 = 180-degree SYMMETRY, 2 = ANY ROTATION SYMMETRY

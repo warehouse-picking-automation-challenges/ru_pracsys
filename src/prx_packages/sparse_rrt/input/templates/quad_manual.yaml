@@ -1,0 +1,43 @@
+type: manual_controller
+input_keys:
+  - 
+    input_key: UP
+    control_index: 0
+    value: 1
+    action: add
+  -
+    input_key: DOWN
+    control_index: 1
+    value: 1
+    action: add
+  -
+    input_key: LEFT
+    control_index: 2
+    value: 1
+    action: add
+  -
+    input_key: RIGHT
+    control_index: 3
+    value: 1
+    action: add
+  - 
+    input_key: lower_i
+    control_index: 0
+    value: -1
+    action: add
+  -
+    input_key: k
+    control_index: 1
+    value: -1
+    action: add
+  -
+    input_key: lower_j
+    control_index: 2
+    value: -1
+    action: add
+  -
+    input_key: lower_l
+    control_index: 3
+    value: -1
+    action: add
+

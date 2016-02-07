@@ -1,0 +1,235 @@
+type: ode_plant
+
+geometries:
+  -
+    name: chassis
+    collision_geometry:
+      type: box
+      dims: [5.4, 2.4, 1.0]
+      material: grey
+    config:
+      position: [0.2, 0, 1.4]
+      orientation: [0.0, 0.0, 0.0, 1]
+    dims: [4.2, 2, 1.2]
+    mass_type: false
+    weight: 3.25
+  - 
+    name: steer_block
+    collision_geometry:
+      type: box
+      dims: [0.6, 2.0, 0.4]
+      material: black
+    config:
+      position: [1.8, 0, 0.8]
+      orientation: [0,0,0,1]
+    dims: [0.4,1.8,0.2]
+    mass_type: false
+    weight: 9.5
+  -
+    name: frwheel
+    collision_geometry:
+      type: cylinder
+      radius: 0.6
+      height: 0.6
+      material: black
+    config:
+      position: [1.8, -1.4, 0.6]
+      orientation: [0.7071067812, 0.0, 0.0, 0.7071067812]
+    dims: [0.6, 0.6]
+    mass_type: false
+    weight: 0.85
+  -
+    name: flwheel
+    collision_geometry:
+      type: cylinder
+      radius: 0.6
+      height: 0.6
+      material: black
+    config:
+      position: [1.8, 1.4, 0.6]
+      orientation: [0.7071067812, 0.0, 0.0, 0.7071067812]
+    dims: [0.6, 0.6]
+    mass_type: false
+    weight: 0.85
+  -
+    name: mrwheel
+    collision_geometry:
+      type: cylinder
+      radius: 0.6
+      height: 0.6
+      material: black
+    config:
+      position: [-0.5, -1.4, 0.6]
+      orientation: [0.7071067812, 0.0, 0.0, 0.7071067812]
+    dims: [0.6, 0.6]
+    mass_type: false
+    weight: 0.35
+  -
+    name: mlwheel
+    collision_geometry:
+      type: cylinder
+      radius: 0.6
+      height: 0.6
+      material: black
+    config:
+      position: [-0.5, 1.4, 0.6]
+      orientation: [0.7071067812, 0.0, 0.0, 0.7071067812]
+    dims: [0.6, 0.6]
+    mass_type: false
+    weight: 0.35
+  -
+    name: brwheel
+    collision_geometry:
+      type: cylinder
+      radius: 0.6
+      height: 0.6
+      material: black
+    config:
+      position: [-1.8, -1.4, 0.6]
+      orientation: [0.7071067812, 0.0, 0.0, 0.7071067812]
+    dims: [0.6, 0.6]
+    mass_type: false
+    weight: 1.55
+  -
+    name: blwheel
+    collision_geometry:
+      type: cylinder
+      radius: 0.6
+      height: 0.6
+      material: black
+    config:
+      position: [-1.8, 1.4, 0.6]
+      orientation: [0.7071067812, 0.0, 0.0, 0.7071067812]
+    dims: [0.6, 0.6]
+    mass_type: false
+    weight: 1.55
+
+joints:
+  -
+    name: frjoint
+    type: hinge2
+    parent: steer_block
+    child: frwheel
+    params: [1.8, -1.2, 0.6, 0, 0, 1, 0, -1, 0]
+    joint_limits_1: [0.0, 0.0]
+    suspension: 0.01
+  -
+    name: fljoint
+    type: hinge2
+    parent: steer_block
+    child: flwheel
+    params: [1.8, 1.2, 0.6, 0, 0, 1, 0, -1, 0]
+    joint_limits_1: [0.0, 0.0]
+    suspension: 0.01
+  -
+    name: frontsteer
+    type: hinge
+    parent: chassis
+    child: steer_block
+    params: [1.8, 0, 0.8, 0, 0, 1]
+    joint_limits_1: [-0.35, 0.35]
+  -
+    name: mrjoint
+    type: hinge2
+    parent: chassis
+    child: mrwheel
+    params: [-0.5, -1.2, 0.6, 0, 0, 1, 0, -1, 0]
+    joint_limits_1: [0.0, 0.0]
+    suspension: 0.014
+  -
+    name: mljoint
+    type: hinge2
+    parent: chassis
+    child: mlwheel
+    params: [-0.5, 1.2, 0.6 , 0, 0, 1, 0, -1, 0]
+    joint_limits_1: [0.0, 0.0]
+    suspension: 0.014
+  -
+    name: brjoint
+    type: hinge2
+    parent: chassis
+    child: brwheel
+    params: [-1.8, -1.2, 0.6, 0, 0, 1, 0, -1, 0]
+    joint_limits_1: [0.0, 0.0]
+    suspension: 0.014
+    cfm: 0.0003
+  -
+    name: bljoint
+    type: hinge2
+    parent: chassis
+    child: blwheel
+    params: [-1.8, 1.2, 0.6 , 0, 0, 1, 0, -1, 0]
+    joint_limits_1: [0.0, 0.0]
+    suspension: 0.014
+    cfm: 0.0003
+
+controls:
+  -
+    name: left_forward_torque
+    bounds: [-125, 150]
+    type: joint
+    ode_object: bljoint
+    component: 1
+  -
+    name: right_forward_torque
+    bounds: [-125, 150]
+    type: joint
+    ode_object: brjoint
+    component: 1
+  -
+    name: turning_torque
+    bounds: [-20, 20]
+    type: joint
+    ode_object: frontsteer
+    component: 0
+  -
+    name: up_thrust_fleft
+    bounds: [0, 500]
+    type: body
+    ode_object: chassis
+    direction: [ 0, 0, 1 ]
+    point: [ 2.85, 2, 0 ]
+    is_torque: false
+  -
+    name: up_thrust_fright
+    bounds: [0, 500]
+    type: body
+    ode_object: chassis
+    direction: [ 0, 0, 1 ]
+    point: [ 2.85, -2, 0 ]
+    is_torque: false
+  -
+    name: up_thrust_bleft
+    bounds: [0, 500]
+    type: body
+    ode_object: chassis
+    direction: [ 0, 0, 1 ]
+    point: [ -3, 2, 0 ]
+    is_torque: false
+  -
+    name: up_thrust_bright
+    bounds: [0, 500]
+    type: body
+    ode_object: chassis
+    direction: [ 0, 0, 1 ]
+    point: [ -3, -2, 0 ]
+    is_torque: false
+  -
+    name: magic_left
+    bounds: [0, 1000]
+    type: body
+    ode_object: chassis
+    direction: [ 0, 0, -1 ]
+    point: [ 2, 1, 0.5 ]
+    is_torque: false
+  -
+    name: magic_right
+    bounds: [0, 1000]
+    type: body
+    ode_object: chassis
+    direction: [ 0, 0, -1 ]
+    point: [ 2, -1, 0.5 ]
+    is_torque: false
+    
+
+

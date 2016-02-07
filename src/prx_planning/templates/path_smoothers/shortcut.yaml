@@ -1,0 +1,6 @@
+type: shortcut_smoother 
+validity_checker: 
+  type: world_model_validity_checker
+local_planner:
+  type: bvp_local_planner
+resolution: 1.0

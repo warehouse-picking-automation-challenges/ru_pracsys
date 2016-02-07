@@ -1,0 +1,11 @@
+<launch>
+	<node name="prx_object_detection_node" pkg="prx_object_detection" type="prx_object_detection_node" required="true" output="screen"
+		args="$(find prx_object_detection)/object_models/object_template.lmt" >
+        </node>
+
+
+<!--
+	<include file="$(find openni_launch)/launch/openni.launch"/>
+-->
+
+</launch>

@@ -1,0 +1,16 @@
+<launch>
+	<arg name="robot_ip" default="172.16.71.101" />
+	<arg name="use_bswap" default="true" />
+	<arg name="version0" default="false" />
+
+    <rosparam>
+    controller_joint_names: [arm_left_joint_1_s,arm_left_joint_2_l,arm_left_joint_3_e,arm_left_joint_4_u,arm_left_joint_5_r,arm_left_joint_6_b,arm_left_joint_7_t,arm_right_joint_1_s,arm_right_joint_2_l,arm_right_joint_3_e,arm_right_joint_4_u,arm_right_joint_5_r,arm_right_joint_6_b,arm_right_joint_7_t,torso_joint_b1,torso_joint_b2]
+    </rosparam>
+	<rosparam command="load" file="$(find motoman_sda10f_support)/config/sda10f_state_interface.yaml" />
+	<rosparam command="load" file="$(find motoman_sda10f_support)/config/joint_names_sda10f.yaml" />
+	<include file="$(find motoman_driver)/launch/robot_interface_streaming.launch">
+		<arg name="robot_ip"   value="$(arg robot_ip)" />
+		<arg name="use_bswap"  value="$(arg use_bswap)" />
+		<arg name="version0"  value="$(arg version0)" />
+	</include>
+</launch>

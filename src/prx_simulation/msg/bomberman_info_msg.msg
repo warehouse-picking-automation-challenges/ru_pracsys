@@ -1,0 +1,17 @@
+string node_name
+string consumer
+float64 goal_radius
+float64 bomb_radius
+float64 bomb_frequency
+float64[] my_bomb_state
+geometry_msgs/Point[] opp_bomb_state
+float64[] my_goal
+geometry_msgs/Point[] opp_goal
+float64[] my_position
+geometry_msgs/Point[] opp_position
+float64[] my_respawn
+geometry_msgs/Point[] opp_respawn
+float64 timestamp
+bool exploded
+bool new_contingency_used
+float64 contingency_length

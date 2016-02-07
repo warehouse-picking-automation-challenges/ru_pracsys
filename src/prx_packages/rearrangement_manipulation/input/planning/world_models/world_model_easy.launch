@@ -1,0 +1,61 @@
+<launch>
+ <rosparam>
+  system_mapping:
+  -
+    pair: [simulator/consumer/manipulator, world_model/simulator/manipulator]
+  -
+    pair: [simulator/cup1, world_model/simulator/cup1]
+  -
+    pair: [simulator/cup2, world_model/simulator/cup2]
+  <!--
+    pair: [simulator/cup3, world_model/simulator/cup3] -->
+
+  consumer: simulator/consumer
+  </rosparam>
+
+  
+  <!-- cup_b Has to be here only for the planning examples. NO for the generation examples -->
+  <rosparam command="load" ns="world_model/simulator/subsystems/cup_b" file="$(find manipulation)/input/simulation/plants/cups.yaml"/> 
+
+  <!-- k cups -->
+  <rosparam command="load" ns="world_model/simulator/subsystems/cup1" file="$(find manipulation)/input/simulation/plants/cups.yaml"/>
+  <rosparam command="load" ns="world_model/simulator/subsystems/cup2" file="$(find manipulation)/input/simulation/plants/cups.yaml"/>
+  <!-- <rosparam command="load" ns="world_model/simulator/subsystems/cup3" file="$(find manipulation)/input/simulation/plants/cups.yaml"/> -->
+  
+  <!-- b imaginary cups -->
+  <!-- <rosparam command="load" ns="world_model/simulator/subsystems/cup_i1" file="$(find manipulation)/input/simulation/plants/cups.yaml"/>
+  <rosparam command="load" ns="world_model/simulator/subsystems/cup_i2" file="$(find manipulation)/input/simulation/plants/cups.yaml"/>
+  <rosparam command="load" ns="world_model/simulator/subsystems/cup_i3" file="$(find manipulation)/input/simulation/plants/cups.yaml"/> -->
+
+  
+  <!-- Information for cup_b has to be here only for the planning examples. NO for the generation examples -->
+  <rosparam ns="world_model/simulator/subsystems/cup_b">
+    embeddings:
+      collision_checking_space_name:
+        type: "full_mapping"
+      collision_object_space:
+        type: "full_mapping"
+      pumped_objects_space_name:
+        type: "hide_mapping"
+      search_space_name:
+        type: "hide_mapping"
+      real_world_space:
+        type: "hide_mapping"
+  </rosparam>
+
+  <!-- The b imaginary cups have to be removed from the real world-->
+  <!-- 
+  <rosparam ns="world_model/simulator/subsystems/cup_i1">
+    embeddings:
+      real_world_space:
+        type: "hide_mapping"
+  </rosparam>
+
+  <rosparam ns="world_model/simulator/subsystems/cup_i2">
+    embeddings:
+      real_world_space:
+        type: "hide_mapping"
+  </rosparam>
+  -->
+
+</launch>

@@ -1,0 +1,9 @@
+map:
+  type: obstacle
+  geometries:
+    - collision_geometry: {material: white,
+        type: point_cloud}
+      config:
+        orientation: [0, 0, 0, 1]
+        position: [0,0,0]
+      name: point_cloud

@@ -1,0 +1,4 @@
+simulator:
+  type: no_collision_simulator
+  simulation_step: 0.02
+

@@ -1,0 +1,48 @@
+prx:
+  spaces:
+    EMPTY: ""             #Empty
+    SE2: "EER"            #'X', 'Y', then 'Theta'
+    SE3: "EEEQQQQ"        #'X', 'Y', 'Z', then 'Orientation as a Quaternion'
+    X: "E"                #Single Euclidean Coordinate : 'X'
+    Xd: "E"               #Single coordinate 'Velocity' : 'Xdot'
+    Xdd: "E"              #Single coordinate 'Acceleration' : 'Xdotdot'
+    XY: "EE"              #Two Euclidean coordinates: 'X', 'Y'
+    XdYd: "EE"            #Two coordinates of 'Velocity' : 'Xdot' and 'Ydot'
+    XddYdd: "EE"          #Two coordinates of 'Acceleration' : 'Xdotdot' and 'Ydotdot'
+    XXd: "EE"             #Euclidean Coordinate 'X', and its derivative 'DOT'
+    XYZ: "EEE"            #Three Euclidean Coordinates: 'X', 'Y', 'Z'
+    TWO_D_BODY: "EEEE"    #X,Y AND DX, DY
+    D: "D"                #A single discrete coordinate: 'D'
+    R: "R"                #A rotational coordinate: 'R'
+    RR: "RR"              #A rotational coordinate: 'R'
+    Rd: "E"               #A euclidean rotational velocity coordinate 'Rdot'
+    Rdd: "E"              #A euclidean torque coordinate 'Rdotdot'
+    XR: "ER"              #A euclidean coordinate tied to some rotational one (Think cart-pole statespace)
+    XdRd: "EE"            #A euclidean-rotational coordinate pair derivative
+    XddRdd: "EE"          #A single acceleration and torque value : 'Xdotdot' and 'Rdotdot'
+    XXdRRd: "EERE"        #A euclidean and rotational coordinate with their derivatives.
+    SOCar: "EEREE"        #Corresponds to a second-order car statespace : 'X', 'Y', 'Theta' plus 'Velocity', 'Steering Angle'
+    Airplane: "EEEREEE"   #Airplane state (x,y,z,theta,v,z_dot,w)
+    AirControl: "EEE"     #Airplane control
+    RallyCar: "EEEEREEE"  #Rally car state (x,y,xdot,ydot,theta,thetadot,frontwheel,backwheel)
+    RallyCarTask: "EEER"  #Rally car task space state (x,y,V,theta)
+    WheelControl: "REE"   #Steering angle and wheel torques.
+    Vector: "ER"          #A rotational direction coordinate and a euclidean magnitude compoenent
+    OneLink: "RE"         #One-Link Acrobot State: 'Theta1', then 'Theta1dot'
+    TwoLink: "RREE"       #Two-link Acrobot State: 'Theta1', 'Theta2', then 'Theta1dot', 'Theta2dot'
+    ThreeLink: "RRREEE"   #Three-link Acrobot State: 'Theta[1,2,3]', then 'Theta[1,2,3]dot'
+    Time: "E"             #Time
+    DynamicRigidBody: "EEEQQQQEEEEEE" #Dynamic Rigid body state space (x,y,z,quaternion,dx,dy,dz,dyaw,dpitch,droll)
+    HeliControl: "EERR"   #Helicopter control (lift, yaw_force, blade pitch, blade roll)
+    bomb_state: "EEE"     #Bomberman stuff 
+    ODE_J: "E"            #A simple ODE control space (for joint control)
+    ODE_B: "E"            #A simple ODE control space (for body control)
+    SimpleManipulator: "EEERRRD" #'X', 'Y', 'Z', 'Theta', 'Theta2', 'Theta3' then grasping state
+    Baxter_Arm_Left: "EEEEEEED" # s0, s1, e0, e1, w0, w1, w2 angles & gripper state
+    ManipulationSampler: "EEERR"   #'X', 'Y', 'Z', 'Theta', 'Theta2', For the special manipulation sampler
+    ManipulationSamplerNear: "ERR"   #'Z', 'Theta', 'Theta2', For the special manipulation sampler
+    PointRawPitchYaw: "EEERRR" #'X', 'Y', 'Z', 'Theta', 'Theta2', 'Theta3'
+    ConstructionDiskState: "EEERRD" #'X', 'Y', 'Z', 'Disk Theta', 'Manipulator Theta', 'Grasp', State for the construction disk
+    ConstructionDiskControl: "ERDD" #'V', 'Theta', 'Z', 'Grasp', Control for the construction disk
+    Motoman: "EEEEEEEEEEEEEEEE" # 7 dof arms x2 + torso + grasp
+    Motoman_unigripper: "EEEEEEEEEEEEEEEEE" # 8 dof arm + 7 dof arm + torso + grasp

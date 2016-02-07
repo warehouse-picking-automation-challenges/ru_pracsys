@@ -1,0 +1,28 @@
+<launch>
+        
+  <rosparam command="load" file="$(find prx_input)/templates/applications/empty_application.yaml"/> 
+  <rosparam command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+  
+
+
+  <rosparam command="load" ns="baxter" file="$(find baxter)/input/urdf/baxter.yaml"/>
+  <rosparam command="load" ns="simulator">
+    manipulator_name: simulator/consumer/manipulator
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/consumer" file="$(find prx_input)/templates/controllers/consumer.yaml"/>
+  <rosparam ns="simulator/subsystems/consumer">
+  deserialize_plan: "/Users/pracsys2/wafr_plan.txt"
+  active_queries: false
+  </rosparam>
+  
+  <rosparam command="load" ns="simulator/subsystems/consumer/subsystems/manipulator">
+    template: "baxter"
+    hand: left
+  </rosparam>
+  
+  <rosparam command="load" ns="simulator/obstacles" file="$(find baxter)/input/simulation/baxter_torso.yaml" />
+   <!-- rosparam command="load" ns="simulator/obstacles" file="$(find baxter)/input/environments/shelf.yaml" / --> 
+  
+
+</launch>

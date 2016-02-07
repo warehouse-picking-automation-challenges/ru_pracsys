@@ -1,0 +1,21 @@
+<launch>
+
+  <!-- Include the world model you wish to use.  The namespace you place this in must match the planning node name below. -->
+  <include ns="planning" file="$(find prx_input)/experiments/RRT/planning/world_models/world_model.launch"/>
+
+  <!-- Include the planner structure you wish to use -->
+  <include ns="planning" file="$(find prx_input)/experiments/RRT/planning/planner_structures/planner_structure.launch"/>
+
+  <!-- What queries you wish to run -->
+  <include ns="planning" file="$(find prx_input)/experiments/RRT/planning/queries/query.launch"/>
+
+
+  <!-- Define the planning node -->
+  <!-- 	IMPORTANT! If you want simulation to run after the planning node has finished,
+	then you need to set the required attribute to false. -->
+
+  <node name="planning" pkg="prx_planning" type="prx_planning"
+        required="true" launch-prefix="gdb --args" output="screen" args="planning" />
+
+
+</launch>

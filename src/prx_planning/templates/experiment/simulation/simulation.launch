@@ -1,0 +1,40 @@
+<launch>
+
+  <!-- Load independent files -->
+        
+  <rosparam command="load" file="$(find prx_input)/templates/applications/..._application.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+
+  <!-- Load template files -->
+        
+  <rosparam command="load" ns="controller" file="$(find prx_input)/templates/controllers/....yaml"/>
+  <rosparam command="load" ns="plant" file="$(find prx_input)/templates/plants/....yaml"/>
+  
+  <!-- Override template parameters -->
+        
+  <rosparam ns="controller">
+  </rosparam>
+        
+  <rosparam ns="plant">
+  </rosparam>
+       
+  <!-- Set up concrete system tree -->
+   
+  <rosparam command="load" ns="simulator/subsystems/...">
+    template: "controller"
+  </rosparam>
+        
+  <rosparam command="load" ns="simulator/subsystems/.../subsystems/...">
+    template: "plant"
+  </rosparam>
+
+  <!-- Load an environment -->
+  <rosparam command="load" ns="/simulator/obstacles"
+     file="$(find prx_input)/templates/environments/....yaml"/>
+  
+  <!-- Define the simulation node -->
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+        required="true" output="screen" />
+
+</launch>

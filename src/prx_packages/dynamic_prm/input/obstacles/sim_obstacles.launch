@@ -1,0 +1,51 @@
+<launch>
+  <rosparam command="load" ns="simulator/subsystems/waypoints1" file="$(find prx_input)/templates/controllers/waypoint_controller.yaml" />
+  <rosparam command="load" ns="simulator/subsystems/waypoints1/subsystems/disk1" file="$(find prx_input)/templates/plants/disk.yaml" />
+  <rosparam command="load" ns="simulator/subsystems/waypoints1">
+    waypoints:
+      -
+        state: [-2,2]
+      -
+        state: [-2,-2]
+  </rosparam>
+  <rosparam command="load" ns="simulator/subsystems/waypoints1/subsystems/disk1">
+    initial_state: [-2,2]
+    z: 3.0
+    input_control_space:
+      min: [0, -3.14]
+      max: [0.75,  3.14]
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.25
+          height: 1.7
+          material: blue
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/waypoints2" file="$(find prx_input)/templates/controllers/waypoint_controller.yaml" />
+  <rosparam command="load" ns="simulator/subsystems/waypoints2/subsystems/disk2" file="$(find prx_input)/templates/plants/disk.yaml" />
+  <rosparam command="load" ns="simulator/subsystems/waypoints2">
+    waypoints:
+      -
+        state: [0.8,-1.2]
+      -
+        state: [0.8,0.3]
+  </rosparam>
+  <rosparam command="load" ns="simulator/subsystems/waypoints2/subsystems/disk2">
+    initial_state: [0.8,-1.2]
+    z: 3.0
+    input_control_space:
+      min: [0, -3.14]
+      max: [0.75,  3.14]
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.25
+          height: 1.7
+          material: blue
+  </rosparam>
+</launch>

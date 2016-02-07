@@ -1,0 +1,8 @@
+<package>
+  <description brief="Near Optimal Planning">
+      Near-Optimality test suite.
+  </description>
+  <author>Andrew Dobson</author>
+  <license>BSD</license>
+    <url>http://www.pracsyslab.org</url>
+</package>

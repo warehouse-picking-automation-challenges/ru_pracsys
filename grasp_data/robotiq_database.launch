@@ -1,0 +1,65 @@
+<launch>
+
+  
+  <rosparam>
+  robotiq_grasps:
+    cheezit_big_original:  1
+    crayola_64_ct:  1
+    elmers_washable_no_run_school_glue:  1
+    expo_dry_erase_board_eraser:  1
+    feline_greenies_dental_treats:  1
+    first_years_take_and_toss_straw_cup:  1
+    genuine_joe_plastic_stir_sticks:  1
+    highland_6539_self_stick_notes:  1
+    kong_air_dog_squeakair_tennis_ball:  1
+    kyjen_squeakin_eggs_plush_puppies:  1
+    mommys_helper_outlet_plugs:  1
+    munchkin_white_hot_duck_bath_toy:  1
+    oreo_mega_stuf:  1
+    rolodex_jumbo_pencil_cup:  1
+  </rosparam>
+
+  <!--
+  <rosparam ns="robotiq_grasps/cheezit_big_original"
+    file="$(find prx_planning)../../grasp_data/Robotiq/cheezit_big_original.yaml"/>
+  
+  <rosparam ns="robotiq_grasps/crayola_64_ct"
+    file="$(find prx_planning)../../grasp_data/Robotiq/crayola_64_ct.yaml"/>
+  
+  <rosparam ns="robotiq_grasps/elmers_washable_no_run_school_glue"
+    file="$(find prx_planning)../../grasp_data/Robotiq/elmers_washable_no_run_school_glue.yaml"/>
+  
+  <rosparam ns="robotiq_grasps/expo_dry_erase_board_eraser"
+    file="$(find prx_planning)../../grasp_data/Robotiq/expo_dry_erase_board_eraser.yaml"/>
+  
+  <rosparam ns="robotiq_grasps/feline_greenies_dental_treats"
+    file="$(find prx_planning)../../grasp_data/Robotiq/feline_greenies_dental_treats.yaml"/>
+  
+  <rosparam ns="robotiq_grasps/first_years_take_and_toss_straw_cup"
+    file="$(find prx_planning)../../grasp_data/Robotiq/first_years_take_and_toss_straw_cup.yaml"/>
+  
+  <rosparam ns="robotiq_grasps/genuine_joe_plastic_stir_sticks"
+    file="$(find prx_planning)../../grasp_data/Robotiq/genuine_joe_plastic_stir_sticks.yaml"/>
+  
+  <rosparam ns="robotiq_grasps/highland_6539_self_stick_notes"
+    file="$(find prx_planning)../../grasp_data/Robotiq/highland_6539_self_stick_notes.yaml"/>
+  
+  <rosparam ns="robotiq_grasps/kong_air_dog_squeakair_tennis_ball"
+    file="$(find prx_planning)../../grasp_data/Robotiq/kong_air_dog_squeakair_tennis_ball.yaml"/>
+
+  <rosparam ns="robotiq_grasps/kyjen_squeakin_eggs_plush_puppies"
+    file="$(find prx_planning)../../grasp_data/Robotiq/kyjen_squeakin_eggs_plush_puppies.yaml"/>
+
+  <rosparam ns="robotiq_grasps/mommys_helper_outlet_plugs"
+    file="$(find prx_planning)../../grasp_data/Robotiq/mommys_helper_outlet_plugs.yaml"/>
+
+  <rosparam ns="robotiq_grasps/munchkin_white_hot_duck_bath_toy"
+    file="$(find prx_planning)../../grasp_data/Robotiq/munchkin_white_hot_duck_bath_toy.yaml"/>
+
+  <rosparam ns="robotiq_grasps/munchkin_white_hot_duck_bath_toy"
+    file="$(find prx_planning)../../grasp_data/Robotiq/oreo_mega_stuf.yaml"/>
+
+  <rosparam ns="robotiq_grasps/oreo_mega_stuf"
+    file="$(find prx_planning)../../grasp_data/Robotiq/rolodex_jumbo_pencil_cup.yaml"/>
+-->
+</launch>

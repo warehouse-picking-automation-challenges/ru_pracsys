@@ -1,0 +1,11 @@
+{'x':1.12, 'y':0.0, 'z':-0.09, 'roll':0.0, 'pitch':0.0, 'yaw':0.0, 'width':0.873, 'height':0.995, 'depth':0.450, 'rows':4, 'cols':3, 'a_col_width':0.285, 'b_col_width':0.305, 'c_col_width':0.285, 'a_row_height':0.265, 'd_row_height':0.230, 'g_row_height':0.230, 'j_row_height':0.270, 'shelfs_lip_height':0.038, 'support_column_width':0.03}
+# DO NOT CHANGE THE PARAMETERS' ORDER
+# x -> distance from base origin (x axis) to the face of the shelf
+# y -> distance from base origin (y axis) to the center of the shelf
+# z -> distance from base origin (z axis) to the first shelf of the shelf (internal point)
+# roll, pitch and yaw -> rotation with respect to base (in degress; rotation is applied after translation)
+# width, height and depth -> related to the cuboid with the target shelfs of the shelf
+#   width -> external measurement
+#   height -> starting at the internal part of the first shelf and ending at the external part of the last shelf
+# xxx_row_heights -> from the internal part of one shelf to the internal part of the next, from botton to top
+# xxxx_col_widths -> external measurements

@@ -1,0 +1,95 @@
+<class name="prx_planning/rearrangement_manipulation_tp"
+    type="prx::packages::rearrangement_manipulation::rearrangement_manipulation_tp_t"
+    base_class_type="prx::plan::planner_t"> 
+    <description>
+        A task planner for a simple rearrangement manipulation problem.
+    </description>        
+</class>
+
+<class name="prx_planning/preprocess_manipulation_tp"
+    type="prx::packages::rearrangement_manipulation::preprocess_manipulation_tp_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        A task planner for running offline and build the informed graph for the rearrangement problem.
+    </description>        
+</class>
+
+<class name="prx_planning/manipulator_tp"
+    type="prx::packages::rearrangement_manipulation::manipulator_tp_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        A task planner for the manipulator task planner with extra information.
+    </description>        
+</class>
+
+<class name="prx_planning/manipulation_mp"
+    type="prx::packages::rearrangement_manipulation::manipulation_mp_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        A motion planner for informing the graph for the rearrangment problem.
+    </description>        
+</class>
+
+<class name="prx_planning/rearrangement_manipulation_specification"
+    type="prx::packages::rearrangement_manipulation::rearrangement_manipulation_specification_t"
+    base_class_type="prx::plan::specification_t">
+    <description>
+        The problem specification for the rearrangement manipulation problem.
+    </description>        
+</class>
+
+<class name="prx_planning/manipulator_specification"
+    type="prx::packages::rearrangement_manipulation::manipulator_specification_t"
+    base_class_type="prx::plan::specification_t">
+    <description>
+        The problem specification for the manipulator motion planner.
+    </description>        
+</class>
+
+<class name="prx_planning/manipulation_mp_specification"
+    type="prx::packages::rearrangement_manipulation::manipulation_mp_specification_t"
+    base_class_type="prx::plan::specification_t">
+    <description>
+        The problem specification for the manipulation motion planner.
+    </description>        
+</class>
+
+<class name="prx_planning/manipulator_query"
+    type="prx::packages::rearrangement_manipulation::manipulator_query_t"
+    base_class_type="prx::plan::query_t">
+    <description>
+        The query for the manipulator task planner inside the rearrangement problem.
+    </description>        
+</class>
+
+<class name="prx_planning/manipulator_mp_query"
+    type="prx::packages::rearrangement_manipulation::manipulator_mp_query_t"
+    base_class_type="prx::plan::query_t">
+    <description>
+        The query for the manipulator motion planner inside the rearrangement problem.
+    </description>        
+</class>
+
+<class name="prx_planning/obstacle_aware_astar"
+    type="prx::packages::rearrangement_manipulation::obstacle_aware_astar_t"
+    base_class_type="prx::plan::astar_module_t">
+    <description>
+        A special A* for the rearrangement manipulation problem.
+    </description>        
+</class>
+
+<class name="prx_planning/super_graph_astar"
+    type="prx::packages::rearrangement_manipulation::super_graph_astar_t"
+    base_class_type="prx::plan::astar_module_t">
+    <description>
+        A special A* for the super graph in the rearrangement manipulation problem.
+    </description>        
+</class>
+
+<class name="prx_planning/system_name_validity_checker"
+    type="prx::packages::rearrangement_manipulation::system_name_validity_checker_t"
+    base_class_type="prx::plan::validity_checker_t">
+    <description>
+        A validity checker for the obstacle aware A*.
+    </description>        
+</class>

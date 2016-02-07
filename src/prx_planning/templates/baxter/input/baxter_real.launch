@@ -1,0 +1,14 @@
+<launch>
+ 
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+  <include ns="simulation" file="$(find baxter)/input/simulation/baxter_real.launch"/>
+
+  <!-- Define the simulation node -->
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation" 
+    required="true" launch-prefix="" output="screen" args="simulation"/>
+
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+  
+</launch>
+
+

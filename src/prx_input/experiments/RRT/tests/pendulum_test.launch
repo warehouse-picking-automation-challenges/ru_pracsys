@@ -1,0 +1,13 @@
+<!-- This file has been tested on PRACSYS revision  -->
+
+<launch>
+
+  <include file="$(find prx_input)/experiments/RRT/simulation/pendulum_simulation.launch"/>
+  <include file="$(find prx_input)/experiments/RRT/planning/pendulum_planning.launch"/>
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+  <rosparam ns="visualization/viewer/scene" >
+   line_thickness: 3
+  </rosparam>
+
+</launch>

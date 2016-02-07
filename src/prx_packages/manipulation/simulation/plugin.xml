@@ -1,0 +1,41 @@
+<class name="prx_simulation/manipulation_simulator"
+    type="prx::packages::manipulation::manipulation_simulator_t"
+    base_class_type="prx::sim::simulator_t">
+    <description>
+        A simulator which deals with the manipulation problems.
+    </description>        
+</class>
+
+<class name="prx_simulation/simple_manipulator"
+    type="prx::packages::manipulation::simple_manipulator_plant_t"
+    base_class_type="prx::sim::system_t">
+    <description>
+        A plant that represent a simple manipulator.
+    </description>        
+</class>
+
+<class name="prx_simulation/movable_body"
+    type="prx::packages::manipulation::movable_body_plant_t"
+    base_class_type="prx::sim::system_t">
+    <description>
+        A plant that represent a movable body that is not controllable.
+    </description>        
+</class>
+
+<class name="prx_simulation/grasp_sensing_info"
+    type="prx::packages::manipulation::grasp_sensing_info_t"
+    base_class_type="prx::sim::sensing_info_t">
+    <description>
+        Sensing info for grasping.
+    </description>        
+</class>
+
+<class name="prx_simulation/simulated_grasp_sensor"
+    type="prx::packages::manipulation::simulated_grasp_sensor_t"
+    base_class_type="prx::sim::sensor_t">
+    <description>
+        Simulated grasp sensor.
+    </description>        
+</class>
+
+

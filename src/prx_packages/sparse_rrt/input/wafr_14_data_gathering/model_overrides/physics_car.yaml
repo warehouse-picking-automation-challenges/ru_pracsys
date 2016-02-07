@@ -1,0 +1,8 @@
+planning_contexts:
+  space1:
+    default: {type: bullet_car_to_se2}
+simulator:
+  type: bullet_simulator
+  gravity: [0,0,-9.8]
+  collision_checker:
+    type: bullet

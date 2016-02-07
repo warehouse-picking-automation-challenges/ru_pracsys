@@ -1,0 +1,447 @@
+<!-- Auto generated launch file for Baxter: 2 1 0 -->
+<launch>
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+
+  <!-- = = = = = = = -->
+  <!--   Simulation  -->
+  <!-- = = = = = = = -->
+  <!-- Load independent files -->
+  <rosparam command="load" ns="simulation" file="$(find prx_input)/templates/applications/empty_application.yaml"/>
+  <rosparam command="load" ns="simulation" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+  <!-- Load template files -->
+  <rosparam command="load" ns="simulation/controller" file="$(find prx_input)/templates/controllers/consumer.yaml"/>
+  <rosparam command="load" ns="simulation/plant" file="$(find baxter)input/urdf/baxter.yaml"/>
+
+  <!-- = = = = = = = -->
+  <!--    Planning   -->
+  <!-- = = = = = = = -->
+
+  <!-- Planning Contexts... We will need to make a list of these... -->
+  <rosparam ns="planning/world_model/planning_contexts">
+    space1:
+      default:
+        type: hide_mapping
+    space2:
+      default:
+        type: hide_mapping
+  </rosparam>
+
+  <!-- Consumer Mappings -->
+  <rosparam ns="planning">
+  system_mapping:
+  -
+    pair: [simulator/consumer1/baxter1, world_model/simulator/baxter1]
+  -
+    pair: [simulator/consumer2/baxter2, world_model/simulator/baxter2]
+  consumer: simulator/consumer1
+  </rosparam>
+
+  <rosparam command="load" ns="planning" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+  <rosparam command="load" ns="planning/world_model" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+  <rosparam command="load" ns="planning" file="$(find prx_input)/templates/planning_applications/single_query_application.yaml"/>
+  <rosparam command="load" ns="planning/task_planner/" file="$(find prx_input)/templates/task_planners/single_shot.yaml"/>
+
+  <!-- Load template files -->
+  <rosparam command="load" ns="planning/plant" file="$(find baxter)input/urdf/baxter.yaml"/>
+
+  <rosparam ns="planning">
+    random_seed: 8476
+    consumer_mapping:
+      -
+        pair: [simulator/consumer2, space2]
+  </rosparam>
+
+  <!-- = = = = = = = -->
+  <!--  Environment  -->
+  <!-- = = = = = = = -->
+
+
+  <!-- Baxter 1-->
+  <rosparam command="load" ns="simulation/simulator/subsystems/consumer1">
+    template: "controller"
+  </rosparam>
+
+  <rosparam command="load" ns="simulation/simulator/subsystems/consumer1/subsystems/baxter1">
+    template: "plant"
+    initial_state: [0.25684,-1.34394,0.42624,2.61800,2.84100,2.09400,-0.06762,0]
+    hand: left
+    forward_transform_rotation: [0,-1,0,1,0,0,0,0,1]
+    forward_transform_translation: [0,0,0]
+    inverse_transform_rotation: [0,1,0,-1,0,0,0,0,1]
+    inverse_transform_translation: [0,0,0]
+  </rosparam>
+
+  <!--rosparam ns="simulation/simulator/obstacles">
+    baxter1_torso:
+      type: obstacle
+      geometries:
+        -
+          name: pedestal1
+          collision_geometry:
+            type: box
+            dims: [0.90, 0.80, 0.05]
+            material: black
+          config:
+            position: [1.7, -0.04, 0.31]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: mesh
+            filename: meshes/base/pedestal.osg
+            material: black
+        -
+          name: torso1
+          collision_geometry:
+            type: cylinder
+            radius: 0.15
+            height: 1.6
+            material: black
+          config:
+            position: [1.7, -0.065, 1.085]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: mesh
+            filename: meshes/torso/base.osg
+            material: black
+        -
+          name: head1
+          collision_geometry:
+            type: cylinder
+            radius: 0.1
+            height: 0.25
+            material: black
+          config:
+            position: [1.7, 0.04, 1.585]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: box
+            dims: [0.01, 0.01, 0.01]
+            material: black
+  </rosparam-->
+
+  <rosparam command="load" ns="planning/world_model/simulator/subsystems/baxter1">
+    template: "plant"
+    initial_state: [0.25684,-1.34394,0.42624,2.61800,2.84100,2.09400,-0.06762,0]
+    hand: left
+    forward_transform_rotation: [0,-1,0,1,0,0,0,0,1]
+    forward_transform_translation: [0,0,0]
+    inverse_transform_rotation: [0,1,0,-1,0,0,0,0,1]
+    inverse_transform_translation: [0,0,0]
+    planning_contexts:
+      space1:
+        type: full_mapping
+  </rosparam>
+
+  <rosparam ns="planning/task_planner/planners/" >
+    planner1:
+      type: rrtc
+      heuristic_search:
+        type: prm_astar
+      stretch_factor: 1.5
+      space_name: "full_space"
+      visualization_body: "simulator/baxter/end_effector"
+      visualization_bodies: ["simulator/baxter/end_effector"]
+      visualize_graph: false
+      visualize_tree: false
+      visualize_solutions: false
+      sparse_delta: 25
+      dense_delta: 0.5
+      delta_prm: false
+      pno_mode: false
+      graph_color: "green"
+  </rosparam>
+
+  <!--rosparam ns="planning/world_model/simulator/obstacles">
+    baxter1_torso:
+      type: obstacle
+      geometries:
+        -
+          name: pedestal1
+          collision_geometry:
+            type: box
+            dims: [0.90, 0.80, 0.05]
+            material: black
+          config:
+            position: [1.7, -0.04, 0.31]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: mesh
+            filename: meshes/base/pedestal.osg
+            material: black
+        -
+          name: torso1
+          collision_geometry:
+            type: cylinder
+            radius: 0.15
+            height: 1.6
+            material: black
+          config:
+            position: [1.7, -0.065, 1.085]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: mesh
+            filename: meshes/torso/base.osg
+            material: black
+        -
+          name: head1
+          collision_geometry:
+            type: cylinder
+            radius: 0.1
+            height: 0.25
+            material: black
+          config:
+            position: [1.7, 0.04, 1.585]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: box
+            dims: [0.01, 0.01, 0.01]
+            material: black
+  </rosparam-->
+
+
+  <!-- TORSO -->
+  <rosparam ns="simulation/simulator/obstacles">
+    dual_baxter_torso:
+      type: obstacle
+      geometries:
+        -
+          name: pedestal
+          collision_geometry:
+            type: box
+            dims: [0.90, 0.80, 0.05]
+            material: black
+          config:
+            position: [0, -0.04, -0.575]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: mesh
+            filename: meshes/base/pedestal.osg
+            material: black
+        -
+          name: torso
+          collision_geometry:
+            type: cylinder
+            radius: 0.15
+            height: 1.6
+            material: black
+          config:
+            position: [0, -0.065, 0.3]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: mesh
+            filename: meshes/torso/base.osg
+            material: black
+        -
+          name: head
+          collision_geometry:
+            type: cylinder
+            radius: 0.1
+            height: 0.2
+            material: black
+          config:
+            position: [0, 0.04, 0.8]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: box
+            dims: [0.01, 0.01, 0.01]
+            material: black
+  </rosparam>
+  <rosparam ns="planning/world_model/simulator/obstacles">
+    dual_baxter_torso:
+      type: obstacle
+      geometries:
+        -
+          name: pedestal
+          collision_geometry:
+            type: box
+            dims: [0.90, 0.80, 0.05]
+            material: black
+          config:
+            position: [-0.04, 0, -0.575]
+            orientation: [0,0,0.382683432365090,0.923879532511287]
+          visualization_geometry:
+            type: mesh
+            filename: meshes/base/pedestal.osg
+            material: black
+        -
+          name: torso
+          collision_geometry:
+            type: cylinder
+            radius: 0.15
+            height: 1.6
+            material: black
+          config:
+            position: [-0.065, 0, 0.3]
+            orientation: [0,0,0.382683432365090,0.923879532511287]
+          visualization_geometry:
+            type: mesh
+            filename: meshes/torso/base.osg
+            material: black
+        -
+          name: head
+          collision_geometry:
+            type: cylinder
+            radius: 0.1
+            height: 0.2
+            material: black
+          config:
+            position: [0.04, 0, 0.8]
+            orientation: [0,0,0.382683432365090,0.923879532511287]
+          visualization_geometry:
+            type: box
+            dims: [0.01, 0.01, 0.01]
+            material: black
+  </rosparam>
+
+  <!-- Baxter 2-->
+  <rosparam command="load" ns="simulation/simulator/subsystems/consumer2">
+    template: "controller"
+  </rosparam>
+
+  <rosparam command="load" ns="simulation/simulator/subsystems/consumer2/subsystems/baxter2">
+    template: "plant"
+    initial_state: [-1.25684,-1.34394,0.42624,2.61800,2.84100,2.09400,-0.06762,0]
+    hand: right
+    forward_transform_rotation: [0,-1,0,1,0,0,0,0,1]
+    forward_transform_translation: [0,0,0]
+    inverse_transform_rotation: [0,1,0,-1,0,0,0,0,1]
+    inverse_transform_translation: [0,0,0]
+  </rosparam>
+
+  <!--rosparam ns="simulation/simulator/obstacles">
+    baxter2_torso:
+      type: obstacle
+      geometries:
+        -
+          name: pedestal2
+          collision_geometry:
+            type: box
+            dims: [0.90, 0.80, 0.05]
+            material: black
+          config:
+            position: [3.4, -0.04, 0.31]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: mesh
+            filename: meshes/base/pedestal.osg
+            material: black
+        -
+          name: torso2
+          collision_geometry:
+            type: cylinder
+            radius: 0.15
+            height: 1.6
+            material: black
+          config:
+            position: [3.4, -0.065, 1.085]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: mesh
+            filename: meshes/torso/base.osg
+            material: black
+        -
+          name: head2
+          collision_geometry:
+            type: cylinder
+            radius: 0.1
+            height: 0.25
+            material: black
+          config:
+            position: [3.4, 0.04, 1.585]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: box
+            dims: [0.01, 0.01, 0.01]
+            material: black
+  </rosparam-->
+
+  <rosparam command="load" ns="planning/world_model/simulator/subsystems/baxter2">
+    template: "plant"
+    initial_state: [-1.25684,-1.34394,0.42624,2.61800,2.84100,2.09400,-0.06762,0]
+    hand: right
+    forward_transform_rotation: [0,-1,0,1,0,0,0,0,1]
+    forward_transform_translation: [0,0,0]
+    inverse_transform_rotation: [0,1,0,-1,0,0,0,0,1]
+    inverse_transform_translation: [0,0,0]
+    planning_contexts:
+      space2:
+        type: full_mapping
+  </rosparam>
+
+  <rosparam ns="planning/task_planner/planners/" >
+    planner2:
+      type: rrtc
+      heuristic_search:
+        type: prm_astar
+      stretch_factor: 1.5
+      space_name: "full_space"
+      visualization_body: "simulator/baxter/end_effector"
+      visualization_bodies: ["simulator/baxter/end_effector"]
+      visualize_graph: false
+      visualize_tree: false
+      visualize_solutions: false
+      sparse_delta: 25
+      dense_delta: 0.5
+      delta_prm: false
+      pno_mode: false
+      graph_color: "green"
+  </rosparam>
+
+  <!--rosparam ns="planning/world_model/simulator/obstacles">
+    baxter2_torso:
+      type: obstacle
+      geometries:
+        -
+          name: pedestal2
+          collision_geometry:
+            type: box
+            dims: [0.90, 0.80, 0.05]
+            material: black
+          config:
+            position: [3.4, -0.04, 0.31]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: mesh
+            filename: meshes/base/pedestal.osg
+            material: black
+        -
+          name: torso2
+          collision_geometry:
+            type: cylinder
+            radius: 0.15
+            height: 1.6
+            material: black
+          config:
+            position: [3.4, -0.065, 1.085]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: mesh
+            filename: meshes/torso/base.osg
+            material: black
+        -
+          name: head2
+          collision_geometry:
+            type: cylinder
+            radius: 0.1
+            height: 0.25
+            material: black
+          config:
+            position: [3.4, 0.04, 1.585]
+            orientation: [0,0,0.707106781186547,0.707106781186548]
+          visualization_geometry:
+            type: box
+            dims: [0.01, 0.01, 0.01]
+            material: black
+  </rosparam-->
+
+
+
+  <!-- = = = = = = = -->
+  <!-- Visualization -->
+  <!-- = = = = = = = -->
+  <include file="$(find baxter)input/visualization.launch"/>
+
+  <!-- Define the simulation node -->
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation" required="true" launch-prefix="" output="screen" args="simulation" />
+
+</launch>
+

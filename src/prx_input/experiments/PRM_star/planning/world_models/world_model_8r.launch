@@ -1,0 +1,55 @@
+<launch>
+ <rosparam>
+  <!-- First define the mapping between simulation and world model plants. WARNING: DO NOT END IN A SLASH -->
+  system_mapping:
+  - 
+    pair: [simulator/consumer/router, world_model/simulator/router]
+  - 
+    pair: [simulator/consumer/router/disk1, world_model/simulator/router/disk1]
+  - 
+    pair: [simulator/consumer/router/disk2, world_model/simulator/router/disk2]
+  - 
+    pair: [simulator/consumer/router/disk3, world_model/simulator/router/disk3]
+  - 
+    pair: [simulator/consumer/router/disk4, world_model/simulator/router/disk4]
+  - 
+    pair: [simulator/consumer/router/disk5, world_model/simulator/router/disk5] 
+  - 
+    pair: [simulator/consumer/router/disk6, world_model/simulator/router/disk6] 
+  -
+    pair: [simulator/consumer/router/disk7, world_model/simulator/router/disk7] 
+  -
+    pair: [simulator/consumer/router/disk8, world_model/simulator/router/disk8] 
+  consumer: simulator/consumer
+  </rosparam>
+
+  <!-- 	First define the embedding names you are going to use. 
+	This part of the file only specifies the default mapping function
+	for things that don't define a mapping.-->
+  <rosparam ns="world_model/embeddings">
+  full_space:
+    default:
+      type: "full_mapping"
+  </rosparam>
+
+  <!-- This file is reincluded for the event where planning runs without simulation-->
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+
+  <!-- Specify the internal simulator and systems the world model will use -->
+  <rosparam ns="world_model" command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+  <!-- 	Set up concrete system tree. For each system with state, you can define an embedding for that state.
+	Otherwise, the default from above is used. -->
+  
+  <rosparam command="load" ns="world_model/simulator/subsystems/router" file="$(find prx_input)/templates/controllers/router.yaml"/>   
+  <rosparam command="load" ns="world_model/simulator/subsystems/router/subsystems/disk1" file="$(find prx_input)/templates/plants/disk_rigid_body.yaml"/>
+  <rosparam command="load" ns="world_model/simulator/subsystems/router/subsystems/disk2" file="$(find prx_input)/templates/plants/disk_rigid_body.yaml"/>
+  <rosparam command="load" ns="world_model/simulator/subsystems/router/subsystems/disk3" file="$(find prx_input)/templates/plants/disk_rigid_body.yaml"/>
+  <rosparam command="load" ns="world_model/simulator/subsystems/router/subsystems/disk4" file="$(find prx_input)/templates/plants/disk_rigid_body.yaml"/>
+  <rosparam command="load" ns="world_model/simulator/subsystems/router/subsystems/disk5" file="$(find prx_input)/templates/plants/disk_rigid_body.yaml"/>
+  <rosparam command="load" ns="world_model/simulator/subsystems/router/subsystems/disk6" file="$(find prx_input)/templates/plants/disk_rigid_body.yaml"/>
+  <rosparam command="load" ns="world_model/simulator/subsystems/router/subsystems/disk7" file="$(find prx_input)/templates/plants/disk_rigid_body.yaml"/>
+  <rosparam command="load" ns="world_model/simulator/subsystems/router/subsystems/disk8" file="$(find prx_input)/templates/plants/disk_rigid_body.yaml"/>
+
+
+</launch>

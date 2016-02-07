@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="kinect" params="prefix">
+
+    <link name="${prefix}kinect_base">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.075 0.085 0.03" />
+        </geometry>
+        <material name="black">
+          <color rgba="0.05 0.05 0.05 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.075 0.085 0.03" />
+        </geometry>
+        <material name="black">
+          <color rgba="0.05 0.05 0.05 1"/>
+        </material>
+      </collision>
+    </link>
+
+    <link name="${prefix}kinect_head">
+      <visual>
+        <origin xyz="0.0 0.0 0.03" rpy="0 0 0" />
+        <geometry>
+          <box size="0.065 0.282 0.035" />
+        </geometry>
+        <material name="black">
+          <color rgba="0.05 0.05 0.05 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0.0 0.03" rpy="0 0 0" />
+        <geometry>
+          <box size="0.065 0.28 0.035" />
+        </geometry>
+        <material name="black">
+          <color rgba="0.05 0.05 0.05 1"/>
+        </material>
+      </collision>
+    </link>
+
+    <link name="${prefix}RGB_camera">
+      <visual>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.01" length="0.011"/>
+        </geometry>
+        <material name="blackish">
+          <color rgba="0.09 0.09 0.09 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.01" length="0.011"/>
+        </geometry>
+        <material name="blackish">
+          <color rgba="0.09 0.09 0.09 1"/>
+        </material>
+      </collision>
+    </link>
+
+    <link name="${prefix}IR_camera">
+      <visual>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.01" length="0.011"/>
+        </geometry>
+        <material name="blackgreen">
+          <color rgba="0.09 0.29 0.09 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.01" length="0.011"/>
+        </geometry>
+        <material name="blackgreen">
+          <color rgba="0.09 0.29 0.09 1"/>
+        </material>
+      </collision>
+    </link>
+
+    <!-- Joints -->
+
+    <joint name="${prefix}kinect_hinge" type="fixed">
+      <origin xyz="0.0 0.0 0.005" rpy="0 0 0" />
+      <axis xyz="0 0 0" />
+      <parent link="${prefix}kinect_base" />
+      <child link="${prefix}kinect_head" />
+    </joint>
+
+    <joint name="${prefix}fixed_rgb" type="fixed">
+      <origin xyz="0.0275 -0.012 0.03" rpy="0 0 0" />
+      <axis xyz="0 0 0" />
+      <parent link="${prefix}kinect_head" />
+      <child link="${prefix}RGB_camera" />
+    </joint>    
+
+    <joint name="${prefix}fixed_ir" type="fixed">
+      <origin xyz="0.0275 0.012 0.03" rpy="0 1.5715 0" />
+      <axis xyz="0 0 0" />
+      <parent link="kinect_head" />
+      <child link="IR_camera" />
+    </joint>
+
+  </xacro:macro>
+</robot>

@@ -1,0 +1,19 @@
+<launch>
+
+  <rosparam>
+    reflex_grasps:
+      champion_copper_plus_spark_plug: 1
+      cheezit_big_original: 1
+      crayola_64_ct: 1
+      dr_browns_bottle_brush: 1
+      elmers_washable_no_run_school_glue: 1
+      expo_dry_erase_board_eraser: 1
+      feline_greenies_dental_treats: 1
+      kong_duck_dog_toy: 1
+      kyjen_squekin_eggs_plush_puppies: 1
+      munchkin_white_hot_duck_bath_toy: 1
+      oreo_mega_stuf: 1
+      stanley_66_052: 1
+  </rosparam>
+
+</launch>

@@ -1,0 +1,12 @@
+table:
+    type: obstacle
+    geometries:
+      -
+        name: top
+        collision_geometry: 
+          type: box
+          dims: [1.6, 1.1, 0.05]
+          material: gold       
+        config:
+          position: [0, 0, 0.025]
+          orientation: [0, 0, 0, 1]

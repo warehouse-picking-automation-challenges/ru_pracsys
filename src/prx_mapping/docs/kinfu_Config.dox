@@ -1,0 +1,10 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~stop" : \b [bool] Stop capturing and save current world to world.pcd min: False, default: False, max: True
+- \b "~first_rotating_axis" : \b [int] First rotating axis (0 = none, 1 = x, 2 = y, 3 = z) min: 0, default: 2, max: 3
+- \b "~first_rotating_axis_signal" : \b [double] First rotating axis signal min: -1.0, default: 1.0, max: 1.0
+- \b "~second_rotating_axis" : \b [int] Second rotating axis (0 = none, 1 = x, 2 = y, 3 = z) min: 0, default: 2, max: 3
+- \b "~second_rotating_axis_signal" : \b [double] Second rotating axis signal min: -1.0, default: 1.0, max: 1.0
+

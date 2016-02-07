@@ -1,0 +1,18 @@
+<class name="prx_simulation/dprm_sim_application"
+	type="prx::packages::dynamic_prm::dprm_sim_application_t"
+	base_class_type="prx::sim::application_t">
+	
+	<description>
+		Simulation application for dynamic PRM.
+	</description>
+</class>
+
+<class name="prx_simulation/feedback_controller"
+	type="prx::packages::dynamic_prm::feedback_controller_t"
+	base_class_type="prx::sim::system_t">
+	
+	<description>
+		Minor extension of consumer controller that sets up a feedback loop to constantly replan.
+	</description>
+</class>
+

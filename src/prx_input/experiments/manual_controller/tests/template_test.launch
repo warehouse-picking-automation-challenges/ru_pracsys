@@ -1,0 +1,17 @@
+<!-- This file has been tested on PRACSYS revision 2780 -->
+
+<launch>
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+        required="true" launch-prefix="" args= "simulation" output="screen"/>
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>      
+  <include ns="simulation" file="$(find prx_input)/experiments/manual_controller/simulation/template_simulation.launch"/>
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+    <rosparam ns="simulation/">
+      simulator:
+        type: collision_stop_simulator
+        simulation_step: 0.02
+        collision_checker:
+          type: circular
+    </rosparam>
+
+</launch>

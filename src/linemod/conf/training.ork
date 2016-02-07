@@ -1,0 +1,18 @@
+pipeline1:
+  type: LinemodTrainer
+  module: 'object_recognition_linemod'
+  parameters:
+    visualize: true
+    renderer_n_points: 5000
+    renderer_angle_step: 15
+    renderer_radius_min: 0.5
+    renderer_radius_max: 0.7
+    renderer_radius_step: 0.2
+    # object_ids: ['a9755f4c1dcff7fcc7ad758a74037add']
+    # object_ids: ['ef1f15d583839f71b7428006ab0832ad','ef1f15d583839f71b7428006ab084151','ef1f15d583839f71b7428006ab085002','ef1f15d583839f71b7428006ab08569c']
+    # object_name: 'object3'
+    object_ids: 'all'
+    db:
+      type: 'CouchDB'
+      root: 'http://localhost:5984'
+      collection: 'object_recognition'

@@ -1,0 +1,10 @@
+<launch>
+<!--
+<machine name="alberto-PC" address="172.16.71.21" env-loader="~/env.sh" user="alberto" password="1q2w3e4r" />
+ <node machine="alberto-PC" name="robotiq_force_torque_sensor_left" pkg="robotiq_force_torque_sensor" type="rq_sensor" args="0" />
+ <node name="rq_test_sensor" pkg="robotiq_force_torque_sensor" type="rq_test_sensor" />
+ <node name="robotiq_force_torque_sensor_right" pkg="robotiq_force_torque_sensor" type="rq_sensor" args="1 8" />
+-->
+ <node name="robotiqSModel" pkg="robotiq_s_model_control" type="SModelTcpNode.py" args="192.168.1.11" />
+
+</launch>

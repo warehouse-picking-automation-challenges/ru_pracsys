@@ -1,0 +1,21 @@
+<class name="prx_planning/heuristic_task_planner"
+    type="prx::packages::isst::heuristic_task_planner_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        Task planner that takes a roadmap and forms a heuristic from it.
+    </description>        
+</class>
+<class name="prx_planning/heuristic_task_specification"
+    type="prx::packages::isst::heuristic_task_specification_t"
+    base_class_type="prx::plan::specification_t">
+    <description>
+        Specification taking two motion planning specifications.
+    </description>        
+</class>
+<class name="prx_planning/clearance_validity_checker"
+    type="prx::packages::isst::clearance_validity_checker_t"
+    base_class_type="prx::plan::validity_checker_t">
+    <description>
+        Implements cost function with clearances.
+    </description>        
+</class>

@@ -1,0 +1,45 @@
+<launch>
+
+  <rosparam ns="queries">
+ query1:
+    type: manipulation_query
+    target_cup_name: simulator/subsystems/cup_a
+    target_pos: [50,50,2,0,0,2,0]
+    start_state: [-20,10,1.5,0,0,0,0]
+    moving_point: [10,-30,1.5,0,0,0,1]    
+    goal:
+      type: "goal_state"
+      distance_metric:
+        type: ann_distance_metric
+      goal_state: [10,10,1.5,0,0,0,1]
+    stopping_criteria:
+      elements:
+        criterion1:
+          type: iteration_criterion
+          condition: 20
+    max_poses: 20
+    extra_iterations: 0
+    safe_position: [-20,10,2,0,0,0,0]
+    k: 4
+    b: 3
+    initial_states:
+      -
+        name: simulator/cup_a
+        state: [10 10 1.5 0 0 0 1 ]
+      -
+        name: simulator/cup_a
+        state: [18 10 1.5 0 0 0 1]
+      -
+        name: simulator/cup_a
+        state: [18.00,2.00,1.50,0.00,0.00,0.00,1.00]
+      -
+        name: simulator/cup_a
+        state: [10.00,2.00,1.50,0.00,0.00,0.00,1.00]
+    extra_initial_states:
+      -
+        name: simulator/cup_a
+        state: [100,100,-100,0,0,0,1]
+  </rosparam>
+
+</launch>
+

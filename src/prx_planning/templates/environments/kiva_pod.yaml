@@ -1,0 +1,16 @@
+kiva_shelf:
+  type: obstacle
+  geometries:
+    -
+      name: shelf
+      collision_geometry:
+        type: mesh
+        filename: meshes/kiva_pod.stl
+        material: blue
+      visualization_geometry:
+        type: mesh
+        filename: meshes/kiva_pod.osg
+        material: black
+      config:
+        position: [-.1,1.5,2.1375]
+        orientation: [0.7071067811865476, 0, 0, 0.7071067811865476]

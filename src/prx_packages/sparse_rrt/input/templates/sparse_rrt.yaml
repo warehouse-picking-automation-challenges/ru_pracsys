@@ -1,0 +1,22 @@
+type: sparse_rrt
+validity_checker: 
+  type: world_model_validity_checker
+sampler:
+  type: uniform_sampler
+distance_metric:
+  type: linear_distance_metric
+local_planner:
+  type: time_varying_local_planner
+  lower_multiple: 10
+  upper_multiple: 50
+max_points: 1000000
+delta_drain: 1
+delta_near: 2
+max_attempts: 10
+collision_checking: true
+cost_threshold: 20
+visualize_tree: false
+visualize_solution: false
+visualization_tree_name: "/sparse_rrt/graph"
+visualization_solution_name: "/sparse_rrt/solution"
+visualization_body: body

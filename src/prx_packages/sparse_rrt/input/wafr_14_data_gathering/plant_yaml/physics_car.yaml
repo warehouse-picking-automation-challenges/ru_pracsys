@@ -1,0 +1,141 @@
+type: bullet_plant
+geometries:
+  -
+    name: chassis
+    collision_geometry:
+      type: box
+      dims: [3,1,1]
+      material: red
+    config: 
+      position: [0,0,1]
+      orientation: [0,0,0,1]
+    mass: 4
+  -
+    name: front_axle
+    collision_geometry:
+      type: box
+      dims: [.1,1,.1]
+      material: red
+    config: 
+      position: [1,0,.35]
+      orientation: [0,0,0,1]
+    mass: 1
+  -
+    name: rear_axle
+    collision_geometry:
+      type: box
+      dims: [.1,1,.1]
+      material: red
+    config: 
+      position: [-1,0,.35]
+      orientation: [0,0,0,1]
+    mass: 1
+  -
+    name: wheel1
+    collision_geometry:
+      type: cylinder
+      radius: .5
+      height: .2
+      material: blue
+    config: 
+      position: [1,.65,.45]
+      orientation: [0.707,0,0,0.707]
+    mass: 2
+  -
+    name: wheel2
+    collision_geometry:
+      type: cylinder
+      radius: .5
+      height: .2
+      material: blue
+    config: 
+      position: [1,-.65, .45]
+      orientation: [0.707,0,0,0.707]
+    mass: 2
+  -
+    name: wheel3
+    collision_geometry:
+      type: cylinder
+      radius: .5
+      height: .2
+      material: blue
+    config: 
+      position: [-1,.65,.45]
+      orientation: [0.707,0,0,0.707]
+    mass: 2
+  -
+    name: wheel4
+    collision_geometry:
+      type: cylinder
+      radius: .5
+      height: .2
+      material: blue
+    config: 
+      position: [-1,-.65,.45]
+      orientation: [0.707,0,0,0.707]
+    mass: 2
+controls:
+  -
+    name: chassis
+    bounds: [0, 100]
+    direction: [1,0,0]
+    relative_position: [0,0,0]
+    type: body_force
+    object: chassis
+  -
+    name: steering
+    bounds: [-20, 20]
+    direction: [0,0,-1]
+    relative_position: [0,0,0]
+    type: body_torque
+    object: front_axle
+joints:
+  -
+    type: generic
+    root_body: chassis
+    child_body: front_axle
+    linear_lower_limits: [0,0,0]
+    linear_upper_limits: [0,0,0]
+    angular_lower_limits: [0,0,-10]
+    angular_upper_limits: [0,0,10]
+  -
+    type: generic
+    root_body: chassis
+    child_body: rear_axle
+    linear_lower_limits: [0,0,0]
+    linear_upper_limits: [0,0,0]
+    angular_lower_limits: [0,0,0]
+    angular_upper_limits: [0,0,0]
+  -
+    type: generic
+    root_body: front_axle
+    child_body: wheel1
+    linear_lower_limits: [0,0,0]
+    linear_upper_limits: [0,0,0]
+    angular_lower_limits: [0,40,0]
+    angular_upper_limits: [0,-40,0]
+  -
+    type: generic
+    root_body: front_axle
+    child_body: wheel2
+    linear_lower_limits: [0,0,0]
+    linear_upper_limits: [0,0,0]
+    angular_lower_limits: [0,40,0]
+    angular_upper_limits: [0,-40,0]
+  -
+    type: generic
+    root_body: rear_axle
+    child_body: wheel3
+    linear_lower_limits: [0,0,0]
+    linear_upper_limits: [0,0,0]
+    angular_lower_limits: [0,40,0]
+    angular_upper_limits: [0,-40,0]
+  -
+    type: generic
+    root_body: rear_axle
+    child_body: wheel4
+    linear_lower_limits: [0,0,0]
+    linear_upper_limits: [0,0,0]
+    angular_lower_limits: [0,40,0]
+    angular_upper_limits: [0,-40,0]
+

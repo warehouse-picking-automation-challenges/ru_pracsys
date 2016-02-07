@@ -1,0 +1,42 @@
+<rosparam ns="PLANNER_NAME">
+simulate: true
+visualize: true
+</rosparam>
+<rosparam>
+application:
+  type: empty_application
+simulator:
+  type: collision_stop_simulator
+  collision_checker:
+    type: pqp
+  simulation_step: 0.005
+  subsystems:
+    consumer:
+      type: consumer_controller
+      planning_node: PLANNER_NAME
+</rosparam>
+
+<rosparam ns="simulator/subsystems/consumer/subsystems/system" file="plant_yaml/PLANT_FILE.yaml"/>
+<rosparam ns="simulator/obstacles" file="obstacle_yaml/OBSTACLE_FILE.yaml"/>
+<rosparam file="model_overrides/MODEL_OVERRIDE_FILE.yaml"/>
+<rosparam ns="PLANNER_NAME">
+system_mapping:
+  - 
+    pair: [simulator/consumer/system, world_model/simulator/system]
+
+consumer: simulator/consumer
+task_planner:
+  planners:
+    PLANNER_NAME:
+      visualization_body: simulator/system/body
+      visualize_tree: false
+      visualize_solution: true
+      visualize: true
+</rosparam>
+
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+        required="true" launch-prefix="" output="screen" />
+        
+  <node name="PLANNER_NAME" pkg="prx_planning" type="prx_planning"
+        required="false" launch-prefix="" output="screen" args="PLANNER_NAME" /> 
+<include file="$(find prx_input)/templates/visualization/visualization.launch"/>

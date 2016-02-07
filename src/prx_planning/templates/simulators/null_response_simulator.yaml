@@ -1,0 +1,5 @@
+simulator:
+  type: null_response_simulator
+  simulation_step: 0.02
+  collision_checker:
+    type: pqp

@@ -1,0 +1,8 @@
+<package>
+	<description brief="Dynamic PRM Test">
+		An environment with moving obstacles for testing dynamic versions of PRM.
+	</description>
+	<author>Justin Cardoza</author>
+	<license>BSD</license>
+	<url>http://www.pracsyslab.org</url>
+</package>

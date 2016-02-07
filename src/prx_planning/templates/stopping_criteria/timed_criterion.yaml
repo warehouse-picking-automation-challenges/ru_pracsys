@@ -1,0 +1,3 @@
+type: timed_criterion
+criterion_type: timed
+time_limit: 60.0

@@ -1,0 +1,3 @@
+radius: 1
+start_state: [0,0]
+goal_state: [9,9]

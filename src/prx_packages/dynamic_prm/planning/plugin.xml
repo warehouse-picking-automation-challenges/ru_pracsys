@@ -1,0 +1,56 @@
+<class name="prx_planning/dprm_plan_application"
+	type="prx::packages::dynamic_prm::dprm_plan_application_t"
+	base_class_type="prx::plan::planning_application_t">
+	
+	<description>
+		Planning application for dynamic PRM.
+	</description>
+</class>
+<class name="prx_planning/dprm_task_planner"
+	type="prx::packages::dynamic_prm::dprm_task_planner_t"
+	base_class_type="prx::plan::planner_t">
+	
+	<description>
+		Task planner for dynamic PRM.
+	</description>
+</class>
+<class name="prx_planning/dprm_motion_planner"
+	type="prx::packages::dynamic_prm::dprm_motion_planner_t"
+	base_class_type="prx::plan::planner_t">
+	
+	<description>
+		Motion planner for dynamic PRM.
+	</description>
+</class>
+<class name="prx_planning/serializing_task_planner"
+	type="prx::packages::dynamic_prm::serializing_task_planner_t"
+	base_class_type="prx::plan::planner_t">
+	
+	<description>
+		Serializing task planner for dynamic PRM.
+	</description>
+</class>
+<class name="prx_planning/roadmap_validity_checker"
+	type="prx::packages::dynamic_prm::roadmap_validity_checker_t"
+	base_class_type="prx::plan::validity_checker_t">
+	
+	<description>
+		Validity checker for operating with roadmaps and state updates.
+	</description>
+</class>
+<class name="prx_planning/plan_shell_app"
+	type="prx::packages::dynamic_prm::plan_shell_app_t"
+	base_class_type="prx::plan::planning_application_t">
+	
+	<description>
+		Client planner for distributed planning on dynamic PRM.
+	</description>
+</class>
+<class name="prx_planning/plan_remote_app"
+	type="prx::packages::dynamic_prm::plan_remote_app_t"
+	base_class_type="prx::plan::planning_application_t">
+	
+	<description>
+		Worker planner for distributed planning on dynamic PRM.
+	</description>
+</class>

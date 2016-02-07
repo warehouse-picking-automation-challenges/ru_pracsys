@@ -1,0 +1,6 @@
+type: multi_planner
+stats_criteria:
+  elements:
+    criterion1:
+      type: iteration_criterion
+      condition: 10000

@@ -1,0 +1,3 @@
+string[] plant_paths
+geometry_msgs/Pose[] ghost_configs
+---

@@ -1,0 +1,33 @@
+<launch>
+
+  <!-- Load independent files -->
+
+  <rosparam command="load" file="$(find prx_input)/templates/applications/empty_application.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+  <!-- Load template files -->
+
+  <rosparam command="load" ns="controller" file="$(find prx_input)/templates/controllers/consumer.yaml"/>
+  <rosparam command="load" ns="plant" file="$(find baxter)input/urdf/baxter.yaml"/>
+
+  <!-- Override template parameters -->
+
+  <rosparam ns="controller">
+  </rosparam>
+
+  <!-- Set up concrete system tree -->
+
+  <rosparam command="load" ns="simulator/subsystems/consumer">
+    template: "controller"
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/consumer/subsystems/baxter">
+    template: "plant"
+    initial_state: [1.40684,-1.24394,0.02624,2.26800,3.02419,1.02000,-0.06762,0.00000]
+    hand: left
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/obstacles" file="$(find baxter)/input/simulation/baxter_torso.yaml" />
+  <!-- <rosparam command="load" ns="simulator/obstacles" file="$(find manipulation)/input/environments/table.yaml" /> -->
+
+</launch>

@@ -1,0 +1,15 @@
+shelf_wall:
+  type: obstacle
+  geometries:
+    -
+      name: platform
+      collision_geometry:
+        type: box
+        dims: [0.4, 0.05, 0.45]
+        material: white
+      config:
+        position: [0, 1.1, 3.4005]
+        orientation: [0, 0, 0, 1]
+
+
+      

@@ -1,0 +1,8 @@
+<package>
+  <description brief="RRT* with Shooting">
+    RRT* with Shooting
+  </description>
+  <author>Zakary Littlefield</author>
+  <license>BSD</license>
+  <url>http://www.pracsyslab.org</url>
+</package>

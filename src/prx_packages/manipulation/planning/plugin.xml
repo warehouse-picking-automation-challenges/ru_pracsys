@@ -1,0 +1,39 @@
+<class name="prx_planning/manipulation_application"
+    type="prx::packages::manipulation::manipulation_application_t"
+    base_class_type="prx::plan::planning_application_t">
+    <description>
+        An application for the manipulation problems.
+    </description>        
+</class>
+
+<class name="prx_planning/manipulation_tp"
+    type="prx::packages::manipulation::manipulation_tp_t"
+    base_class_type="prx::plan::planner_t">
+    <description>
+        A task planner for a simple manipulation problem.
+    </description>        
+</class>
+
+<class name="prx_planning/manip_sampler"
+    type="prx::packages::manipulation::manip_sampler_t"
+    base_class_type="prx::plan::sampler_t">
+    <description>
+        A sampler for sampling a manipulator with an object.
+    </description>        
+</class>
+
+<class name="prx_planning/manipulation_query"
+    type="prx::packages::manipulation::manipulation_query_t"
+    base_class_type="prx::plan::query_t">
+    <description>
+        The query for the manipulation problem.
+    </description>        
+</class>
+
+<class name="prx_planning/manipulation_specification"
+    type="prx::packages::manipulation::manipulation_specification_t"
+    base_class_type="prx::plan::specification_t">
+    <description>
+        The problem specification for the manipulation problem.
+    </description>        
+</class>

@@ -1,0 +1,11 @@
+<package>
+  <name>prx_input</name>
+  <version>0.0.1</version>
+  <description >
+    Input files common to multiple prx packages.
+  </description>
+  <author>Kostas Bekris</author>
+  <license>BSD</license>
+  <maintainer email="kostas.bekris@cs.rutgers.edu">Kostas Bekris</maintainer>
+  <url>pracsyslab.org</url>
+</package>

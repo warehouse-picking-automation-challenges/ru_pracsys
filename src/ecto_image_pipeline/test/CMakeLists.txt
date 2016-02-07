@@ -1,0 +1,29 @@
+catkin_add_gtest(image_pipeline-test
+  main.cpp
+  pinhole.cpp
+  test_pose_graph.cpp
+  )
+
+target_link_libraries(image_pipeline-test
+                      ecto_image_pipeline
+                      ${catkin_LIBRARIES}
+)
+
+macro(pytest pyfile)
+  string(REPLACE ";" " " args "${ARGN}")
+
+  add_test(ecto_image_pipeline_${pyfile}
+    ${CATKIN_ENV}
+    ${CMAKE_CURRENT_SOURCE_DIR}/${pyfile}.py ${ARGN}
+    )
+endmacro()
+
+option(DESKTOP_TEST "Desktop tests will attempt to run tests that may require graphics or devices." OFF)
+if(DESKTOP_TEST)
+    pytest(test_source --niter 100)
+endif()
+
+if(ROS_TEST)
+  pytest(test_common_io_ros_source_kinect)
+  pytest(test_common_io_ros_source_bag_reader)
+endif()

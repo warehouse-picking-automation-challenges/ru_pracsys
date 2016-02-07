@@ -1,0 +1,117 @@
+{
+  "bin_contents":
+  {
+    "bin_A":
+    [
+      "munchkin_white_hot_duck_bath_toy",
+      "crayola_64_ct",
+      "champion_copper_plus_spark_plug",
+      "highland_6539_self_stick_notes"
+    ],
+    "bin_B":
+    [
+      "munchkin_white_hot_duck_bath_toy",
+      "crayola_64_ct",
+      "champion_copper_plus_spark_plug",
+      "highland_6539_self_stick_notes"
+    ],
+    "bin_C":
+    [
+      "munchkin_white_hot_duck_bath_toy",
+      "crayola_64_ct",
+      "champion_copper_plus_spark_plug",
+      "highland_6539_self_stick_notes"
+    ],
+    "bin_D":
+    [
+      "munchkin_white_hot_duck_bath_toy",
+      "crayola_64_ct",
+      "champion_copper_plus_spark_plug",
+      "highland_6539_self_stick_notes"
+    ],
+    "bin_E":
+    [
+      "munchkin_white_hot_duck_bath_toy",
+      "crayola_64_ct",
+      "champion_copper_plus_spark_plug",
+      "highland_6539_self_stick_notes"
+    ],
+    "bin_F":
+    [
+      "munchkin_white_hot_duck_bath_toy",
+      "crayola_64_ct",
+      "champion_copper_plus_spark_plug",
+      "highland_6539_self_stick_notes"
+    ],
+    "bin_G":
+    [
+      "munchkin_white_hot_duck_bath_toy",
+      "crayola_64_ct",
+      "champion_copper_plus_spark_plug",
+      "highland_6539_self_stick_notes"
+    ],
+    "bin_H":
+    [
+      "munchkin_white_hot_duck_bath_toy",
+      "crayola_64_ct",
+      "champion_copper_plus_spark_plug",
+      "highland_6539_self_stick_notes"
+    ],
+    "bin_I":
+    [
+      "munchkin_white_hot_duck_bath_toy",
+      "crayola_64_ct",
+      "champion_copper_plus_spark_plug",
+      "highland_6539_self_stick_notes"
+    ],
+    "bin_J":
+    [
+      "munchkin_white_hot_duck_bath_toy",
+      "crayola_64_ct",
+      "champion_copper_plus_spark_plug",
+      "highland_6539_self_stick_notes"
+    ],
+    "bin_K":
+    [
+      "munchkin_white_hot_duck_bath_toy",
+      "crayola_64_ct",
+      "champion_copper_plus_spark_plug",
+      "highland_6539_self_stick_notes"
+    ],
+    "bin_L":
+    [
+      "munchkin_white_hot_duck_bath_toy",
+      "crayola_64_ct",
+      "champion_copper_plus_spark_plug",
+      "highland_6539_self_stick_notes"
+    ]
+  },
+
+  "work_order":
+  [
+    {
+      "bin": "bin_G",
+      "item": "crayola_64_ct"
+    },
+    {
+      "bin": "bin_H",
+      "item": "crayola_64_ct"
+    },
+    {
+      "bin": "bin_I",
+      "item": "crayola_64_ct"
+    },
+    {
+      "bin": "bin_J",
+      "item": "crayola_64_ct"
+    },
+    {
+      "bin": "bin_K",
+      "item": "crayola_64_ct"
+    },
+    {
+      "bin": "bin_L",
+      "item": "crayola_64_ct"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+<launch>
+ <rosparam file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+
+<rosparam ns="simulation" file="$(find prx_input)/templates/applications/empty_application.yaml"/>
+<rosparam ns="simulation" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+<rosparam ns="simulation/controller" file="$(find prx_input)/templates/controllers/consumer.yaml"/>
+<rosparam ns="simulation/plant" file="$(find prx_input)/templates/plants/disk.yaml"/>
+
+<rosparam ns="simulation/simulator/subsystems/consumer">
+  template: "controller"
+  keep_last_control: false
+  keep_last_state: true
+</rosparam>
+
+<rosparam ns="simulation/simulator/subsystems/consumer/subsystems/rover">
+template: "plant"
+initial_state: [-760,0]
+</rosparam>
+
+<!--
+  <rosparam ns="simulation/simulator/obstacles" file="$(find REU_2014_VO)/input/templates/environments/large_maze.yaml" />
+-->
+  <rosparam ns="simulation/simulator/obstacles" file="$(find prx_input)/templates/environments/lots_of_rows.yaml" />
+  <rosparam ns="planning" file="$(find prx_input)/templates/planning_applications/single_query_application.yaml"/>
+
+<rosparam ns="planning">
+random_seed: 56849
+consumer_mapping:
+  - 
+    pair: [simulator/consumer, true_space]
+</rosparam>
+        
+  <!-- Load template files -->
+       
+  <rosparam ns="planning/motion_planner/" file="$(find prx_input)/templates/motion_planners/sst.yaml"/>
+  <rosparam ns="planning/motion_planner2/" file="$(find prx_input)/templates/motion_planners/rrt_star.yaml"/>
+ 
+  <rosparam ns="planning/task_planner/" >
+    type: heuristic_task_planner
+    real_planner: isst
+    heuristic_planner: prm
+    stats_criteria:
+      elements:
+        criterion1:
+          condition: 100
+          type: iteration_criterion
+  </rosparam>
+
+<rosparam ns="planning/task_planner/planners/" >
+isst:
+  template: "motion_planner"
+  type: isst
+  space_name: "true_space"
+  visualization_body: "simulator/rover/body"
+  visualize_tree: false
+  visualize_solution: true
+  sample_metric:
+    type: graph_distance_metric
+  max_points: 100000
+  delta_drain: 10
+  steering: false
+  delta_near: 12
+  rrt_first: false
+  use_heuristic: true
+  use_trrt_heuristic: false
+  branch_and_bound: true
+  complex_heuristic: true
+  sst_only: false
+  graph_color: white
+  solution_color: blue
+prm:
+  template: "motion_planner2"
+  type: rrt_star
+  stretch_factor: 2.5
+  space_name: "approximate_space"
+  sample_metric:
+    type: graph_distance_metric
+  max_points: 200001
+  delta_drain: 1
+  steering: false
+  delta_near: 2
+  visualization_body: "simulator/rigid_rover/body"
+  visualize_tree: true
+  visualize_solution: false
+  graph_color: green
+  rrt_first: false
+  use_heuristic: false
+  use_trrt_heuristic: false
+  branch_and_bound: false
+  complex_heuristic: false
+  sst_only: true
+</rosparam>
+       
+  <rosparam ns="planning/query_type" file="$(find prx_input)/templates/queries/motion_planning_query.yaml"/>
+<rosparam ns="planning/problems">
+problem1:
+  specification:
+    type: heuristic_task_specification
+    state_mapping: 
+      type: full_mapping
+    real_specification:
+      type: motion_planning_specification
+      validity_checker: 
+        type: world_model_validity_checker
+        cost_function: trrt_cost_function
+      sampler:
+        type: uniform_sampler
+      distance_metric:
+        type: graph_distance_metric
+      local_planner:
+        type: time_varying_local_planner
+        lower_multiple: 10
+        upper_multiple: 100
+      seeds:
+        -
+          state: [-760,0]
+      stopping_criteria:
+        elements:
+          criterion1:
+            type: timed_criterion
+            condition: 60
+    heuristic_specification:
+      type: motion_planning_specification
+      validity_checker: 
+        type: world_model_validity_checker
+        cost_function: trrt_cost_function
+      sampler:
+        type: uniform_sampler
+      distance_metric:
+        type: graph_distance_metric
+      local_planner:
+        type: bvp_local_planner
+      seeds:
+        -
+          state: [760,0]
+      stopping_criteria:
+        elements:
+          criterion1:
+            type: iteration_criterion
+            condition: 200000
+  query:
+    template: "query_type"
+    start_state: [-760,0]
+    goal:
+      type: "radial_goal_region"
+      distance_metric:
+        type: ann_distance_metric
+      goal_state: [760,0]
+      radius: 10
+</rosparam>
+
+<rosparam ns="planning">
+  system_mapping:
+  - 
+    pair: [simulator/consumer/rover, world_model/simulator/rover]
+
+  consumer: simulator/consumer
+</rosparam>
+
+<rosparam ns="planning/world_model/planning_contexts">
+true_space:
+  default:
+    type: "full_mapping"
+approximate_space:
+  default:
+    type: "full_mapping"
+</rosparam>
+  <rosparam ns="planning/world_model" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+
+<!--
+  <rosparam ns="planning/world_model/simulator/obstacles" file="$(find REU_2014_VO)/input/templates/environments/large_maze.yaml" />
+-->
+
+<rosparam ns="planning/world_model/simulator/obstacles" file="$(find prx_input)/templates/environments/lots_of_rows.yaml" />
+
+  <rosparam ns="planning/world_model/simulator/subsystems/rover" file="$(find prx_input)/templates/plants/disk.yaml"/>
+
+  <rosparam ns="planning/world_model/simulator/subsystems/rigid_rover" file="$(find prx_input)/templates/plants/disk.yaml"/>
+  
+  <rosparam ns="planning/world_model/simulator/subsystems/rigid_rover">
+planning_contexts:
+  true_space: 
+    type: hide_mapping
+  </rosparam> 
+
+  
+  <rosparam ns="planning/world_model/simulator/subsystems/rover">
+planning_contexts:
+  approximate_space: 
+    type: hide_mapping
+  </rosparam>
+
+<node name="simulation" pkg="prx_simulation" type="prx_simulation" required="true" launch-prefix="" output="screen" args="simulation"/>
+
+<node name="planning" pkg="prx_planning" type="prx_planning" required="false" launch-prefix="" output="screen" args="planning" />
+
+<include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+
+</launch>

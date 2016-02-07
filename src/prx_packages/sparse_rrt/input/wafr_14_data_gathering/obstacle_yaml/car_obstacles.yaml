@@ -1,0 +1,102 @@
+building1:
+  type: bullet_obstacle
+  geometries:
+    -
+      name: right_wall
+      collision_geometry:
+        type: box
+        dims: [10,200,30]
+        material: black
+      config:
+        position: [100,0,1]
+        orientation: [0,0,0,1]
+    -
+      name: upper_wall
+      collision_geometry:
+        type: box
+        dims: [200,10,30]
+        material: black
+      config:
+        position: [0,100,1]
+        orientation: [0,0,0,1]
+    -
+      name: lower_wall
+      collision_geometry:
+        type: box
+        dims: [200,10,30]
+        material: black
+      config:
+        position: [0,-100,1]
+        orientation: [0,0,0,1]
+    -
+      name: left_wall
+      collision_geometry:
+        type: box
+        dims: [10,200,30]
+        material: black
+      config:
+        position: [-100,0,1]
+        orientation: [0,0,0,1]
+    -
+      name: back_stop
+      collision_geometry:
+        type: box
+        dims: [10,50,30]
+        material: black
+      config:
+        position: [-30,0,0]
+        orientation: [0,0,0,1]
+    -
+      name: top_barrier
+      collision_geometry:
+        type: box
+        dims: [70,10,30]
+        material: black
+      config:
+        position: [0,20,0]
+        orientation: [0,0,0,1]
+    -
+      name: bottom_barrier
+      collision_geometry:
+        type: box
+        dims: [70,10,30]
+        material: black
+      config:
+        position: [0,-20,0]
+        orientation: [0,0,0,1]
+    -
+      name: obstacle1
+      collision_geometry:
+        type: box
+        dims: [10,30,30]
+        material: black
+      config:
+        position: [30,70,0]
+        orientation: [0,0,0,1]
+    -
+      name: obstacle2
+      collision_geometry:
+        type: box
+        dims: [10,30,30]
+        material: black
+      config:
+        position: [-30,50,0]
+        orientation: [0,0,0,1]
+    -
+      name: obstacle3
+      collision_geometry:
+        type: box
+        dims: [10,60,30]
+        material: black
+      config:
+        position: [-30,-60,0]
+        orientation: [0,0,0,1]
+    -
+      name: obstacle4
+      collision_geometry:
+        type: box
+        dims: [10,60,30]
+        material: black
+      config:
+        position: [40,-60,0]
+        orientation: [0,0,0.3826834323650897,0.9238795325112867]

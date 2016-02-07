@@ -1,0 +1,15 @@
+<!-- This file has been tested on PRACSYS revision  -->
+
+<launch>
+
+  <include ns="simulation" file="$(find tutorial)/input/simulation/simulation.launch"/>
+  <include file="$(find tutorial)/input/planning/planning.launch"/>
+  <include file="$(find prx_input)/templates/visualization/visualization.launch"/>
+
+  <rosparam command="load" file="$(find prx_input)/templates/spaces/space_types.yaml"/>
+
+  <!-- Define the simulation node -->
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+        required="true" launch-prefix="" output="screen" args="simulation" />
+
+</launch>

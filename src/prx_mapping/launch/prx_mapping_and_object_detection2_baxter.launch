@@ -1,0 +1,57 @@
+<launch>
+<!--
+	<node name="prx_motion_planning" pkg="prx_motion_planning" type="move_baxter_to_origin.py" 
+		output="screen" >
+        </node>
+-->
+	<include file="$(find freenect_launch)/launch/freenect.launch"/>
+
+	<node name="prx_mapping_node" pkg="prx_mapping" type="prx_mapping_node" required="true" output="screen">
+        </node>
+
+	<node name="image_view_rgb" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera/rgb/image_color"/>
+	</node>
+
+	<node name="image_view_depth" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera/depth/image"/>
+	</node>
+
+	<node name="image_view_kinfu" pkg="image_view" type="image_view">
+		<remap from="image" to="/camera/kinfuLS/depth"/>
+	</node>
+
+	<node name="prx_localizer" pkg="prx_localizer" type="prx_localizer" required="true" output="screen">
+	</node>
+
+	<node name="object_recognition_core" pkg="object_recognition_core" type="detection" 
+		args="-c $(find object_recognition_linemod)/conf/detection.ros.ork" 
+		required="true" output="screen" >
+        </node>
+
+
+	<node name="dynamic_reconfigure0" pkg="dynamic_reconfigure" type="dynparam" args="set /camera/driver depth_registration True" 
+		output="screen" >
+        </node>
+
+<!--
+	<node name="dynamic_reconfigure1" pkg="dynamic_reconfigure" type="dynparam" args="set /camera/driver data_skip 10" 
+		output="screen" >
+        </node>
+-->
+
+	<node name="dynamic_reconfigure2" pkg="dynamic_reconfigure" type="dynparam" args="set /prx_mapping_node first_rotating_axis 1" 
+		output="screen" >
+        </node>
+
+	<node name="dynamic_reconfigure3" pkg="dynamic_reconfigure" type="dynparam" 
+		args="load /robot/left_joint_position_controller/joints/left_s0_controller/pid $(find prx_decision_making)/../../robot_s0.yaml" 
+		output="screen" >
+	</node>
+
+	<node name="dynamic_reconfigure4" pkg="dynamic_reconfigure" type="dynparam" 
+		args="load /robot/left_joint_position_controller/joints/left_s1_controller/pid $(find prx_decision_making)/../../robot_s1.yaml" 
+		output="screen" >
+	</node>
+
+</launch>

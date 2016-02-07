@@ -1,0 +1,31 @@
+<launch>
+  <!-- Load the planning application -->
+
+  <!-- Load template files -->
+       
+  <rosparam command="load" ns="motion_planner" file="$(find prx_input)/templates/motion_planners/...yaml"/>
+ 
+  <!-- We currently only support one task planner. It will be future work to bring task planners that work on task planners. -->
+  <rosparam command="load" ns="task_planner" file="$(find prx_input)/templates/task_planners/...yaml"/>
+
+  <!-- Overwrite any parameters for the template or the task planner -->
+  <rosparam ns="task_planner" >
+  </rosparam>
+
+  <!-- Set up the motion planners used in the task planner. 
+	 1) can either be from template or loading a yaml and rewriting the values
+	 2) the space name needs to correspond to the names in the world_model file -->
+  <rosparam ns="task_planner/planners" >
+  planner1:
+    template: "motion_planner"
+    space_name: "space1"
+  planner2:
+    template: "motion_planner"
+    space_name: "space2"
+  </rosparam>
+
+
+
+
+
+</launch>

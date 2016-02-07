@@ -1,0 +1,8 @@
+<package>
+  <description brief="Baxter plant">
+    This package includes the baxter plant.
+  </description>
+  <author>Rahul Shome</author>
+  <license>BSD</license>
+  <url>http://www.pracsyslab.org</url>
+</package>

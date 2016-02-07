@@ -1,0 +1,41 @@
+<launch>
+  <rosparam command="load" ns="world_model/simulator/subsystems/disk1" file="$(find prx_input)/templates/plants/disk.yaml" />
+  <rosparam command="load" ns="world_model/simulator/subsystems/disk1">
+    initial_state: [-2,2]
+    z: 3.0
+    input_control_space:
+      min: [0, -3.14]
+      max: [0.75,  3.14]
+    embeddings:
+      space1:
+        type: obstacle_mapping
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.25
+          height: 1.7
+          material: blue
+  </rosparam>
+
+  <rosparam command="load" ns="world_model/simulator/subsystems/disk2" file="$(find prx_input)/templates/plants/disk.yaml" />
+  <rosparam command="load" ns="world_model/simulator/subsystems/disk2">
+    initial_state: [0.8,-1.2]
+    z: 3.0
+    input_control_space:
+      min: [0, -3.14]
+      max: [0.75,  3.14]
+    embeddings:
+      space1:
+        type: obstacle_mapping
+    geometries:
+      -
+        name: body
+        collision_geometry:
+          type: cylinder
+          radius: 0.25
+          height: 1.7
+          material: blue
+  </rosparam>
+</launch>

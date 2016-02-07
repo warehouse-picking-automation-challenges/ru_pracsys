@@ -1,0 +1,19 @@
+<launch>
+	<arg name="kinect" default="false"/>
+	<group if="$(arg kinect)" >
+    
+    	 <!-- launch openni to talk to kinect -->
+<!--     <include file="$(find openni_launch)/launch/openni.launch" />	
+-->		
+		<!-- Users update this to set transform between camera and robot -->
+<!-- 		<node pkg="tf" type="static_transform_publisher" name="camera_link_broadcaster"
+		args="1.0 0.0 0.0 0.0 0.0 0.0 /torso /camera_link 100" />
+-->		
+		<!-- octomap parameters for moveit -->
+		<group ns="move_group" >
+		  <param name="octomap_frame" type="string" value="base_link" />
+		  <param name="octomap_resolution" type="double" value="0.01" />
+		  <rosparam command="load" file="$(find motoman_sda10f_moveit_config)/config/kinect_sensor_apc.yaml" />
+		</group>
+	</group>
+</launch>

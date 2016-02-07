@@ -1,0 +1,26 @@
+<launch>
+
+  <rosparam command="load" file="$(find prx_input)/templates/applications/manual_application.yaml"/>
+  <rosparam command="load" file="$(find prx_input)/templates/simulators/collision_stop_simulator.yaml"/>
+
+
+  <rosparam command="load" ns="manual_controllers">
+    system_paths: [simulator/manual]
+  </rosparam>
+
+  <rosparam command="load" ns="car"
+     file="$(find prx_input)/templates/plants/rally_car.yaml">
+  </rosparam>
+
+  <rosparam command="load" ns="simulator/subsystems/manual"
+     file="$(find prx_input)/templates/controllers/manual/rally_car.yaml"/>
+  
+  <rosparam command="load" ns="simulator/subsystems/manual/subsystems/car">
+    initial_state: [0,0,0,0,0,0,0,0]
+    template: "car"
+  </rosparam>
+
+  <node name="simulation" pkg="prx_simulation" type="prx_simulation"
+        required="true" launch-prefix="" output="screen"/>
+
+</launch>

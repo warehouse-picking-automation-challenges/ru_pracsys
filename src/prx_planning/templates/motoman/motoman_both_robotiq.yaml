@@ -1,0 +1,339 @@
+type: motoman
+max_step: 0
+hand: left
+robotiq: true
+integrator: 
+  type: euler
+initial_state: [0 1.57 0 0 -1.57 0 0 0 1.57 0 0 -1.57 0 0 0 0 0]
+initial_control: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# root_offset: [0 0 .296863]
+root_offset: [0 0 0]
+state_space: 
+  # min: [-2.9570, -3.13, -1.90, -2.95, -2.36, -3.13, -1.90, -3.13,
+  #                -3.13, -1.90, -2.95, -2.36, -3.13, -1.90, -3.13]
+  # max: [2.9570, 3.13, 1.90, 2.95, 2.36, 3.13, 1.90, 3.13,
+  #               3.13, 1.90, 2.95, 2.36, 3.13, 1.90, 3.13]
+  min: [-2.9570, -3.13, -1.90, -2.95, -2.36, -3.13, -1.90, -3.13,
+                 -3.13, -1.90, -2.95, -2.36, -3.13, -1.90, -3.13, 0, 0]
+  max: [2.9570, 3.13, 1.90, 2.95, 2.36, 3.13,  1.90, 3.13,
+                3.13, 1.90, 2.95, 2.36, 3.13, 1.90, 3.13, 1.57,1]
+
+input_control_space:
+  # min: [-2.26,  -2.95, -2.95, -2.95, -2.95, -3.48, -3.48, -6.97,
+  #              -2.95, -2.95, -2.95, -2.95, -3.48, -3.48, -6.97]
+  # max: [2.26,  2.95, 2.95, 2.95, 2.95, 3.48, 3.48, 6.97,
+  #              2.95, 2.95, 2.95, 2.95, 3.48, 3.48, 6.97]
+  ###### Full speed Left arm and torso
+  # min: [-2.26, 0, 0, 0, 0, 0, 0, 0,
+  #         -2.95, -2.95, -2.95, -2.95, -3.48, -3.48, -6.97, 0]
+  # max: [2.26, 0, 0, 0, 0, 0, 0, 0,
+  #         2.95, 2.95, 2.95, 2.95, 3.48, 3.48, 6.97,1]
+  ####### Quarter speed
+  #Right
+  # min: [-.565, 0, 0, 0, 0, 0, 0, 0, 
+  #           -0.7375, -0.7375, -0.7375, -0.7375, -0.87, -0.87, -1.7425,-.1, 0]
+  # max: [.565, 0, 0, 0, 0, 0, 0, 0,
+  #           0.7375, 0.7375, 0.7375, 0.7375, 0.87, 0.87, 1.7425, .1, 1]
+  #Left
+  min: [-.565,  -0.7375, -0.7375, -0.7375, -0.7375, -0.87, -0.87, -1.7425,
+              0, 0, 0, 0, 0, 0, 0, -.1, 0]
+  max: [.565,  0.7375, 0.7375, 0.7375, 0.7375, 0.87, 0.87, 1.7425,
+               0, 0, 0, 0, 0, 0, 0, .1, 1]
+geometries:
+#base of robot
+  -
+    name: base_link
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_base.stl
+      material: blue
+  -
+    name: torso_link_b1
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_b1.stl
+      material: white
+#left arm
+  -
+    name: arm_left_link_1_s
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_s.stl
+      material: blue
+  -
+    name: arm_left_link_2_l
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_l.stl
+      material: white
+  -
+    name: arm_left_link_3_e
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_e.stl
+      material: blue
+  -
+    name: arm_left_link_4_u
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_u.stl
+      material: white
+  -
+    name: arm_left_link_5_r
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_r.stl
+      material: blue
+  -
+    name: arm_left_link_6_b
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_b.stl
+      material: white
+  -
+    name: arm_left_link_7_t
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_t.stl
+      material: blue
+#right arm
+  -
+    name: arm_right_link_1_s
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_s.stl
+      material: blue
+  -
+    name: arm_right_link_2_l
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_l.stl
+      material: white
+  -
+    name: arm_right_link_3_e
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_e.stl
+      material: blue
+  -
+    name: arm_right_link_4_u
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_u.stl
+      material: white
+  -
+    name: arm_right_link_5_r
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_r.stl
+      material: blue
+  -
+    name: arm_right_link_6_b
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_b.stl
+      material: white
+  -
+    name: arm_right_link_7_t
+    collision_geometry:
+      type: mesh
+      filename: meshes/motoman/sda10f/collision/motoman_axis_t.stl
+      material: blue
+#robotiq hand
+  -
+    name: arm_right_robotiq_virtual
+    collision_geometry:
+      type: box
+      dims: [.01 .01 .01]
+      material: green
+  -
+    name: finger_1_link_0
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/link_0.STL
+      material: yellow
+  -
+    name: finger_1_link_1
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/link_1.STL
+      material: yellow
+  -
+    name: finger_1_link_2
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/link_2.STL
+      material: yellow
+  -
+    name: finger_1_link_3
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/link_3.STL
+      material: yellow
+  -
+    name: finger_2_link_0
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/link_0.STL
+      material: yellow
+  -
+    name: finger_2_link_1
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/link_1.STL
+      material: yellow
+  -
+    name: finger_2_link_2
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/link_2.STL
+      material: yellow
+  -
+    name: finger_2_link_3
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/link_3.STL
+      material: yellow
+  -
+    name: finger_middle_link_0
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/link_0.STL
+      material: yellow
+  -
+    name: finger_middle_link_1
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/link_1.STL
+      material: yellow
+  -
+    name: finger_middle_link_2
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/link_2.STL
+      material: yellow
+  -
+    name: finger_middle_link_3
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/link_3.STL
+      material: yellow
+  -
+    name: palm
+    collision_geometry:
+      type: mesh
+      filename: meshes/robotiq/s-model_articulated/collision/palm.STL
+      material: yellow
+#left hand unigripper
+  -
+    name: base_plate
+    collision_geometry:
+      type: cylinder
+      radius: 0.04
+      height: 0.008
+      material: white
+  -
+    name: main_beam
+    collision_geometry:
+      type: box
+      dims: [0.015, 0.040, 0.180]
+      material: white
+  -
+    name: head_connector
+    collision_geometry:
+      type: box
+      dims: [0.035, 0.015, 0.039]
+      material: white
+  -
+    name: head_plate
+    collision_geometry:
+      type: box
+      dims: [0.045, 0.045, 0.005]
+      material: white
+  -
+    name: head_base
+    collision_geometry:
+      type: box
+      dims: [0.062, 0.121, 0.03]
+      material: white
+  -
+    name: head_sponge
+    collision_geometry:
+      type: box
+      dims: [0.06, 0.12, 0.016]
+      material: black
+  -
+    name: tube_port
+    collision_geometry:
+      type: cylinder
+      radius: 0.01
+      height: 0.025
+      material: blue
+  -
+    name: actuator
+    collision_geometry:
+      type: box
+      dims: [0.03, 0.035, 0.180]
+      material: dark_grey
+
+white_list:
+  - [base_link, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                 arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                 finger_1_link_3, finger_2_link_3, finger_middle_link_3]]
+  - [torso_link_b1, [arm_left_link_3_e, arm_left_link_4_u, arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                 arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                 finger_1_link_3, finger_2_link_3, finger_middle_link_3]]
+  - [arm_left_link_1_s, [arm_left_link_5_r, arm_left_link_6_b, arm_left_link_7_t,
+                         arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         finger_1_link_3, finger_2_link_3, finger_middle_link_3]]
+  - [arm_left_link_2_l, [arm_left_link_6_b, arm_left_link_7_t,
+                         arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         finger_1_link_3, finger_2_link_3, finger_middle_link_3]]
+  - [arm_left_link_3_e, [arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         finger_1_link_3, finger_2_link_3, finger_middle_link_3]]
+  - [arm_left_link_4_u, [arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         finger_1_link_3, finger_2_link_3, finger_middle_link_3]]
+  - [arm_left_link_5_r, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         finger_1_link_3, finger_2_link_3, finger_middle_link_3]]
+  - [arm_left_link_6_b, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         finger_1_link_3, finger_2_link_3, finger_middle_link_3]]
+  - [arm_left_link_7_t, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                         finger_1_link_3, finger_2_link_3, finger_middle_link_3]]
+  - [arm_right_link_1_s, [arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t,
+                          finger_1_link_3, finger_2_link_3, finger_middle_link_3]]
+  - [arm_right_link_2_l, [arm_right_link_6_b, arm_right_link_7_t,
+                          finger_1_link_3, finger_2_link_3, finger_middle_link_3]]
+  - [base_plate, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t]]
+  - [main_beam, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t]]
+  - [head_connector, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t]]
+  - [head_plate, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t]]
+  - [head_base, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t]]
+  - [tube_port, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t]]
+  - [actuator, [arm_right_link_1_s, arm_right_link_2_l, arm_right_link_3_e, arm_right_link_4_u, arm_right_link_5_r, arm_right_link_6_b, arm_right_link_7_t]]
+#hand to hand
+  - [finger_1_link_0,[torso_link_b1,base_link,base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+  - [finger_1_link_1,[torso_link_b1,base_link,base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+  - [finger_1_link_2,[torso_link_b1,base_link,base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+  - [finger_1_link_3,[base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+  - [finger_2_link_0,[torso_link_b1,base_link,base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+  - [finger_2_link_1,[torso_link_b1,base_link,base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+  - [finger_2_link_2,[torso_link_b1,base_link,base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+  - [finger_2_link_3,[base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+  - [finger_middle_link_0,[torso_link_b1,base_link,base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+  - [finger_middle_link_1,[torso_link_b1,base_link,base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+  - [finger_middle_link_2,[torso_link_b1,base_link,base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+  - [finger_middle_link_3,[base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+  - [palm,[arm_left_link_1_s,arm_left_link_2_l,arm_left_link_3_e,arm_left_link_4_u,arm_left_link_5_r,arm_left_link_6_b,arm_left_link_7_t,torso_link_b1,base_link,base_plate,main_beam,head_connector,head_plate,head_base,tube_port,actuator]]
+
+
+
+
+
+
+
+
+
+
+
+
+
